@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=media-libs/alsa-lib >=media-libs/liblscp-0.5.6:= x11-libs/libX11 libgig? ( >=media-libs/libgig-3.3.0:= ) dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtx11extras:5 dev-qt/qtwidgets:5 dev-qt/linguist-tools:5
+DESCRIPTION=A graphical frontend to the LinuxSampler engine
+EAPI=5
+HOMEPAGE=http://www.linuxsampler.org/
+IUSE=debug +libgig
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/alsa-lib >=media-libs/liblscp-0.5.6:= x11-libs/libX11 libgig? ( >=media-libs/libgig-3.3.0:= ) dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtx11extras:5 dev-qt/qtwidgets:5 >=media-sound/linuxsampler-0.5
+SLOT=0
+SRC_URI=mirror://sourceforge/qsampler/0.4.1/qsampler-0.4.1.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	165fc17c38d1b11dac2008280dab6e80	qmake-utils	0a242e7177789b0028b4045f336dd4db	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=eb69ab1007500545d0af258af90e269b
