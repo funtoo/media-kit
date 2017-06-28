@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=ffmpeg? ( libav? ( media-video/libav:= ) !libav? ( media-video/ffmpeg:0= ) ) virtual/jpeg:= mmal? ( media-libs/raspberrypi-userland ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql:= )
 SLOT=0
 SRC_URI=https://github.com/Motion-Project/motion/archive/release-4.0.1.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	e32ea84bf82cf8987965b574672dba93	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	e10ccb95af96d45f86016fa982a949bb
 _md5_=f2620fc05d22d2d261333a47383e3a04

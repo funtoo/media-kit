@@ -1,6 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="*"
 IUSE="graphicsmagick +imagemagick"
 REQUIRED_USE="^^ ( graphicsmagick imagemagick )"
 
@@ -25,12 +23,17 @@ RDEPEND=">=dev-libs/fribidi-0.19.2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 DOCS=( AUTHORS ChangeLog README TODO )
 
 src_prepare() {
 	default
+
+	if use imagemagick && has_version '>=media-gfx/imagemagick-7.0.1.0' ; then
+		eapply "${FILESDIR}/${PN}-0.7.2-imagemagick7.patch"
+	fi
+
 	if use graphicsmagick ; then
 		sed -i -e 's:ExportImagePixels:dIsAbLeAuToMaGiC&:' configure \
 			|| die

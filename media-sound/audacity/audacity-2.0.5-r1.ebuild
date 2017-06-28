@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -15,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_T}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 x86"
 IUSE="alsa ffmpeg flac id3tag jack ladspa libsamplerate midi mp3 sbsms soundtouch twolame vamp vorbis"
 RESTRICT="test"
 

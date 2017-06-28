@@ -1,5 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: confutils.eclass
 # @MAINTAINER:
@@ -452,7 +453,7 @@ enable_extension_enable_built_with() {
 	fi
 }
 
-# @FUNCTION: enable_extension_with_built_with
+# @FUNCTION: enable_extension_with_built_with ()
 # @USAGE: <foreign> <flag> <extension> [shared] [extra conf] [msg]
 # @DESCRIPTION:
 # This function is like enable_extension_with(), except that it

@@ -1,6 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -12,7 +10,7 @@ SRC_URI="mirror://nongnu/linphone/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0/3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 # Many cameras will not work or will crash an application if mediastreamer2 is
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
@@ -35,8 +33,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	pcap? ( sys-libs/libcap )
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
-	speex? ( >=media-libs/speex-1.2_beta3 )
-	upnp? ( net-libs/libupnp )
+	speex? ( >=media-libs/speex-1.2_beta3 media-libs/speexdsp )
+	upnp? ( net-libs/libupnp:0 )
 	video? (
 		libav? ( >=media-video/libav-9.12:0= )
 		!libav? ( >=media-video/ffmpeg-1.2.6-r1:0= )

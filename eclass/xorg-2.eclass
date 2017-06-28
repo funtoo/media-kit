@@ -20,7 +20,8 @@
 # with the other X packages, you don't need to set SRC_URI. Pretty much
 # everything else should be automatic.
 
-if [[ ${PV} == *9999* ]] || [[ -n "${EGIT_COMMIT}${EGIT_BRANCH}" ]]; then
+GIT_ECLASS=""
+if [[ ${PV} == *9999* ]]; then
 	GIT_ECLASS="git-r3"
 	XORG_EAUTORECONF="yes"
 fi

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -72,14 +73,7 @@
 # (e.g. selenium's firefox driver extension). When set this argument is
 # passed to "grep -E" to remove reporting of these shared objects.
 
-local inherits=""
-case ${EAPI} in
-	2|3|4|5)
-		inherits="eutils"
-		;;
-esac
-
-inherit ${inherits} java-utils-2 multilib toolchain-funcs ruby-utils
+inherit eutils java-utils-2 multilib toolchain-funcs ruby-utils
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_setup
 
@@ -87,7 +81,7 @@ case ${EAPI} in
 	0|1)
 		die "Unsupported EAPI=${EAPI} (too old) for ruby-ng.eclass" ;;
 	2|3) ;;
-	4|5|6)
+	4|5)
 		# S is no longer automatically assigned when it doesn't exist.
 		S="${WORKDIR}"
 		;;
@@ -269,7 +263,7 @@ ruby_get_use_targets() {
 # confuse this function with ruby_implementation_depend().
 #
 # @EXAMPLE:
-# EAPI=6
+# EAPI=4
 # RUBY_OPTIONAL=yes
 #
 # inherit ruby-ng
@@ -292,7 +286,7 @@ if [[ ${RUBY_OPTIONAL} != yes ]]; then
 	RDEPEND="${RDEPEND} $(ruby_implementations_depend)"
 
 	case ${EAPI:-0} in
-		4|5|6)
+		4|5)
 			REQUIRED_USE+=" || ( $(ruby_get_use_targets) )"
 			;;
 	esac
@@ -301,7 +295,7 @@ fi
 _ruby_invoke_environment() {
 	old_S=${S}
 	case ${EAPI} in
-		4|5|6)
+		4|5)
 			if [ -z "${RUBY_S}" ]; then
 				sub_S=${P}
 			else
@@ -325,14 +319,7 @@ _ruby_invoke_environment() {
 				;;
 		esac
 		pushd "${WORKDIR}"/all &>/dev/null || die
-		# use an array to trigger filename expansion
-		# fun fact: this expansion fails in src_unpack() but the original
-		# code did not have any checks for failed expansion, so we can't
-		# really add one now without redesigning stuff hard.
-		sub_S=( ${sub_S} )
-		if [[ ${#sub_S[@]} -gt 1 ]]; then
-			die "sub_S did expand to multiple paths: ${sub_S[*]}"
-		fi
+		sub_S=$(eval ls -d "${sub_S}" 2>/dev/null)
 		popd &>/dev/null || die
 	fi
 
@@ -412,24 +399,15 @@ ruby-ng_src_unpack() {
 }
 
 _ruby_apply_patches() {
-	case ${EAPI} in
-		2|3|4|5)
-			for patch in "${RUBY_PATCHES[@]}"; do
-				if [ -f "${patch}" ]; then
-					epatch "${patch}"
-				elif [ -f "${FILESDIR}/${patch}" ]; then
-					epatch "${FILESDIR}/${patch}"
-				else
-					die "Cannot find patch ${patch}"
-				fi
-			done
-			;;
-		6)
-			if [[ -n ${RUBY_PATCHES[@]} ]]; then
-			   eqawarn "RUBY_PATCHES is no longer supported, use PATCHES instead"
-			fi
-			;;
-	esac
+	for patch in "${RUBY_PATCHES[@]}"; do
+		if [ -f "${patch}" ]; then
+			epatch "${patch}"
+		elif [ -f "${FILESDIR}/${patch}" ]; then
+			epatch "${FILESDIR}/${patch}"
+		else
+			die "Cannot find patch ${patch}"
+		fi
+	done
 
 	# This is a special case: instead of executing just in the special
 	# "all" environment, this will actually copy the effects on _all_
@@ -453,13 +431,6 @@ ruby-ng_src_prepare() {
 	# the extra data forks, we do it here to avoid repeating it for
 	# almost every other ebuild.
 	find . -name '._*' -delete
-
-	# Handle PATCHES and user supplied patches via the default phase
-	case ${EAPI} in
-		6)
-			_ruby_invoke_environment all default
-			;;
-	esac
 
 	_ruby_invoke_environment all _ruby_apply_patches
 

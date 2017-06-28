@@ -2,12 +2,10 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
 media-fonts/culmus:ancient - Install ancient semitic scripts
 media-fonts/culmus:fancy - Install fancy fonts
 media-fonts/culmus:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/culmus:taamey - Install taamey fonts
-media-fonts/dejavu:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/fontawesome:otf - Install the OpenType version of the font
 media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/infinality-ultimate-meta:free - Install fonts for the "free" preset
@@ -15,7 +13,6 @@ media-fonts/infinality-ultimate-meta:latin - Install additional latin fonts
 media-fonts/infinality-ultimate-meta:minimal - Install a minimal set of fonts
 media-fonts/infinality-ultimate-meta:ms - Install (free) fonts for the "ms" preset
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
-media-fonts/liberation-fonts:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/sil-charis:compact - Use more compactly spaced font
@@ -34,6 +31,152 @@ media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like L
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
 media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/unifont:utils - Install unifont utilities
+media-gfx/album:plugins - Install optional plugins
+media-gfx/album:themes - Install optional themes
+media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
+media-gfx/asymptote:offscreen - Enables off-screen rendering
+media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
+media-gfx/blender:boost - Enable features depending on boost.
+media-gfx/blender:bullet - Enable Bullet (Physics Engine).
+media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
+media-gfx/blender:colorio - Enable OpenColorIO color management through media-libs/opencolorio.
+media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
+media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimageio and dev-libs/boost).
+media-gfx/blender:dds - Adds DDS textures support to Blender.
+media-gfx/blender:doc - Build C and Python API documentation directly from the source code.
+media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
+media-gfx/blender:game-engine - Adds Game Engine support to Blender.
+media-gfx/blender:headless - Build without graphical support (renderfarm, server mode only).
+media-gfx/blender:jemalloc - Use dev-libs/jemalloc for memory allocation.
+media-gfx/blender:llvm - Enable features depending on llvm.
+media-gfx/blender:man - Build and install man pages.
+media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
+media-gfx/blender:openimageio - Enable OpenImageIO Support
+media-gfx/blender:opennl - Enable use of Open Numerical Library
+media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
+media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
+media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
+media-gfx/blender:redcode - This flag add support for RED CODE camera digital format (5K HD images *.r3d) - EXPERIMENTAL.
+media-gfx/blender:test - Build the provided unit tests.
+media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
+media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
+media-gfx/cura:usb - Access 3D printers via USB
+media-gfx/darktable:colord - Support color management using x11-misc/colord
+media-gfx/darktable:flickr - Add support for uploading photos to flickr
+media-gfx/darktable:geo - Enable geotagging support
+media-gfx/darktable:libsecret - Enable libsecret support to store login credentials
+media-gfx/darktable:opencl - Enable opencl support
+media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
+media-gfx/darktable:slideshow - Build the opengl slideshow viewer
+media-gfx/darktable:webp - Enable WebP export support
+media-gfx/digikam:addressbook - Enable akonadi contact integration
+media-gfx/digikam:kipi - Enable support for media-plugins/kipi-plugins
+media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
+media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
+media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
+media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
+media-gfx/digikam:video - Enable video player support
+media-gfx/enblend:gpu - GPU support for Enblend
+media-gfx/enblend:image-cache - allow for processing of large images
+media-gfx/eom:gtk3 - Build with GTK+3 instead of GTK+2
+media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
+media-gfx/exiv2:webready - Support reading metadata over the internet
+media-gfx/fbida:X - Install the Motif based image viewer "ida"
+media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
+media-gfx/fbida:ghostscript - Install the framebuffer ghostscript viewer "fbgs"
+media-gfx/fbida:webp - Enable support for the WebP image format
+media-gfx/fim:dia - Enable DIA file support via app-office/dia
+media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
+media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
+media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
+media-gfx/fotowall:webcam - Enable webcam support
+media-gfx/freewrl:glew - Enable glew extensions
+media-gfx/freewrl:java - Build and install java EAI/SAI support library
+media-gfx/freewrl:libeai - Build EAI C library
+media-gfx/freewrl:opencl - Enable OpenCL support
+media-gfx/freewrl:osc - Allows for OSC-based control and communication between multiple freewrl instances
+media-gfx/freewrl:rbp - Enable support for Rigid Body Physics
+media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
+media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
+media-gfx/geeqie:map - Enable items map display - experimental
+media-gfx/gimp:smp - Enable support for multiprocessors
+media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
+media-gfx/gmic:cli - Build CLI interface
+media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
+media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
+media-gfx/graphicsmagick:modules - Compile graphicsmagick with dynamically loadable modules
+media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
+media-gfx/graphicsmagick:q32 - Set storage quantum size to 32 (~5*memory)
+media-gfx/graphicsmagick:webp - Enable support for webp image format
+media-gfx/graphviz:X - Builds lefty front-end, builds plugin -Txlib, and enables support for x11 in various other modules (needs cairo)
+media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
+media-gfx/graphviz:gdk-pixbuf - Enables gdk-pixbuf2 plugin
+media-gfx/graphviz:gtk - Enables gtk+ output plugin -Tgtk (needs cairo)
+media-gfx/graphviz:gts - Enables support for gts
+media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
+media-gfx/graphviz:qt4 - Builds gvedit front-end
+media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift-C
+media-gfx/imagemagick:autotrace - Use media-gfx/autotrace to convert bitmaps into vector graphics
+media-gfx/imagemagick:corefonts - Use media-fonts/corefonts which is required by some commands
+media-gfx/imagemagick:fpx - Enable media-libs/libfpx support
+media-gfx/imagemagick:hdri - enable High Dynamic Range Images formats
+media-gfx/imagemagick:lqr - Enable experimental liquid rescale support using media-libs/liblqr
+media-gfx/imagemagick:opencl - Enable OpenCL support
+media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
+media-gfx/imagemagick:q32 - Set quantum depth value to 32
+media-gfx/imagemagick:q64 - Set quantum depth value to 64
+media-gfx/imagemagick:q8 - Set quantum depth value to 8
+media-gfx/imagemagick:webp - Enable webp image format support using media-libs/libwebp
+media-gfx/imageworsener:webp - enable webp image format support
+media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams
+media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
+media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
+media-gfx/inkscape:latex - pull in dependencies for LaTeX formulas
+media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams
+media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics
+media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
+media-gfx/jpeg2ps:metric - Default to A4 paper size
+media-gfx/k3d:3ds - Enable support for 3D Studio models
+media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
+media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
+media-gfx/kphotoalbum:face - Enable face detection and recognition using kde-apps/libkface
+media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
+media-gfx/kphotoalbum:map - Enable map display support using kde-apps/libkgeomap
+media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
+media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
+media-gfx/krita:vc - Enable support for dev-libs/vc, could be a significant speed boost
+media-gfx/librecad:3d - Require all 2D coordinates stored as 3D
+media-gfx/librecad:tools - Build additional tool programs: tff2lff
+media-gfx/luminance-hdr:fits - Enable support for the FITS format
+media-gfx/nip2:goffice - use x11-libs/goffice to show plots
+media-gfx/nomacs:opencv - Build support for media-libs/opencv
+media-gfx/nomacs:zip - Build support for zip archives
+media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
+media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
+media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
+media-gfx/openclipart:gzip - Compresses clip art using gzip
+media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
+media-gfx/openvdb:abi3-compat - Enables compatibility with the old 3.x ABI. enabled by dfault.
+media-gfx/openvdb:openvdb-compression - Adds enhanced compression to files through dev-libs/c-blosc. Very useful so enabled by dfault.
+media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
+media-gfx/pngcrush:system-libs - Use libpng and libz provided by system
+media-gfx/potrace:metric - default to a4 paper size and metric measurement
+media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
+media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl
+media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
+media-gfx/pstoedit:emf - Enable media-libs/libemf support
+media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
+media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
+media-gfx/qiv:magic - Use libmagic to determine mimetypes
+media-gfx/qiviewer:webp - Build support for WEBP image format
+media-gfx/slic3r:gui - Enable GUI
+media-gfx/splashutils:fbcondecor - Support for the fbcondecor kernel patch.
+media-gfx/ufraw:contrast - enable contrast setting option
+media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs/cfitsio
+media-gfx/ufraw:timezone - enable DST correction for file timestamps
+media-gfx/xpaint:pgf - Support for loading PGF images
+media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
+media-gfx/yafaray:blender - install media-gfx/blender scripts
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
@@ -54,11 +197,6 @@ media-libs/avidemux-plugins:vpx - Enable WebM VP8 Codec SDK support via media-li
 media-libs/babl:cpu_flags_x86_f16c - Take advantage of CPU feature f16c
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/chromaprint:tools - Build and install fpcalc and fpcollect tools
-media-libs/clutter:egl - Enable EGL backend.
-media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering backend
-media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
-media-libs/cogl:kms - Enable KMS support.
-media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
@@ -83,8 +221,6 @@ media-libs/gegl:webp - Enable support for media-libs/libwebp
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
-media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
-media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
 media-libs/gst-plugins-bad:egl - Enable EGL support
 media-libs/gst-plugins-bad:gles2 - Enable GLES2 support
@@ -289,41 +425,9 @@ media-plugins/audacious-plugins:midi - Build with amidi-plug (MIDI synth) suppor
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/calf:lv2 - Add support for Ladspa V2
-media-plugins/deadbeef-plugins-meta:archive - Reading media files from archived files
-media-plugins/deadbeef-plugins-meta:bookmark-manager - Resume playing files (after closing player) from the last timestamp
-media-plugins/deadbeef-plugins-meta:bs2b - bs2b dsp support. Useful for headphones
-media-plugins/deadbeef-plugins-meta:decast - Subscription for the podcasts
-media-plugins/deadbeef-plugins-meta:filebrowser - File browser plugin
-media-plugins/deadbeef-plugins-meta:gnome-mmkeys - Gnome multimedia keys support
-media-plugins/deadbeef-plugins-meta:infobar - Download and show lyrics
-media-plugins/deadbeef-plugins-meta:jack - Jack audio support
-media-plugins/deadbeef-plugins-meta:librarybrowser - File browser plugin that resemble foobar2k music library
-media-plugins/deadbeef-plugins-meta:mpris - MPRIS support
-media-plugins/deadbeef-plugins-meta:musical-spectrum - Draws musical spectrum for current track
-media-plugins/deadbeef-plugins-meta:opus - Ogg opus decoder support
-media-plugins/deadbeef-plugins-meta:quick-search - Quick search support
-media-plugins/deadbeef-plugins-meta:replaygain-control - Advanced control of replaygain
-media-plugins/deadbeef-plugins-meta:soxr - Sox resampler
-media-plugins/deadbeef-plugins-meta:spectrogram - Draws spectrogram for current track
-media-plugins/deadbeef-plugins-meta:statusnotifier - Provides tray icon in plasma5 (implements StatusNotifierItem)
-media-plugins/deadbeef-plugins-meta:stereo-widener - Widens stereo
-media-plugins/deadbeef-plugins-meta:vk - Play music from vk.com social network
-media-plugins/deadbeef-plugins-meta:vu-meter - Draws vu meter for current track
-media-plugins/deadbeef-plugins-meta:waveform-seekbar - Draws waveform seekbar for current track
 media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin, which depends on media-libs/opencv
 media-plugins/frei0r-plugins:scale0tilt - Enables building of scale0tilt and vectorscope plugins, which depend on media-libs/gavl
 media-plugins/gkrellmpc:threads - Use separate thread to init connection (unsafe)
-media-plugins/grilo-plugins:chromaprint - Enable Chromaprint support
-media-plugins/grilo-plugins:daap - Enable dmap support through net-libs/libdmapsharing
-media-plugins/grilo-plugins:flickr - Enable Flickr support
-media-plugins/grilo-plugins:freebox - Build support for viewing TV channels using Freebox
-media-plugins/grilo-plugins:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
-media-plugins/grilo-plugins:pocket - Support for showing content from Pocket
-media-plugins/grilo-plugins:subtitles - Enables support for subtitle from OpenSubtitles
-media-plugins/grilo-plugins:thetvdb - Build support for thetvdb.com
-media-plugins/grilo-plugins:tracker - Build support for content discovery using the app-misc/tracker indexer
-media-plugins/grilo-plugins:vimeo - Build support for Vimeo content discovery using net-libs/libsoup and dev-libs/libgcrypt
-media-plugins/grilo-plugins:youtube - Build support for YouTube content discovery using dev-libs/libgdata
 media-plugins/gst-plugins-gl:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
 media-plugins/gst-plugins-meta:libvisual - Enable visualization effects via media-libs/libvisual
@@ -377,6 +481,14 @@ media-plugins/vdr-xineliboutput:cec - Enable CEC support through dev-libs/libcec
 media-plugins/vdr-xineliboutput:libextractor - Use media-libs/libextractor to gather files' metadata in media-player
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
+media-radio/ax25-tools:X - Enable some X based configuration tools.
+media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
+media-radio/tucnak2:ftdi - Enable support for FTDI USB chips
+media-radio/tucnak2:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio
+media-radio/unixcw:ncurses - Enables building the curses based morse code tutor program 'cwcp'.
+media-radio/xastir:festival - Enable text to speech synthesizer
+media-radio/xastir:gdal - Support for some further map formats
+media-radio/xastir:geotiff - Install geotiff support. Allows using USGS DRG topo maps or other types of geotiff mapes/images
 media-sound/abcde:id3tag - Support ID3, ID3v2 tagging of audio files
 media-sound/abcde:mac - Enable support for Monkey's Audio files
 media-sound/abcde:normalize - Add support for normalizing audio file volume levels
@@ -470,54 +582,6 @@ media-sound/csound:websocket - Build the websocket opcode
 media-sound/darkice:aacplus - AAC+ encoding via media-libs/libaacplus
 media-sound/darkice:opus - Enable Opus audio codec support
 media-sound/darkice:twolame - Build with twolame support
-media-sound/deadbeef:aac - Advanced Audio Coding (AAC) plugin
-media-sound/deadbeef:adplug - Adplug plugin
-media-sound/deadbeef:alac - Apple Lossless Audio Codec (ALAC) plugin
-media-sound/deadbeef:cdda - Compact Disc Digital Audio (CDDA) plugin
-media-sound/deadbeef:converter - Support for converting media files
-media-sound/deadbeef:cover - Album artwork plugin
-media-sound/deadbeef:cover-imlib2 - Album artwork (with support for imlib2) plugin
-media-sound/deadbeef:cover-network - Plugin for downloading album artwork from internet
-media-sound/deadbeef:curl - cURL plugin
-media-sound/deadbeef:dts - Digital Theater System (DTS) plugin
-media-sound/deadbeef:dumb - Tracker music (MOD, S3M, XM, IT, STM, 669, PTM, PSM, MTM, DSM, ASYLUM AMF, UMX, J2B) plugin
-media-sound/deadbeef:equalizer - Equalizer plugin
-media-sound/deadbeef:ffmpeg - FFmpeg plugin
-media-sound/deadbeef:flac - Free Lossless Audio Codec (FLAC) plugin
-media-sound/deadbeef:gme - Game Music Emu (NSF, AY and other formats) plugin
-media-sound/deadbeef:gtk2 - GTK2 based user interface
-media-sound/deadbeef:gtk3 - GTK3 based user interface
-media-sound/deadbeef:hotkeys - Hotkeys support plugin
-media-sound/deadbeef:lastfm - Last.fm scrobbling plugin
-media-sound/deadbeef:libav - Libav plugin
-media-sound/deadbeef:libnotify - Notification daemon support plugin
-media-sound/deadbeef:libsamplerate - Sample rate conversion plugin
-media-sound/deadbeef:m3u - m3u playlist plugin
-media-sound/deadbeef:mac - Monkey's Audio plugin
-media-sound/deadbeef:mad - MPEG-1/2/2.5 Layer 3 (MP3) support through mad/libmad
-media-sound/deadbeef:midi - midi support (via timidity) plugin
-media-sound/deadbeef:mms - Microsoft Media Server (MMS) plugin
-media-sound/deadbeef:mono2stereo - mono2stereo plugin
-media-sound/deadbeef:mp3 - MPEG-1/2/2.5 Layer 3 (MP3) support plugin. It is a virtual use for mad/libmad or mpg123/libmpg123 since deadbeef 0.6.3
-media-sound/deadbeef:mpg123 - MPEG-1/2/2.5 Layer 3 (MP3) support through mpg123/libmpg123
-media-sound/deadbeef:nls - Native Language Support (NLS)
-media-sound/deadbeef:nullout - NULL output plugin
-media-sound/deadbeef:oss - Open Sound System (OSS) output plugin
-media-sound/deadbeef:playlist-browser - Playlist browser user interface plugin
-media-sound/deadbeef:psf - AOSDK-based PSF(QSF,SSF,DSF) plugin
-media-sound/deadbeef:pulseaudio - PulseAudio output plugin
-media-sound/deadbeef:sc68 - Atari ST and Amiga music plugin
-media-sound/deadbeef:shell-exec - Support for running shell commands
-media-sound/deadbeef:shn - Shorten (SHN) plugin
-media-sound/deadbeef:sid - Commodore64 SID music player plugin
-media-sound/deadbeef:sndfile - PCM wave support (via libsndfile) plugin
-media-sound/deadbeef:tta - True Audio TTA plugin
-media-sound/deadbeef:unity - Gnome Unity support
-media-sound/deadbeef:vorbis - Ogg Vorbis plugin
-media-sound/deadbeef:vtx - Libayemy VTX ZX-Spectrum music player plugin
-media-sound/deadbeef:wavpack - WavPack plugin
-media-sound/deadbeef:wma - Windows media audio plugin
-media-sound/deadbeef:zip - vfs_zip plugin
 media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis
 media-sound/denemo:portmidi - Enable support for the portmidi backend
 media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
@@ -545,7 +609,7 @@ media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
-media-sound/jack-audio-connection-kit:pam - Add basic realime configuration via sys-auth/realtime-base
+media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jack2:celt - Support CELT low delay audio codec (media-libs/celt)
 media-sound/jack2:opus - Support media-libs/opus
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
@@ -714,12 +778,6 @@ media-sound/squeezelite:aac - Supports streaming AAC from the server, utilising 
 media-sound/squeezelite:flac - Supports streaming FLAC from the server, utilising media-libs/flac
 media-sound/squeezelite:mp3 - Supports streaming MP3 from the server, utilising media-libs/libmad
 media-sound/squeezelite:vorbis - Supports streaming Ogg/Vorbis from the server, utilising media-libs/libvorbis
-media-sound/supercollider:emacs - Enable the SCEL user interface
-media-sound/supercollider:gedit - Enable the SCED user interface
-media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
-media-sound/supercollider:server - Build with internal server
-media-sound/supercollider:vim - Enable the SCVIM user interface
-media-sound/supercollider:wiimote - Build sclang with Wii Remote support
 media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
 media-sound/tomahawk:hatchet - Enable support for the synchronisation through Hatchet
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
@@ -756,6 +814,99 @@ media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio C
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
 media-sound/yoshimi:lv2 - Add support for Ladspa V2
+media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
+media-tv/kodi:airplay - enable AirPlay support
+media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
+media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
+media-tv/kodi:dvd - Enable optical (CD/DVD drive) support
+media-tv/kodi:gles - Enable support for GLES
+media-tv/kodi:libusb - Use virtual/libusb for usb device hotplug support. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
+media-tv/kodi:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
+media-tv/kodi:midi - Support MIDI files
+media-tv/kodi:nfs - Enable NFS client support
+media-tv/kodi:nonfree - Enable non-free components
+media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
+media-tv/kodi:sftp - Support browsing files over SFTP
+media-tv/kodi:texturepacker - Support packing skin textures
+media-tv/kodi:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
+media-tv/kodi:webserver - Enable internal webserver
+media-tv/kodi:xslt - Enable XSLT support using dev-libs/libxslt
+media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
+media-tv/me-tv:http - Installation of Web-frontend
+media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices, this is needed if you are using ALSA dmix or SPDIF. Note, you will have to physically type your device into the MythTV configuration since it will only give you /dev/dsp devices in the drop down.
+media-tv/mythtv:altivec - Builds ffmpeg's codec libraries with altivec support.
+media-tv/mythtv:autostart - Uses a custom autostart configuration gleaned from experience with MythTV since its early versions and discussed with other MythTV maintainers and users. Does not rely on KDE being installed like most methods do.
+media-tv/mythtv:bluray - Pulls in libbluray for BluRay support.
+media-tv/mythtv:cec - Allows you to control CEC enabled TVs via HDMI. Currently requires a USB based CEC -> HDMI injector between your TV and video card since no graphics drivers support CEC natively.
+media-tv/mythtv:crystalhd - Allows you to utilize a Broadcom CrystalHD hardware based video decoder to improve the performance of video decode.
+media-tv/mythtv:debug - Instructs Qt to use the 'debug' target instead of 'release' target. If your MythTV is crashing or you need a backtrace, you need to compile it with this option otherwise the debugging data is useless.
+media-tv/mythtv:dvb - Enables support for Linux DVB cards. These include all cards that work with digital signals such as ATSC, DVB-T, DVB-C, and DVB-S, QAM-64, and QAM-256.
+media-tv/mythtv:egl - Support EGL video output.
+media-tv/mythtv:fftw - Support visualizations via sci-libs/fftw
+media-tv/mythtv:hls - HTTP Live Streaming support
+media-tv/mythtv:ieee1394 - Allows MythTV to communicate and use Firewire enabled Cable boxes. These are typically found in the United States, where such support is required by law. This will also install Firewire test programs and external channel changers if the internal changer does not work.
+media-tv/mythtv:jack - Allows MythTV to use JACK as your sound output device. You will have to manually configure the path to your JACK settings.
+media-tv/mythtv:lcd - Tells MythTV that you have an instance of app-misc/lcdproc configured on your machine and it should output information such as current time, show name, episode name, etc to that LCD.
+media-tv/mythtv:lirc - Adds LIRC support directly to MythTV allowing for built in control via a LIRC device.
+media-tv/mythtv:mythlogserver - Enable support for syslog and file logging. Not used with systemd.
+media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
+media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper.
+media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
+media-tv/tvbrowser:themes - Install extra theme packs
+media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
+media-tv/tvheadend:constcw - Enable support for the constcw protocol
+media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
+media-tv/tvheadend:dvbscan - Use media-tv/linuxtv-dvb-apps
+media-tv/tvheadend:hdhomerun - Enable support for the HDHomeRun device
+media-tv/tvheadend:imagecache - Enable support for image caching
+media-tv/tvheadend:iptv - Enable support for Internet Protocol TV
+media-tv/tvheadend:satip - Enable support for IP-based Satellite TV
+media-tv/tvheadend:timeshift - Enable TimeShift support
+media-tv/tvheadend:uriparser - Use dev-libs/uriparser
+media-tv/tvheadend:xmltv - Use media-tv/xmltv
+media-tv/v4l-dvb-saa716x:firmware - Install firmware
+media-tv/xmltv:ar - Argentina tv listing grabber
+media-tv/xmltv:ch - Switzerland bluewin tv listing grabber
+media-tv/xmltv:ch_search - Grabber for Switzerland
+media-tv/xmltv:dk - Denmark tv listing grabber
+media-tv/xmltv:dtvla - Latin America digital tv listing grabber
+media-tv/xmltv:ee - Estonia tv listing grabber
+media-tv/xmltv:es_laguiatv - Spain alternative grabber
+media-tv/xmltv:es_miguiatv - Spain alternative grabber
+media-tv/xmltv:eu_dotmedia - Grabber for Europe (xmltv.se / dotmedia)
+media-tv/xmltv:eu_egon - Grabber for german speaking area (Egon zappt)
+media-tv/xmltv:eu_epg - EPG grabber for some European countries.
+media-tv/xmltv:fi - Finland tv listing grabber
+media-tv/xmltv:fi_sv - Grabber for Finland (Swedish)
+media-tv/xmltv:fr - France tv listing grabber
+media-tv/xmltv:fr_kazer - France (Kazer) tv listing grabber
+media-tv/xmltv:hr - Croatia tv listing grabber
+media-tv/xmltv:huro - Hungarian tv listing grabber
+media-tv/xmltv:il - Israel tv listing grabber
+media-tv/xmltv:in - India tv listing grabber
+media-tv/xmltv:is - Iceland tv listing grabber
+media-tv/xmltv:it - Italy tv listing grabber
+media-tv/xmltv:na_dd - North America tv listing grabber
+media-tv/xmltv:na_dtv - North America Direct TV grabber
+media-tv/xmltv:na_icons - option for na_dd to download icons
+media-tv/xmltv:na_tvmedia - Grabber for North America (TVMedia)
+media-tv/xmltv:nl - Netherlands tv listing grabber
+media-tv/xmltv:no_gf - Norway Gfeed tv listing grabber
+media-tv/xmltv:pt - Portugal tv listing grabber
+media-tv/xmltv:pt_meo - Grabber for Portugal (MEO)
+media-tv/xmltv:re - Reunion Island (France) tv listing grabber
+media-tv/xmltv:sd_json - Grabber for schedulesDirect.org SD-JSON service (many countries)
+media-tv/xmltv:se_swedb - Sweden tv listing grabber
+media-tv/xmltv:se_tvzon - Sweden (tvzon.se) tv listing grabber
+media-tv/xmltv:tr - Turkey (Digiturk) tv listing grabber
+media-tv/xmltv:tv_check - enable GUI checking
+media-tv/xmltv:tv_combiner - enable grabbers combiner
+media-tv/xmltv:tv_pick_cgi - enable CGI support
+media-tv/xmltv:uk_atlas - Fast UK and Ireland tv listing grabber
+media-tv/xmltv:uk_bleb - Britain tv listing grabber
+media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
+media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
+media-tv/xmltv:za - South Africa tv listing grabber
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requires GStreamer and a few plugins but technically not the GST plugin for aravis.
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
@@ -862,7 +1013,6 @@ media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC proce
 media-video/libav:vpx - Enable vp8 encoding support using media-libs/libvpx.
 media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.
 media-video/libav:x265 - Enable HEVC encoding with media-libs/x265.
-media-video/libva-utils:drm - Enables VA/DRM API support.
 media-video/lives:libvisual - Enable libvisual support
 media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
@@ -954,10 +1104,6 @@ media-video/syncplay:client - Install Syncplay client
 media-video/syncplay:gui - Enable gui support
 media-video/syncplay:server - Install Syncplay server
 media-video/syncplay:vlc - Enable VLC2.x support
-media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
-media-video/totem:nautilus - Enable the nautilus extension
-media-video/totem:python - Build support for dev-lang/python plugins
-media-video/totem:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:nuv - NuppelVideo container format demuxing
 media-video/transcode:pic - disable optimized assembly code that is not PIC friendly
