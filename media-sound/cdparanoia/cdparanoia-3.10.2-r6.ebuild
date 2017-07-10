@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit autotools eutils libtool toolchain-funcs versionator multilib-minimal
@@ -13,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${MY_P}.src.tgz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="app-eselect/eselect-cdparanoia

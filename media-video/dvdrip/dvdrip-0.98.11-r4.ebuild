@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils flag-o-matic perl-module
@@ -15,7 +14,7 @@ IUSE="ffmpeg fping libav mplayer ogg subtitles vcd vorbis xine xvid"
 
 DEPEND=">=dev-perl/Event-ExecFlow-0.64
 	>=dev-perl/Event-RPC-0.89
-	dev-perl/gtk2-perl
+	dev-perl/Gtk2
 	>=dev-perl/gtk2-ex-formfactory-0.65
 	>=dev-perl/libintl-perl-1.16
 	>=media-video/transcode-1.1.0[dvd,jpeg,mp3,ogg,vorbis]

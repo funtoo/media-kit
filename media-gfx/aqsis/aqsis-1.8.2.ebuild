@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -33,11 +32,13 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( AUTHORS INSTALL README )
+
 PATCHES=(
 	"${FILESDIR}/${P}-openexr-compat.patch"
 	"${FILESDIR}/${P}-unbundle-tinyxml.patch"
 	"${FILESDIR}/${P}-pfto-boost-1.59.patch"
 	"${FILESDIR}/${P}-boost-join-moc.patch"
+	"${FILESDIR}/${P}-gcc6.patch"
 )
 
 src_configure() {

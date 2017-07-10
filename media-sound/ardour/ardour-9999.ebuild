@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +11,7 @@ DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="http://git.ardour.org/ardour/ardour.git"
+	EGIT_REPO_URI="git://git.ardour.org/ardour/ardour.git"
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~x86"
@@ -65,7 +64,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	jack? ( >=media-sound/jack-audio-connection-kit-0.120 )
+	jack? ( virtual/jack )
 	sys-devel/gettext
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen[dot] )"

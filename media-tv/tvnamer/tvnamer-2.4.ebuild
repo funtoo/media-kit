@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -16,7 +15,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/tvdb_api"
-DEPEND="${DEPEND}
-	dev-python/setuptools
-"
+RDEPEND=">=dev-python/tvdb_api-1.10_pre[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

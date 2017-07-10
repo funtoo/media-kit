@@ -3,8 +3,8 @@ media-gfx/asymptote python_single_target_python2_7
 =media-gfx/blender-2.78-r1 python_single_target_python3_5 python_targets_python3_5
 media-gfx/comix python_single_target_python2_7
 media-gfx/cptutils python_single_target_python2_7
-=media-gfx/cura-0.15.04.4 python_single_target_python2_7
 =media-gfx/cura-0.15.04.5_rc5 python_single_target_python2_7
+=media-gfx/cura-0.15.04.4 python_single_target_python2_7
 media-gfx/eom python_single_target_python2_7
 media-gfx/exact-image python_single_target_python2_7
 media-gfx/fr0st python_single_target_python2_7
@@ -22,6 +22,7 @@ media-libs/avidemux-plugins python_single_target_python2_7
 media-libs/hamlib python_single_target_python2_7
 =media-libs/lensfun-0.3.1 python_single_target_python2_7
 media-libs/libcaca python_single_target_python2_7
+media-libs/libffado python_single_target_python2_7
 media-libs/libgpod python_single_target_python2_7
 media-libs/libiptcdata python_single_target_python2_7
 media-libs/libkate python_single_target_python2_7
@@ -56,6 +57,7 @@ media-sound/soundconverter python_single_target_python2_7
 media-sound/tunapie python_single_target_python2_7
 media-tv/kodi python_single_target_python2_7
 media-tv/mythtv python_single_target_python2_7
+media-tv/plex-media-server python_single_target_python2_7
 media-video/griffith python_single_target_python2_7
 media-video/gtk-recordmydesktop python_single_target_python2_7
 media-video/photofilmstrip python_single_target_python2_7

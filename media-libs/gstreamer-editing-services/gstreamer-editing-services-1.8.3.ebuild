@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 python3_{4,5} )
@@ -19,6 +18,7 @@ IUSE="+introspection"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
+	${PYTHON_DEPS}
 	>=dev-libs/glib-2.40.0:2
 	dev-libs/libxml2:2
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
@@ -30,7 +30,6 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/gnonlin:1.0
 "
 DEPEND="${COMMON_DEPEND}
-	${PYTHON_DEPS}
 	>=dev-util/gtk-doc-am-1.3
 	virtual/pkgconfig
 "

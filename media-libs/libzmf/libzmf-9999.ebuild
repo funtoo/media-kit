@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -14,7 +13,7 @@ HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libzmf"
 LICENSE="MPL-2.0"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE="debug doc test tools"
 

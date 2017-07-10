@@ -1,12 +1,11 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit xfconf
 
 DESCRIPTION="Music Player Daemon (MPD) client for the Xfce desktop environment"
-HOMEPAGE="http://goodies.xfce.org/projects/applications/xfmpc"
+HOMEPAGE="https://goodies.xfce.org/projects/applications/xfmpc"
 SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"

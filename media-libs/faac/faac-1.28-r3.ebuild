@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
-inherit autotools eutils
+inherit autotools epatch epunt-cxx ltprune
 
 DESCRIPTION="Free MPEG-4 audio codecs by AudioCoding.com"
 HOMEPAGE="http://www.audiocoding.com"

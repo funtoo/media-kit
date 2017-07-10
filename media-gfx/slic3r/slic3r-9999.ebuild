@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -72,7 +71,7 @@ src_unpack() {
 
 src_prepare() {
 	pushd "${WORKDIR}/slic3r-${PV}" || die
-	eapply "${FILESDIR}/${P}-adjust_var_path.patch"
+	sed -i lib/Slic3r.pm -e "s@FindBin::Bin@FindBin::RealBin@g" || die
 	eapply_user
 	popd || die
 }
