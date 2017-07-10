@@ -1,9 +1,10 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
-KDE_HANDBOOK="false" # buildsystem applies broken python hacks, bug #614950
+KDE_HANDBOOK="optional"
 inherit kde5
 
 DESCRIPTION="Simple tag editor based on Qt"
@@ -12,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="acoustid flac kde mp3 mp4 +taglib vorbis"
 
 REQUIRED_USE="flac? ( vorbis )"
@@ -56,10 +57,7 @@ DEPEND="${COMMON_DEPEND}
 	$(add_qt_dep linguist-tools)
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-3.3.2-libdir.patch"
-	"${FILESDIR}/${PN}-3.4.4-deps.patch"
-)
+PATCHES=( "${FILESDIR}/${PN}-3.3.2-libdir.patch" )
 
 src_prepare() {
 	# overengineered upstream build system

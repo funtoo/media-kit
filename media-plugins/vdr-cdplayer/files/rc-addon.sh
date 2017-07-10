@@ -1,6 +1,7 @@
 #
 # rc-addon-script for plugin cdplayer
 #
+# $Id$
 
 . /etc/conf.d/vdr.cdplayer
 

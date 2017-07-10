@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -34,7 +35,7 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-8" # vlc - vlccore
 
 if [[ ${PV} != *9999 ]] ; then
-	KEYWORDS="amd64 arm ppc ppc64 -sparc x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd"
 fi
 
 IUSE="a52 aalib alsa altivec atmo +audioqueue +avcodec
@@ -68,7 +69,7 @@ RDEPEND="
 		libav? ( media-video/libav:0= )
 	)
 	bidi? ( dev-libs/fribidi:0 )
-	bluray? ( >=media-libs/libbluray-0.3:0= )
+	bluray? ( >=media-libs/libbluray-0.3:0 )
 	cddb? ( >=media-libs/libcddb-1.2:0 )
 	chromaprint? ( >=media-libs/chromaprint-0.6:0 )
 	dbus? ( >=sys-apps/dbus-1.6:0 )
@@ -110,7 +111,7 @@ RDEPEND="
 	musepack? ( >=media-sound/musepack-tools-444:0 )
 	ncurses? ( sys-libs/ncurses:0=[unicode] )
 	ogg? ( >=media-libs/libogg-1:0 )
-	opencv? ( >media-libs/opencv-2:0= )
+	opencv? ( >media-libs/opencv-2:0 )
 	opengl? ( virtual/opengl:0 >=x11-libs/libX11-1.3.99.901:0 )
 	opus? ( >=media-libs/opus-1.0.3:0 )
 	png? ( media-libs/libpng:0= sys-libs/zlib:0 )
@@ -307,7 +308,7 @@ src_configure() {
 	local myconf
 
 	# Compatibility fix for Samba 4.
-	use samba && append-cppflags "-I${EPREFIX}/usr/include/samba-4.0"
+	use samba && append-cppflags "-I/usr/include/samba-4.0"
 
 	# We need to disable -fstack-check if use >=gcc 4.8.0.
 	# See bug #499996
@@ -315,10 +316,10 @@ src_configure() {
 
 	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
-	append-ldflags "-L${EPREFIX}/usr/$(get_libdir)/sidplay/builders/"
+	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
 
 	if use truetype || use projectm ; then
-		local dejavu="${EPREFIX}/usr/share/fonts/dejavu/"
+		local dejavu="/usr/share/fonts/dejavu/"
 		myconf="--with-default-font=${dejavu}/DejaVuSans.ttf \
 				--with-default-font-family=Sans \
 				--with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
@@ -339,7 +340,7 @@ src_configure() {
 	econf \
 		${myconf} \
 		--enable-vlc \
-		--docdir='$(datarootdir)'/doc/${PF} \
+		--docdir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		--disable-optimizations \
 		--disable-update-check \

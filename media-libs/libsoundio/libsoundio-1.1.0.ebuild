@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,7 +12,7 @@ SRC_URI="http://libsound.io/release/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="alsa coreaudio examples jack pulseaudio static-libs"
 
 # Build fails with <=media-sound/jack2-1.9.10

@@ -1,5 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 S=${WORKDIR}/Propaganda
 DESCRIPTION="Propaganda Volume 1-14 + E. Tiling images for your desktop"

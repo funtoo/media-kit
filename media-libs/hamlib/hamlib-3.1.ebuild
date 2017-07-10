@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -45,12 +46,6 @@ src_prepare() {
 	sed -i -e "s#fix}/lib#fix}/$(get_libdir)/hamlib#" \
 		-e "s#fix}/include#fix}/include/hamlib#" \
 		hamlib.pc.in || die "sed failed"
-
-	# Correct install target to whatever INSTALLDIRS says and use vendor
-	# installdirs everywhere (bug #611550)
-	sed -i -e "s#install_site#install#"	\
-	-e 's#MAKEFILE="Hamlib-pl.mk"#MAKEFILE="Hamlib-pl.mk" INSTALLDIRS=vendor#' \
-	bindings/Makefile.am || die "sed failed patching for perl"
 
 	# make building of documentation compatible with autotools-utils
 	sed -i -e "s/doc:/html:/g" doc/Makefile.am || die "sed failed"

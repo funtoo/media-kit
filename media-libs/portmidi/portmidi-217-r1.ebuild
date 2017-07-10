@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -14,17 +15,17 @@ SRC_URI="mirror://sourceforge/portmedia/${PN}-src-${PV}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc java python static-libs test-programs"
 
-CDEPEND="media-libs/alsa-lib
-	python? ( ${PYTHON_DEPS} )"
+CDEPEND="media-libs/alsa-lib"
 RDEPEND="${CDEPEND}
 	java? ( >=virtual/jre-1.6 )"
 DEPEND="${CDEPEND}
 	app-arch/unzip
 	java? ( >=virtual/jdk-1.6 )
-	python? ( >=dev-python/cython-0.12.1[${PYTHON_USEDEP}] )
+	python? ( ${PYTHON_DEPS}
+		>=dev-python/cython-0.12.1[${PYTHON_USEDEP}] )
 	doc? (
 		app-doc/doxygen
 		dev-texlive/texlive-fontsrecommended

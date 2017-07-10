@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -22,6 +23,16 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
 "
+
+src_prepare() {
+	sed -i  -e '/Encoding/d' \
+		-e '/Version/d' \
+		-e '/MimeType/s/$/&;/' \
+		-e '/Categories/s/Application;//' \
+		cropgui.desktop || die 'sed on cropgui.desktop failed'
+
+	eapply_user
+}
 
 install_cropgui_wrapper() {
 	python_domodule cropgtk.py cropgui_common.py filechooser.py cropgui.glade

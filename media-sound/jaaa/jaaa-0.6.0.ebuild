@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-DESCRIPTION="JACK and ALSA Audio Analyser is an audio signal generator and spectrum analyser"
+DESCRIPTION="The JACK and ALSA Audio Analyser is an audio signal generator and spectrum analyser"
 HOMEPAGE="http://kokkinizita.linuxaudio.org/linuxaudio/"
 SRC_URI="http://kokkinizita.linuxaudio.org/linuxaudio/downloads/${P}.tar.bz2"
 

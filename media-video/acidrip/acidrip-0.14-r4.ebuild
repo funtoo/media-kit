@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit perl-app
@@ -14,7 +15,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="encode"
 
 RDEPEND="dev-lang/perl:=
-	dev-perl/Gtk2
+	dev-perl/gtk2-perl
 	media-video/lsdvd
 	media-video/mplayer[encode]
 	encode? ( >=media-sound/lame-3.92 )"

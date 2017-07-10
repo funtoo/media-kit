@@ -1,3 +1,5 @@
+# $Id$
+
 # Global config file for vdr rc-scripts
 
 # The default mount script is "mount.sh". This script is called from the

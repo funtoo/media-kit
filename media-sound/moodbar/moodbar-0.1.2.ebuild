@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="The moodbar tool and gstreamer plugin for Amarok"
-HOMEPAGE="https://userbase.kde.org/Amarok/Manual/Various/Moodbar"
+HOMEPAGE="https://amarok.kde.org/wiki/Moodbar"
 SRC_URI="http://pwsp.net/~qbob/moodbar-${PV}.tar.gz"
 
 LICENSE="GPL-2"

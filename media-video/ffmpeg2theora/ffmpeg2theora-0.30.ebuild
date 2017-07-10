@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils toolchain-funcs scons-utils
@@ -14,7 +15,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="kate libav"
 
 RDEPEND="
-	!libav? ( media-video/ffmpeg:0=[postproc] )
+	!libav? ( media-video/ffmpeg:0= )
 	libav? ( media-libs/libpostproc:0=
 		media-video/libav:0= )
 	>=media-libs/libvorbis-1.1

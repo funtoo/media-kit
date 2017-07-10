@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -18,8 +19,7 @@ IUSE="doc cpu_flags_x86_sse cpu_flags_x86_sse2 test"
 
 RDEPEND=">=dev-libs/glib-2.28
 	media-libs/libpng:0=
-	sys-libs/zlib:=
-	${PYTHON_DEPS}"
+	sys-libs/zlib:="
 DEPEND="${RDEPEND}
 	doc? (
 		app-doc/doxygen

@@ -1,7 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=4
+inherit confutils
 
 SRC_PREFIX="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.1/misc/FontPack910_"
 #SRC_SUFFIX="_i386-solaris.tar.bz2"

@@ -16,6 +16,5 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">christophgysin/pasystray</remote-id>
-		<bugs-to>https://github.com/christophgysin/pasystray/issues</bugs-to>
 	</upstream>
 </pkgmetadata>

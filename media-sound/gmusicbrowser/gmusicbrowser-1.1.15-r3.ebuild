@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,7 +12,7 @@ SRC_URI="http://${PN}.org/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dbus doc extras gstreamer libnotify mplayer"
 
 GSTREAMER_DEPEND="dev-perl/Glib-Object-Introspection"
@@ -24,7 +25,7 @@ OTHER_DEPEND="
 	media-sound/vorbis-tools"
 
 RDEPEND="dev-lang/perl
-	dev-perl/Gtk2
+	dev-perl/gtk2-perl
 	virtual/perl-MIME-Base64
 	|| ( net-misc/wget dev-perl/AnyEvent-HTTP )
 	dbus? ( dev-perl/Net-DBus )

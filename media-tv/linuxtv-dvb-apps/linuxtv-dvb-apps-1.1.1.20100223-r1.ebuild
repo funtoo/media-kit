@@ -1,40 +1,38 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
 inherit eutils multilib toolchain-funcs vcs-snapshot
 
-HOMEPAGE="https://www.linuxtv.org/"
-DESCRIPTION="Small utils for DVB to scan, zap, view signal strength, ..."
+HOMEPAGE="http://www.linuxtv.org/"
+DESCRIPTION="small utils for DVB to scan, zap, view signal strength, ..."
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="alevt usb"
+IUSE="alevt test usb"
 
-RDEPEND="
-	alevt? (
-		!media-video/alevt
-		media-libs/libpng:0=
+RDEPEND="alevt? ( !media-video/alevt
+		media-libs/libpng
 		media-libs/zvbi[v4l]
 		sys-libs/zlib
-		x11-libs/libX11
-	)
+		x11-libs/libX11 )
 	usb? ( virtual/libusb:0 )
-"
+	!dev-db/xbase"
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	virtual/linuxtv-dvb-headers
-"
+	virtual/linuxtv-dvb-headers"
+# !dev-db/xbase (bug #208596)
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-alevt.patch
 
-	# do not compile test-progs, incompatible with videodev2.h
+	# do not compile test-progs, incompartible with videodev2.h
 	sed -e '/-C test/d' \
 		-i Makefile || die
 

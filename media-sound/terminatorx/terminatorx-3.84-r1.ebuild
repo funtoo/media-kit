@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -7,8 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2 eutils
 
 MY_P=${P/terminatorx/terminatorX}
-
-DESCRIPTION="Realtime audio synthesizer allowing you to 'scratch' on sampled audio data"
+DESCRIPTION='realtime audio synthesizer that allows you to "scratch" on digitally sampled audio data'
 HOMEPAGE="http://www.terminatorx.org/"
 SRC_URI="http://www.terminatorx.org/dist/${MY_P}.tar.gz"
 

@@ -1,4 +1,5 @@
 # /etc/conf.d/vdr.vcd:
+# $Id$
 
 # Config file for vdr plugin vcd
 

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -9,13 +10,12 @@ inherit cmake-utils eutils flag-o-matic python-single-r1
 
 SLOT="2.6"
 
-DESCRIPTION="Plugins for the video editor media-video/avidemux"
+DESCRIPTION="Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 IUSE="aac aften a52 alsa amr debug dts fontconfig fribidi jack lame libsamplerate cpu_flags_x86_mmx opengl oss pulseaudio qt4 vorbis truetype twolame xv xvid x264 vdpau vpx"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 KEYWORDS="~amd64 ~x86"
 
 MY_PN="${PN/-plugins/}"
@@ -29,7 +29,7 @@ else
 	SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}/${PV}/${MY_P}.tar.gz"
 fi
 
-RDEPEND="
+DEPEND="
 	~media-libs/avidemux-core-${PV}:${SLOT}[vdpau?]
 	~media-video/avidemux-${PV}:${SLOT}[opengl?,qt4?]
 	>=dev-lang/spidermonkey-1.5-r2:0=
@@ -51,6 +51,7 @@ RDEPEND="
 		libsamplerate? ( media-libs/libsamplerate:0 )
 	)
 	lame? ( media-sound/lame:0 )
+	oss? ( virtual/os-headers:0 )
 	pulseaudio? ( media-sound/pulseaudio:0 )
 	truetype? ( media-libs/freetype:2 )
 	twolame? ( media-sound/twolame:0 )
@@ -65,8 +66,7 @@ RDEPEND="
 	vpx? ( media-libs/libvpx:0 )
 	${PYTHON_DEPS}
 "
-DEPEND="${RDEPEND}
-	oss? ( virtual/os-headers:0 )"
+RDEPEND="$DEPEND"
 
 S="${WORKDIR}/${MY_P}"
 

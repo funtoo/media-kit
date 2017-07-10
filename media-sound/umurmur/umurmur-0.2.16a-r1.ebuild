@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -11,26 +12,28 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
-IUSE="gnutls libressl shm"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="gnutls libressl polarssl shm"
 
-# ssl-provider precendence: gnutls, libressl
+# ssl-provider precendence: polarssl, gnutls, libressl
 # and openssl if none specified
 DEPEND=">=dev-libs/protobuf-c-1.0.0_rc2
 	dev-libs/libconfig
-	gnutls? ( >=net-libs/gnutls-3.0.0 )
-	libressl? ( !gnutls? ( dev-libs/libressl ) )
-	!gnutls? ( !libressl? ( dev-libs/openssl:0 ) )"
+	polarssl? ( >=net-libs/polarssl-1.0.0 )
+	gnutls? ( !polarssl? ( >=net-libs/gnutls-3.0.0 ) )
+	libressl? ( !polarssl? ( !gnutls? ( dev-libs/libressl ) ) )
+	!gnutls? ( !polarssl? ( !libressl? ( dev-libs/openssl:0 ) ) )"
 
 RDEPEND="${DEPEND}"
 
 DOC_CONTENTS="
-	A configuration file has been installed at /etc/umurmur/umurmur.conf - you
-	may	want to review it. See also\n
+	A configuration file has been installed at /etc/umurmur.conf - you may
+	want to review it. See also\n
 	https://github.com/umurmur/umurmur/wiki/Configuration "
 
 pkg_pretend() {
 	local ssl_provider=(  )
+	use polarssl && ssl_provider+=( polarssl )
 	use gnutls && ssl_provider+=( gnutls )
 	use libressl && ssl_provider+=( libressl )
 
@@ -54,7 +57,7 @@ src_configure() {
 	local myconf
 
 	econf \
-		--with-ssl=$(usev gnutls || echo openssl) \
+		--with-ssl=$(usev polarssl || usev gnutls || echo openssl) \
 		$(use_enable shm shmapi)
 }
 
@@ -86,4 +89,12 @@ src_install() {
 
 pkg_postinst() {
 	readme.gentoo_print_elog
+
+	if use polarssl ; then
+		elog
+		elog "Because you have enabled PolarSSL support, umurmurd will use a"
+		elog "predefined test-certificate and key if none are configured, which"
+		elog "is insecure. See https://code.google.com/p/umurmur/wiki/Installing02x#Installing_uMurmur_with_PolarSSL_support"
+		elog "for more information on how to create your certificate and key"
+	fi
 }

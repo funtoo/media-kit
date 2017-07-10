@@ -1,3 +1,4 @@
+# $Id$
 #
 # rc-addon-script for plugin skinenigmang
 #

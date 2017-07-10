@@ -7,4 +7,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=http://johnst.org/sw/exiftags/exiftags-1.01.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=ea09ac7bfb99836d049d89552ae3c4e8
+_md5_=8cbe11e245f851bb8e7eae1da6f97961

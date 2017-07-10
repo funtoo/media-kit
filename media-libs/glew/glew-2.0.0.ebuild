@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
-
-inherit multilib-minimal toolchain-funcs versionator
+inherit multilib multilib-minimal toolchain-funcs versionator
 
 DESCRIPTION="The OpenGL Extension Wrangler Library"
 HOMEPAGE="http://glew.sourceforge.net/"
@@ -14,17 +14,14 @@ SLOT="0/$(get_version_component_range 1-2)"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs"
 
-DEPEND="
-	>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+RDEPEND=">=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
 	>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
 	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
 	>=x11-libs/libXi-1.7.2[${MULTILIB_USEDEP}]
 	>=x11-libs/libXmu-1.1.1-r1[${MULTILIB_USEDEP}]
-"
-RDEPEND="${DEPEND}
-	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
-"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	local PATCHES=( "${FILESDIR}"/${P}-install-headers.patch )

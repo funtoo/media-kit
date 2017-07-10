@@ -1,8 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python3_{4,5,6} )
+PYTHON_COMPAT=( python3_4 )
 
 inherit distutils-r1
 
@@ -15,16 +16,14 @@ KEYWORDS="amd64"
 SLOT="0"
 IUSE="mpris"
 
-RDEPEND="
-	dev-python/pillow[${PYTHON_USEDEP}]
-	dev-python/plyr[${PYTHON_USEDEP}]
-	dev-python/psutil[${PYTHON_USEDEP}]
-	dev-python/urwid[${PYTHON_USEDEP}]
-	mpris? (
-		dev-python/dbus-python[${PYTHON_USEDEP}]
-		dev-python/pygobject:3[${PYTHON_USEDEP}]
-	)
-"
+RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]
+		dev-python/plyr[${PYTHON_USEDEP}]
+		dev-python/psutil[${PYTHON_USEDEP}]
+		dev-python/urwid[${PYTHON_USEDEP}]
+		mpris? (
+			dev-python/dbus-python[${PYTHON_USEDEP}]
+			dev-python/pygobject:3[${PYTHON_USEDEP}]
+		)"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_prepare_all() {

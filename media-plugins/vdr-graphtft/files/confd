@@ -1,4 +1,5 @@
 # /etc/conf.d/vdr.graphtft
+# $Id$
 
 ####### Global config for Graphtft ####################
 

@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,10 +32,7 @@ RDEPEND="
 	>=media-libs/gst-plugins-base-0.10.29:0.10[introspection?,${MULTILIB_USEDEP}]
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
-	python? (
-		${PYTHON_DEPS}
-		dev-python/gst-python:0.10[${PYTHON_USEDEP}]
-	)
+	python? ( dev-python/gst-python:0.10[${PYTHON_USEDEP}] )
 	vala? ( $(vala_depend) )
 "
 DEPEND="${RDEPEND}

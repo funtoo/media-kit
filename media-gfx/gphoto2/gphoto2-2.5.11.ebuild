@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit autotools
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 ~sparc x86"
 IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
@@ -31,10 +32,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	default
-	if ! use exif ; then
-		# Remove tests that require EXIF to pass, bug 610024
-		rm "${S}"/tests/data/test0{35,36,37,40}* || die
-	fi
 	# Leave GCC debug builds under user control
 	sed -r '/(C|LD)FLAGS/ s/ -g( |")/\1/' \
 		-i configure{.ac,} || die

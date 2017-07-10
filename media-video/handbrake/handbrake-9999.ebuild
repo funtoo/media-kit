@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -31,14 +32,13 @@ RDEPEND="
 	dev-libs/jansson
 	media-libs/a52dec
 	media-libs/libass:=
-	>=media-libs/libbluray-1.0
+	media-libs/libbluray
 	media-libs/libdvdnav
 	media-libs/libdvdread
 	media-libs/libsamplerate
 	media-libs/libtheora
 	media-libs/libvorbis
 	media-libs/libvpx
-	media-libs/opus
 	media-libs/x264:=
 	media-sound/lame
 	sys-libs/zlib
@@ -133,7 +133,7 @@ src_compile() {
 src_install() {
 	emake -C build DESTDIR="${D}" install
 
-	dodoc README.markdown AUTHORS.markdown NEWS.markdown THANKS.markdown
+	dodoc AUTHORS CREDITS NEWS THANKS TRANSLATIONS
 }
 
 pkg_postinst() {

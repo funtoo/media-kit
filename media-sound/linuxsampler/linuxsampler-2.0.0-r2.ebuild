@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -17,7 +18,7 @@ IUSE="doc jack lv2 sqlite static-libs"
 RDEPEND="sqlite? ( >=dev-db/sqlite-3.3 )
 	>=media-libs/libgig-4.0.0
 	media-libs/alsa-lib
-	jack? ( virtual/jack )"
+	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )

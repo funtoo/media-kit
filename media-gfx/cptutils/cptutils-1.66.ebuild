@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 CDEPEND="dev-libs/libxml2:2
 	media-libs/libpng:0="

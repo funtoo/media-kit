@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -25,7 +26,7 @@ RDEPEND="dev-libs/atk
 	dev-libs/glib:2
 	gnome-base/libglade:2.0
 	media-sound/fluidsynth
-	virtual/jack
+	media-sound/jack-audio-connection-kit
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2

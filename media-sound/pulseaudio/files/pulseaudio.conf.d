@@ -1,4 +1,5 @@
 # Config file for /etc/init.d/pulseaudio
+# $Id$
 
 # For more see "pulseaudio -h".
 

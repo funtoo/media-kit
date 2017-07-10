@@ -1,4 +1,5 @@
 # /etc/conf.d/vdr.graphlcd
+# $Id$
 
 ####### Global config for Graphlcd ####################
 #

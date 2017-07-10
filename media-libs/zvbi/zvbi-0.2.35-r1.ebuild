@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -10,7 +11,7 @@ HOMEPAGE="http://zapping.sourceforge.net"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc dvb nls static-libs v4l X"
 
 RDEPEND=">=media-libs/libpng-1.5.18:0=[${MULTILIB_USEDEP}]
@@ -24,7 +25,6 @@ DEPEND="${RDEPEND}
 	X? ( x11-libs/libXt )"
 
 src_prepare() {
-	epatch "${FILESDIR}/tests-gcc7.patch"
 	elibtoolize
 }
 

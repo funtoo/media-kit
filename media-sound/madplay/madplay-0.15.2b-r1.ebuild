@@ -1,8 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=4
-inherit autotools epatch epunt-cxx
+inherit autotools eutils
 
 DESCRIPTION="The MAD audio player"
 HOMEPAGE="http://www.underbit.com/products/mad/"

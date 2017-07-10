@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -16,13 +17,12 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples +gtk2 +tools"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="media-libs/lv2
 	>=dev-libs/boost-1.40.0
-	${PYTHON_DEPS}
 	gtk2? ( dev-cpp/gtkmm:2.4 )"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	doc? ( app-doc/doxygen
 		media-gfx/graphviz )
 	virtual/pkgconfig"

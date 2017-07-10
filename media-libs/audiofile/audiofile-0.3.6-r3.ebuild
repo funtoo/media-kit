@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -22,7 +23,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-0.3.6-gcc6-build-fixes.patch
 	"${FILESDIR}"/${PN}-0.3.6-system-gtest.patch
 	"${FILESDIR}"/${PN}-0.3.6-CVE-2015-7747.patch
-	"${FILESDIR}"/${PN}-0.3.6-mingw32.patch
 )
 
 src_prepare() {

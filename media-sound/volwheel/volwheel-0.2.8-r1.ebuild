@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit eutils gnome2-utils
@@ -15,7 +16,7 @@ IUSE="alsa"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
-	dev-perl/Gtk2
+	dev-perl/gtk2-perl
 	alsa? ( media-sound/alsa-utils )"
 
 src_prepare() {

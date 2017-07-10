@@ -1,3 +1,4 @@
+# $Id$
 #
 # rc-addon plugin-startup-skript for vdr-skinelchi
 #

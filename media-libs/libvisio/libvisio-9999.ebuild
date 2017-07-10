@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -20,6 +21,7 @@ RDEPEND="
 	dev-libs/icu:=
 	dev-libs/librevenge
 	dev-libs/libxml2
+	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
 	dev-lang/perl
@@ -39,6 +41,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-werror \
 		$(use_with doc docs) \
 		$(use_enable static-libs static) \
 		$(use_enable test tests) \

@@ -1,11 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 inherit xfconf
 
 DESCRIPTION="a simple media player based on the GStreamer framework for the Xfce4 desktop"
-HOMEPAGE="https://docs.xfce.org/apps/parole/start"
+HOMEPAGE="http://goodies.xfce.org/projects/applications/parole/"
 SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"

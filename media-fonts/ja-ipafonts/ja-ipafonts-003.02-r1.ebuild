@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -7,7 +8,7 @@ inherit font
 
 MY_P="IPAfont${PV/.}"
 
-DESCRIPTION="TrueType fonts developed by Japanese Information-technology Promotion Agency"
+DESCRIPTION="Japanese TrueType fonts developed by IPA (Information-technology Promotion Agency, Japan)"
 HOMEPAGE="http://ipafont.ipa.go.jp/"
 SRC_URI="http://dl.ipafont.ipa.go.jp/IPAfont/${MY_P}.zip"
 

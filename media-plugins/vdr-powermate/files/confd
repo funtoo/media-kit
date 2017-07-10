@@ -1,4 +1,5 @@
 # /etc/conf.d/vdr.powermate:
+# $Id$
 
 # Set to powermat device (/dev/input/event?)
 # Only needed to change if autodetect fails.

@@ -1,28 +1,30 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI="6"
+EAPI="5"
 
-inherit cmake-utils
+inherit cmake-utils eutils flag-o-matic
+
+SLOT="2.6"
 
 DESCRIPTION="Core libraries for a video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
-SLOT="2.6"
-IUSE="debug nls nvenc sdl system-ffmpeg vaapi vdpau video_cards_fglrx xv"
+IUSE="debug nls sdl system-ffmpeg vaapi vdpau video_cards_fglrx xv"
+KEYWORDS="~amd64 ~x86"
 
+MY_PN="${PN/-core/}"
 if [[ ${PV} == *9999* ]] ; then
-	EGIT_REPO_URI="https://github.com/mean00/avidemux2.git"
-	EGIT_CHECKOUT_DIR=${WORKDIR}
+	KEYWORDS=""
+	EGIT_REPO_URI="git://gitorious.org/${MY_PN}2-6/${MY_PN}2-6.git https://git.gitorious.org/${MY_PN}2-6/${MY_PN}2-6.git"
 
-	inherit git-r3
+	inherit git-2
 else
-	MY_PN="${PN/-core/}"
 	MY_P="${MY_PN}_${PV}"
 	SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}/${PV}/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
 fi
 
 # Trying to use virtual; ffmpeg misses aac,cpudetection USE flags now though, are they needed?
@@ -34,7 +36,6 @@ DEPEND="
 	xv? ( x11-libs/libXv:0 )
 	vaapi? ( x11-libs/libva:0 )
 	vdpau? ( x11-libs/libvdpau:0 )
-	nvenc? ( media-video/nvidia_video_sdk )
 	video_cards_fglrx? (
 		|| ( >=x11-drivers/ati-drivers-14.12-r3
 			x11-libs/xvba-video:0 )
@@ -52,9 +53,13 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
-CMAKE_USE_DIR="${S}/${PN/-/_}"
+BUILD_DIR="${S}/buildCore"
+
+DOCS=( AUTHORS README )
 
 src_prepare() {
+	mkdir "${BUILD_DIR}" || die "Can't create build folder."
+
 	cmake-utils_src_prepare
 
 	if use system-ffmpeg ; then
@@ -65,10 +70,12 @@ src_prepare() {
 		sed -i -e 's/include(admFFmpegUtil)//g' avidemux/commonCmakeApplication.cmake || die "${error}"
 		sed -i -e '/registerFFmpeg/d' avidemux/commonCmakeApplication.cmake || die "${error}"
 		sed -i -e 's/include(admFFmpegBuild)//g' avidemux_core/CMakeLists.txt || die "${error}"
+	else
+		# Avoid existing avidemux installations from making the build process fail, bug #461496.
+		sed -i -e "s:getFfmpegLibNames(\"\${sourceDir}\"):getFfmpegLibNames(\"${S}/buildCore/ffmpeg/source/\"):g" cmake/admFFmpegUtil.cmake \
+			|| die "Failed to avoid existing avidemux installation from making the build fail."
 	fi
-}
 
-src_configure() {
 	# Add lax vector typing for PowerPC.
 	if use ppc || use ppc64 ; then
 		append-cflags -flax-vector-conversions
@@ -76,23 +83,24 @@ src_configure() {
 
 	# See bug 432322.
 	use x86 && replace-flags -O0 -O1
+}
 
-	local mycmakeargs=(
+src_configure() {
+	local mycmakeargs="
 		-DAVIDEMUX_SOURCE_DIR='${S}'
-		-DGETTEXT="$(usex nls)"
-		-DSDL="$(usex sdl)"
-		-DLIBVA="$(usex vaapi)"
-		-DVDPAU="$(usex vdpau)"
-		-DXVBA="$(usex video_cards_fglrx)"
-		-DXVIDEO="$(usex xv)"
-		-DNVENC="$(usex nvenc)"
-	)
+		$(cmake-utils_use nls GETTEXT)
+		$(cmake-utils_use sdl SDL)
+		$(cmake-utils_use vaapi LIBVA)
+		$(cmake-utils_use vdpau VDPAU)
+		$(cmake-utils_use video_cards_fglrx XVBA)
+		$(cmake-utils_use xv XVIDEO)
+	"
 
 	if use debug ; then
-		mycmakeargs+=( -DVERBOSE=1 -DADM_DEBUG=1 )
+		mycmakeargs+=" -DVERBOSE=1 -DCMAKE_BUILD_TYPE=Debug -DADM_DEBUG=1"
 	fi
 
-	cmake-utils_src_configure
+	CMAKE_USE_DIR="${S}"/avidemux_core cmake-utils_src_configure
 }
 
 src_compile() {

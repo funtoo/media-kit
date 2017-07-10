@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 inherit toolchain-funcs
@@ -11,7 +12,7 @@ SRC_URI="system-libs? ( mirror://sourceforge/pmt/${P}-nolib.tar.xz )
 
 LICENSE="pngcrush"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+system-libs"
 
 RDEPEND="

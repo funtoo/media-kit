@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=6
 
@@ -49,7 +50,6 @@ DEPEND="${CDEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		-DCMAKE_DISABLE_FIND_PACKAGE_PocketSphinx=ON # bug 616706
 		$(cmake-utils_use_find_package mpv MPV)
 		$(cmake-utils_use_find_package unicode ICU)
 		$(cmake-utils_use_find_package xine Xine)

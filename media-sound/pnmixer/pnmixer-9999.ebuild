@@ -1,10 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=5
 
 WANT_LIBTOOL=none
-inherit cmake-utils gnome2-utils git-r3
+inherit autotools eutils gnome2-utils git-r3
 
 DESCRIPTION="Volume mixer for the system tray"
 HOMEPAGE="https://github.com/nicklan/pnmixer"
@@ -15,23 +16,31 @@ EGIT_BRANCH="master"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="libnotify"
+IUSE="debug libnotify"
 
 RDEPEND="dev-libs/glib:2
 	media-libs/alsa-lib
-	>=x11-libs/gtk+-3.12:3
+	>=x11-libs/gtk+-3.6:3
 	x11-libs/libX11
 	libnotify? ( x11-libs/libnotify )"
 DEPEND="${RDEPEND}
-	sys-devel/gettext
+	dev-util/intltool
 	virtual/pkgconfig"
 
-src_configure() {
-	local mycmakeargs=(
-		-DWITH_LIBNOTIFY="$(usex libnotify)"
-	)
+src_prepare() {
+	eautoreconf
+}
 
-	cmake-utils_src_configure
+src_configure() {
+	econf \
+		$(use_with libnotify) \
+		$(use_enable debug) \
+		--enable-minimal-flags \
+		--with-gtk3
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {

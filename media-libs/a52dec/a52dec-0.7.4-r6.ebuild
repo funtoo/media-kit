@@ -1,8 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
-inherit autotools epatch flag-o-matic ltprune
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="library for decoding ATSC A/52 streams used in DVD"
 HOMEPAGE="http://liba52.sourceforge.net/"

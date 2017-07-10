@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -14,7 +15,7 @@ SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r2
@@ -53,7 +54,7 @@ multilib_src_test() {
 multilib_src_install() {
 	cd src
 	emake INSTALL_PLUGINS_DIR="/usr/$(get_libdir)/ladspa" \
-		DESTDIR="${ED}" \
+		DESTDIR="${D}" \
 		MKDIR_P="mkdir -p" \
 		install
 }
@@ -66,5 +67,5 @@ multilib_src_install_all() {
 	# emul-linux-soundlibs doesnt seem to install this, so keep it only for the
 	# default abi.
 	dodir /etc/env.d
-	echo "LADSPA_PATH=${EPREFIX}/usr/$(get_libdir)/ladspa" > "${ED}/etc/env.d/60ladspa"
+	echo "LADSPA_PATH=/usr/$(get_libdir)/ladspa" > "${D}/etc/env.d/60ladspa"
 }

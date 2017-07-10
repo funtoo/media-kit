@@ -1,11 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
-EAPI=6
+EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
-DESCRIPTION="Commandline program to transcode shoutcast/icecast streams to different bitrates"
+DESCRIPTION="Command line application to transcode shoutcast/icecast streams to different bitrates"
 HOMEPAGE="http://www.oddsock.org"
 SRC_URI="http://www.oddsock.org/tools/streamTranscoder/${P}.tar.gz"
 
@@ -22,10 +23,12 @@ RDEPEND=">=media-libs/libogg-1.1
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${P}-build.patch )
-
 src_prepare() {
-	default
-	mv configure.{in,ac} || die
+	epatch "${FILESDIR}"/${P}-build.patch
 	eautoreconf
+}
+
+src_install() {
+	default
+	dodoc AUTHORS README
 }

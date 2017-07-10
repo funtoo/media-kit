@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 
@@ -12,7 +13,7 @@ else
 	SRC_URI="
 		https://bitbucket.org/multicoreware/x265/downloads/${PN}_${PV}.tar.gz
 		http://ftp.videolan.org/pub/videolan/x265/${PN}_${PV}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="Library for encoding video streams into the H.265/HEVC format"
@@ -20,8 +21,8 @@ HOMEPAGE="http://x265.org/"
 
 LICENSE="GPL-2"
 # subslot = libx265 soname
-SLOT="0/116"
-IUSE="+10bit +12bit cpu_flags_arm_neon numa pic power8 test"
+SLOT="0/111"
+IUSE="+10bit +12bit neon numa pic test"
 
 ASM_DEPEND=">=dev-lang/yasm-1.2.0"
 RDEPEND="numa? ( >=sys-process/numactl-2.0.10-r1[${MULTILIB_USEDEP}] )"
@@ -29,11 +30,7 @@ DEPEND="${RDEPEND}
 	abi_x86_32? ( ${ASM_DEPEND} )
 	abi_x86_64? ( ${ASM_DEPEND} )"
 
-PATCHES=(
-	"${FILESDIR}/arm.patch"
-	"${FILESDIR}/neon.patch"
-	"${FILESDIR}/ppc64.patch"
-)
+PATCHES=( "${FILESDIR}/arm.patch" "${FILESDIR}/neon.patch" "${FILESDIR}/ppc64.patch" )
 
 src_unpack() {
 	if [[ ${PV} = 9999* ]]; then
@@ -143,8 +140,6 @@ multilib_src_configure() {
 		$(cmake-utils_use_enable test TESTS)
 		$(multilib_is_native_abi || echo "-DENABLE_CLI=OFF")
 		-DENABLE_LIBNUMA=$(usex numa ON OFF)
-		-DCPU_POWER8=$(usex power8 ON OFF)
-		-DENABLE_ALTIVEC=$(usex power8 ON OFF)
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 	)
 
@@ -158,8 +153,8 @@ multilib_src_configure() {
 		# bug #510890
 		myabicmakeargs+=( -DENABLE_ASSEMBLY=OFF )
 	elif [[ ${ABI} = arm ]] ; then
-		myabicmakeargs+=( -DENABLE_ASSEMBLY=$(usex pic OFF $(usex cpu_flags_arm_neon ON OFF)) )
-		use cpu_flags_arm_neon && use pic && ewarn "PIC has been requested but arm neon asm is not PIC-safe, disabling it."
+		myabicmakeargs+=( -DENABLE_ASSEMBLY=$(usex pic OFF $(usex neon ON OFF)) )
+		use neon && use pic && ewarn "PIC has been requested but arm neon asm is not PIC-safe, disabling it."
 	fi
 
 	local MULTIBUILD_VARIANTS=( $(x265_get_variants) )

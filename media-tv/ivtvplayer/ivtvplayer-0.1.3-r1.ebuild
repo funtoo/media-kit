@@ -1,5 +1,6 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="2"
 
@@ -17,7 +18,7 @@ RDEPEND="media-tv/v4l-utils
 		media-video/mplayer[dvb] )
 	 media-sound/alsa-utils
 	 dev-perl/XML-Simple
-	 gtk? ( dev-perl/Gtk2 )
+	 gtk? ( dev-perl/gtk2-perl )
 	 xosd? ( dev-perl/X-Osd )
 	 >=dev-perl/Lirc-Client-1.50"
 DEPEND=""

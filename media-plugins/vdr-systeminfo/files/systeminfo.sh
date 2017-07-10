@@ -5,6 +5,8 @@
 # See the main source file 'systeminfo.c' for copyright information and
 # how to reach the author.
 #
+# $Id$
+#
 # possible output formats:
 # (blanks around tabs only for better reading)
 # 1)   Name \t Value         	displays Name and Value

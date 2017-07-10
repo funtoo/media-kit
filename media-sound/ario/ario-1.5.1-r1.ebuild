@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI=5
 GNOME2_LA_PUNT=yes
@@ -32,7 +33,6 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	taglib? ( media-libs/taglib )
 	zeroconf? ( net-dns/avahi )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext"
