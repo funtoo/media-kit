@@ -12,7 +12,7 @@ SRC_URI="https://github.com/cisco/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/mozilla/gmp-api/archive/Firefox${MOZVER}.tar.gz -> gmp-api-Firefox${MOZVER}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="+plugin utils"
 
 RESTRICT="bindist"
@@ -25,7 +25,7 @@ DEPEND="
 DOCS=( LICENSE CONTRIBUTORS README.md )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-pkgconfig-pathfix.patch
+	epatch "${FILESDIR}"/${PN}-1.5.0-pkgconfig-pathfix.patch
 	multilib_copy_sources
 }
 
