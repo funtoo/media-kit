@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://kaffeine.kde.org/"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2+ handbook? ( FDL-1.3 )"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="
@@ -55,6 +55,7 @@ src_prepare() {
 		-e "/find_package(KF5DocTools CONFIG REQUIRED)/d" \
 		-e "/kdoctools_install(po)/d" \
 		CMakeLists.txt || die
+	eapply ${FILESDIR}/${PN}-ki18n.patch
 }
 
 src_configure() {
