@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 >=media-libs/gstreamer-1.6.0 >=media-video/ffmpeg-3.1.0:= media-libs/libv4l jack? ( virtual/jack ) pulseaudio? ( media-sound/pulseaudio ) >=sys-kernel/linux-headers-3.6 virtual/pkgconfig doc? ( dev-qt/qdoc )
+DESCRIPTION=A full featured webcam capture application
+EAPI=6
+HOMEPAGE=https://webcamoid.github.io
+IUSE=doc headers jack pulseaudio linguas_ca linguas_de linguas_el linguas_es linguas_et linguas_fr linguas_gl linguas_it linguas_ja linguas_ko linguas_nl linguas_pt linguas_ru linguas_zh_CN linguas_zh_TW
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 >=media-libs/gstreamer-1.6.0 >=media-video/ffmpeg-3.1.0:= media-libs/libv4l jack? ( virtual/jack ) pulseaudio? ( media-sound/pulseaudio )
+SLOT=0
+SRC_URI=https://github.com/webcamoid/webcamoid/archive/7.2.1.tar.gz -> webcamoid-7.2.1.tar.gz
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	l10n	2c2e15383ba891d642f51896a7f0ecfe	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=5562cc41e155592d18efe0ae6b9bd876
