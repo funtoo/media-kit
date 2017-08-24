@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -15,8 +14,8 @@ DESCRIPTION="Digital photo management application"
 HOMEPAGE="https://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
-IUSE="addressbook calendar gphoto2 jpeg2k +kipi +lensfun marble semantic-desktop mysql opengl openmp +panorama scanner video X"
+KEYWORDS="amd64 x86"
+IUSE="addressbook calendar gphoto2 jpeg2k +kipi +lensfun marble semantic-desktop mysql opengl openmp +panorama scanner X"
 
 if [[ ${KDE_BUILD_TYPE} != live ]]; then
 	MY_PV=${PV/_/-}
@@ -27,6 +26,8 @@ if [[ ${KDE_BUILD_TYPE} != live ]]; then
 	S="${WORKDIR}/${MY_P}/core"
 fi
 
+# TODO: Package QtAV http://www.qtav.org/
+# video? ( media-video/qtav )
 COMMON_DEPEND="
 	$(add_frameworks_dep kconfig)
 	$(add_frameworks_dep kconfigwidgets)
@@ -81,7 +82,6 @@ COMMON_DEPEND="
 	panorama? ( $(add_frameworks_dep threadweaver) )
 	scanner? ( $(add_kdeapps_dep libksane) )
 	semantic-desktop? ( $(add_frameworks_dep kfilemetadata) )
-	video? ( $(add_qt_dep qtmultimedia 'widgets') )
 	X? (
 		$(add_qt_dep qtx11extras)
 		x11-libs/libX11
@@ -106,12 +106,7 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT=test
 # bug 366505
 
-PATCHES=(
-	"${FILESDIR}/${P}-db-lock.patch"
-	"${FILESDIR}/${P}-clang.patch"
-	"${FILESDIR}/${P}-kf-5.31.patch"
-	"${FILESDIR}/${P}-redeyes-crash.patch"
-)
+PATCHES=( "${FILESDIR}/${P}-cmake-3.9.patch" )
 
 pkg_pretend() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp
@@ -154,7 +149,7 @@ src_configure() {
 		-DENABLE_APPSTYLES=ON
 		-DENABLE_AKONADICONTACTSUPPORT=$(usex addressbook)
 		-DENABLE_MYSQLSUPPORT=$(usex mysql)
-		-DENABLE_MEDIAPLAYER=$(usex video)
+		-DENABLE_MEDIAPLAYER=OFF
 		-DENABLE_OPENCV3=$(has_version ">=media-libs/opencv-3" && echo yes || echo no)
 		$(cmake-utils_use_find_package calendar KF5CalendarCore)
 		$(cmake-utils_use_find_package gphoto2 Gphoto2)

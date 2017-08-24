@@ -7,7 +7,6 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 # git diff --relative=mythtv v0.27.6.. > ~/mythtv-0.27.6/patches/mythtv.patch
-BACKPORTS="3543e74534a39c150e956e2f07f50ed9f873a84e"
 MY_P=${P%_p*}
 MY_PV=${PV%_p*}
 
@@ -17,7 +16,7 @@ MYTHTV_BRANCH="fixes/0.28"
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org"
-SRC_URI="https://github.com/MythTV/mythtv/archive/${BACKPORTS}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/MythTV/mythtv/archive/v0.28.tar.gz -> ${P}.tar.gz"
 
 SLOT="0/${PV}"
 LICENSE="GPL-2"
