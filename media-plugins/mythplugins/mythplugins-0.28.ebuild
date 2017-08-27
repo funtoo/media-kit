@@ -6,15 +6,13 @@ EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
-BACKPORTS="3543e74534a39c150e956e2f07f50ed9f873a84e"
 MY_P=${P%_p*}
 
 inherit eutils python-single-r1 vcs-snapshot
 
 DESCRIPTION="Official MythTV plugins"
 HOMEPAGE="http://www.mythtv.org"
-SRC_URI="https://github.com/MythTV/mythtv/archive/${BACKPORTS}.tar.gz -> mythtv-${PV}.tar.gz"
-
+SRC_URI="https://github.com/MythTV/mythtv/archive/v0.28.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
