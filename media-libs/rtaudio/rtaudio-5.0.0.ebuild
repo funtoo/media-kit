@@ -1,16 +1,16 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit eutils autotools
+inherit ltprune autotools
 
 DESCRIPTION="A set of cross-platform C++ classes for realtime audio I/O"
 HOMEPAGE="https://www.music.mcgill.ca/~gary/rtaudio/"
 SRC_URI="https://www.music.mcgill.ca/~gary/${PN}/release/${P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/6"
 KEYWORDS="~amd64 ~x86"
 IUSE="+alsa doc jack pulseaudio static-libs"
 REQUIRED_USE="|| ( alsa jack pulseaudio )"
@@ -23,12 +23,11 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	local PATCHES=(
-		"${FILESDIR}"/${P}-configure.patch
-		"${FILESDIR}"/${P}-cflags.patch
-	)
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.1.2-cflags.patch
+)
 
+src_prepare() {
 	default
 
 	# don't rebuild docs
@@ -54,7 +53,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodoc readme doc/release.txt
-	if use doc ; then
+	if use doc; then
 		dodoc -r doc/html
 		dodoc -r doc/images
 	fi
