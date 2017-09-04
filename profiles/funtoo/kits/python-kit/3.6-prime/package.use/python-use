@@ -1,20 +1,20 @@
 media-gfx/asymptote python_single_target_python2_7 python_targets_python2_7
+=media-gfx/blender-2.78-r1 python_single_target_python3_5 python_targets_python3_5
 =media-gfx/blender-2.72b-r4 python_single_target_python3_4
 =media-gfx/blender-2.78a-r1 python_single_target_python3_5 python_targets_python3_5
-=media-gfx/blender-2.78-r1 python_single_target_python3_5 python_targets_python3_5
 media-gfx/comix python_single_target_python2_7 python_targets_python2_7
 media-gfx/cptutils python_single_target_python2_7 python_targets_python2_7
-=media-gfx/cura-2.3.1 python_single_target_python3_4
-=media-gfx/cura-2.1.0_beta python_single_target_python3_4
 =media-gfx/cura-0.15.04.5_rc5 python_single_target_python2_7 python_targets_python2_7
+=media-gfx/cura-2.1.0_beta python_single_target_python3_4
 =media-gfx/cura-0.15.04.4 python_single_target_python2_7 python_targets_python2_7
+=media-gfx/cura-2.3.1 python_single_target_python3_4
 media-gfx/eom python_single_target_python2_7 python_targets_python2_7
 media-gfx/exact-image python_single_target_python2_7 python_targets_python2_7
-=media-gfx/fontforge-20150612-r1 python_single_target_python3_4
-=media-gfx/fontforge-20160404 python_single_target_python3_4
 =media-gfx/fontforge-20150824 python_single_target_python3_4
 =media-gfx/fontforge-20161005 python_single_target_python3_4
+=media-gfx/fontforge-20160404 python_single_target_python3_4
 =media-gfx/fontforge-20170731 python_single_target_python3_4
+=media-gfx/fontforge-20150612-r1 python_single_target_python3_4
 media-gfx/fr0st python_single_target_python2_7 python_targets_python2_7
 media-gfx/freecad python_single_target_python2_7 python_targets_python2_7
 media-gfx/gimp python_single_target_python2_7 python_targets_python2_7
@@ -37,14 +37,14 @@ media-libs/libgpod python_single_target_python2_7 python_targets_python2_7
 media-libs/libiptcdata python_single_target_python2_7 python_targets_python2_7
 media-libs/libkate python_single_target_python2_7 python_targets_python2_7
 =media-libs/libopenshot-0.1.3 python_single_target_python3_4
-=media-libs/lv2-1.12.0 python_single_target_python3_4
 =media-libs/lv2-1.10.0-r1 python_single_target_python3_4
+=media-libs/lv2-1.12.0 python_single_target_python3_4
 media-libs/lvtk python_single_target_python2_7 python_targets_python2_7
 media-libs/mlt python_single_target_python2_7 python_targets_python2_7
 media-libs/opencolorio python_single_target_python2_7 python_targets_python2_7
 media-libs/opencv python_single_target_python2_7 python_targets_python2_7
-=media-libs/openimageio-1.3.5 python_single_target_python2_7 python_targets_python2_7
 =media-libs/openimageio-1.6.13 python_single_target_python3_4
+=media-libs/openimageio-1.3.5 python_single_target_python2_7 python_targets_python2_7
 media-libs/pymemphis python_single_target_python2_7 python_targets_python2_7
 media-libs/vigra python_single_target_python2_7 python_targets_python2_7
 media-libs/vips python_single_target_python2_7 python_targets_python2_7
