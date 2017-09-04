@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -9,32 +8,30 @@ lt lv nb nl pa pl pt pt_BR ro ru sl sr sr@ijekavian sr@ijekavianlatin sr@latin
 sv tr uk zh_CN zh_TW"
 KDE_REQUIRED="never"
 KDE_HANDBOOK="optional"
+SQL_REQUIRED="always"
 VIRTUALX_REQUIRED="test"
 VIRTUALDBUS_TEST="true"
-WEBKIT_REQUIRED="always"
 inherit flag-o-matic kde4-base pax-utils
 
 DESCRIPTION="Advanced audio player based on KDE framework"
-HOMEPAGE="http://amarok.kde.org/"
+HOMEPAGE="https://amarok.kde.org/"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
-	KEYWORDS="amd64 x86"
-else
 	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda debug +embedded ipod lastfm mp3tunes mtp ofa opengl test +utils"
+IUSE="debug +embedded ipod lastfm mp3tunes mtp ofa opengl test +utils"
 
 if [[ ${KDE_BUILD_TYPE} == live ]]; then
-	RESTRICT="test"
+	RESTRICT+=" test"
 fi
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
 COMMONDEPEND="
 	app-crypt/qca:2[qt4(+)]
-	kde-frameworks/kdelibs:4[opengl?]
+	kde-frameworks/kdelibs:4[opengl?,plasma(+)]
 	$(add_kdeapps_dep kdebase-kioslaves)
 	>=media-libs/taglib-1.7[asf(+),mp4(+)]
 	>=media-libs/taglib-extras-1.0.1
@@ -44,20 +41,15 @@ COMMONDEPEND="
 	>=dev-qt/qtdbus-4.8:4
 	>=dev-qt/qtscript-4.8:4
 	>=x11-libs/qtscriptgenerator-0.1.0
-	cdda? (
-		$(add_kdeapps_dep libkcddb)
-		$(add_kdeapps_dep libkcompactdisc)
-		$(add_kdeapps_dep audiocd-kio)
-	)
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 	lastfm? ( >=media-libs/liblastfm-1.0.3[qt4(+)] )
 	mp3tunes? (
 		dev-libs/glib:2
 		dev-libs/libxml2
 		dev-libs/openssl:0
+		>=dev-qt/qtcore-4.8.4:4[glib]
 		net-libs/loudmouth
 		net-misc/curl
-		>=dev-qt/qtcore-4.8.4:4[glib]
 	)
 	mtp? ( >=media-libs/libmtp-1.0.0 )
 	ofa? ( >=media-libs/libofa-0.9.0 )
@@ -80,7 +72,15 @@ PATCHES=(
 	"${FILESDIR}/${P}-scriptconsole.patch"
 	"${FILESDIR}/${P}-gcc6.patch"
 	"${FILESDIR}/${P}-ffmpeg3.patch"
+	"${FILESDIR}/${P}-no-webkit.patch"
 )
+
+src_prepare() {
+	kde4-base_src_prepare
+
+	# requires qtwebkit
+	sed -i -e "s/wikipedia,//" data/amarok_homerc || die
+}
 
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707
