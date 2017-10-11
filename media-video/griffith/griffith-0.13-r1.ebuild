@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -19,9 +18,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="doc"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="dev-python/pillow
-	gnome-base/libglade
+RDEPEND="
+	${PYTHON_DEPS}
+	dev-python/pillow[${PYTHON_USEDEP}]
+	gnome-base/libglade[${PYTHON_USEDEP}]
 	dev-python/pyxml[${PYTHON_USEDEP}]
 	>=dev-python/pygtk-2.6.1:2[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]

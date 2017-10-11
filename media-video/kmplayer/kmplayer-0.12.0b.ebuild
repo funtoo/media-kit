@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -13,7 +12,7 @@ HOMEPAGE="https://kmplayer.kde.org"
 SRC_URI="mirror://kde/stable/${PN}/${EGIT_BRANCH}/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cairo npp"
 
 CDEPEND="
@@ -37,7 +36,7 @@ CDEPEND="
 	$(add_qt_dep qtwidgets)
 	$(add_qt_dep qtx11extras)
 	$(add_qt_dep qtxml)
-	media-libs/phonon[qt5]
+	media-libs/phonon[qt5(+)]
 	x11-libs/libX11
 	x11-libs/libxcb
 	cairo? ( x11-libs/cairo[xcb] )

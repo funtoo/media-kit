@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 MY_P=${P}-src
@@ -45,13 +44,15 @@ REQUIRED_USE="
 
 DOCS=( README.md )
 
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc-7.patch
+)
+
 pkg_setup() {
 	use python && python_setup
 }
 
 src_prepare() {
-	default
-
 	einfo "Removing shipped docs and VCS files"
 	rm -rf doc || die
 	rm .git* .travis.yml || die

@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -26,7 +25,10 @@ RDEPEND="
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	>=dev-python/pycairo-1.4[${PYTHON_USEDEP}]
-	dev-libs/protobuf[python,${PYTHON_USEDEP}]
+	|| (
+		dev-python/protobuf-python[${PYTHON_USEDEP}]
+		dev-libs/protobuf[python,${PYTHON_USEDEP}]
+	)
 	>=dev-libs/json-c-0.11:=
 	media-libs/lcms:2
 	media-libs/libpng:0=

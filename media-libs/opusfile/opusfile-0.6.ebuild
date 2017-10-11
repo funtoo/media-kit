@@ -1,12 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 DESCRIPTION="A high-level decoding and seeking API for .opus files"
-HOMEPAGE="http://www.opus-codec.org/"
-SRC_URI="http://downloads.xiph.org/releases/opus/${P}.tar.gz"
+HOMEPAGE="https://www.opus-codec.org/"
+SRC_URI="https://downloads.xiph.org/releases/opus/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

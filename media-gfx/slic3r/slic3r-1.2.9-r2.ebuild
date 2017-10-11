@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -65,6 +64,7 @@ S="${WORKDIR}/Slic3r-${PV}/xs"
 src_prepare() {
 	pushd "${WORKDIR}/Slic3r-${PV}" || die
 	eapply "${FILESDIR}/${P}-adjust_var_path.patch"
+	eapply "${FILESDIR}/${P}-c++11.patch"
 	eapply_user
 	popd || die
 }

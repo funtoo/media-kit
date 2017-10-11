@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -8,7 +7,7 @@ inherit autotools nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
 if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="git://git.code.sf.net/p/freewrl/git"
+	EGIT_REPO_URI="https://git.code.sf.net/p/freewrl/git"
 	EGIT_BRANCH="develop"
 	S="${WORKDIR}/${P}/freex3d"
 	SRC_URI=

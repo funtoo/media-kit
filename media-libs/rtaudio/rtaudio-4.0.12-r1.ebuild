@@ -1,14 +1,13 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
 inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="A set of cross-platform C++ classes for realtime audio I/O"
-HOMEPAGE="http://www.music.mcgill.ca/~gary/rtaudio/"
-SRC_URI="http://www.music.mcgill.ca/~gary/${PN}/release/${P}.tar.gz"
+HOMEPAGE="https://www.music.mcgill.ca/~gary/rtaudio/"
+SRC_URI="https://www.music.mcgill.ca/~gary/${PN}/release/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

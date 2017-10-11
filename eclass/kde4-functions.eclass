@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: kde4-functions.eclass
 # @MAINTAINER:
@@ -297,6 +296,10 @@ add_kdeapps_dep() {
 
 	local ver
 
+	if [[ -n ${2} ]] ; then
+		local use="[${2}]"
+	fi
+
 	if [[ -n ${3} ]]; then
 		ver=${3}
 	elif [[ -n ${KDE_OVERRIDE_MINIMAL} ]]; then
@@ -314,9 +317,7 @@ add_kdeapps_dep() {
 
 	[[ -z ${1} ]] && die "Missing parameter"
 
-	#FIXME
-	# Drop aqua= from kf5 packages
-	echo " >=kde-apps/${1}-${ver}:4[aqua=${2:+,${2}}]"
+	echo " >=kde-apps/${1}-${ver}:4${use}"
 }
 
 # @FUNCTION: add_kdebase_dep
@@ -332,6 +333,10 @@ add_kdebase_dep() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local ver
+
+	if [[ -n ${2} ]] ; then
+		local use="[${2}]"
+	fi
 
 	if [[ -n ${3} ]]; then
 		ver=${3}
@@ -352,7 +357,7 @@ add_kdebase_dep() {
 
 	[[ -z ${1} ]] && die "Missing parameter"
 
-	echo " >=kde-base/${1}-${ver}:4[aqua=${2:+,${2}}]"
+	echo " >=kde-base/${1}-${ver}:4${use}"
 }
 
 # local function to enable specified translations for specified directory

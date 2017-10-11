@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 inherit cmake-utils toolchain-funcs versionator
@@ -16,10 +15,8 @@ LICENSE="ZLIB"
 SLOT="0"
 IUSE="cuda doc examples opencl openmp ptex tbb tutorials"
 
-# OpenCL does not work with Open Source drivers or nVidia binaries.
 RDEPEND="media-libs/glew:=
 	media-libs/glfw:=
-	opencl? ( x11-drivers/ati-drivers:* )
 	cuda? ( dev-util/nvidia-cuda-toolkit:* )
 	ptex? ( media-libs/ptex )"
 
@@ -37,6 +34,13 @@ pkg_pretend() {
 
 pkg_setup() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp
+}
+
+src_prepare() {
+	cmake-utils_src_prepare
+
+	sed -e 's|"${OSD_SONAME}"|${OSD_SONAME}|' \
+	    -i CMakeLists.txt || die
 }
 
 src_configure() {

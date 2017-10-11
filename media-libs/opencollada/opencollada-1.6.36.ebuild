@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -62,5 +61,5 @@ src_install() {
 	echo "LDPATH=/usr/$(get_libdir)/opencollada" > "${T}"/99${PN} || die "echo failed"
 	doenvd "${T}"/99${PN}
 
-	dobin ${BUILD_DIR}/bin/OpenCOLLADAValidator
+	dobin "${BUILD_DIR}/bin/OpenCOLLADAValidator"
 }

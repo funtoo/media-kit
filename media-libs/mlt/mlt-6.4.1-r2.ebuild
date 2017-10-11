@@ -1,7 +1,11 @@
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
+# this ebuild currently only supports installing ruby bindings for a single ruby version
+# so USE_RUBY must contain only a single value (the latest stable) as the ebuild calls
+# /usr/bin/${USE_RUBY} directly
 USE_RUBY="ruby22"
 inherit eutils flag-o-matic multilib python-single-r1 ruby-single toolchain-funcs
 
@@ -90,6 +94,7 @@ src_prepare() {
 		sed -i "/mlt.so/s: -lmlt++ :& ${CFLAGS} ${LDFLAGS} :" src/swig/$x/build || die
 	done
 	sed -i "/^LDFLAGS/s: += :& ${LDFLAGS} :" src/swig/ruby/build || die
+
 	sed -i -e "s/env ruby/${USE_RUBY}/" src/swig/ruby/* || die
 
 	default

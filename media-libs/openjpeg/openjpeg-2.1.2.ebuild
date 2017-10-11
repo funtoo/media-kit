@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 inherit multilib cmake-multilib
@@ -114,7 +113,7 @@ multilib_src_test() {
 				die "Test suite failed. New/unknown test failure(s) found!"
 			else
 				echo ""
-				einfo "Test suite passed. Now new/unknown test failure found!"
+				einfo "Test suite passed. No new/unknown test failure found!"
 			fi
 
 			return 0

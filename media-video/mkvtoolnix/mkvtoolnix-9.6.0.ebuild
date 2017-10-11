@@ -1,13 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 inherit eutils multilib toolchain-funcs versionator multiprocessing autotools
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
-HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
-SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.xz"
+HOMEPAGE="https://mkvtoolnix.download/"
+SRC_URI="https://mkvtoolnix.download/sources/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

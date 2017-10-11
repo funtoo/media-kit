@@ -1,13 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 
 inherit toolchain-funcs multilib multilib-minimal
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/foo86/dcadec.git"
+	EGIT_REPO_URI="https://github.com/foo86/${PN}.git"
 	inherit git-r3
 else
 	SRC_URI="https://github.com/foo86/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"

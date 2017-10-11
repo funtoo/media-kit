@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -11,7 +10,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Python library to search and download subtitles"
 HOMEPAGE="https://github.com/Diaoul/subliminal https://pypi.python.org/pypi/subliminal"
-EGIT_REPO_URI=( {https,git}://github.com/Diaoul/${PN}.git )
+EGIT_REPO_URI="https://github.com/Diaoul/${PN}.git"
 EGIT_BRANCH="develop"
 SRC_URI="test? ( mirror://sourceforge/matroska/test_files/matroska_test_w1_1.zip )"
 

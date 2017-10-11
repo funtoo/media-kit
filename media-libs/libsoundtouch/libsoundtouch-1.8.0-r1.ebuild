@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -8,8 +7,8 @@ inherit autotools eutils flag-o-matic multilib-minimal
 MY_PN=${PN/lib}
 
 DESCRIPTION="Audio processing library for changing tempo, pitch and playback rates"
-HOMEPAGE="http://www.surina.net/soundtouch/"
-SRC_URI="http://www.surina.net/soundtouch/${P/lib}.tar.gz"
+HOMEPAGE="https://www.surina.net/soundtouch/"
+SRC_URI="https://www.surina.net/soundtouch/${P/lib}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

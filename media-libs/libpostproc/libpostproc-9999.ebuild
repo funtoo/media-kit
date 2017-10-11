@@ -1,13 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SCM="git-2"
-	EGIT_REPO_URI="git://github.com/lu-zero/postproc.git"
+	EGIT_REPO_URI="https://github.com/lu-zero/postproc.git"
 fi
 
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}

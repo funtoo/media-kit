@@ -1,13 +1,12 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 inherit cmake-multilib
 
 DESCRIPTION="Implementation of the codec specified in the JPEG-2000 Part-1 standard"
-HOMEPAGE="http://www.ece.uvic.ca/~mdadams/jasper/"
+HOMEPAGE="https://www.ece.uvic.ca/~mdadams/jasper/"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3

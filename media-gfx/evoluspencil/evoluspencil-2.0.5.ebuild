@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 MY_P="pencil-${PV}"
@@ -31,6 +30,7 @@ src_prepare() {
 }
 
 src_install() {
+	insinto /
 	doins -r usr
 	newbin "${FILESDIR}"/launcher ${PN}
 }

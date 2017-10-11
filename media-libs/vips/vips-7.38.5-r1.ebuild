@@ -1,3 +1,4 @@
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -11,7 +12,7 @@ HOMEPAGE="http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS"
 RESTRICT="mirror"
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="*"
+KEYWORDS="~amd64 ~x86"
 IUSE="cxx debug exif fits fftw imagemagick jpeg lcms matio openexr
 	+orc png python static-libs tiff webp"
 

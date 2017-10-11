@@ -1,13 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils toolchain-funcs autotools multilib-minimal
 
 MY_P=smpeg-${PV}
 DESCRIPTION="SDL MPEG Player Library"
-HOMEPAGE="http://icculus.org/smpeg/"
+HOMEPAGE="https://icculus.org/smpeg/"
 SRC_URI="https://dev.gentoo.org/~hasufell/distfiles/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
@@ -24,6 +23,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-smpeg2-config.patch
+	epatch "${FILESDIR}"/${P}-gcc6.patch
+	epatch_user
 
 	# avoid file collision with media-libs/smpeg
 	sed -i \

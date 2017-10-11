@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -17,12 +16,6 @@ case "${EAPI:-0}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
-
-if [[ ! ${_GIT_R3} ]]; then
-
-inherit eutils
-
-fi
 
 EXPORT_FUNCTIONS src_unpack
 
@@ -112,18 +105,22 @@ fi
 # @ECLASS-VARIABLE: EGIT_REPO_URI
 # @REQUIRED
 # @DESCRIPTION:
-# URIs to the repository, e.g. git://foo, https://foo. If multiple URIs
-# are provided, the eclass will consider them as fallback URIs to try
-# if the first URI does not work. For supported URI syntaxes, read up
-# the manpage for git-clone(1).
+# URIs to the repository, e.g. https://foo. If multiple URIs are
+# provided, the eclass will consider the remaining URIs as fallbacks
+# to try if the first URI does not work. For supported URI syntaxes,
+# read the manpage for git-clone(1).
 #
-# It can be overriden via env using ${PN}_LIVE_REPO variable.
+# URIs should be using https:// whenever possible. http:// and git://
+# URIs are completely unsecured and their use (even if only as
+# a fallback) renders the ebuild completely vulnerable to MITM attacks.
+#
+# It can be overridden via env using ${PN}_LIVE_REPO variable.
 #
 # Can be a whitespace-separated list or an array.
 #
 # Example:
 # @CODE
-# EGIT_REPO_URI="git://a/b.git https://c/d.git"
+# EGIT_REPO_URI="https://a/b.git https://c/d.git"
 # @CODE
 
 # @ECLASS-VARIABLE: EVCS_OFFLINE
@@ -154,8 +151,9 @@ fi
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # The tag name or commit identifier to check out. If unset, newest
-# commit from the branch will be used. If set, EGIT_BRANCH will
-# be ignored.
+# commit from the branch will be used. Note that if set to a commit
+# not on HEAD branch, EGIT_BRANCH needs to be set to a branch on which
+# the commit is available.
 #
 # It can be overriden via env using ${PN}_LIVE_COMMIT variable.
 
@@ -163,7 +161,8 @@ fi
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Attempt to check out the repository state for the specified timestamp.
-# The date should be in format understood by 'git rev-list'.
+# The date should be in format understood by 'git rev-list'. The commits
+# on EGIT_BRANCH will be considered.
 #
 # The eclass will select the last commit with commit date preceding
 # the specified date. When merge commits are found, only first parents
@@ -571,6 +570,16 @@ git-r3_fetch() {
 
 	[[ ${repos[@]} ]] || die "No URI provided and EGIT_REPO_URI unset"
 
+	local r
+	for r in "${repos[@]}"; do
+		if [[ ${r} == git:* || ${r} == http:* ]]; then
+			ewarn "git-r3: ${r%%:*} protocol is completely unsecure and may render the ebuild"
+			ewarn "easily susceptible to MITM attacks (even if used only as fallback). Please"
+			ewarn "use https instead."
+			ewarn "[URI: ${r}]"
+		fi
+	done
+
 	local -x GIT_DIR
 	_git-r3_set_gitdir "${repos[0]}"
 
@@ -583,7 +592,7 @@ git-r3_fetch() {
 	fi
 
 	# try to fetch from the remote
-	local r success saved_umask
+	local success saved_umask
 	if [[ ${EVCS_UMASK} ]]; then
 		saved_umask=$(umask)
 		umask "${EVCS_UMASK}" || die "Bad options to umask: ${EVCS_UMASK}"
@@ -858,6 +867,9 @@ git-r3_checkout() {
 		echo "${orig_repo}/objects" > "${GIT_DIR}"/objects/info/alternates || die
 		# now copy the refs
 		cp -R "${orig_repo}"/refs/* "${GIT_DIR}"/refs/ || die
+		if [[ -f ${orig_repo}/packed-refs ]]; then
+			cp "${orig_repo}"/packed-refs "${GIT_DIR}"/packed-refs || die
+		fi
 
 		# (no need to copy HEAD, we will set it via checkout)
 

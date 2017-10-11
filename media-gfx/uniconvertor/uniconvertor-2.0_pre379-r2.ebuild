@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -39,6 +38,8 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 
 	sed \
+		-e "s@/usr/include@${EPREFIX}/usr/include@" \
+		-e "s@/usr/share@${EPREFIX}/usr/share@" \
 		-e "/libraries/s:'MagickWand':${wand}:g" \
 		-i setup.py || die
 

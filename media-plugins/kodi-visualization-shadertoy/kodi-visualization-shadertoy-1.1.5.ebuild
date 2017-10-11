@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -13,7 +12,7 @@ SRC_URI=""
 case ${PV} in
 9999)
 	SRC_URI=""
-	EGIT_REPO_URI="git://github.com/notspiff/visualization.shadertoy.git"
+	EGIT_REPO_URI="https://github.com/notspiff/visualization.shadertoy.git"
 	inherit git-r3
 	;;
 *)

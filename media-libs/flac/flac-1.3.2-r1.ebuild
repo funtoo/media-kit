@@ -1,14 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 inherit autotools multilib-minimal
 
 DESCRIPTION="free lossless audio encoder and decoder"
-HOMEPAGE="http://flac.sourceforge.net"
-SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.xz"
+HOMEPAGE="https://xiph.org/flac/"
+SRC_URI="https://downloads.xiph.org/releases/${PN}/${P}.tar.xz"
 
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1"
 SLOT="0"

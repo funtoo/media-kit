@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -16,6 +15,10 @@ KEYWORDS="amd64 x86 ~amd64-linux"
 IUSE="static-libs"
 
 DOCS=( AUTHORS NEWS README.md )
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.3-proper_detection_cxxabi_execinfo.patch
+)
 
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" \

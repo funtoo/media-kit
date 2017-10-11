@@ -1,6 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=4
 
@@ -23,10 +22,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-libs.patch
 	epatch "${FILESDIR}"/${P}-ld-order.patch
+	epatch "${FILESDIR}"/${P}-gcc-7.patch
+	epatch "${FILESDIR}"/${P}-no-XPTR.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" VERBOSE=1
 }
 
 src_install() {

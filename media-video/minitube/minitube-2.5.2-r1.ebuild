@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -26,7 +25,7 @@ DEPEND="dev-qt/qtgui:5[accessibility]
 	dev-qt/qtsql:5[sqlite]
 	dev-qt/qtwidgets:5
 	dev-qt/qtsingleapplication[qt5(+),X]
-	media-libs/phonon[qt5]
+	media-libs/phonon[qt5(+)]
 "
 RDEPEND="${DEPEND}"
 

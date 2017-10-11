@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -8,7 +7,7 @@ EGIT_REPO_URI="https://github.com/clementine-player/Clementine.git"
 
 LANGS=" af ar be bg bn br bs ca cs cy da de el en_CA en_GB eo es et eu fa fi fr ga gl he he_IL hi hr hu hy ia id is it ja ka kk ko lt lv mr ms my nb nl oc pa pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr tr_TR uk uz vi zh_CN zh_TW"
 
-inherit cmake-utils flag-o-matic fdo-mime gnome2-utils virtualx
+inherit cmake-utils flag-o-matic xdg-utils gnome2-utils virtualx
 [[ ${PV} == *9999* ]] && inherit git-r3
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
@@ -20,7 +19,7 @@ LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~amd64 ~x86"
-IUSE="box cdda +dbus debug dropbox googledrive ipod lastfm mms moodbar mtp projectm pulseaudio seafile skydrive test +udisks udisks_legacy vkontakte wiimote"
+IUSE="box cdda +dbus debug dropbox googledrive ipod lastfm mms moodbar mtp projectm pulseaudio seafile skydrive test +udisks udisks_legacy wiimote"
 IUSE+="${LANGS// / linguas_}"
 
 REQUIRED_USE="
@@ -78,7 +77,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext
 	dev-qt/qttest:4
-	dev-cpp/gmock
+	|| (
+		>=dev-cpp/gtest-1.8.0
+		dev-cpp/gmock
+	)
 	box? ( dev-cpp/sparsehash )
 	dropbox? ( dev-cpp/sparsehash )
 	googledrive? ( dev-cpp/sparsehash )
@@ -133,7 +135,6 @@ src_configure() {
 		-DENABLE_LIBPULSE="$(usex pulseaudio)"
 		-DENABLE_SEAFILE="$(usex seafile)"
 		-DENABLE_SKYDRIVE="$(usex skydrive)"
-		-DENABLE_VK="$(usex vkontakte)"
 		-DENABLE_SPOTIFY_BLOB=OFF
 		-DENABLE_BREAKPAD=OFF  #< disable crash reporting
 		-DUSE_BUILTIN_TAGLIB=OFF
@@ -143,6 +144,8 @@ src_configure() {
 		# force to find crypto++ see bug #548544
 		-DCRYPTOPP_LIBRARIES="crypto++"
 		-DCRYPTOPP_FOUND=ON
+		# avoid automagically enabling of ccache (bug #611010)
+		-DCCACHE_EXECUTABLE=OFF
 		)
 
 	use !debug && append-cppflags -DQT_NO_DEBUG_OUTPUT
@@ -160,11 +163,15 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
+
+	elog "Note that list of supported formats is controlled by media-plugins/gst-plugins-meta "
+	elog "USE flags. You may be intrested in setting aac, flac, mp3, ogg or wavpack USE flags "
+	elog "depending on your preferences"
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }

@@ -1,13 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils readme.gentoo toolchain-funcs
 
 DESCRIPTION="Command-line decoder for raw digital photos"
-HOMEPAGE="http://www.cybercom.net/~dcoffin/dcraw/"
-SRC_URI="http://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
+HOMEPAGE="https://www.cybercom.net/~dcoffin/dcraw/"
+SRC_URI="https://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
 	mirror://gentoo/parse-1.73.tar.bz2
 	gimp? ( mirror://gentoo/rawphoto-1.32.tar.bz2 )"
 

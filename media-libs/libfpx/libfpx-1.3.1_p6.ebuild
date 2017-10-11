@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 inherit eutils flag-o-matic libtool
@@ -11,15 +10,18 @@ SRC_URI="mirror://imagemagick/delegates/${P/_p/-}.tar.bz2"
 
 LICENSE="Flashpix"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="static-libs"
 
 S=${WORKDIR}/${P/_p/-}
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.0.13-export-symbols.patch
+	"${FILESDIR}"/${P}-gcc6.patch
+)
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.2.0.13-export-symbols.patch
-	epatch "${FILESDIR}"/${PN}-1.2.0.13-gcc6-compat.patch
-	eapply_user
+	default
 
 	# we're not windows, even though we don't define __unix by default
 	[[ ${CHOST} == *-darwin* ]] && append-flags -D__unix

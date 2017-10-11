@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +15,7 @@ SRC_URI="https://github.com/mypaint/libmypaint/releases/download/v${MY_PV}/${MY_
 
 LICENSE="ISC"
 SLOT="0/0"  # first soname component for subslot
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~x86"
 IUSE="gegl introspection nls openmp"
 
 CDEPEND="

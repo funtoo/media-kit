@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -11,7 +10,7 @@ PLOCALE_BACKUP="en_US"
 inherit l10n qmake-utils
 
 DESCRIPTION="Great Qt GUI front-end for mplayer/mpv"
-HOMEPAGE="http://www.smplayer.eu/"
+HOMEPAGE="http://www.smplayer.info/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+ BSD-2"

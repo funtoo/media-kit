@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -48,7 +47,8 @@ pkg_setup() {
 src_prepare() {
 	eapply \
 		"${FILESDIR}"/${PN}-0.7.5-libpng14.patch \
-		"${FILESDIR}"/${P}-libpng15.patch
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-gcc6.patch
 	eapply_user
 
 	# fix python hardcoded path wrt bug #327171

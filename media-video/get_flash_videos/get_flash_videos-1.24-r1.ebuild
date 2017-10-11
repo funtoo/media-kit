@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils perl-module readme.gentoo
@@ -9,8 +8,8 @@ MY_PN="App-${PN}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Downloads videos from various Flash-based video hosting sites"
-HOMEPAGE="https://code.google.com/p/get-flash-videos/"
-SRC_URI="https://get-flash-videos.googlecode.com/files/${MY_P}.tar.gz"
+HOMEPAGE="https://github.com/monsieurvideo/get-flash-videos"
+SRC_URI="https://github.com/monsieurvideo/get-flash-videos/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

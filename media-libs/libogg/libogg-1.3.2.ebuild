@@ -1,13 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit autotools-multilib
 
 DESCRIPTION="the Ogg media file format library"
-HOMEPAGE="http://xiph.org/ogg/"
-SRC_URI="http://downloads.xiph.org/releases/ogg/${P}.tar.xz"
+HOMEPAGE="https://xiph.org/ogg/"
+SRC_URI="https://downloads.xiph.org/releases/ogg/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"

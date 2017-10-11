@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils
@@ -47,6 +46,10 @@ src_unpack() {
 	if use gtk3 ; then
 		mv "${MY_P}-gtk3" "${MY_P}"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-c++11-throw-in-dtors.patch
 }
 
 src_configure() {

@@ -1,3 +1,4 @@
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -33,8 +34,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	pcap? ( sys-libs/libcap )
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
-	speex? ( >=media-libs/speex-1.2_beta3 media-libs/speexdsp )
-	upnp? ( net-libs/libupnp:0 )
+	speex? ( >=media-libs/speex-1.2_beta3 )
+	upnp? ( net-libs/libupnp )
 	video? (
 		libav? ( >=media-video/libav-9.12:0= )
 		!libav? ( >=media-video/ffmpeg-1.2.6-r1:0= )

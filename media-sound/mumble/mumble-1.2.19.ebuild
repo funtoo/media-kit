@@ -13,7 +13,7 @@ SRC_URI="https://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="+alsa +dbus debug g15 libressl oss pch portaudio pulseaudio speech zeroconf"
 
 RDEPEND=">=dev-libs/boost-1.41.0
@@ -22,8 +22,13 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	>=dev-libs/protobuf-2.2.0:=
 	>=media-libs/libsndfile-1.0.20[-minimal]
 	>=media-libs/opus-1.0.1
-	>=media-libs/speex-1.2.0:0
-	media-libs/speexdsp:0
+	|| (
+		(
+			>=media-libs/speex-1.2.0
+			media-libs/speexdsp
+		)
+		<media-libs/speex-1.2.0
+	)
 	sys-apps/lsb-release
 	x11-libs/libX11
 	x11-libs/libXi
