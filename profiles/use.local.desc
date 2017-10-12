@@ -71,13 +71,6 @@ media-gfx/darktable:libsecret - Enable libsecret support to store login credenti
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
 media-gfx/darktable:webp - Enable WebP export support
-media-gfx/digikam:addressbook - Enable akonadi contact integration
-media-gfx/digikam:kipi - Enable support for media-plugins/kipi-plugins
-media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
-media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
-media-gfx/digikam:mediaplayer - Enable support for media player using media-libs/qtav
-media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
-media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
 media-gfx/enblend:gpu - GPU support for Enblend
 media-gfx/enblend:image-cache - allow for processing of large images
 media-gfx/eom:gtk3 - Build with GTK+3 instead of GTK+2
@@ -139,12 +132,6 @@ media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/k3d:3ds - Enable support for 3D Studio models
 media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
 media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
-media-gfx/kphotoalbum:face - Enable face detection and recognition using kde-apps/libkface
-media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
-media-gfx/kphotoalbum:map - Enable map display support using kde-apps/libkgeomap
-media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
-media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
-media-gfx/krita:vc - Enable support for dev-libs/vc, could be a significant speed boost
 media-gfx/librecad:3d - Require all 2D coordinates stored as 3D
 media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
@@ -440,10 +427,6 @@ media-plugins/gst-plugins-vaapi:egl - Enable EGL support
 media-plugins/hexter:gtk2 - Enable x11-libs/gtk+:2 based GUI
 media-plugins/imlib2_loaders:eet - Enable Eet image loader
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
-media-plugins/kipi-plugins:flashexport - Build the flash export plugin
-media-plugins/kipi-plugins:mediawiki - Build the mediawiki export plugin
-media-plugins/kipi-plugins:remotestorage - Build plugin for remote storage using network protocols such as FTP, SSH, SAMBA via kde-frameworks/kio
-media-plugins/kipi-plugins:vkontakte - Build plugin for vkontakte.ru
 media-plugins/mediastreamer-ilbc:20ms-frames - enable 20ms frame size (default is 30ms). Some VOIP providers such as Gizmo5 (aka Sipphone) require the codec to be compiled with the 30ms setting.
 media-plugins/mythplugins:cdr - Allows MythMusic to burn CD-Rs
 media-plugins/mythplugins:exif - Allows MythGallery to read EXIF data from photos
@@ -501,12 +484,6 @@ media-sound/alsa-utils:bat - install basic audio tester (BAT) util
 media-sound/alsa-utils:libsamplerate - install utils that use libsamplerate (e.g. alsaloop)
 media-sound/alsa-utils:ncurses - install utils that use ncurses (e.g. alsamixer)
 media-sound/alsaplayer:id3tag - Enables ID3 tagging with id3tag library
-media-sound/amarok:embedded - Use libmysqld, MySQL embedded server library. Try disabling this if you encounter -PIC related in amarok, it will make amarok rely only on standalone MySQL server.
-media-sound/amarok:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
-media-sound/amarok:mp3tunes - Enable mp3tunes integration
-media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
-media-sound/amarok:ofa - Use media-libs/libofa to compute MusicDNS acoustic fingerprints (used by MusicBrainz)
-media-sound/amarok:utils - Build the utils - old media-sound/amarok-utils
 media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/aqualung:ifp - Enable support for iRiver iFP portable audio players
 media-sound/aqualung:lua - Enable support for programmable title formatting with dev-lang/lua
@@ -616,7 +593,6 @@ media-sound/jack2:opus - Support media-libs/opus
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
-media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
 media-sound/klick:rubberband - Enable rubberband support
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
@@ -775,8 +751,6 @@ media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
 media-sound/supercollider:wiimote - Build sclang with Wii Remote support
 media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
-media-sound/tomahawk:hatchet - Enable support for the synchronisation through Hatchet
-media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
 media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/tuxguitar:fluidsynth - Enables Fluidsynth MIDI software synthesis (with external sound fonts). JSA must be disabled in the plug-ins menu to use this.
 media-sound/tuxguitar:lilypond - Exports the score in a lilypond compatible format.
@@ -981,7 +955,6 @@ media-video/handbrake:gtk - Install the GTK UI, ghb.
 media-video/handbrake:libav-aac - Support for encoding AAC using media-video/libav's internal encoder.
 media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
-media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
 media-video/libav:aac - Use external vo-aacenc library for AAC encoding
 media-video/libav:amr - Enable Adaptive Multi-Rate Audio support
 media-video/libav:armv5te - Enable optimizations for armv5te processors
@@ -1099,7 +1072,6 @@ media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/l
 media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
 media-video/smplayer:streaming - Support for streaming video sites through net-misc/youtube-dl (MPV only).
-media-video/subtitlecomposer:mpv - Build mpv backend support
 media-video/syncplay:client - Install Syncplay client
 media-video/syncplay:gui - Enable gui support
 media-video/syncplay:server - Install Syncplay server
