@@ -3,19 +3,19 @@
 
 EAPI=6
 
+COMMIT=269370863ecd61dd038eed3b96ecd65898d3bb6e
+LINGUAS="bs de es fi fr gl ms pl pt ru sk sv ug uk vi"
 PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
-
-inherit cmake-multilib python-any-r1
+inherit cmake-multilib python-any-r1 vcs-snapshot
 
 DESCRIPTION="EXIF, IPTC and XMP metadata C++ library and command line utility"
 HOMEPAGE="http://www.exiv2.org/"
-SRC_URI="http://www.exiv2.org/builds/${P}-trunk.tar.gz"
+SRC_URI="https://github.com/Exiv2/${PN}/tarball/${COMMIT} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0/26"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
-IUSE_LINGUAS="bs de es fi fr gl ms pl pt ru sk sv ug uk vi"
-IUSE="doc examples nls png webready xmp $(printf 'linguas_%s ' ${IUSE_LINGUAS})"
+IUSE="doc examples nls png webready xmp $(printf 'linguas_%s ' ${LINGUAS})"
 
 RDEPEND="
 	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
@@ -30,34 +30,19 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	doc? (
+		${PYTHON_DEPS}
 		app-doc/doxygen
 		dev-libs/libxslt
 		media-gfx/graphviz
 		virtual/pkgconfig
-		${PYTHON_DEPS}
 	)
 	nls? ( sys-devel/gettext )
 "
 
-DOCS=( README doc/ChangeLog doc/cmd.txt )
-
-PATCHES=(
-	"${FILESDIR}"/${P}-cmake{1,2,3,4,5,6,7}.patch
-	"${FILESDIR}"/${P}-CVE-2017-9239.patch
-	# TODO: Take to upstream
-	"${FILESDIR}"/${P}-fix-docs.patch
-	"${FILESDIR}"/${P}-tools-optional.patch
-)
+DOCS=( README.md doc/ChangeLog doc/cmd.txt )
 
 pkg_setup() {
 	use doc && python-any-r1_pkg_setup
-}
-
-src_unpack() {
-	# FIXME @upstream: MacOS cruft is breaking the buildsystem, so don't let it in...
-	tar -C "${WORKDIR}" --exclude=.* -xpf "${DISTDIR}/${A}" --gz 2> /dev/null ||
-		elog "${my_tar}: tar extract command failed at least partially - continuing"
-	mv "${PN}-trunk" "${S}" || die "Failed to create source dir ${S}"
 }
 
 src_prepare() {
@@ -95,17 +80,15 @@ src_prepare() {
 
 multilib_src_configure() {
 	local mycmakeargs=(
-		-DEXIV2_ENABLE_BUILD_PO=YES
-		-DEXIV2_ENABLE_BUILD_SAMPLES=NO
+		-DEXIV2_BUILD_SAMPLES=NO
+		-DEXIV2_BUILD_PO=$(usex nls)
 		-DEXIV2_ENABLE_NLS=$(usex nls)
 		-DEXIV2_ENABLE_PNG=$(usex png)
 		-DEXIV2_ENABLE_CURL=$(usex webready)
 		-DEXIV2_ENABLE_SSH=$(usex webready)
 		-DEXIV2_ENABLE_WEBREADY=$(usex webready)
 		-DEXIV2_ENABLE_XMP=$(usex xmp)
-		-DEXIV2_ENABLE_LIBXMP=NO
-		$(multilib_is_native_abi || \
-			echo -DEXIV2_ENABLE_TOOLS=NO)
+		$(multilib_is_native_abi || echo -DEXIV2_BUILD_EXIV2_COMMAND=NO)
 	)
 
 	cmake-utils_src_configure
