@@ -9,7 +9,7 @@ inherit cmake-multilib python-any-r1
 
 DESCRIPTION="EXIF, IPTC and XMP metadata C++ library and command line utility"
 HOMEPAGE="http://www.exiv2.org/"
-SRC_URI="http://www.exiv2.org/builds/${P}-trunk.tar.gz"
+SRC_URI="mirror://funtoo/${P}-trunk.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0/26"
