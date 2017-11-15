@@ -1,21 +1,22 @@
-# Copyright 1999-2017 Gentoo Foundation
+
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit eutils wxwidgets
+inherit eutils gnome2-utils wxwidgets xdg-utils
 
 MY_P="${PN}-minsrc-${PV}"
+DOC_PV="2.1.3"
 DESCRIPTION="Free crossplatform audio editor"
 HOMEPAGE="http://web.audacityteam.org/"
 SRC_URI="https://dev.gentoo.org/~polynomial-c/dist/${MY_P}.tar.xz
-	doc? ( https://dev.gentoo.org/~polynomial-c/dist/${PN}-help-${PV}.zip )"
+	doc? ( https://dev.gentoo.org/~polynomial-c/dist/${PN}-help-${DOC_PV}.zip )"
 	# wget doesn't seem to work on FossHub links, so we mirror
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~mips ppc ppc64 x86"
 IUSE="alsa cpu_flags_x86_sse doc ffmpeg +flac id3tag jack +ladspa +lame libav
-	+lv2 mad +midi nls +portmixer sbsms +soundtouch twolame vamp +vorbis +vst"
+	+lv2 mad +midi nls sbsms +soundtouch twolame vamp +vorbis +vst"
 RESTRICT="test"
 
 RDEPEND=">=app-arch/zip-2.3
@@ -49,7 +50,7 @@ REQUIRED_USE="soundtouch? ( midi )"
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	WX_GTK_VER="3.0"
+	local WX_GTK_VER="3.0"
 	need-wxwidgets unicode
 
 	# * always use system libraries if possible
@@ -62,6 +63,7 @@ src_configure() {
 		--with-libsndfile=system
 		--with-libsoxr=system
 		--with-portaudio
+		--with-portmixer=yes
 		--with-widgetextra=local
 		--with-wx-version=${WX_GTK_VER}
 		$(use_enable cpu_flags_x86_sse sse)
@@ -82,7 +84,6 @@ src_configure() {
 		$(use_with twolame libtwolame)
 		$(use_with vamp libvamp)
 		$(use_with vorbis libvorbis)
-		$(use_with portmixer)
 	)
 	econf "${myeconfargs[@]}"
 }
@@ -91,7 +92,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	# Remove bad doc install
-	rm -r "${D}"/usr/share/doc || die
+	rm -r "${D%/}"/usr/share/doc || die
 
 	# Install our docs
 	dodoc README.txt
@@ -101,4 +102,16 @@ src_install() {
 		dodoc -r "${WORKDIR}"/{m,man,manual}
 		dodoc "${WORKDIR}"/{favicon.ico,index.html,quick_help.html}
 	fi
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
+	gnome2_icon_cache_update
 }
