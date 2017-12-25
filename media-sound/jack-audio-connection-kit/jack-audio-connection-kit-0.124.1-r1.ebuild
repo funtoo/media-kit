@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -18,6 +17,7 @@ IUSE="cpu_flags_x86_3dnow altivec alsa coreaudio doc debug examples oss cpu_flag
 # readline: only used for jack_transport -> useless for non native ABIs
 # libsndfile: ditto for jackrec
 RDEPEND="
+	sys-libs/db[${MULTILIB_USEDEP}]
 	sys-libs/readline
 	>=media-libs/libsndfile-1.0.0
 	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
@@ -27,8 +27,7 @@ RDEPEND="
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen )
-	sys-libs/db[${MULTILIB_USEDEP}]"
+	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
 	alsa? ( sys-process/lsof )
 	pam? ( sys-auth/realtime-base )"
@@ -58,6 +57,7 @@ multilib_src_configure() {
 		$(use_enable debug) \
 		$(use_enable oss) \
 		--disable-portaudio \
+		--disable-firewire \
 		$(use_enable cpu_flags_x86_sse sse) \
 		--with-html-dir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
