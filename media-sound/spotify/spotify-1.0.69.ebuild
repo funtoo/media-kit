@@ -1,15 +1,14 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit eutils fdo-mime gnome2-utils pax-utils unpacker
+inherit eutils xdg-utils gnome2-utils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-BUILD_ID="125.g72ee7853"
-SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}-client/"
-SRC_URI="amd64? ( ${SRC_BASE}${PN}-client_${PV}.${BUILD_ID}-111_amd64.deb )
-	x86? ( ${SRC_BASE}${PN}-client_${PV}.${BUILD_ID}-22_i386.deb )"
+BUILD_ID="336.g7edcc575-39"
+SRC_BASE="mirror://funtoo/"
+SRC_URI="amd64? ( ${SRC_BASE}${PN}-client_${PV}.${BUILD_ID}_amd64.deb )
+	x86? ( ${SRC_BASE}${PN}-client_${PV}.${BUILD_ID}_i386.deb )"
 LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="amd64 x86"
@@ -97,8 +96,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	fdo-mime_mime_database_update
-	fdo-mime_desktop_database_update
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
 
 	ewarn "If Spotify crashes after an upgrade its cache may be corrupt."
 	ewarn "To remove the cache:"
@@ -112,6 +111,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	fdo-mime_mime_database_update
-	fdo-mime_desktop_database_update
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
 }
