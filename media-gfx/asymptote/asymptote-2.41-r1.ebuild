@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex offscreen +opengl python sigsegv svg test vim-syntax X"
 
 REQUIRED_USE="
@@ -63,6 +63,9 @@ PATCHES=(
 
 	# Bug #322473
 	"${FILESDIR}/${P}-info.patch"
+
+	# Bug #635984 - perl-5.26 no longer has . in @INC
+	"${FILESDIR}/${P}-perl-5.26.patch"
 )
 
 pkg_setup() {

@@ -26,7 +26,7 @@ fi
 [[ ${PV%9999} != "" ]] && SRC_URI+=" test? ( https://dev.gentoo.org/~lu_zero/libav/fate-${PV%%.*}.tar.xz )"
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
-SLOT="0/12"
+SLOT="0/13"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
@@ -109,7 +109,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
 	ieee1394? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
-	cpu_flags_x86_mmx? ( dev-lang/yasm )
+	cpu_flags_x86_mmx? ( >=dev-lang/nasm-2.13 )
 	rtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	schroedinger? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	ssl? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
@@ -220,10 +220,7 @@ multilib_src_configure() {
 		use ${i} || myconf+=( --disable-indev=${i} )
 	done
 	use X && myconf+=( --enable-libxcb )
-	# Outdevs
-	for i in alsa oss ; do
-		use ${i} || myconf+=( --disable-outdev=${i} )
-	done
+
 	# libavfilter options
 	use bs2b && myconf+=( --enable-libbs2b )
 	multilib_is_native_abi && use frei0r && myconf+=( --enable-frei0r )

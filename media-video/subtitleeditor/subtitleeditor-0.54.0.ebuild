@@ -12,7 +12,7 @@ SRC_URI="https://github.com/kitone/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug nls"
 # opengl would mix gtk+:2 and :3 which is not possible
 
@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-cpp/cairomm-1.12
 	>=dev-cpp/glibmm-2.46:2
 	>=dev-cpp/gtkmm-3.18:3.0
-	>=dev-cpp/gstreamermm-1.0:1.0
+	>=dev-cpp/gstreamermm-1.0:1.0=
 	>=dev-cpp/libxmlpp-2.40:2.6
 	dev-libs/glib:2
 	>=dev-libs/libsigc++-2.6:2
