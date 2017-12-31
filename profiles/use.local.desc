@@ -602,7 +602,6 @@ media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on 
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jack2:celt - Support CELT low delay audio codec (media-libs/celt)
-media-sound/jack2:classic - Enable building of jackd
 media-sound/jack2:opus - Support media-libs/opus
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
@@ -739,9 +738,15 @@ media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/qtscrobbler:cli - Build commandline client
 media-sound/quark:gnome - Provides tray-icon and enables gconf support
+media-sound/renoise:icons - Install icons and desktop menu entries
+media-sound/renoise-demo:icons - Install icons and desktop menu entries
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
 media-sound/rhythmbox:visualizer - Enable support for visualizations using media-plugins/gst-plugins-libvisual
 media-sound/rhythmbox:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
+media-sound/rubyripper:cdrdao - Add support for advanced toc scanning using app-cdr/cdrdao
+media-sound/rubyripper:cli - Build command line interface rubyripper
+media-sound/rubyripper:normalize - Add support for normalizing audio file volume levels
+media-sound/rubyripper:wav - Add support for wavegain
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
@@ -758,6 +763,10 @@ media-sound/split2flac:flake - Add support for Flake, alternative FLAC encoder
 media-sound/split2flac:mac - Add support for Monkey's Audio files
 media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relative volume adjustment
 media-sound/spotify:pax_kernel - Triggers a paxmarking of the main Spotify binary
+media-sound/squeezelite:aac - Supports streaming AAC from the server, utilising media-libs/faad2
+media-sound/squeezelite:flac - Supports streaming FLAC from the server, utilising media-libs/flac
+media-sound/squeezelite:mp3 - Supports streaming MP3 from the server, utilising media-libs/libmad
+media-sound/squeezelite:vorbis - Supports streaming Ogg/Vorbis from the server, utilising media-libs/libvorbis
 media-sound/supercollider:emacs - Enable the SCEL user interface
 media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
@@ -1188,6 +1197,11 @@ media-video/vlc:x265 - Support X265 Encoder.
 media-video/vlc:xcb - Support the X C-language Binding, a replacement for Xlib; !!! you will need this option to be able to integrate video in the Qt interface, see bug #500678.
 media-video/vlc:zeroconf - Enables support for zero-configuration networking via avahi.
 media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
+media-video/webcamoid:headers - Install development headers
+media-video/webcamoid:libuvc - Build with libuvc support
+media-video/webcamoid:qtaudio - Enable audio capture/play via dev-qt/qtmultimedia
+media-video/webcamoid:v4lutils - Build with V4L-utils support
+media-video/webcamoid:videoeffects - Build video effects
 media-video/x264-encoder:10bit - Set output bit depth to 10
 media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
