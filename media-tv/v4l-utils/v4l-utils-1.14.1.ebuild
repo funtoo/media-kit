@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit flag-o-matic udev xdg-utils
+inherit autotools flag-o-matic udev xdg-utils
 
 DESCRIPTION="Separate utilities ebuild from upstream v4l-utils package"
 HOMEPAGE="http://git.linuxtv.org/v4l-utils.git"
@@ -28,7 +28,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${PN}-1.14.1-sysmacros.patch ) #580910
+src_prepare() {
+	eapply "${FILESDIR}"/${PN}-1.14.1-sysmacros.patch #580910
+	eapply $"${FILESDIR}"/${P}-libjpeg.patch
+	eautoreconf
+	default
+}
 
 src_configure() {
 	if use qt5; then
