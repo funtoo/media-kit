@@ -1218,3 +1218,4 @@ media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input mod
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
+virtual/ffmpeg:opus - Use the external opus library for encoding and decoding.
