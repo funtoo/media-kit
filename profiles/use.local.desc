@@ -588,6 +588,7 @@ media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/easytag:opus - Enable support for media-libs/opus and media-libs/opusfile (opus audio codec)
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
+media-sound/elisa:mpris - Enable MPRIS support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/forked-daapd:itunes - Enable support for iTunes library XML
 media-sound/forked-daapd:lastfm - Enable LastFM scrobbling support
