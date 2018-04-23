@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,21 +18,16 @@ HOMEPAGE="http://lilypond.org/"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-IUSE="debug emacs guile2 profile vim-syntax"
+IUSE="debug emacs profile vim-syntax"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND=">=app-text/ghostscript-gpl-8.15
-	>=dev-scheme/guile-1.8.2:12[deprecated,regex]
 	media-fonts/tex-gyre
 	media-libs/fontconfig
 	media-libs/freetype:2
 	>=x11-libs/pango-1.12.3
 	emacs? ( virtual/emacs )
-	guile2? ( >=dev-scheme/guile-2:12 )
-	!guile2? (
-		>=dev-scheme/guile-1.8.2:12[deprecated,regex]
-		<dev-scheme/guile-2.0:12
-	)
+	>=dev-scheme/guile-2.0.11
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	app-text/t1utils
@@ -101,8 +95,8 @@ src_configure() {
 		--disable-documentation
 		--disable-optimising
 		--disable-pipe
+		--enable-guile2
 		$(use_enable debug debugging)
-		$(use_enable guile2)
 		$(use_enable profile profiling)
 	)
 
