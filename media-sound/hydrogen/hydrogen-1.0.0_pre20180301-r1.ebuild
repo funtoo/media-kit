@@ -3,15 +3,16 @@
 
 EAPI=6
 
-inherit cmake-utils git-r3 xdg-utils
+COMMIT=1a477ffe380f153c5d9fb3495d9874df7f75334f
+inherit cmake-utils vcs-snapshot xdg-utils
 
 DESCRIPTION="Advanced drum machine"
 HOMEPAGE="http://www.hydrogen-music.org/"
-EGIT_REPO_URI="https://github.com/${PN}-music/${PN}"
+SRC_URI="https://github.com/${PN}-music/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2 ZLIB"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="alsa +archive jack ladspa lash osc oss portaudio portmidi pulseaudio"
 
 REQUIRED_USE="lash? ( alsa )"
@@ -41,7 +42,7 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog DEVELOPERS README.txt )
 
-PATCHES=( "${FILESDIR}/${PN}-gnuinstalldirs.patch" )
+PATCHES=( "${FILESDIR}/${P}-gnuinstalldirs.patch" )
 
 src_configure() {
 	local mycmakeargs=(
