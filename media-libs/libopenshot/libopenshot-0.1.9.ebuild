@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -26,7 +25,7 @@ RDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtmultimedia:5[widgets]
 	media-libs/libopenshot-audio
-	imagemagick? ( <media-gfx/imagemagick-7:0=[cxx] )
+	imagemagick? ( >=media-gfx/imagemagick-7[cxx] )
 	libav? ( media-video/libav:=[encode,x264,xvid,vpx,mp3,theora] )
 	!libav? ( media-video/ffmpeg:0=[encode,x264,xvid,vpx,mp3,theora] )
 	python? ( ${PYTHON_DEPS} )
@@ -38,7 +37,7 @@ DEPEND="
 "
 
 # https://github.com/OpenShot/libopenshot/pull/45
-PATCHES=( ${FILESDIR}/${PN}-0.1.8-fix-tests.patch )
+PATCHES=( ${FILESDIR}/${PN}-0.1.8-fix-tests.patch ${FILESDIR}/${P}-imagemagick7.patch )
 
 check_compiler() {
 	if [[ ${MERGE_TYPE} != binary ]] && ! tc-has-openmp; then
