@@ -11,7 +11,7 @@ SRC_URI="https://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ppc ppc64 ~sh x86 ~x86-fbsd ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE="adplug +alsa ao audiofile bzip2 cdio +curl debug +eventfd expat faad
 	+fifo +ffmpeg flac fluidsynth gme +icu +id3tag +inotify +ipv6 jack
 	lame mms libav libmpdclient libsamplerate libsoxr +mad mikmod modplug
@@ -34,16 +34,19 @@ REQUIRED_USE="
 	webdav? ( curl expat )
 "
 
-CDEPEND="!<sys-cluster/mpich2-1.4_rc2
+CDEPEND="
 	adplug? ( media-libs/adplug )
 	alsa? (
-		media-sound/alsa-utils
 		media-libs/alsa-lib
+		media-sound/alsa-utils
 	)
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio-paranoia )
+	cdio? (
+		dev-libs/libcdio:=
+		dev-libs/libcdio-paranoia
+	)
 	curl? ( net-misc/curl )
 	expat? ( dev-libs/expat )
 	faad? ( media-libs/faad2 )
@@ -77,7 +80,10 @@ CDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( >=net-fs/samba-4.0.25 )
-	sid? ( || ( media-libs/libsidplay:2 media-libs/libsidplayfp ) )
+	sid? ( || (
+		media-libs/libsidplay:2
+		media-libs/libsidplayfp
+	) )
 	sndfile? ( media-libs/libsndfile )
 	soundcloud? ( >=dev-libs/yajl-2:= )
 	sqlite? ( dev-db/sqlite:3 )
@@ -95,12 +101,11 @@ DEPEND="${CDEPEND}
 	dev-libs/boost
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
+	!<sys-cluster/mpich2-1.4_rc2
 	selinux? ( sec-policy/selinux-mpd )
 "
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.18.conf.patch
-)
+PATCHES=( "${FILESDIR}"/${PN}-0.18.conf.patch )
 
 pkg_setup() {
 	use network || ewarn "Icecast and Shoutcast streaming needs networking."
@@ -224,6 +229,7 @@ src_configure() {
 		$(use_enable webdav)
 		$(use_enable faad aac)
 		$(use_with zeroconf zeroconf avahi)
+		--with-boost="${EPREFIX}"/usr
 		--with-systemdsystemunitdir=$(systemd_get_systemunitdir)
 		--with-systemduserunitdir=$(systemd_get_userunitdir)
 	)
@@ -237,7 +243,7 @@ src_install() {
 	insinto /etc
 	newins doc/mpdconf.dist mpd.conf
 
-	newinitd "${FILESDIR}"/${PN}-0.20.4.init ${PN}
+	newinitd "${FILESDIR}"/${PN}-0.20.19.init ${PN}
 
 	if use unicode; then
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
