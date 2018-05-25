@@ -1,11 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit toolchain-funcs versionator multiprocessing
+inherit toolchain-funcs versionator multiprocessing xdg-utils qmake-utils gnome2-utils
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/mbunkus/mkvtoolnix.git"
+	EGIT_REPO_URI="https://gitlab.com/mbunkus/mkvtoolnix.git"
 	inherit git-r3
 else
 	SRC_URI="https://mkvtoolnix.download/sources/${P}.tar.xz"
@@ -13,7 +13,7 @@ else
 fi
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
-HOMEPAGE="https://mkvtoolnix.download/ https://github.com/mbunkus/mkvtoolnix"
+HOMEPAGE="https://mkvtoolnix.download/ https://gitlab.com/mbunkus/mkvtoolnix"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,6 +39,7 @@ RDEPEND="
 		dev-qt/qtwidgets:5
 		dev-qt/qtconcurrent:5
 		dev-qt/qtmultimedia:5
+		app-text/cmark
 	)
 "
 DEPEND="${RDEPEND}
@@ -74,10 +75,10 @@ src_configure() {
 	if use qt5 ; then
 		# ac/qt5.m4 finds default Qt version set by qtchooser, bug #532600
 		myconf+=(
-			--with-moc=/usr/$(get_libdir)/qt5/bin/moc
-			--with-uic=/usr/$(get_libdir)/qt5/bin/uic
-			--with-rcc=/usr/$(get_libdir)/qt5/bin/rcc
-			--with-qmake=/usr/$(get_libdir)/qt5/bin/qmake
+			--with-moc=$(qt5_get_bindir)/moc
+			--with-uic=$(qt5_get_bindir)/uic
+			--with-rcc=$(qt5_get_bindir)/rcc
+			--with-qmake=$(qt5_get_bindir)/qmake
 		)
 	fi
 
@@ -107,4 +108,16 @@ src_install() {
 
 	einstalldocs
 	doman doc/man/*.1
+}
+
+pkg_postrm() {
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postinst() {
+	xdg_mimeinfo_database_update
+	xdg_desktop_database_update
+	gnome2_icon_cache_update
 }
