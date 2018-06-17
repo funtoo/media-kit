@@ -436,6 +436,9 @@ media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin,
 media-plugins/frei0r-plugins:scale0tilt - Enables building of scale0tilt and vectorscope plugins, which depend on media-libs/gavl
 media-plugins/gkrellmpc:threads - Use separate thread to init connection (unsafe)
 media-plugins/gst-plugins-gl:libvisual - Enable visualization effects via media-libs/libvisual
+media-plugins/gst-plugins-gtk:egl - Enable EGL platform usage
+media-plugins/gst-plugins-gtk:gles2 - Enable gtkglsink OpenGL sink based on GLESv2 API
+media-plugins/gst-plugins-gtk:opengl - Enable gtkglsink OpenGL sink based on desktop OpenGL API
 media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
 media-plugins/gst-plugins-meta:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-meta:opus - Enable Opus audio codec support
