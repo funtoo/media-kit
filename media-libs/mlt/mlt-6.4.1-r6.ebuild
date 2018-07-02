@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python2_7 )
 # this ebuild currently only supports installing ruby bindings for a single ruby version
 # so USE_RUBY must contain only a single value (the latest stable) as the ebuild calls
 # /usr/bin/${USE_RUBY} directly
-USE_RUBY="ruby22"
+USE_RUBY="ruby23"
 inherit eutils flag-o-matic multilib python-single-r1 ruby-single toolchain-funcs
 
 DESCRIPTION="Open source multimedia framework for television broadcasting"
@@ -16,36 +16,37 @@ SRC_URI="https://github.com/mltframework/${PN}/archive/v${PV}.tar.gz -> ${P}.tar
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="compressed-lumas debug ffmpeg fftw frei0r gtk jack kdenlive libav libsamplerate melt opencv opengl
-cpu_flags_x86_mmx qt5 rtaudio sdl cpu_flags_x86_sse cpu_flags_x86_sse2 xine xml lua python ruby vdpau"
+IUSE="compressed-lumas cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 debug ffmpeg fftw frei0r
+gtk jack kdenlive libav libsamplerate lua melt opencv opengl python qt5 rtaudio ruby sdl vdpau xine xml"
 # java perl php tcl vidstab
 IUSE="${IUSE} kernel_linux"
 
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 #rtaudio will use OSS on non linux OSes
 COMMON_DEPEND="
+	>=media-libs/libebur128-1.2.2
 	ffmpeg? (
 		libav? ( media-video/libav:0=[vdpau?] )
 		!libav? ( media-video/ffmpeg:0=[vdpau?] )
 	)
-	xml? ( >=dev-libs/libxml2-2.5 )
-	sdl? ( >=media-libs/libsdl-1.2.10[X,opengl,video]
-		 >=media-libs/sdl-image-1.2.4 )
-	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3
-		media-libs/ladspa-sdk
-		>=dev-libs/libxml2-2.5 )
 	fftw? ( sci-libs/fftw:3.0= )
 	frei0r? ( media-plugins/frei0r-plugins )
-	gtk? ( x11-libs/gtk+:2
+	gtk? (
 		media-libs/libexif
-		x11-libs/pango )
-	opencv? ( >=media-libs/opencv-3.1.0:= )
-	opengl? ( media-video/movit )
-	rtaudio? (
-		media-libs/rtaudio
-		kernel_linux? ( media-libs/alsa-lib )
+		x11-libs/gtk+:2
+		x11-libs/pango
 	)
-	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
+	jack? (
+		>=dev-libs/libxml2-2.5
+		media-libs/ladspa-sdk
+		virtual/jack
+	)
+	libsamplerate? ( >=media-libs/libsamplerate-0.1.2 )
+	lua? ( >=dev-lang/lua-5.1.4-r4:= )
+	opencv? ( >=media-libs/opencv-3.2.0:= )
+	opengl? ( media-video/movit )
+	python? ( ${PYTHON_DEPS} )
 	qt5? (
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
@@ -54,15 +55,22 @@ COMMON_DEPEND="
 		dev-qt/qtxml:5
 		media-libs/libexif
 		x11-libs/libX11
-		opengl? ( dev-qt/qtopengl:5 )
 	)
-	lua? ( >=dev-lang/lua-5.1.4-r4:= )
-	python? ( ${PYTHON_DEPS} )
-	ruby? ( ${RUBY_DEPS} )"
-#	sox? ( media-sound/sox )
+	rtaudio? (
+		media-libs/rtaudio
+		kernel_linux? ( media-libs/alsa-lib )
+	)
+	ruby? ( ${RUBY_DEPS} )
+	sdl? (
+		>=media-libs/libsdl-1.2.10[X,opengl,video]
+		>=media-libs/sdl-image-1.2.4
+	)
+	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
+	xml? ( >=dev-libs/libxml2-2.5 )"
 #	java? ( >=virtual/jre-1.5 )
 #	perl? ( dev-lang/perl )
 #	php? ( dev-lang/php )
+#	sox? ( media-sound/sox )
 #	tcl? ( dev-lang/tcl:0= )
 #	vidstab? ( media-libs/libvidstab )
 SWIG_DEPEND=">=dev-lang/swig-2.0"
@@ -80,14 +88,22 @@ RDEPEND="${COMMON_DEPEND}
 	!media-libs/mlt++
 "
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+DOCS=( AUTHORS ChangeLog NEWS README docs/{framework,melt,mlt{++,-xml}}.txt )
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-6.2.0-ruby-link.patch
+	"${FILESDIR}"/${P}-libebur128-unbundle.patch
+	"${FILESDIR}"/${P}-opencv-3.3.patch
+	"${FILESDIR}"/${P}-glibc226-{1,2}.patch
+	"${FILESDIR}"/${P}-qtopengl-{1,2}.patch
+)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.2.0-ruby-link.patch
+	default
 
 	# respect CFLAGS LDFLAGS when building shared libraries. Bug #308873
 	for x in python lua; do
@@ -96,8 +112,6 @@ src_prepare() {
 	sed -i "/^LDFLAGS/s: += :& ${LDFLAGS} :" src/swig/ruby/build || die
 
 	sed -i -e "s/env ruby/${USE_RUBY}/" src/swig/ruby/* || die
-
-	default
 }
 
 src_configure() {
@@ -106,7 +120,8 @@ src_configure() {
 	# bug 589848
 	append-cxxflags -std=c++11
 
-	local myconf="--enable-gpl
+	local myconf=(
+		--enable-gpl
 		--enable-gpl3
 		--enable-motion-est
 		--target-arch=$(tc-arch)
@@ -132,21 +147,24 @@ src_configure() {
 		$(use_enable xml)
 		$(use_enable xine)
 		$(use_enable kdenlive)
-		--disable-sox"
+		--disable-sox
+	)
 		#$(use_enable sox) FIXME
 
 	if use qt5 ; then
-		myconf+=" --enable-qt
+		myconf+=(
+			--enable-qt
 			--qt-includedir=$(pkg-config Qt5Core --variable=includedir)
-			--qt-libdir=$(pkg-config Qt5Core --variable=libdir)"
+			--qt-libdir=$(pkg-config Qt5Core --variable=libdir)
+		)
 	else
-		myconf+=" --disable-qt"
+		myconf+=( --disable-qt )
 	fi
 
 	if use x86 || use amd64 ; then
-		myconf+=" $(use_enable cpu_flags_x86_mmx mmx)"
+		myconf+=( $(use_enable cpu_flags_x86_mmx mmx) )
 	else
-		myconf+=" --disable-mmx"
+		myconf+=( --disable-mmx )
 	fi
 
 	if ! use melt; then
@@ -161,21 +179,16 @@ src_configure() {
 	for i in lua python ruby ; do
 		use $i && swig_lang="${swig_lang} $i"
 	done
-	[ -z "${swig_lang}" ] && swig_lang="none"
+	[[ -z "${swig_lang}" ]] && swig_lang="none"
 
-	econf ${myconf} --swig-languages="${swig_lang}"
+	econf ${myconf[@]} --swig-languages="${swig_lang}"
 
 	sed -i -e s/^OPT/#OPT/ "${S}/config.mak" || die
-	if use qt5 ; then
-		if ! use opengl ; then
-			sed -i -e "/^USE_QT_OPENGL/ s/^/#/" "${S}/src/modules/qt/config.mak" || die
-		fi
-	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README docs/*.txt
+	einstalldocs
 
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
