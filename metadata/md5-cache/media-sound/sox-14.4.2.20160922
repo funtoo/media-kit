@@ -8,5 +8,5 @@ KEYWORDS=*
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libltdl:0= >=media-sound/gsm-1.0.12-r1 alsa? ( media-libs/alsa-lib ) amr? ( media-libs/opencore-amr ) ao? ( media-libs/libao ) encode? ( >=media-sound/lame-3.98.4 ) flac? ( >=media-libs/flac-1.1.3 ) id3tag? ( media-libs/libid3tag ) ladspa? ( media-libs/ladspa-sdk ) mad? ( media-libs/libmad ) ogg? ( media-libs/libvorbis media-libs/libogg ) opus? ( media-libs/opus media-libs/opusfile ) png? ( media-libs/libpng:0= sys-libs/zlib ) pulseaudio? ( media-sound/pulseaudio ) sndfile? ( >=media-libs/libsndfile-1.0.11 ) twolame? ( media-sound/twolame ) wavpack? ( media-sound/wavpack )
 SLOT=0
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	git-r3	fec09a83ae965b041b47f5ff7c8ba29a	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	git-r3	18aed4252aebae08e3db185e684ee37c	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=270237103d7385558d4ddf28f96b0181
