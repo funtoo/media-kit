@@ -11,7 +11,7 @@ SRC_URI="https://github.com/google/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~sparc ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~amd64 ~arm ~sparc"
 IUSE=""
 
 RDEPEND="app-arch/brotli"
@@ -21,8 +21,8 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		-DCMAKE_SKIP_RPATH=ON # needed, causes QA warnings otherwise
-		-DCANONICAL_PREFIXES=ON #661942
+		# needed, causes QA warnings otherwise
+		-DCMAKE_SKIP_RPATH=ON
 	)
 	cmake-utils_src_configure
 }
