@@ -7,7 +7,7 @@ PYTHON_REQ_USE="xml"
 
 inherit autotools flag-o-matic gnome2-utils xdg toolchain-funcs python-single-r1
 
-MY_P=${P/_/}
+MY_P="${P/_/}"
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="https://inkscape.org/"
@@ -15,7 +15,7 @@ SRC_URI="https://inkscape.global.ssl.fastly.net/media/resources/file/${P}.tar.bz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="cdr dia dbus exif gnome imagemagick openmp postscript inkjar jpeg latex"
 IUSE+=" lcms nls spell static-libs visio wpg"
 
@@ -93,16 +93,18 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-0.91_pre3-automagic.patch"
+	"${FILESDIR}/${PN}-0.92.1-automagic.patch"
 	"${FILESDIR}/${PN}-0.91_pre3-cppflags.patch"
-	"${FILESDIR}/${PN}-0.91_pre3-desktop.patch"
+	"${FILESDIR}/${PN}-0.92.1-desktop.patch"
 	"${FILESDIR}/${PN}-0.91_pre3-exif.patch"
 	"${FILESDIR}/${PN}-0.91_pre3-sk-man.patch"
 	"${FILESDIR}/${PN}-0.48.4-epython.patch"
-	"${FILESDIR}/${PN}-0.91-fix-gtkmm-2.48.patch"
+	"${FILESDIR}/${PN}-0.92.3-freetype_pkgconfig.patch"
+	"${FILESDIR}/${PN}-0.92.3-poppler-0.64.patch"
+	"${FILESDIR}/${PN}-0.92.3-poppler-0.65.patch"
 )
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 RESTRICT="test"
 
@@ -127,28 +129,26 @@ src_prepare() {
 src_configure() {
 	# aliasing unsafe wrt #310393
 	append-flags -fno-strict-aliasing
-	# enable c++11 as needed for sigc++-2.6, #566318
-	# remove it when upstream solves the issue
-	# https://bugs.launchpad.net/inkscape/+bug/1488079
-	append-cxxflags -std=c++11
 
-	econf \
-		$(use_enable static-libs static) \
-		$(use_enable nls) \
-		$(use_enable openmp) \
-		$(use_enable exif) \
-		$(use_enable jpeg) \
-		$(use_enable lcms) \
-		--enable-poppler-cairo \
-		$(use_enable wpg) \
-		$(use_enable visio) \
-		$(use_enable cdr) \
-		$(use_enable dbus dbusapi) \
-		$(use_enable imagemagick magick) \
-		$(use_with gnome gnome-vfs) \
-		$(use_with inkjar) \
-		$(use_with spell gtkspell) \
+	local myeconfargs=(
+		$(use_enable static-libs static)
+		$(use_enable nls)
+		$(use_enable openmp)
+		$(use_enable exif)
+		$(use_enable jpeg)
+		$(use_enable lcms)
+		--enable-poppler-cairo
+		$(use_enable wpg)
+		$(use_enable visio)
+		$(use_enable cdr)
+		$(use_enable dbus dbusapi)
+		$(use_enable imagemagick magick)
+		$(use_with gnome gnome-vfs)
+		$(use_with inkjar)
+		$(use_with spell gtkspell)
 		$(use_with spell aspell)
+	)
+	econf "${myeconfargs[@]}"
 }
 
 src_compile() {
@@ -158,8 +158,8 @@ src_compile() {
 src_install() {
 	default
 
-	prune_libtool_files
-	python_optimize "${ED}"/usr/share/${PN}/extensions
+	find "${ED}" -name "*.la" -delete || die
+	python_optimize "${ED%/}"/usr/share/${PN}/extensions
 }
 
 pkg_preinst() {
