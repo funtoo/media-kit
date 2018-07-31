@@ -6,11 +6,10 @@ GST_ORG_MODULE=gst-plugins-bad
 
 inherit gstreamer
 
-DESCRIPTION="bs2b elements for Gstreamer"
-KEYWORDS="amd64 x86"
-IUSE=""
+DESCRIPTION="Color management correction GStreamer plugins"
+KEYWORDS="~amd64"
 
-RDEPEND="
-	media-libs/libbs2b[${MULTILIB_USEDEP}]
-"
+RDEPEND=">=media-libs/lcms-2.7:2[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
+
+GST_PLUGINS_BUILD="lcms2"
