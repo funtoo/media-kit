@@ -1,31 +1,33 @@
-# Copyright 1999-2017 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
+# Copyright 1999-2018 Gentoo Foundation
 
 EAPI=6
-PYTHON_COMPAT=( python2_7 )
+
+PYTHON_COMPAT=( python3_{5,6,7} )
 DISTUTILS_SINGLE_IMPL=1
 DISABLE_AUTOFORMATTING=true
-inherit distutils-r1 readme.gentoo-r1
+
+inherit distutils-r1 gnome2-utils readme.gentoo-r1 xdg-utils
 
 DESCRIPTION="A cross-platform music tagger"
 HOMEPAGE="https://picard.musicbrainz.org"
-SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/picard/${P}.tar.gz"
+SRC_URI="https://github.com/metabrainz/${PN}/archive/${PV/_beta3/dev6}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
+RDEPEND="
+	dev-python/PyQt5[declarative,gui,network,widgets,${PYTHON_USEDEP}]
+	dev-qt/qtgui:5[accessibility]
+	>=media-libs/mutagen-1.38"
 DEPEND="
-	dev-python/PyQt4[X,${PYTHON_USEDEP}]
-	dev-qt/qtgui:4[accessibility]
-	media-libs/mutagen"
-RDEPEND="${DEPEND}"
+	nls? ( dev-qt/linguist-tools:5 )
+"
 
 RESTRICT="test" # doesn't work with ebuilds
-S="${WORKDIR}/${PN}-release-${PV}"
 
-DOCS=( AUTHORS.txt NEWS.txt README.md )
+S="${WORKDIR}/${P/_beta3/dev6}"
 
 python_compile() {
 	local build_args=(
@@ -65,4 +67,11 @@ Picard's settings:
 
 pkg_postinst() {
 	readme.gentoo_print_elog
+	xdg_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	gnome2_icon_cache_update
 }

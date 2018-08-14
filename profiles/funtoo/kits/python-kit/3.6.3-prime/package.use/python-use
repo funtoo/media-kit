@@ -61,7 +61,6 @@ media-sound/jack2 python_single_target_python2_7
 media-sound/lash python_single_target_python2_7
 media-sound/lilycomp python_single_target_python2_7
 media-sound/lilypond python_single_target_python2_7
-media-sound/picard python_single_target_python2_7
 media-sound/pympd python_single_target_python2_7
 media-sound/solfege python_single_target_python2_7
 media-sound/sonata python_single_target_python2_7
