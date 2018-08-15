@@ -768,7 +768,7 @@ media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
 media-sound/supercollider:wiimote - Build sclang with Wii Remote support
-media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service.
+media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for handling multiple virtual servers.
 media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
 media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/tuxguitar:fluidsynth - Enables Fluidsynth MIDI software synthesis (with external sound fonts). JSA must be disabled in the plug-ins menu to use this.
