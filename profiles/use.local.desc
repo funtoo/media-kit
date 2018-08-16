@@ -162,6 +162,7 @@ media-gfx/pqiv:archive - Enable support for images in archives and cbX comic boo
 media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
+media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/qiv:magic - Use libmagic to determine mimetypes
 media-gfx/qiviewer:webp - Build support for WEBP image format
 media-gfx/sigal:s3 - Enables support for the Amazon S3 service.
