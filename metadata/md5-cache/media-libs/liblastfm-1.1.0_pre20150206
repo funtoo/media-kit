@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtxml:5 fingerprint? ( dev-qt/qtsql:5 media-libs/libsamplerate sci-libs/fftw:3.0 ) test? ( dev-qt/qttest:5 ) sys-devel/make >=dev-util/cmake-3.9.6
+DESCRIPTION=Collection of libraries to integrate Last.fm services
+EAPI=6
+HOMEPAGE=https://github.com/lastfm/liblastfm
+IUSE=fingerprint test
+KEYWORDS=amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtxml:5 fingerprint? ( dev-qt/qtsql:5 media-libs/libsamplerate sci-libs/fftw:3.0 )
+RESTRICT=test
+SLOT=0/0
+SRC_URI=https://github.com/lastfm/liblastfm/archive/44331654256df83bc1d3cbb271a8ce3d4c464686.tar.gz -> liblastfm-1.1.0_pre20150206.tar.gz
+_eclasses_=cmake-utils	f0bc1c175684130a76ab6c17f575d820	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	55aaa148741116aa54ad0d80e361818e	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	vcs-snapshot	b77011b62e2053c646ad720defe6d921	xdg-utils	89bb9f083a2590d9b447fd0b78a96186
+_md5_=7eb840fa78259c74f0723ccbdbaae5f7
