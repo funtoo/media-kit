@@ -202,6 +202,9 @@ media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/chromaprint:tools - Build and install fpcalc and fpcollect tools
 media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/coin:simage - Texture loading via media-libs/simage library
+media-libs/dav1d:10bit - Add support for building 10-bit AV1.
+media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
+media-libs/dav1d:asm - Enable custom x86 assembly for faster decoding.
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
 media-libs/esdl:image - Enable image support
@@ -244,7 +247,6 @@ media-libs/libbdplus:aacs - Add support for decryption of AACS
 media-libs/libbluray:aacs - Add support for decryption of AACS
 media-libs/libbluray:bdplus - Use media-libs/libbdplus for BD+ decryption
 media-libs/libbluray:java - Add support for BD-J
-media-libs/libbluray:udf - Add UDF (Universal Disk Format) support
 media-libs/libbluray:utils - Install command-line utilities and examples
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
@@ -670,7 +672,6 @@ media-sound/musescore:webengine - Use dev-qt/qtwebengine for embedded web browse
 media-sound/ncmpc:artist-screen - Enable artist screen
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
-media-sound/ncmpc:colors - Enable color support
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen
 media-sound/ncmpc:lyrics-screen - Enable lyrics screen
@@ -1075,7 +1076,9 @@ media-video/obs-studio:python - Build support for scripting via Python 3.
 media-video/obs-studio:speexdsp - Enable noise suppression filter support via media-libs/speexdsp.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
-media-video/orion:mpv - Use the media-video/mpv player (upstream default) instead of the dev-qt/qtmultimedia one
+media-video/orion:mpv - Use the media-video/mpv player (upstream default)
+media-video/orion:qtav - Use the media-libs/qtav player
+media-video/orion:qtmedia - Use the dev-qt/qtmultimedia
 media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/keybinder
 media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/libvpx.
