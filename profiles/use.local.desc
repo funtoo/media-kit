@@ -1077,7 +1077,7 @@ media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead o
 media-video/obs-studio:luajit - Build support for scripting via Luajit.
 media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards.
 media-video/obs-studio:python - Build support for scripting via Python 3.
-media-video/obs-studio:speexdsp - Enable noise suppression filter support via media-libs/speexdsp.
+media-video/obs-studio:speex - Enable noise suppression filter support via media-libs/speexdsp.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/orion:mpv - Use the media-video/mpv player (upstream default)

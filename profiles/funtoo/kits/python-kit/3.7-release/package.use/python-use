@@ -86,6 +86,7 @@ media-tv/mythtv python_single_target_python2_7
 media-tv/plex-media-server python_single_target_python2_7
 media-video/griffith python_single_target_python2_7
 media-video/gtk-recordmydesktop python_single_target_python2_7
+media-video/obs-studio python_single_target_python3_4 python_targets_python3_4
 media-video/openshot python_single_target_python3_4 python_targets_python3_4
 media-video/photofilmstrip python_single_target_python2_7
 media-video/pymp python_single_target_python2_7
