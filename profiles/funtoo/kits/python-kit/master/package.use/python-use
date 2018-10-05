@@ -71,7 +71,6 @@ media-tv/plex-media-server python_single_target_python2_7
 media-video/griffith python_single_target_python2_7
 media-video/gtk-recordmydesktop python_single_target_python2_7
 media-video/photofilmstrip python_single_target_python2_7
-media-video/pitivi python_single_target_python3_4 python_targets_python3_4
 media-video/pymp python_single_target_python2_7
 media-video/qt-recordmydesktop python_single_target_python2_7
 media-video/subdl python_single_target_python2_7
