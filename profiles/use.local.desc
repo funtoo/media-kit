@@ -81,7 +81,6 @@ media-gfx/darktable:kwallet - Enable encrypted storage of passwords with kde-fra
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
 media-gfx/darktable:webp - Enable WebP export support
-media-gfx/eom:gtk3 - Build with GTK+3 instead of GTK+2
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
 media-gfx/exiv2:webready - Support reading metadata over the internet
 media-gfx/fbida:X - Install the Motif based image viewer "ida"
@@ -734,6 +733,13 @@ media-sound/rubyripper:normalize - Add support for normalizing audio file volume
 media-sound/rubyripper:wav - Add support for wavegain
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
+media-sound/snapcast:avahi - Build with avahi support
+media-sound/snapcast:client - Build and install Snapcast client component
+media-sound/snapcast:flac - Build with FLAC compression support
+media-sound/snapcast:server - Build and install Snapcast server component
+media-sound/snapcast:static-libs - Build static libs
+media-sound/snapcast:tremor - Build with TREMOR version of vorbis
+media-sound/snapcast:vorbis - Build with libvorbis support
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
 media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
