@@ -1,18 +1,17 @@
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
-inherit autotools git-r3
+inherit autotools
 
-DESCRIPTION="The swiss army knife of sound processing programs. This version includes DSF support."
-HOMEPAGE="https://github.com/mansr/sox"
-
-EGIT_REPO_URI="https://github.com/mansr/sox.git"
-EGIT_COMMIT="1179ab5df6f6c300c4b96f3b701b8501007088d0"
+DESCRIPTION="The swiss army knife of sound processing programs"
+HOMEPAGE="http://sox.sourceforge.net"
+SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="alsa amr ao debug encode flac id3tag ladspa mad ogg openmp oss opus png pulseaudio sndfile static-libs twolame wavpack"
 
 RDEPEND="
@@ -26,9 +25,18 @@ RDEPEND="
 	id3tag? ( media-libs/libid3tag )
 	ladspa? ( media-libs/ladspa-sdk )
 	mad? ( media-libs/libmad )
-	ogg? ( media-libs/libvorbis	media-libs/libogg )
-	opus? ( media-libs/opus media-libs/opusfile )
-	png? ( media-libs/libpng:0= sys-libs/zlib )
+	ogg? (
+		media-libs/libogg
+		media-libs/libvorbis
+	)
+	opus? (
+		media-libs/opus
+		media-libs/opusfile
+	)
+	png? (
+		media-libs/libpng:0=
+		sys-libs/zlib
+	)
 	pulseaudio? ( media-sound/pulseaudio )
 	sndfile? ( >=media-libs/libsndfile-1.0.11 )
 	twolame? ( media-sound/twolame )
@@ -38,7 +46,21 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 
+PATCHES=(
+	"${FILESDIR}"/${P}-CVE-2017-11332.patch
+	"${FILESDIR}"/${P}-CVE-2017-11333.patch
+	"${FILESDIR}"/${P}-CVE-2017-11358.patch
+	"${FILESDIR}"/${P}-CVE-2017-11359.patch
+	"${FILESDIR}"/${P}-CVE-2017-15370.patch
+	"${FILESDIR}"/${P}-CVE-2017-15371.patch
+	"${FILESDIR}"/${P}-CVE-2017-15372.patch
+	"${FILESDIR}"/${P}-CVE-2017-15642.patch
+	"${FILESDIR}"/${P}-CVE-2017-18189.patch
+	"${FILESDIR}"/${P}-wavpack-chk-errors-on-init.patch
+)
+
 src_prepare() {
+	default
 	sed -i -e 's:CFLAGS="-g":CFLAGS="$CFLAGS -g":' configure.ac || die #386027
 	eautoreconf
 }
@@ -69,7 +91,6 @@ src_configure() {
 }
 
 src_install() {
-	make txt
 	default
 	# libltdl is used for loading plugins, keeping libtool files with empty
 	# dependency_libs what otherwise would be -exec rm -f {} +
