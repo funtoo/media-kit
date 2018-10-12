@@ -1,4 +1,3 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -31,7 +30,7 @@ RDEPEND="app-arch/snappy:0/1
 	dev-qt/qtwidgets:5
 	net-libs/libsrtp:0
 	sys-libs/libcxx[libcxxabi]
-	sys-libs/zlib:0/1
+	sys-libs/zlib
 	virtual/udev
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
