@@ -31,6 +31,9 @@ media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like L
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
 media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/unifont:utils - Install unifont utilities
+media-gfx/ahoviewer:libsecret - Support password storing using libsecret
+media-gfx/ahoviewer:rar - Rar archive support
+media-gfx/ahoviewer:zip - Zip archive support
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/alembic:boost - Use dev-libs/boost library
