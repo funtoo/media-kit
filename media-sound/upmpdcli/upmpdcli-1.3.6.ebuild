@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit user
+inherit systemd user
 
 DESCRIPTION="UPnP Media Renderer front-end for MPD, the Music Player Daemon"
 HOMEPAGE="https://www.lesbonscomptes.com/upmpdcli/index.html"
@@ -23,7 +23,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	thirdparty? ( dev-python/requests )
-	media-sound/mpd
+	media-sound/mpd[curl]
 "
 
 pkg_setup() {
@@ -35,6 +35,7 @@ src_install() {
 	default
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
+	systemd_dounit systemd/upmpdcli.service
 }
 
 pkg_postinst() {
