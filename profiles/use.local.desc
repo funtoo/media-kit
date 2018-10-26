@@ -741,12 +741,9 @@ media-sound/rubyripper:normalize - Add support for normalizing audio file volume
 media-sound/rubyripper:wav - Add support for wavegain
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
-media-sound/snapcast:avahi - Build with avahi support
 media-sound/snapcast:client - Build and install Snapcast client component
-media-sound/snapcast:flac - Build with FLAC compression support
 media-sound/snapcast:server - Build and install Snapcast server component
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
-media-sound/snapcast:vorbis - Build with libvorbis support
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
 media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
