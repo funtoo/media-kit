@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure prepare unpack
+DEPEND=gles2? ( media-libs/mesa[gles2] ) media-libs/glm media-libs/mesa qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtopengl:5 media-sound/pulseaudio ) sdl? ( >=media-libs/libsdl2-2.0.5 ) sys-libs/zlib virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DESCRIPTION=A graphical music visualization plugin similar to milkdrop
+EAPI=6
+HOMEPAGE=https://github.com/projectM-visualizer/projectm
+IUSE=gles2 qt5 sdl
+LICENSE=LGPL-2
+RDEPEND=gles2? ( media-libs/mesa[gles2] ) media-libs/glm media-libs/mesa qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtopengl:5 media-sound/pulseaudio ) sdl? ( >=media-libs/libsdl2-2.0.5 ) sys-libs/zlib
+SLOT=0
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	git-r3	0d4635eeb5a96cd5315597a47eba25c9	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=da84aa589495d42adbe6b938a93244ef

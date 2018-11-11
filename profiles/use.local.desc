@@ -274,6 +274,7 @@ media-libs/libopenglrecorder:vpx - Enable VP8/VP9 codec support via media-libs/l
 media-libs/libpagemaker:tools - Build command line file format conversion tools
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
+media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
 media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
 media-libs/libraw:demosaic - Enable support for external interpolation algorithms
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
@@ -501,6 +502,7 @@ media-sound/alsa-utils:libsamplerate - install utils that use libsamplerate (e.g
 media-sound/alsa-utils:ncurses - install utils that use ncurses (e.g. alsamixer)
 media-sound/alsaplayer:id3tag - Enables ID3 tagging with id3tag library
 media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
+media-sound/apulse:sdk - Install PulseAudio headers and pkg-config files. Be aware apulse is not a full PulseAudio replacement by design and some functionality may be missing.
 media-sound/aqualung:ifp - Enable support for iRiver iFP portable audio players
 media-sound/aqualung:lua - Enable support for programmable title formatting with dev-lang/lua
 media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files
@@ -511,8 +513,6 @@ media-sound/ario:idle - Enable experimental support for MPD's idle command to re
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
 media-sound/audacious:gtk3 - Link against version 3 of the GIMP Toolkit instead of version 2 (x11-libs/gtk+)
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
-media-sound/audacity:libsamplerate - Uses media-libs/libsamplerate as audio resampling library: Higher quality than the included resampler but lower quality and much slower than libsoxr.
-media-sound/audacity:libsoxr - Uses media-libs/soxr as audio resampling library: Higher quality and much faster than both the included resampler and libsamplerate.
 media-sound/audacity:lv2 - Add support for Ladspa V2
 media-sound/audacity:midi - Enables MIDI support
 media-sound/audacity:portmixer - Enable the internal portmixer feature
@@ -599,8 +599,8 @@ media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/hydrogen:portmidi - Add portmidi support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
-media-sound/jack2:celt - Support CELT low delay audio codec (media-libs/celt)
-media-sound/jack2:opus - Support media-libs/opus
+media-sound/jack2:celt - Support CELT low delay audio codec
+media-sound/jack2:classic - Enable building of jackd
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
@@ -728,7 +728,6 @@ media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
 media-sound/sox:amr - Enables Adaptive Multi-Rate Audio support
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
-media-sound/sox:opus - Enables reading Ogg Opus files.
 media-sound/sox:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/split2flac:enca - Try to guess the charset using enca
 media-sound/split2flac:flake - Add support for Flake, alternative FLAC encoder
@@ -900,7 +899,6 @@ media-video/ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
 media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
 media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
-media-video/ffmpeg:celt - Adds Xiph CELT audio decoding support
 media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint.
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
 media-video/ffmpeg:codec2 - Enables codec2 low bit rate speech codec support via media-libs/codec2.
@@ -981,7 +979,6 @@ media-video/libav:schroedinger - Enable Dirac video support (an advanced royalty
 media-video/libav:ssl - Enable SSL/TLS support using dev-libs/openssl or net-libs/gnutls.
 media-video/libav:tools - Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.
 media-video/libav:twolame - Enable MP2 encoding via media-sound/twolame as an alternative to the internal encoder
-media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/libav:vpx - Enable vp8 encoding support using media-libs/libvpx.
 media-video/libav:x265 - Enable HEVC encoding with media-libs/x265.
 media-video/libva-utils:drm - Enables VA/DRM API support.
@@ -1030,7 +1027,6 @@ media-video/mplayer:tremor - Enable internal support for Vorbis
 media-video/mplayer:twolame - Enable twolame MPEG-2 encoding
 media-video/mplayer:vcd - Enables VCD support
 media-video/mplayer:vidix - Support for vidix video output
-media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:yuv4mpeg - Enables yuv4mpeg video output
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/mpv:archive - Enable support for various archive formats via app-arch/libarchive
