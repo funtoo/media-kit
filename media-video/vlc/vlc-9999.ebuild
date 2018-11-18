@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,9 +19,9 @@ else
 	else
 		SRC_URI="https://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 	fi
-	KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 -sparc x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd"
 fi
-inherit autotools flag-o-matic gnome2-utils toolchain-funcs versionator virtualx xdg-utils ${SCM}
+inherit autotools flag-o-matic gnome2-utils toolchain-funcs virtualx xdg-utils ${SCM}
 
 DESCRIPTION="Media player and framework with support for most multimedia files and streaming"
 HOMEPAGE="https://www.videolan.org/vlc/"
@@ -29,14 +29,14 @@ HOMEPAGE="https://www.videolan.org/vlc/"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-9" # vlc - vlccore
 
-IUSE="a52 alsa altivec aom archive bidi bluray cddb chromaprint chromecast dbus dc1394
-	debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac fluidsynth fontconfig
-	+gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate libass libav libcaca
-	libnotify +libsamplerate libtar libtiger linsys lirc live lua macosx-notifications
-	macosx-qtkit matroska microdns modplug mp3 mpeg mtp musepack ncurses neon nfs ogg
-	omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5 rdp rtsp
-	run-as-root samba schroedinger sdl-image sftp shout sid skins soxr speex srt ssl svg
-	taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vnc vorbis vpx
+IUSE="a52 alsa altivec aom archive aribsub bidi bluray cddb chromaprint chromecast dbus
+	dc1394 debug directx dts +dvbpsi dvd +encode faad fdk +ffmpeg flac fluidsynth
+	fontconfig +gcrypt gme gnome-keyring gstreamer ieee1394 jack jpeg kate kms libass
+	libav libcaca libnotify +libsamplerate libtar libtiger linsys lirc live lua
+	macosx-notifications macosx-qtkit mad matroska modplug mp3 mpeg mtp musepack ncurses
+	neon nfs ogg omxil opencv optimisememory opus png postproc projectm pulseaudio +qt5
+	rdp run-as-root samba sdl-image sftp shout sid skins soxr speex srt ssl
+	svg taglib theora tremor truetype twolame udev upnp vaapi v4l vdpau vnc vorbis vpx
 	wayland wma-fixed +X x264 x265 xml zeroconf zvbi cpu_flags_x86_mmx cpu_flags_x86_sse
 "
 REQUIRED_USE="
@@ -61,6 +61,7 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib:0 )
 	aom? ( media-libs/libaom:= )
 	archive? ( app-arch/libarchive:= )
+	aribsub? ( media-libs/aribb24 )
 	bidi? (
 		dev-libs/fribidi:0
 		media-libs/freetype:2[harfbuzz]
@@ -70,7 +71,10 @@ RDEPEND="
 	bluray? ( media-libs/libbluray:0= )
 	cddb? ( media-libs/libcddb:0 )
 	chromaprint? ( media-libs/chromaprint:0= )
-	chromecast? ( >=dev-libs/protobuf-2.5.0:= )
+	chromecast? (
+		>=dev-libs/protobuf-2.5.0:=
+		>=net-libs/libmicrodns-0.0.9:=
+	)
 	dbus? ( sys-apps/dbus:0 )
 	dc1394? (
 		media-libs/libdc1394:2
@@ -86,7 +90,7 @@ RDEPEND="
 	fdk? ( media-libs/fdk-aac:0= )
 	ffmpeg? (
 		!libav? ( >=media-video/ffmpeg-3.1.3:0=[vaapi?,vdpau?] )
-		libav? ( >=media-video/libav-11.8:0=[vaapi?,vdpau?] )
+		libav? ( >=media-video/libav-12.2:0=[vaapi?,vdpau?] )
 	)
 	flac? (
 		media-libs/flac:0
@@ -108,6 +112,7 @@ RDEPEND="
 	jack? ( virtual/jack )
 	jpeg? ( virtual/jpeg:0 )
 	kate? ( media-libs/libkate:0 )
+	kms? ( x11-libs/libdrm )
 	libass? (
 		media-libs/fontconfig:1.0
 		media-libs/libass:0=
@@ -126,14 +131,14 @@ RDEPEND="
 	lirc? ( app-misc/lirc:0 )
 	live? ( media-plugins/live:0 )
 	lua? ( >=dev-lang/lua-5.1:0 )
+	mad? ( media-libs/libmad )
 	matroska? (
 		dev-libs/libebml:0=
 		media-libs/libmatroska:0=
 	)
-	microdns? ( >=net-libs/libmicrodns-0.0.9:= )
-	modplug? ( media-libs/libmodplug:0 )
-	mp3? ( media-libs/libmad:0 )
-	mpeg? ( media-libs/libmpeg2:0 )
+	modplug? ( media-libs/libmodplug )
+	mp3? ( media-sound/mpg123 )
+	mpeg? ( media-libs/libmpeg2 )
 	mtp? ( media-libs/libmtp:0= )
 	musepack? ( media-sound/musepack-tools:0 )
 	ncurses? ( sys-libs/ncurses:0=[unicode] )
@@ -160,7 +165,6 @@ RDEPEND="
 	)
 	rdp? ( >=net-misc/freerdp-2.0.0_rc0:0=[client] )
 	samba? ( >=net-fs/samba-4.0.0:0[client,-debug(-)] )
-	schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 	sdl-image? ( media-libs/sdl-image:0 )
 	sftp? ( net-libs/libssh2:0 )
 	shout? ( media-libs/libshout:0 )
@@ -199,12 +203,14 @@ RDEPEND="
 	vorbis? ( media-libs/libvorbis:0 )
 	vpx? ( media-libs/libvpx:0= )
 	wayland? (
-		dev-libs/wayland
-		dev-libs/wayland-protocols
+		>=dev-libs/wayland-1.15
+		>=dev-libs/wayland-protocols-1.12
 	)
 	X? (
 		x11-libs/libX11
-		x11-libs/libxcb
+		x11-libs/libxcb[xkb]
+		x11-libs/libXcursor
+		x11-libs/libxkbcommon[X]
 		x11-libs/xcb-util
 		x11-libs/xcb-util-keysyms
 	)
@@ -226,25 +232,17 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch # build system
 	"${FILESDIR}"/${PN}-2.2.4-libav-11.7.patch # bug #593460
 	"${FILESDIR}"/${PN}-2.2.8-freerdp-2.patch # bug 590164
-	"${FILESDIR}"/${PN}-3.0.1-qt-5.11.patch # TODO upstream
 )
 
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_pretend() {
-	# https://bugs.gentoo.org/647668
-	if use chromecast && ! use microdns; then
-		einfo "USE=microdns is required for Chromecast autodetection support"
-	fi
-}
-
 src_prepare() {
 	default
 
 	has_version '>=net-libs/libupnp-1.8.0' && \
-		eapply "${FILESDIR}"/${PN}-2.2.8-libupnp-slot-1.8.patch
+		eapply "${FILESDIR}"/${P}-libupnp-slot-1.8.patch
 
 	# Bootstrap when we are on a git checkout.
 	if [[ ${PV} = *9999 ]] ; then
@@ -274,9 +272,9 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		--disable-aa
 		--disable-dependency-tracking
 		--disable-optimizations
+		--disable-rpath
 		--disable-update-check
 		--enable-fast-install
 		--enable-screen
@@ -287,12 +285,14 @@ src_configure() {
 		$(use_enable altivec)
 		$(use_enable aom)
 		$(use_enable archive)
+		$(use_enable aribsub)
 		$(use_enable bidi fribidi)
 		$(use_enable bidi harfbuzz)
 		$(use_enable bluray)
 		$(use_enable cddb libcddb)
 		$(use_enable chromaprint)
 		$(use_enable chromecast)
+		$(use_enable chromecast microdns)
 		$(use_enable cpu_flags_x86_mmx mmx)
 		$(use_enable cpu_flags_x86_sse sse)
 		$(use_enable dbus)
@@ -324,6 +324,7 @@ src_configure() {
 		$(use_enable jack)
 		$(use_enable jpeg)
 		$(use_enable kate)
+		$(use_enable kms)
 		$(use_enable libass)
 		$(use_enable libcaca caca)
 		$(use_enable libnotify notify)
@@ -336,10 +337,10 @@ src_configure() {
 		$(use_enable lua)
 		$(use_enable macosx-notifications osx-notifications)
 		$(use_enable macosx-qtkit)
+		$(use_enable mad)
 		$(use_enable matroska)
-		$(use_enable microdns)
 		$(use_enable modplug mod)
-		$(use_enable mp3 mad)
+		$(use_enable mp3 mpg123)
 		$(use_enable mpeg libmpeg2)
 		$(use_enable mtp)
 		$(use_enable musepack mpc)
@@ -347,7 +348,6 @@ src_configure() {
 		$(use_enable neon)
 		$(use_enable ogg)
 		$(use_enable omxil)
-		$(use_enable omxil omxil-vout)
 		$(use_enable opencv)
 		$(use_enable optimisememory optimize-memory)
 		$(use_enable opus)
@@ -357,10 +357,8 @@ src_configure() {
 		$(use_enable pulseaudio pulse)
 		$(use_enable qt5 qt)
 		$(use_enable rdp freerdp)
-		$(use_enable rtsp realrtsp)
 		$(use_enable run-as-root)
 		$(use_enable samba smbclient)
-		$(use_enable schroedinger)
 		$(use_enable sdl-image)
 		$(use_enable sftp)
 		$(use_enable shout)
@@ -388,13 +386,13 @@ src_configure() {
 		$(use_enable wma-fixed)
 		$(use_with X x)
 		$(use_enable X xcb)
-		$(use_enable X xvideo)
 		$(use_enable x264)
 		$(use_enable x265)
 		$(use_enable xml libxml2)
 		$(use_enable zeroconf avahi)
 		$(use_enable zvbi)
 		$(use_enable !zvbi telx)
+		--with-kde-solid=/usr/share/solid/actions
 		--disable-asdcp
 		--disable-coverage
 		--disable-cprof
@@ -412,6 +410,7 @@ src_configure() {
 		--disable-opensles
 		--disable-oss
 		--disable-rpi-omxil
+		--disable-schroedinger
 		--disable-shine
 		--disable-sndio
 		--disable-spatialaudio
@@ -472,12 +471,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ "$ROOT" = "/" ]] && [[ -x "/usr/$(get_libdir)/vlc/vlc-cache-gen" ]] ; then
-		einfo "Running /usr/$(get_libdir)/vlc/vlc-cache-gen on /usr/$(get_libdir)/vlc/plugins/"
-		"/usr/$(get_libdir)/vlc/vlc-cache-gen" "/usr/$(get_libdir)/vlc/plugins/"
+	if [[ "$ROOT" = "/" ]] && [[ -x "/usr/libexec/vlc/vlc-cache-gen" ]] ; then
+		einfo "Running /usr/libexec/vlc/vlc-cache-gen on /usr/libexec/vlc/plugins/"
+		"/usr/libexec/vlc/vlc-cache-gen" "/usr/libexec/vlc/plugins/"
 	else
 		ewarn "We cannot run vlc-cache-gen (most likely ROOT!=/)"
-		ewarn "Please run /usr/$(get_libdir)/vlc/vlc-cache-gen manually"
+		ewarn "Please run /usr/libexec/vlc/vlc-cache-gen manually"
 		ewarn "If you do not do it, vlc will take a long time to load."
 	fi
 
@@ -487,8 +486,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [[ -e /usr/$(get_libdir)/vlc/plugins/plugins.dat ]]; then
-		rm /usr/$(get_libdir)/vlc/plugins/plugins.dat || die "Failed to rm plugins.dat"
+	if [[ -e /usr/libexec/vlc/plugins/plugins.dat ]]; then
+		rm /usr/libexec/vlc/plugins/plugins.dat || die "Failed to rm plugins.dat"
 	fi
 
 	gnome2_icon_cache_update

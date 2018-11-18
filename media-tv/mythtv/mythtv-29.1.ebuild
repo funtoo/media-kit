@@ -1,32 +1,34 @@
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
 
 # git diff --relative=mythtv v0.27.6.. > ~/mythtv-0.27.6/patches/mythtv.patch
-BACKPORTS="03f44039848bd09444ff4baa8dc158bd61454079"
+BACKPORTS="d8a2db77f5731cf32c6d31127452391c6cf7f91f"
 MY_P=${P%_p*}
 MY_PV=${PV%_p*}
 
 inherit flag-o-matic python-single-r1 qmake-utils user readme.gentoo-r1 systemd vcs-snapshot
 
-MYTHTV_BRANCH="fixes/0.28"
+MYTHTV_BRANCH="fixes/29"
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="https://www.mythtv.org"
-SRC_URI="https://github.com/MythTV/mythtv/archive/${BACKPORTS}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/MythTV/mythtv/archive/${BACKPORTS}.tar.gz -> ${PF}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0/${PV}"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
-IUSE="alsa altivec autostart bluray cec crystalhd debug dvb dvd egl +hls \
-	ieee1394 jack lcd libass lirc +mythlogserver perl pulseaudio python systemd +theora \
+IUSE="alsa altivec autostart bluray cec crystalhd debug dvb dvd egl fftw +hls \
+	ieee1394 jack lcd libass lirc mythlogserver perl pulseaudio python systemd +theora \
 	vaapi vdpau +vorbis +wrapper +xml xmltv +xvid zeroconf ${IUSE_INPUT_DEVICES}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	bluray? ( xml )
-	theora? ( vorbis )"
+	theora? ( vorbis )
+"
 
 COMMON="
 	dev-libs/glib:2
@@ -69,8 +71,8 @@ COMMON="
 		sys-fs/udisks:2
 	)
 	egl? ( media-libs/mesa[egl] )
+	fftw? ( sci-libs/fftw:3.0= )
 	hls? (
-		media-libs/faac
 		<media-libs/libvpx-1.7.0:=
 		>=media-libs/x264-0.0.20111220:=
 	)
@@ -97,6 +99,8 @@ COMMON="
 		dev-python/lxml
 		dev-python/mysql-python
 		dev-python/urlgrabber
+		dev-python/future
+		dev-python/requests-cache
 	)
 	systemd? ( sys-apps/systemd:= )
 	theora? ( media-libs/libtheora media-libs/libogg )
@@ -127,12 +131,11 @@ RDEPEND="${COMMON}
 "
 DEPEND="${COMMON}
 	dev-lang/yasm
-	sci-libs/fftw
-	x11-proto/xf86vidmodeproto
-	x11-proto/xineramaproto
+	virtual/pkgconfig
+	x11-base/xorg-proto
 "
 
-S="${WORKDIR}/${P}/mythtv"
+S="${WORKDIR}/${PF}/mythtv"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="
@@ -173,8 +176,6 @@ src_prepare() {
 	echo "BRANCH=\"${MYTHTV_BRANCH}\"" >> "${S}"/EXPORTED_VERSION
 
 	echo "setting.extra -= -ldconfig" >> "${S}"/programs/mythfrontend/mythfrontend.pro
-
-	eapply "${FILESDIR}/${P}-glibc225.patch"
 }
 
 src_configure() {
@@ -201,7 +202,6 @@ src_configure() {
 	myconf="${myconf} --enable-xv"
 	myconf="${myconf} --enable-x11"
 	myconf="${myconf} --enable-nonfree"
-	myconf="${myconf} --enable-libmp3lame"
 	use cec || myconf="${myconf} --disable-libcec"
 	use zeroconf || myconf="${myconf} --disable-libdns-sd"
 	myconf="${myconf} $(use_enable theora libtheora)"
@@ -210,7 +210,6 @@ src_configure() {
 	if use hls; then
 		myconf="${myconf} --enable-libx264"
 		myconf="${myconf} --enable-libvpx"
-		myconf="${myconf} --enable-libfaac"
 	fi
 
 	myconf="${myconf} $(use_enable libass)"
@@ -266,6 +265,7 @@ src_configure() {
 	has ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
 	myconf="${myconf} $(use_enable systemd systemd_notify)"
+	myconf="${myconf} $(use_enable systemd systemd_journal)"
 	use systemd || myconf="${myconf} $(use_enable mythlogserver)"
 
 	chmod +x ./external/FFmpeg/version.sh
@@ -343,6 +343,9 @@ src_install() {
 		while read file; do
 		chmod a+x "${file}"
 	done
+
+	# Remove empty dir
+	rmdir "${ED}"/var/log/mythtv/old
 }
 
 pkg_preinst() {

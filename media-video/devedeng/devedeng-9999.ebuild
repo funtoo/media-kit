@@ -5,15 +5,16 @@ EAPI=6
 
 PYTHON_COMPAT=( python3_{4,5,6} )
 
-inherit distutils-r1 gnome2-utils
+inherit distutils-r1 git-r3 gnome2-utils
 
 DESCRIPTION="DevedeNG is a program to create video DVDs and CDs (VCD, sVCD or CVD)"
 HOMEPAGE="http://www.rastersoft.com/programas/devede.html"
-SRC_URI="https://github.com/rastersoft/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/rastersoft/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="libav"
 
 RDEPEND="dev-python/pycairo[${PYTHON_USEDEP}]
@@ -25,7 +26,7 @@ RDEPEND="dev-python/pycairo[${PYTHON_USEDEP}]
 	media-video/dvdauthor
 	media-video/vcdimager
 	virtual/cdrtools
-	|| ( app-cdr/brasero kde-apps/k3b app-cdr/xfburn )"
+	|| ( app-cdr/brasero kde-apps/k3b )"
 
 DEPEND="${PYTHON_DEPS}"
 
