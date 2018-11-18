@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 sys-libs/zlib virtual/glu
 SLOT=0
 SRC_URI=https://github.com/lazarus-pkgs/panini/archive/v0.72.0.tar.gz -> panini-0.72.0.tar.gz
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	estack	5ac2a138d0b33354b764d84f9e835db8	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
+_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	estack	5ac2a138d0b33354b764d84f9e835db8	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7	xdg-utils	9ef13b5c5bcf0c50d6aa53692d8e441c
 _md5_=5d4f216c8e382a04befc230096435b0a

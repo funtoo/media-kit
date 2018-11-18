@@ -10,5 +10,5 @@ RDEPEND=png? ( media-libs/gd[png,truetype?] )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.mcternan.me.uk/mscgen/software/mscgen-src-0.20.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
 _md5_=0025f9e58c395832c7d28dbfb35bd23f
