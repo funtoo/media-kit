@@ -4,6 +4,7 @@
 =media-gfx/openvdb-5.2.0 python_single_target_python2_7
 =media-libs/alsa-lib-1.1.2 python_single_target_python2_7
 =media-libs/hamlib-3.1 python_single_target_python2_7
+=media-sound/gpodder-3.10.5 python_single_target_python3_6 python_targets_python3_6
 =media-sound/gpodder-3.9.1 python_single_target_python2_7
 media-gfx/alembic python_single_target_python2_7
 media-gfx/asymptote python_single_target_python2_7

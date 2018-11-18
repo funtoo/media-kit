@@ -628,6 +628,8 @@ media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mp3splt-gtk:audacious - Include media-sound/audacious support
 media-sound/mpd:adplug - Enable the AdPlug decoder plugin
 media-sound/mpd:cdio - Use libcdio for ISO9660 parsing support
+media-sound/mpd:chromaprint - Enable ChromaPrint / AcoustID support
+media-sound/mpd:cue - Enable CUE sheet support
 media-sound/mpd:curl - Support for web stream listening
 media-sound/mpd:eventfd - Use the eventfd function in MPD's event loop
 media-sound/mpd:faad - Use external faad library for AAC decoding
@@ -642,17 +644,17 @@ media-sound/mpd:libsoxr - Enable the libsoxr resampler
 media-sound/mpd:mpg123 - Enable support for mp3 decoding over media-sound/mpg123
 media-sound/mpd:network - Enables network streaming support
 media-sound/mpd:nfs - Enable support for the Network File System
-media-sound/mpd:opus - Enable Opus codec support
 media-sound/mpd:pipe - Support writing audio to a pipe
+media-sound/mpd:qobuz - Build plugin to access qobuz
 media-sound/mpd:recorder - Enables output plugin for recording radio streams
 media-sound/mpd:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mpd:signalfd - Use the signalfd function in MPD's event loop
 media-sound/mpd:soundcloud - Build plugin to access soundcloud
 media-sound/mpd:systemd - Enable support for systemd socket activation
+media-sound/mpd:tidal - Build plugin to access tidal
 media-sound/mpd:twolame - Support twolame MPEG-2 encoding
 media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
-media-sound/mpd:zip - Support for ZIP files
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
@@ -711,13 +713,7 @@ media-sound/qmmp:tray - Build tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
-media-sound/renoise:icons - Install icons and desktop menu entries
-media-sound/renoise-demo:icons - Install icons and desktop menu entries
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
-media-sound/rubyripper:cdrdao - Add support for advanced toc scanning using app-cdr/cdrdao
-media-sound/rubyripper:cli - Build command line interface rubyripper
-media-sound/rubyripper:normalize - Add support for normalizing audio file volume levels
-media-sound/rubyripper:wav - Add support for wavegain
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
 media-sound/snapcast:client - Build and install Snapcast client component
@@ -736,10 +732,6 @@ media-sound/split2flac:mac - Add support for Monkey's Audio files
 media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relative volume adjustment
 media-sound/spotify:pax_kernel - Triggers a paxmarking of the main Spotify binary
 media-sound/spotify:systray - Pulls in dependencies needed for systray support on some desktop environments
-media-sound/squeezelite:aac - Supports streaming AAC from the server, utilising media-libs/faad2
-media-sound/squeezelite:flac - Supports streaming FLAC from the server, utilising media-libs/flac
-media-sound/squeezelite:mp3 - Supports streaming MP3 from the server, utilising media-libs/libmad
-media-sound/squeezelite:vorbis - Supports streaming Ogg/Vorbis from the server, utilising media-libs/libvorbis
 media-sound/supercollider:emacs - Enable the SCEL user interface
 media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)

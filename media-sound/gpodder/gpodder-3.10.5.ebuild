@@ -1,32 +1,34 @@
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python3_{4,5,6,7} )
+PYTHON_COMPAT=( python3_{6,7} )
 PYTHON_REQ_USE="sqlite"
-# Required for python_fix_shebang:
 DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1 gnome2-utils
 
 DESCRIPTION="A free cross-platform podcast aggregator"
-HOMEPAGE="http://gpodder.org/"
-SRC_URI="https://github.com/gpodder/gpodder/archive/3.10.5.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://gpodder.github.io/"
+SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="*"
-IUSE="+dbus bluetooth ipod kernel_linux mtp test"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+IUSE="+dbus bluetooth kernel_linux mtp test"
 
+# As in Fedora: re-enable >=dev-python/eyeD3-0.7[${PYTHON_USEDEP}] and
+# ipod? ( media-libs/libgpod[python,${PYTHON_USEDEP}] ) once they
+# support python3
 COMMON_DEPEND="
-	>=dev-python/feedparser-5.1.2[${PYTHON_USEDEP}]
 	dev-python/html5lib[${PYTHON_USEDEP}]
+	dev-python/isort[${PYTHON_USEDEP}]
+	dev-python/pycairo[${PYTHON_USEDEP}]
+	>=dev-python/pygobject-3.22.0:3[${PYTHON_USEDEP}]
+	>=dev-python/podcastparser-0.6.0[${PYTHON_USEDEP}]
 	>=dev-python/mygpoclient-1.8[${PYTHON_USEDEP}]
-	dev-python/pycairo[xcb,${PYTHON_USEDEP}]
-	dev-python/pygobject[${PYTHON_USEDEP}]
-	dev-python/podcastparser[${PYTHON_USEDEP}]
 	dbus? ( dev-python/dbus-python[${PYTHON_USEDEP}] )
 	bluetooth? ( net-wireless/bluez )
-	ipod? ( media-libs/libgpod[python] )
 	mtp? ( >=media-libs/libmtp-1.0.0:= )
 "
 RDEPEND="${COMMON_DEPEND}
@@ -37,19 +39,13 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-apps/help2man
 	test? (
-		dev-python/minimock[${PYTHON_USEDEP}]
-		dev-python/coverage[${PYTHON_USEDEP}]
+		dev-python/minimock
+		dev-python/coverage
 	)
 "
-src_prepare() {
-	default
-	sed -i -e '/setup.py.*install/d' makefile || die
-	# Fix for "AttributeError: 'gPodder' object has no attribute 'toolbar'":
-	python_fix_shebang .
-}
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake PYTHON=python3 DESTDIR="${D}" install
 	distutils-r1_src_install
 }
 
@@ -63,10 +59,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	xdg_desktop_database_update
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	xdg_desktop_database_update
 }

@@ -1,3 +1,4 @@
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,7 +11,7 @@ if [[ "${PV}" = "9999" ]]; then
 	EGIT_REPO_URI="git://git.sv.gnu.org/lilypond.git"
 else
 	SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~hppa x86"
 fi
 
 DESCRIPTION="GNU Music Typesetter"
@@ -18,16 +19,21 @@ HOMEPAGE="http://lilypond.org/"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-IUSE="debug emacs profile vim-syntax"
+IUSE="debug emacs guile2 profile vim-syntax"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND=">=app-text/ghostscript-gpl-8.15
+	>=dev-scheme/guile-1.8.2:12[deprecated,regex]
 	media-fonts/tex-gyre
 	media-libs/fontconfig
 	media-libs/freetype:2
 	>=x11-libs/pango-1.12.3
 	emacs? ( virtual/emacs )
-	>=dev-scheme/guile-2.0.11
+	guile2? ( >=dev-scheme/guile-2:12 )
+	!guile2? (
+		>=dev-scheme/guile-1.8.2:12[deprecated,regex]
+		<dev-scheme/guile-2.0:12
+	)
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	app-text/t1utils
@@ -95,8 +101,8 @@ src_configure() {
 		--disable-documentation
 		--disable-optimising
 		--disable-pipe
-		--enable-guile2
 		$(use_enable debug debugging)
+		$(use_enable guile2)
 		$(use_enable profile profiling)
 	)
 
