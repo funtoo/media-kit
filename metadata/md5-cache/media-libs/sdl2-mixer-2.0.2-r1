@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/libsdl2-2.0.7[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?
 REQUIRED_USE=midi? ( || ( timidity fluidsynth ) ) timidity? ( midi ) fluidsynth? ( midi ) mp3? ( || ( smpeg mad ) ) smpeg? ( mp3 ) mad? ( mp3 ) mod? ( || ( mikmod modplug ) ) mikmod? ( mod ) modplug? ( mod ) tremor? ( vorbis )
 SLOT=0
 SRC_URI=https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.2.tar.gz
-_eclasses_=multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	d22583becf660d6476780c3ebb0925e4	multilib-minimal	2b16dd98c05c0a78efd8b3259ebb7622	toolchain-funcs	fa43c370cf1e0d4ada6e123b775a35b7
+_eclasses_=multibuild	293f364715a9786d81588224c129b704	multilib	97f470f374f2e94ccab04a2fb21d811e	multilib-build	d22583becf660d6476780c3ebb0925e4	multilib-minimal	2b16dd98c05c0a78efd8b3259ebb7622	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=49dc849d5270434abeb7a44df96be363
