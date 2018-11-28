@@ -1,12 +1,12 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI="6"
 
-inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs
+inherit flag-o-matic multilib multilib-minimal toolchain-funcs
 
 if [[ ${PV} == *9999 ]] ; then
-	: ${EGIT_REPO_URI:="git://git.libav.org/libav.git"}
+	: ${EGIT_REPO_URI:="https://git.libav.org/libav.git"}
 	if [[ ${PV%9999} != "" ]] ; then
 		: ${EGIT_BRANCH:="release/${PV%.9999}"}
 	fi
@@ -26,14 +26,11 @@ else # Official release
 	SRC_URI+=" test? ( https://dev.gentoo.org/~lu_zero/libav/fate-12-r1.tar.xz )"
 fi
 
-SRC_URI+=" https://dev.gentoo.org/~lu_zero/libav/0001-xcb-Add-all-the-libraries-to-the-link-line-explicitl.patch"
 # 9999 does not have fate-*.tar.xz
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0/12"
-[[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
-~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
-~x64-solaris ~x86-solaris"
+[[ ${PV} == *9999 ]] || KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="aac alsa amr bs2b +bzip2 cdio cpudetection custom-cflags debug doc +encode faac fdk
 	frei0r fontconfig +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k libressl mp3
 	+network nvidia openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
@@ -124,10 +121,6 @@ DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 "
 
-RDEPEND="${RDEPEND}
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
-		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
-
 # faac can't be binary distributed
 # openssl support marked as nonfree
 # faac and aac are concurent implementations
@@ -152,9 +145,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch_user
-
-	epatch "${DISTDIR}/0001-xcb-Add-all-the-libraries-to-the-link-line-explicitl.patch"
+	eapply_user
 
 	# if we have snapshot then we need to hardcode the version
 	if [[ ${PV%_p*} != ${PV} ]]; then
@@ -261,7 +252,7 @@ multilib_src_configure() {
 	done
 
 	# pass the right -mfpu as extra
-	use neon && append-cflags -mfpu=neon
+	use neon && use arm && append-cflags -mfpu=neon
 
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
@@ -354,5 +345,5 @@ multilib_src_install_all() {
 multilib_src_test() {
 	local _libs="$(for i in lib*/;do echo -n "${BUILD_DIR}/${i%/}:";done)"
 	einfo "LD_LIBRARY_PATH is set to \"${_libs}\""
-	LD_LIBRARY_PATH="${_libs}" make -j1 fate V=1
+	LD_LIBRARY_PATH="${_libs}" emake -j1 fate V=1
 }
