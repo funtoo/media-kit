@@ -215,6 +215,8 @@ media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
 media-libs/ganv:fdgl - Use experimental force-directed graph layout
 media-libs/gd:webp - Enable support for the webp format
+media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
+media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
