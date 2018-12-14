@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Large Linux console font (suitable for word processing)
+EAPI=7
+HOMEPAGE=https://github.com/talamus/solarize-12x29-psf
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=git-r3	18aed4252aebae08e3db185e684ee37c
+_md5_=96527bbf35f9801fe91397f8efaf3935
