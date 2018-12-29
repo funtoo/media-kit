@@ -4,7 +4,7 @@
 EAPI=6
 PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
 
-inherit cmake-utils vcs-snapshot python-single-r1
+inherit cmake-utils python-single-r1
 
 DESCRIPTION="A library for reading and writing images"
 HOMEPAGE="https://sites.google.com/site/openimageio/ https://github.com/OpenImageIO"
@@ -65,15 +65,13 @@ RDEPEND=">=dev-libs/boost-1.62:=
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )"
 
-PATCHES=(
-	"${FILESDIR}/${P}-ffmpeg4.patch"
-)
-
 DOCS=( CHANGES.md CREDITS.md README.md src/doc/${PN}.pdf )
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
+
+S="${WORKDIR}/oiio-Release-${PV}"
 
 src_configure() {
 	# Build with SIMD support
