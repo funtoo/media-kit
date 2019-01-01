@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,25 +7,25 @@ PYTHON_COMPAT=( python2_7 )
 # this ebuild currently only supports installing ruby bindings for a single ruby version
 # so USE_RUBY must contain only a single value (the latest stable) as the ebuild calls
 # /usr/bin/${USE_RUBY} directly
-USE_RUBY="ruby23"
-inherit flag-o-matic python-single-r1 ruby-single toolchain-funcs
+USE_RUBY="ruby25"
+inherit python-single-r1 ruby-single toolchain-funcs
 
 DESCRIPTION="Open source multimedia framework for television broadcasting"
 HOMEPAGE="https://www.mltframework.org/"
-SRC_URI="https://github.com/mltframework/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/mltframework/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 debug ffmpeg fftw frei0r
-gtk jack kdenlive libav libsamplerate lua melt opencv opengl python qt5 rtaudio ruby sdl vdpau xine xml"
+gtk jack kdenlive libav libsamplerate lua melt opencv opengl python qt5 rtaudio ruby sdl sdl1 vdpau xine xml"
 # java perl php tcl vidstab
 IUSE="${IUSE} kernel_linux"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 #rtaudio will use OSS on non linux OSes
-COMMON_DEPEND="
+RDEPEND="
 	>=media-libs/libebur128-1.2.2
 	ffmpeg? (
 		libav? ( >=media-video/libav-12:0=[vdpau?] )
@@ -62,6 +62,7 @@ COMMON_DEPEND="
 		kernel_linux? ( media-libs/alsa-lib )
 	)
 	ruby? ( ${RUBY_DEPS} )
+	sdl1? ( media-libs/libsdl media-libs/sdl-image )
 	sdl? (
 		media-libs/libsdl2[X,opengl,video]
 		media-libs/sdl2-image
@@ -75,7 +76,7 @@ COMMON_DEPEND="
 #	tcl? ( dev-lang/tcl:0= )
 #	vidstab? ( media-libs/libvidstab )
 SWIG_DEPEND=">=dev-lang/swig-2.0"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	compressed-lumas? ( virtual/imagemagick-tools[png] )
 	lua? ( ${SWIG_DEPEND} virtual/pkgconfig )
@@ -85,13 +86,15 @@ DEPEND="${COMMON_DEPEND}
 #	perl? ( ${SWIG_DEPEND} )
 #	php? ( ${SWIG_DEPEND} )
 #	tcl? ( ${SWIG_DEPEND} )
-RDEPEND="${COMMON_DEPEND}
-	!media-libs/mlt++
-"
 
 DOCS=( AUTHORS ChangeLog NEWS README docs/{framework,melt,mlt{++,-xml}}.txt )
 
-PATCHES=( "${FILESDIR}"/${P}-swig-underlinking.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-6.10.0-swig-underlinking.patch
+	"${FILESDIR}"/${P}-seconds-digits.patch
+	"${FILESDIR}"/${P}-rgb-to-yuv-accuracy.patch
+	"${FILESDIR}"/${P}-frei0r-w-tractor.patch
+)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -111,9 +114,6 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC CXX
-
-	# bug 589848
-	append-cxxflags -std=c++11
 
 	local myconf=(
 		--enable-gpl
@@ -139,6 +139,7 @@ src_configure() {
 		$(use_enable libsamplerate resample)
 		$(use_enable rtaudio)
 		$(use vdpau && echo ' --avformat-vdpau')
+		$(use_enable sdl1 sdl)
 		$(use_enable sdl sdl2)
 		$(use_enable xml)
 		$(use_enable xine)
