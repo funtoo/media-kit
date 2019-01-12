@@ -54,6 +54,9 @@ DEPEND="${COMMON_DEPEND}
 		dev-util/intltool )
 	virtual/pkgconfig
 "
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-enchant2.patch
+}
 
 src_configure() {
 	gnome2_src_configure \
