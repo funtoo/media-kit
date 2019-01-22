@@ -59,6 +59,8 @@ RDEPEND="${COMMON_DEPEND}
 	media-plugins/tap-plugins
 "
 
+PATCHES=( "${FILESDIR}"/${PN}-nowerror.patch "${FILESDIR}"/${P}-qt-5.11.patch )
+
 DOCS=( README.md doc/AUTHORS )
 
 src_configure() {
