@@ -33,12 +33,14 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	default
+	eapply "${FILESDIR}"/${PN}-configdir.patch
 	eautoreconf
 }
 
 multilib_src_configure() {
 	local myeconfargs=(
 		--enable-rfcomm
+		--with-alsaconfdir=/usr/share/alsa
 		$(use_enable aac)
 		$(use_enable debug)
 		$(use_enable static-libs static)
