@@ -44,6 +44,7 @@ RDEPEND="${COMMON_DEPEND}
 	)
 	aac? ( media-plugins/gst-plugins-faac:1.0 )
 	opus? (	media-plugins/gst-plugins-opus:1.0 )
+	gnome-base/gconf
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
