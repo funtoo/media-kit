@@ -312,6 +312,15 @@ media-libs/mediastreamer:ortp - Enable usage of net-libs/ortp
 media-libs/mediastreamer:pcap - Enable usage of net-libs/libpcap
 media-libs/mediastreamer:silk - Use silk (skype protocol) codec plugin
 media-libs/mediastreamer:video - Enable video support
+media-libs/mlt:compressed-lumas - Compress the luma files in png.
+media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
+media-libs/mlt:kdenlive - Build support for kde-apps/kdenlive
+media-libs/mlt:lua - Build SWIG bindings for Lua
+media-libs/mlt:melt - Build the melt commandline tool
+media-libs/mlt:opencv - Build motion tracking module using media-libs/opencv
+media-libs/mlt:python - Build SWIG bindings for Python
+media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms.
+media-libs/mlt:ruby - Build SWIG bindings for Ruby
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:contrib_cvv - CVV module requires Qt5

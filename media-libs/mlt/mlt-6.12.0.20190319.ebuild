@@ -15,9 +15,9 @@ HOMEPAGE="https://www.mltframework.org/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="compressed-lumas cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 debug ffmpeg fftw frei0r
-gtk jack kdenlive libav libsamplerate lua melt opencv opengl python qt5 rtaudio ruby sdl sdl1 vdpau xine xml"
-# java perl php tcl vidstab
+IUSE="compressed-lumas cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 debug ffmpeg +fftw +frei0r
+gtk jack kdenlive libav libsamplerate lua +melt opencv opengl python qt5 rtaudio ruby sdl sdl1 vdpau +vidstab xine xml"
+# java perl php tcl
 IUSE="${IUSE} kernel_linux"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -30,7 +30,7 @@ RDEPEND="
 		!libav? ( media-video/ffmpeg:0=[vdpau?] )
 	)
 	fftw? ( sci-libs/fftw:3.0= )
-	frei0r? ( media-plugins/frei0r-plugins )
+	frei0r? ( >=media-plugins/frei0r-plugins-1.6.1.20190222 )
 	gtk? (
 		media-libs/libexif
 		x11-libs/gtk+:2
@@ -65,6 +65,7 @@ RDEPEND="
 		media-libs/libsdl2[X,opengl,video]
 		media-libs/sdl2-image
 	)
+	vidstab? ( media-libs/vidstab )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
 	xml? ( >=dev-libs/libxml2-2.5 )"
 #	java? ( >=virtual/jre-1.5 )
@@ -72,7 +73,6 @@ RDEPEND="
 #	php? ( dev-lang/php )
 #	sox? ( media-sound/sox )
 #	tcl? ( dev-lang/tcl:0= )
-#	vidstab? ( media-libs/libvidstab )
 SWIG_DEPEND=">=dev-lang/swig-2.0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -145,6 +145,7 @@ src_configure() {
 		$(use vdpau && echo ' --avformat-vdpau')
 		$(use_enable sdl1 sdl)
 		$(use_enable sdl sdl2)
+		$(use_enable vidstab vid.stab)
 		$(use_enable xml)
 		$(use_enable xine)
 		$(use_enable kdenlive)
