@@ -619,6 +619,7 @@ media-sound/deadbeef:mp3 - MPEG-1/2/2.5 Layer 3 (MP3) support plugin. It is a vi
 media-sound/deadbeef:mpg123 - MPEG-1/2/2.5 Layer 3 (MP3) support through mpg123/libmpg123
 media-sound/deadbeef:nls - Native Language Support (NLS)
 media-sound/deadbeef:nullout - NULL output plugin
+media-sound/deadbeef:opus - Ogg Opus plugin
 media-sound/deadbeef:oss - Open Sound System (OSS) output plugin
 media-sound/deadbeef:playlist-browser - Playlist browser user interface plugin
 media-sound/deadbeef:psf - AOSDK-based PSF(QSF,SSF,DSF) plugin
