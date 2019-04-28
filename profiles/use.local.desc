@@ -624,6 +624,7 @@ media-sound/deadbeef:oss - Open Sound System (OSS) output plugin
 media-sound/deadbeef:playlist-browser - Playlist browser user interface plugin
 media-sound/deadbeef:psf - AOSDK-based PSF(QSF,SSF,DSF) plugin
 media-sound/deadbeef:pulseaudio - PulseAudio output plugin
+media-sound/deadbeef:replaygain-scanner - ReplayGain scanner plugin
 media-sound/deadbeef:sc68 - Atari ST and Amiga music plugin
 media-sound/deadbeef:shell-exec - Support for running shell commands
 media-sound/deadbeef:shn - Shorten (SHN) plugin
