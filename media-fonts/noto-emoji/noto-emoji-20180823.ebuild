@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/googlei18n/noto-emoji/archive/${COMMIT}.tar.gz -> ${
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}
@@ -38,6 +38,9 @@ PATCHES=(
 	# From Fedora
 	"${FILESDIR}/${PN}-use-system-pngquant.patch"
 	"${FILESDIR}/${PN}-build-all-flags.patch"
+
+	# https://github.com/googlei18n/noto-emoji/issues/240
+	"${FILESDIR}/${PN}-20180823-build-path.patch"
 )
 
 src_prepare() {

@@ -4,6 +4,7 @@
 =media-gfx/hugin-2017.0 python_single_target_python2_7
 =media-libs/alsa-lib-1.1.2 python_single_target_python2_7
 =media-libs/hamlib-3.1 python_single_target_python2_7
+=media-libs/openimageio-1.6.13 python_single_target_python2_7
 =media-sound/gpodder-3.9.1 python_single_target_python2_7
 media-gfx/alembic python_single_target_python2_7
 media-gfx/asymptote python_single_target_python2_7
@@ -27,14 +28,15 @@ media-libs/mlt python_single_target_python2_7
 media-libs/opencv python_single_target_python2_7
 media-libs/pymemphis python_single_target_python2_7
 media-plugins/gimp-resynthesizer python_single_target_python2_7
-media-plugins/mythplugins python_single_target_python2_7
 media-radio/KochMorse python_single_target_python2_7
 media-sound/a2jmidid python_single_target_python2_7
 media-sound/apetag python_single_target_python2_7
 media-sound/codecgraph python_single_target_python2_7
 media-sound/cplay python_single_target_python2_7
 media-sound/csound python_single_target_python2_7
+media-sound/dir2ogg python_single_target_python2_7
 media-sound/ecasound python_single_target_python2_7
+media-sound/exaile python_single_target_python2_7
 media-sound/idjc python_single_target_python2_7
 media-sound/jack python_single_target_python2_7
 media-sound/jack2 python_single_target_python2_7

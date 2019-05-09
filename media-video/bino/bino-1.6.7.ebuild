@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,7 +11,7 @@ SRC_URI="https://bino3d.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc libav lirc video_cards_nvidia"
 
 RDEPEND="
@@ -34,6 +34,9 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
+	# Qt5 now requires C++11, #649282
+	append-cxxflags -std=c++11
+
 	if use video_cards_nvidia; then
 		append-cppflags "-I/usr/include/NVCtrl"
 		append-ldflags "-L/usr/$(get_libdir)/opengl/nvidia/lib -L/usr/$(get_libdir)"

@@ -1,24 +1,38 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-# Does not work with py3 here
-PYTHON_COMPAT=( python2_7 )
-PYTHON_REQ_USE="sqlite"
-
-inherit autotools cmake-utils eutils gnome2-utils linux-info pax-utils python-single-r1 xdg-utils
-
+: ${CMAKE_MAKEFILE_GENERATOR:=ninja}
+PYTHON_REQ_USE="libressl?,sqlite,ssl"
 LIBDVDCSS_VERSION="1.4.2-Leia-Beta-5"
 LIBDVDREAD_VERSION="6.0.0-Leia-Alpha-3"
 LIBDVDNAV_VERSION="6.0.0-Leia-Alpha-3"
-FFMPEG_VERSION="4.0.1"
+FFMPEG_VERSION="4.0.3"
 CODENAME="Leia"
-FFMPEG_KODI_VERSION="Alpha3-1"
+FFMPEG_KODI_VERSION="18.2"
 SRC_URI="https://github.com/xbmc/libdvdcss/archive/${LIBDVDCSS_VERSION}.tar.gz -> libdvdcss-${LIBDVDCSS_VERSION}.tar.gz
 	https://github.com/xbmc/libdvdread/archive/${LIBDVDREAD_VERSION}.tar.gz -> libdvdread-${LIBDVDREAD_VERSION}.tar.gz
 	https://github.com/xbmc/libdvdnav/archive/${LIBDVDNAV_VERSION}.tar.gz -> libdvdnav-${LIBDVDNAV_VERSION}.tar.gz
 	!system-ffmpeg? ( https://github.com/xbmc/FFmpeg/archive/${FFMPEG_VERSION}-${CODENAME}-${FFMPEG_KODI_VERSION}.tar.gz -> ffmpeg-${PN}-${FFMPEG_VERSION}-${CODENAME}-${FFMPEG_KODI_VERSION}.tar.gz )"
+
+if [[ ${PV} == *9999 ]] ; then
+	PYTHON_COMPAT=( python2_7 python3_{5,6,7} )
+	EGIT_REPO_URI="https://github.com/xbmc/xbmc.git"
+	inherit git-r3
+else
+	PYTHON_COMPAT=( python2_7 )
+	MY_PV=${PV/_p/_r}
+	MY_PV=${MY_PV/_alpha/a}
+	MY_PV=${MY_PV/_beta/b}
+	MY_PV=${MY_PV/_rc/rc}
+	MY_P="${PN}-${MY_PV}"
+	SRC_URI+=" https://github.com/xbmc/xbmc/archive/${MY_PV}-${CODENAME}.tar.gz -> ${MY_P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+	S=${WORKDIR}/xbmc-${MY_PV}-${CODENAME}
+fi
+
+inherit autotools cmake-utils eutils gnome2-utils linux-info pax-utils python-single-r1 xdg-utils
 
 DESCRIPTION="A free and open source media-player and entertainment hub"
 HOMEPAGE="https://kodi.tv/ https://kodi.wiki/"
@@ -28,7 +42,7 @@ SLOT="0"
 # use flag is called libusb so that it doesn't fool people in thinking that
 # it is _required_ for USB support. Otherwise they'll disable udev and
 # that's going to be worse.
-IUSE="airplay alsa bluetooth bluray caps cec +css dbus debug dvd gbm gles lcms libressl libusb lirc mariadb mysql nfs +opengl pulseaudio samba systemd +system-ffmpeg test +udev udisks upnp upower vaapi vdpau wayland webserver +X +xslt zeroconf"
+IUSE="airplay alsa bluetooth bluray caps cec +css dbus dvd gbm gles lcms libressl libusb lirc mariadb mysql nfs +opengl pulseaudio samba systemd +system-ffmpeg test +udev udisks upnp upower vaapi vdpau wayland webserver +X +xslt zeroconf"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	|| ( gles opengl )
@@ -60,6 +74,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-libs/lzo-2.04
 	dev-libs/tinyxml[stl]
 	dev-python/pillow[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep 'dev-python/pycryptodome[${PYTHON_USEDEP}]' 'python3*')
 	>=dev-libs/libcdio-0.94
 	dev-libs/libfmt
 	dev-libs/libfstrcmp
@@ -81,7 +96,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	)
 	mysql? ( dev-db/mysql-connector-c:= )
 	mariadb? ( dev-db/mariadb-connector-c:= )
-	>=net-misc/curl-7.56.1
+	>=net-misc/curl-7.56.1[http2]
 	nfs? ( >=net-fs/libnfs-2.0.0:= )
 	opengl? ( media-libs/glu )
 	!libressl? ( >=dev-libs/openssl-1.0.2l:0= )
@@ -124,12 +139,7 @@ RDEPEND="${COMMON_DEPEND}
 	lirc? ( app-misc/lirc )
 	!media-tv/xbmc
 	udisks? ( sys-fs/udisks:2 )
-	upower? (
-		systemd? ( sys-power/upower )
-		!systemd? (
-			|| ( sys-power/upower-pm-utils sys-power/upower )
-		)
-	)
+	upower? ( sys-power/upower )
 "
 DEPEND="${COMMON_DEPEND}
 	app-arch/bzip2
@@ -147,19 +157,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/jre
 	x86? ( dev-lang/nasm )
 "
-if [[ ${PV} == *9999 ]] ; then
-	EGIT_REPO_URI="https://github.com/xbmc/xbmc.git"
-	inherit git-r3
-else
-	MY_PV=${PV/_p/_r}
-	MY_PV=${MY_PV/_alpha/a}
-	MY_PV=${MY_PV/_beta/b}
-	MY_PV=${MY_PV/_rc/rc}
-	MY_P="${PN}-${MY_PV}"
-	SRC_URI+=" https://github.com/xbmc/xbmc/archive/${MY_PV}-${CODENAME}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-	S=${WORKDIR}/xbmc-${MY_PV}-${CODENAME}
-fi
 
 CONFIG_CHECK="~IP_MULTICAST"
 ERROR_IP_MULTICAST="
@@ -170,6 +167,22 @@ Please consider enabling IP_MULTICAST under Networking options.
 pkg_setup() {
 	check_extra_config
 	python-single-r1_pkg_setup
+}
+
+src_unpack() {
+	if [[ ${PV} == *9999 ]] ; then
+		if python_is_python3; then
+			EGIT_BRANCH="feature_python3"
+			ewarn "Using the experimental Python 3 branch!"
+			ewarn "See https://kodi.wiki/view/Migration_to_Python_3 for more information."
+			ewarn "To use the non-experimental Python 2 version:"
+			ewarn "echo '~${CATEGORY}/${P} PYTHON_TARGETS: -* python2_7 PYTHON_SINGLE_TARGET: -* python2_7' >> /etc/portage/package.use"
+			ewarn "then re-merge using: emerge -a =${CATEGORY}/${PF}"
+		fi
+		git-r3_src_unpack
+	else
+		default
+	fi
 }
 
 src_prepare() {
