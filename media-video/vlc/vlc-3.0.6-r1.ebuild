@@ -19,7 +19,7 @@ else
 	else
 		SRC_URI="https://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 	fi
-	KEYWORDS="amd64 ~arm ~arm64 ppc ~ppc64 -sparc x86 ~x86-fbsd"
+	KEYWORDS="amd64 ~arm ~arm64 ppc ppc64 -sparc x86 ~x86-fbsd"
 fi
 inherit autotools flag-o-matic toolchain-funcs virtualx xdg
 
@@ -234,6 +234,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-libvpx-1.8.0.patch # bug 677606
 	"${FILESDIR}"/${P}-fdk-aac-2.0.0.patch # bug 672290
 	"${FILESDIR}"/${P}-libav.patch
+	"${FILESDIR}"/${P}-sftp.patch
 )
 
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )

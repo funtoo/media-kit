@@ -52,7 +52,6 @@ media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
-media-gfx/blender:boost - Enable features depending on boost.
 media-gfx/blender:bullet - Enable Bullet (Physics Engine).
 media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
 media-gfx/blender:colorio - Enable OpenColorIO color management through media-libs/opencolorio.
@@ -68,12 +67,10 @@ media-gfx/blender:man - Build and install man pages.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:opencl - Allow OpenCL Graphics Acceleration. This may require extra graphics card drivers.
 media-gfx/blender:openimageio - Enable OpenImageIO Support
-media-gfx/blender:opennl - Enable use of Open Numerical Library
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
 media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
-media-gfx/blender:redcode - This flag add support for RED CODE camera digital format (5K HD images *.r3d) - EXPERIMENTAL.
 media-gfx/blender:test - Build the provided unit tests.
 media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
 media-gfx/chafa:tools - Build command-line tools
@@ -145,7 +142,6 @@ media-gfx/librecad:3d - Require all 2D coordinates stored as 3D
 media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
 media-gfx/mandelbulber:opencl - Enable GPU rendering support using OpenCL
-media-gfx/nomacs:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/nomacs:opencv - Build support for media-libs/opencv
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
@@ -269,6 +265,10 @@ media-libs/libmypaint:gegl - Add support for media-libs/gegl
 media-libs/libopenglrecorder:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libopenglrecorder:vpx - Enable VP8/VP9 codec support via media-libs/libvpx
 media-libs/libpagemaker:tools - Build command line file format conversion tools
+media-libs/libplacebo:glslang - Use dev-util/glslang to compile GLSL
+media-libs/libplacebo:lcms - Add support for color management via media-libs/lcms
+media-libs/libplacebo:shaderc - Use media-libs/shaderc to compile GLSL
+media-libs/libplacebo:vulkan - Add support for the vulkan graphics API
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
 media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
@@ -348,8 +348,7 @@ media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util
 media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb.
-media-libs/opus:ambisonics - Enable ambisonics support (experimental).
-media-libs/opus:custom-modes - Build with custom-modes.
+media-libs/opus:custom-modes - Enable non-Opus modes, e.g. 44.1 kHz and 2^n frames
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
@@ -385,7 +384,6 @@ media-libs/spandsp:fixed-point - Enable fixed point support
 media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec).
 media-libs/speex:vbr - Enable VBR support.
 media-libs/svgalib:kernel-helper - Build the helper kernel module
-media-libs/tiff:zstd - Enable zstd compression support.
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
 media-libs/vigra:valgrind - Enable valgrind in make check
@@ -415,6 +413,7 @@ media-libs/xine-lib:vis - Adds support for SIMD optimizations for UltraSPARC pro
 media-libs/xine-lib:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 media-libs/xvid:pic - disable optimized assembly code that is not PIC friendly
+media-libs/zita-resampler:tools - Install zresample and zretune tools
 media-plugins/alsa-plugins:arcam_av - Enables Arcam AV control plugin
 media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin
@@ -514,6 +513,8 @@ media-sound/beets:replaygain - Enable support for Replay Gain metadata calculati
 media-sound/beets:thumbnail - Enable album thumbnails generation
 media-sound/beets:webserver - Enable embedded webserver support through dev-python/flask
 media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
+media-sound/bluez-alsa:ldac - Enable support for AOSP media-libs/libldac dispatcher
+media-sound/bluez-alsa:ofono - Enable ofono elephony support
 media-sound/cantata:cdio - Use dev-libs/libcdio-paranoia for CD support (instead of cdparanoia)
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
 media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
@@ -527,11 +528,13 @@ media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:seafile - Enable support for seafile: a file sync service
 media-sound/clementine:skydrive - Enable Skydrive support
 media-sound/clementine:wiimote - Enable support for Wii remote
-media-sound/cmus:cdio - use libcdio for CD support
-media-sound/cmus:cue - enable CUE sheet parsing
-media-sound/cmus:discid - enable reading the ID of the inserted CD
-media-sound/cmus:pidgin - install support script for net-im/pidgin
-media-sound/cmus:tremor - use libivorbis from media-libs/tremor instead of media-libs/libvorbis
+media-sound/cmus:cdio - Use libcdio for CD support
+media-sound/cmus:cue - Enable CUE sheet parsing
+media-sound/cmus:discid - Enable reading the ID of the inserted CD
+media-sound/cmus:elogind - Enable MPRIS support via sys-auth/elogind
+media-sound/cmus:pidgin - Install support script for net-im/pidgin
+media-sound/cmus:systemd - Enable MPRIS support via sys-apps/systemd
+media-sound/cmus:tremor - Use libivorbis from media-libs/tremor instead of media-libs/libvorbis
 media-sound/csound:beats - Build the beats score frontend
 media-sound/csound:chua - Build the chua opcodes
 media-sound/csound:csoundac - Build the CsoundAC extension module
@@ -570,14 +573,13 @@ media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
 media-sound/exaile:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
-media-sound/forked-daapd:itunes - Enable support for iTunes library XML
-media-sound/forked-daapd:lastfm - Enable LastFM scrobbling support
-media-sound/forked-daapd:mpd - Enable streaming to mpd
 media-sound/gimmix:cover - Enable cover art fetching
 media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/gmpc:unique - Enable single instance support using dev-libs/libunique
 media-sound/gmpc:xspf - Enable support for reading and saving XSPF playlists
 media-sound/gmusicbrowser:extras - Install some extra deps for plugins (ex. Titlebar)
+media-sound/guitarix:lv2 - Build lv2 plugins
+media-sound/guitarix:standalone - Build standalone application
 media-sound/herrie:http - Enable http streaming
 media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
@@ -649,7 +651,6 @@ media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
 media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
 media-sound/musescore:vorbis - Enable SoundFont support using media-libs/libvorbis
 media-sound/musescore:webengine - Use dev-qt/qtwebengine for embedded web browser
-media-sound/ncmpc:artist-screen - Enable artist screen
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:help-screen - Enable the help screen
@@ -660,7 +661,6 @@ media-sound/ncmpc:mouse - Enable curses getmouse support
 media-sound/ncmpc:outputs-screen - Enable the outputs screen
 media-sound/ncmpc:search-screen - Enable search screen
 media-sound/ncmpc:song-screen - Enable song viewer screen
-media-sound/ncmpc:tcp - Enable TCP support
 media-sound/ncmpcpp:clock - Enable clock screen
 media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
@@ -709,7 +709,6 @@ media-sound/snapcast:server - Build and install Snapcast server component
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
 media-sound/sonata:lyrics - Support for lyrics fetching
-media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
 media-sound/sox:amr - Enables Adaptive Multi-Rate Audio support
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
@@ -736,6 +735,7 @@ media-sound/tuxguitar:fluidsynth - Enables Fluidsynth MIDI software synthesis (w
 media-sound/tuxguitar:lilypond - Exports the score in a lilypond compatible format.
 media-sound/tuxguitar:pdf - Exports the score as a PDF file using dev-java/itext.
 media-sound/tuxguitar:tray - Adds an icon to the tray that controls midi playback.
+media-sound/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 media-sound/umurmur:shm - Enable shared memory support
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
@@ -745,7 +745,6 @@ media-sound/wildmidi:player - Install the wildmidi player
 media-sound/xmms2:airplay - Support for airplay format
 media-sound/xmms2:asf - Support for Monkey's Audio (APE) format with help of bundled libasf
 media-sound/xmms2:fluidsynth - Enable fluidsynth support (MIDI)
-media-sound/xmms2:gvfs - Transport for glibs virtual filesystem
 media-sound/xmms2:ices - Icecast source output plugin
 media-sound/xmms2:mac - Support for Monkey's Audio (APE) format with help of media-sound/mac
 media-sound/xmms2:mlib-update - Enable building of xmms2-mlib-updater client
@@ -859,9 +858,6 @@ media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
-media-video/dcpomatic:alsa - Utilize alsa output of media-libs/rtaudio.
-media-video/dcpomatic:jack - Utilize jack output of media-libs/rtaudio.
-media-video/dcpomatic:pulseaudio - Utilize pulseaudio output of media-libs/rtaudio.
 media-video/dv2sub:kino - install kino plugin
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
@@ -881,6 +877,7 @@ media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
 media-video/ffmpeg:codec2 - Enables codec2 low bit rate speech codec support via media-libs/codec2.
 media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
+media-video/ffmpeg:dav1d - Enables AV1 decoding viamedia-libs/dav1d.
 media-video/ffmpeg:ebur128 - Enables EBU R128 loudness normalization filter via media-libs/libebur128
 media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
 media-video/ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
