@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -8,7 +8,7 @@ if [[ "${PV}" == "9999" ]]; then
 	SCM="git-r3"
 	EGIT_REPO_URI="https://code.videolan.org/videolan/dav1d"
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 	SRC_URI="https://code.videolan.org/videolan/dav1d/-/archive/${PV}/${P}.tar.bz2"
 fi
 
@@ -18,7 +18,7 @@ DESCRIPTION="dav1d is an AV1 Decoder :)"
 HOMEPAGE="https://code.videolan.org/videolan/dav1d"
 
 LICENSE="BSD-2"
-SLOT="0"
+SLOT="0/1"
 IUSE="+8bit +10bit +asm"
 
 ASM_DEPEND=">=dev-lang/nasm-2.13"
@@ -34,7 +34,7 @@ DOCS=( README.md doc/PATENTS )
 multilib_src_configure() {
 	local -a bits=()
 	use 8bit  && bits+=( 8 )
-	use 10bit && bits+=( 10 )
+	use 10bit && bits+=( 16 )
 
 	if [[ ${MULTILIB_ABI_FLAG} == abi_x86_x32 ]]; then
 		build_asm=false
