@@ -2,11 +2,13 @@
 =media-gfx/fontforge-20190317-r2 python_single_target_python2_7
 =media-libs/alsa-lib-1.1.2 python_single_target_python2_7
 =media-libs/alsa-lib-1.1.6-r1 python_single_target_python2_7
-=media-libs/alsa-lib-1.1.7 python_single_target_python2_7
 =media-libs/alsa-lib-1.1.8 python_single_target_python2_7
+=media-libs/alsa-lib-1.1.9 python_single_target_python2_7
 =media-libs/hamlib-3.1 python_single_target_python2_7
 =media-libs/hamlib-3.2 python_single_target_python2_7
 =media-libs/hamlib-3.3 python_single_target_python2_7
+=media-libs/opencolorio-1.1.0-r1 python_single_target_python2_7
+=media-libs/opencolorio-1.1.0-r2 python_single_target_python2_7
 =media-libs/openimageio-1.6.13 python_single_target_python2_7
 =media-libs/openimageio-1.6.18 python_single_target_python2_7
 =media-libs/openimageio-1.7.17 python_single_target_python2_7
@@ -42,12 +44,10 @@ media-libs/libopenshot python_single_target_python3_5 python_targets_python3_5
 media-libs/lv2 python_single_target_python2_7
 media-libs/lvtk python_single_target_python2_7
 media-libs/mlt python_single_target_python2_7
-media-libs/opencolorio python_single_target_python2_7
 media-libs/opencv python_single_target_python2_7
 media-libs/partio python_single_target_python2_7
 media-libs/pymemphis python_single_target_python2_7
 media-plugins/gimp-resynthesizer python_single_target_python2_7
-media-radio/KochMorse python_single_target_python2_7
 media-sound/a2jmidid python_single_target_python2_7
 media-sound/apetag python_single_target_python2_7
 media-sound/codecgraph python_single_target_python2_7
