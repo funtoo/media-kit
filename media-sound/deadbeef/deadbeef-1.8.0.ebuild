@@ -4,13 +4,13 @@
 EAPI="7"
 
 PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
-	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
+	lt lv nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
 
 PLOCALE_BACKUP="en_GB"
 
 inherit autotools gnome2-utils l10n xdg-utils
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="https://github.com/DeaDBeeF-Player/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -138,10 +138,17 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P}"
 
 src_prepare() {
-	if ! use_if_iuse linguas_ru ; then
+	if [[ "$(l10n_get_locales disabled)" =~ "ru" ]] ; then
 		eapply "${FILESDIR}/${P}-remove-ru-help-translation.patch"
 		rm -v "${S}/translation/help.ru.txt" || die
 	fi
+
+	remove_locale() {
+		sed -e "/${1}/d" \
+			-i "${S}/po/LINGUAS" || die
+	}
+
+	l10n_for_each_disabled_locale_do remove_locale
 
 	if use midi ; then
 		# set default gentoo path
@@ -233,7 +240,7 @@ pkg_postinst() {
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
-		gnome2_icon_cache_update
+		xdg_icon_cache_update
 	fi
 }
 
@@ -242,6 +249,6 @@ pkg_postrm() {
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
-		gnome2_icon_cache_update
+		xdg_icon_cache_update
 	fi
 }
