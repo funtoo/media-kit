@@ -7,14 +7,16 @@
 =media-libs/hamlib-3.1 python_single_target_python2_7
 =media-libs/hamlib-3.2 python_single_target_python2_7
 =media-libs/hamlib-3.3 python_single_target_python2_7
+=media-libs/libopenshot-0.2.2 python_single_target_python3_5 python_targets_python3_5
+=media-libs/libopenshot-0.2.4_pre20190609 python_single_target_python3_5 python_targets_python3_5
 =media-libs/opencolorio-1.1.0-r1 python_single_target_python2_7
 =media-libs/opencolorio-1.1.0-r2 python_single_target_python2_7
 =media-libs/openimageio-1.6.13 python_single_target_python2_7
-=media-libs/openimageio-1.6.18 python_single_target_python2_7
-=media-libs/openimageio-1.7.17 python_single_target_python2_7
 =media-libs/openimageio-1.8.17 python_single_target_python2_7
 =media-sound/gpodder-3.10.5 python_single_target_python3_6 python_targets_python3_6
 =media-sound/gpodder-3.9.1 python_single_target_python2_7
+=media-video/openshot-2.4.0-r1 python_single_target_python3_5 python_targets_python3_5
+=media-video/openshot-2.4.4 python_single_target_python3_5 python_targets_python3_5
 =media-video/pitivi-0.999 python_single_target_python3_5 python_targets_python3_5
 media-gfx/alembic python_single_target_python2_7
 media-gfx/asymptote python_single_target_python2_7
@@ -40,7 +42,6 @@ media-libs/libffado python_single_target_python2_7
 media-libs/libgpod python_single_target_python2_7
 media-libs/libiptcdata python_single_target_python2_7
 media-libs/libkate python_single_target_python2_7
-media-libs/libopenshot python_single_target_python3_5 python_targets_python3_5
 media-libs/lv2 python_single_target_python2_7
 media-libs/lvtk python_single_target_python2_7
 media-libs/mlt python_single_target_python2_7
@@ -77,7 +78,6 @@ media-video/flowblade python_single_target_python2_7
 media-video/griffith python_single_target_python2_7
 media-video/gtk-recordmydesktop python_single_target_python2_7
 media-video/obs-studio python_single_target_python3_5 python_targets_python3_5
-media-video/openshot python_single_target_python3_5 python_targets_python3_5
 media-video/photofilmstrip python_single_target_python2_7
 media-video/pymp python_single_target_python2_7
 media-video/subdl python_single_target_python2_7

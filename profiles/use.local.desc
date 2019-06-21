@@ -17,6 +17,7 @@ media-fonts/infinality-ultimate-meta:ms - Install (free) fonts for the "ms" pres
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
+media-fonts/noto:extra - Install full upstream font set
 media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/sil-gentium:compact - Also install more compact version of the font.
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
@@ -43,7 +44,6 @@ media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:maya - Compile Alembic plugin for Maya (experimental)
 media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
-media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:python - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
@@ -54,7 +54,7 @@ media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:bullet - Enable Bullet (Physics Engine).
 media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
-media-gfx/blender:colorio - Enable OpenColorIO color management through media-libs/opencolorio.
+media-gfx/blender:color-management - Enable color management via media-libs/opencolorio.
 media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
 media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimageio and dev-libs/boost).
 media-gfx/blender:dds - Adds DDS textures support to Blender.
@@ -338,12 +338,12 @@ media-libs/opencv:testprograms - Build and install programs for testing OpenCV (
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
-media-libs/openimageio:colorio - Use media-libs/opencolorio
+media-libs/openimageio:color-management - Enable color management via media-libs/opencolorio
 media-libs/openimageio:cpu_flags_x86_avx512f - SIMD Optimization
 media-libs/openimageio:cpu_flags_x86_f16c - SIMD Optimization
-media-libs/openimageio:field3d - Use media-libs/Field3D
-media-libs/openimageio:opencv - Use media-libs/opencv
-media-libs/openimageio:ptex - Use media-libs/ptex
+media-libs/openimageio:field3d - Enable f3d file (write) support via media-libs/Field3D
+media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
+media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
 media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit.
 media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
@@ -435,7 +435,6 @@ media-plugins/calf:lv2 - Add support for Ladspa V2
 media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin, which depends on media-libs/opencv
 media-plugins/frei0r-plugins:scale0tilt - Enables building of scale0tilt and vectorscope plugins, which depend on media-libs/gavl
 media-plugins/gkrellmpc:threads - Use separate thread to init connection (unsafe)
-media-plugins/gst-plugins-gl:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-gtk:egl - Enable EGL platform usage
 media-plugins/gst-plugins-gtk:gles2 - Enable gtkglsink OpenGL sink based on GLESv2 API
 media-plugins/gst-plugins-gtk:opengl - Enable gtkglsink OpenGL sink based on desktop OpenGL API
@@ -473,6 +472,7 @@ media-radio/unixcw:ncurses - Enables building the curses based morse code tutor 
 media-radio/xastir:festival - Enable text to speech synthesizer
 media-radio/xastir:gdal - Support for some further map formats
 media-radio/xastir:geotiff - Install geotiff support. Allows using USGS DRG topo maps or other types of geotiff mapes/images
+media-sound/abcde:aiff - Enable support for Audio Interchange File Format (AIFF) output encoding
 media-sound/abcde:id3tag - Support ID3, ID3v2 tagging of audio files
 media-sound/abcde:mac - Enable support for Monkey's Audio files
 media-sound/abcde:normalize - Add support for normalizing audio file volume levels
@@ -802,7 +802,6 @@ media-tv/mythtv:mythlogserver - Enable support for syslog and file logging. Not 
 media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
 media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper.
 media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
-media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
 media-tv/tvheadend:constcw - Enable support for the constcw protocol
 media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
