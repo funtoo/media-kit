@@ -1,17 +1,17 @@
 # Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PLOCALES="ca de el es et fr gl it ja kab ko nl pt ru uk zh_CN zh_TW"
+PLOCALES="ca de el es et fr gl he it ja kab ko nb_NO nl pl pt pt_BR ru uk zh_CN zh_TW"
 
-inherit l10n qmake-utils
+inherit l10n qmake-utils xdg-utils
 
 DESCRIPTION="A full featured webcam capture application"
 HOMEPAGE="https://webcamoid.github.io"
 SRC_URI="https://github.com/webcamoid/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 LICENSE="GPL-3"
 SLOT="0"
 
@@ -31,6 +31,7 @@ RDEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtopengl:5
 	dev-qt/qtquickcontrols:5
+	dev-qt/qtquickcontrols2:5
 	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	ffmpeg? (
@@ -49,8 +50,6 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-3.6
 	virtual/pkgconfig
 "
-
-PATCHES=( "${FILESDIR}/${P}-ffmpeg-4.patch" )
 
 src_prepare() {
 	local tsdir="${S}/StandAlone/share/ts"
@@ -72,12 +71,15 @@ src_prepare() {
 	l10n_for_each_locale_do prepare_locale
 	l10n_for_each_disabled_locale_do rm_locale
 
+# Removing entry in qmake config for gzipping man page
+	eapply ${FILESDIR}/webcamoid_fix_gzip_manpage.patch
+
 	default
 }
 
 src_configure() {
+# Docs are not build because webcamoid still wants to build DITAXML format which is no longer supported by qdoc
 	local myqmakeargs=(
-		"CONFIG+=debug"
 		"PREFIX=/usr"
 		"BUILDDOCS=0"
 		"INSTALLDEVHEADERS=$(usex headers 1 0)"
@@ -97,7 +99,14 @@ src_configure() {
 	eqmake5 ${myqmakeargs[@]}
 }
 
+DOCS="AUTHORS ChangeLog README.md THANKS TODO"
+
 src_install() {
 	emake INSTALL_ROOT="${D}" install
+	doman StandAlone/share/man/webcamoid.1
 	einstalldocs
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
 }
