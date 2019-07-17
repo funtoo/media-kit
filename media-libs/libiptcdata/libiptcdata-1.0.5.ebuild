@@ -1,16 +1,16 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{5..7})
 
-inherit eutils python-single-r1
+inherit eutils estack python-single-r1 rpm
 
 DESCRIPTION="library for manipulating the International Press Telecommunications
 Council (IPTC) metadata"
 HOMEPAGE="http://libiptcdata.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="https://download-ib01.fedoraproject.org/pub/fedora/linux/updates/30/Everything/SRPMS/Packages/l/${P}-1.fc30.src.rpm"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -19,6 +19,7 @@ IUSE="doc examples nls python"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )"
+
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.13.1 )
 	doc? ( >=dev-util/gtk-doc-1 )"
