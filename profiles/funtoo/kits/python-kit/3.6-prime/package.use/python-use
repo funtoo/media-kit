@@ -24,7 +24,6 @@ media-libs/libiptcdata python_single_target_python2_7
 media-libs/libkate python_single_target_python2_7
 media-libs/lvtk python_single_target_python2_7
 media-libs/mlt python_single_target_python2_7
-media-libs/opencv python_single_target_python2_7
 media-libs/pymemphis python_single_target_python2_7
 media-plugins/gimp-resynthesizer python_single_target_python2_7
 media-plugins/mythplugins python_single_target_python2_7
