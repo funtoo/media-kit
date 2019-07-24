@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
 PYTHON_REQ_USE='threads(+)'
 
 WAF_PV=1.9.8
@@ -18,7 +17,7 @@ if [[ ${PV} != *9999* ]]; then
 		https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		https://dev.gentoo.org/~kensington/distfiles/${P}-patches-${PR}.tar.xz
 	"
-	KEYWORDS="alpha amd64 ~arm ~arm64 ~hppa ppc ppc64 x86 ~amd64-linux"
+	KEYWORDS="*"
 	DOCS=( RELEASE_NOTES )
 else
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
@@ -147,6 +146,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.23.0-make-libavdevice-check-accept-libav.patch"
 	"${FILESDIR}/${PN}-0.25.0-fix-float-comparisons-in-tests.patch"
 	"${FILESDIR}/${PN}-0.27.0-add-missing-link-flags-for-rpi.patch"
+	"${FILESDIR}/${PN}-0.29.1-wayland-configure.patch"
 )
 
 src_prepare() {
