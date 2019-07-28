@@ -9,10 +9,11 @@ if [[ ${PV} == *9999* ]] ; then
 	inherit git-r3
 else
 	MY_PN="${PN/-plugins/}"
-	MY_P="${MY_PN}_${PV}"
-	SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}/${PV}/${MY_P}.tar.gz"
+	MY_P="${MY_PN}2-${PV}"
+	SRC_URI="https://github.com/mean00/${MY_PN}/archive/${PV}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
+
 PYTHON_COMPAT=( python2_7 )
 inherit cmake-utils python-single-r1
 
@@ -85,7 +86,6 @@ S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.20-optional-pulse.patch
-	"${FILESDIR}"/${P}-qt-5.11.patch
 )
 
 src_prepare() {
