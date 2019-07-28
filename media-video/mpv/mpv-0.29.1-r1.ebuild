@@ -1,9 +1,8 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
 PYTHON_REQ_USE='threads(+)'
 
 WAF_PV=2.0.9
@@ -15,7 +14,7 @@ HOMEPAGE="https://mpv.io/"
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux"
+	KEYWORDS="*"
 	DOCS=( RELEASE_NOTES )
 else
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
@@ -138,6 +137,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.29.0-make-ffmpeg-version-check-non-fatal.patch"
+	"${FILESDIR}/${PN}-0.29.1-wayland-configure.patch"
 )
 
 src_prepare() {
@@ -147,7 +147,7 @@ src_prepare() {
 }
 
 src_configure() {
-	python_setup
+	python_setup -2
 	tc-export CC PKG_CONFIG AR
 
 	if use raspberry-pi; then
@@ -341,6 +341,8 @@ pkg_postinst() {
 		elog "If command-line completion doesn't work after mpv update,"
 		elog "please rebuild app-shells/mpv-bash-completion."
 	fi
+
+	elog "If you want URL support, please install net-misc/youtube-dl."
 
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
