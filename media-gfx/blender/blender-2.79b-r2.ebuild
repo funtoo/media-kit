@@ -3,10 +3,9 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{3_5,3_6} )
+PYTHON_COMPAT=( python3_7 )
 
-inherit check-reqs cmake-utils xdg-utils flag-o-matic xdg-utils \
-	pax-utils python-single-r1 toolchain-funcs eapi7-ver
+inherit check-reqs cmake-utils xdg-utils flag-o-matic xdg-utils pax-utils python-single-r1 toolchain-funcs eapi7-ver
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="https://www.blender.org"
@@ -49,7 +48,7 @@ RDEPEND="${PYTHON_DEPS}
 	collada? ( >=media-libs/opencollada-1.6.18:= )
 	color-management? ( media-libs/opencolorio )
 	cuda? ( dev-util/nvidia-cuda-toolkit:= )
-	ffmpeg? ( media-video/ffmpeg:=[x264,mp3,encode,theora,jpeg2k?] )
+	ffmpeg? ( media-video/ffmpeg:0=[x264,mp3,encode,theora,jpeg2k?] )
 	libav? ( >=media-video/libav-11.3:=[x264,mp3,encode,theora,jpeg2k?] )
 	fftw? ( sci-libs/fftw:3.0= )
 	!headless? (
@@ -95,8 +94,19 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-fix-install-rules.patch"
-	"${FILESDIR}/${P}-gcc-8.patch"
+	"${FILESDIR}/${P}-droid.patch"
+	"${FILESDIR}/${P}-scripts.patch"
+	"${FILESDIR}/${P}-locale.patch"
+	"${FILESDIR}/${P}-manpages_game-engine.patch"
+	"${FILESDIR}/${P}-unversioned-system-path.patch"
+	"${FILESDIR}/${P}-openvdb3-abi.patch"
+	"${FILESDIR}/${P}-util_sseb.patch"
+	"${FILESDIR}/${P}-tree_hpp.patch"
+    "${FILESDIR}/${P}-python37.patch"
+    "${FILESDIR}/${P}-oiio2.patch"
+	"${FILESDIR}/${P}-cmake_opengl.patch"
+	"${FILESDIR}/${P}-gcc-9.patch"
+    "${FILESDIR}/${P}-fix-install-rules.patch"
 	"${FILESDIR}/${P}-ffmpeg-4-compat.patch"
 )
 
