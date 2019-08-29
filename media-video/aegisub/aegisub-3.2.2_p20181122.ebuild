@@ -5,7 +5,7 @@ EAPI=6
 
 WX_GTK_VER=3.0
 PLOCALES="ar bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS sr_RS@latin uk_UA vi zh_CN zh_TW"
-COMMIT_ID="b118fe7e7a5c37540e2f0aa75af105e272bad234"
+COMMIT_ID="2cb92a5f74634764ff5aac7e3ad0d647f98142af"
 
 inherit autotools flag-o-matic gnome2-utils l10n wxwidgets xdg-utils vcs-snapshot
 
@@ -57,10 +57,7 @@ REQUIRED_USE="|| ( alsa openal oss portaudio pulseaudio )"
 PATCHES=(
 	"${FILESDIR}/${PV}/${P}-fix-system-luajit-build.patch"
 	"${FILESDIR}/${PV}/${P}-respect-compiler-flags.patch"
-	"${FILESDIR}/${PV}/${P}-support-system-gtest.patch"
-	"${FILESDIR}/${PV}/${P}-fix-icu59-build.patch"
-	"${FILESDIR}/${PV}/${P}-fix-icu62-build.patch"
-
+	"${FILESDIR}/${PV}/${P}-fix-boost170-build.patch"
 )
 
 aegisub_check_compiler() {
