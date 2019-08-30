@@ -1,22 +1,21 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 WX_GTK_VER=3.0
 PLOCALES="ar bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS sr_RS@latin uk_UA vi zh_CN zh_TW"
+COMMIT_ID="2cb92a5f74634764ff5aac7e3ad0d647f98142af"
 
-inherit autotools gnome2-utils l10n wxwidgets xdg-utils git-r3
+inherit autotools flag-o-matic gnome2-utils l10n wxwidgets xdg-utils vcs-snapshot
 
 DESCRIPTION="Advanced subtitle editor"
 HOMEPAGE="http://www.aegisub.org/ https://github.com/Aegisub/Aegisub"
-EGIT_REPO_URI="https://github.com/${PN^}/${PN^}.git"
-# Submodules are used to pull bundled libraries.
-EGIT_SUBMODULES=()
+SRC_URI="https://github.com/Aegisub/Aegisub/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 IUSE="+alsa debug +fftw openal oss portaudio pulseaudio spell test +uchardet"
 
 # aegisub bundles luabins (https://github.com/agladysh/luabins).
@@ -47,7 +46,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	test? (
-		~dev-cpp/gtest-1.7.0
+		>=dev-cpp/gtest-1.8.1
 		dev-lua/busted
 		dev-lua/luarocks
 	)
@@ -56,10 +55,24 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="|| ( alsa openal oss portaudio pulseaudio )"
 
 PATCHES=(
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-fix-system-luajit-build.patch"
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-respect-compiler-flags.patch"
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-support-system-gtest.patch"
+	"${FILESDIR}/${PV}/${P}-fix-system-luajit-build.patch"
+	"${FILESDIR}/${PV}/${P}-respect-compiler-flags.patch"
+	"${FILESDIR}/${PV}/${P}-fix-boost170-build.patch"
 )
+
+aegisub_check_compiler() {
+	if [[ ${MERGE_TYPE} != "binary" ]] && ! test-flag-CXX -std=c++11; then
+		die "Your compiler lacks C++11 support. Use GCC>=4.7.0 or Clang>=3.3."
+	fi
+}
+
+pkg_pretend() {
+	aegisub_check_compiler
+}
+
+pkg_setup() {
+	aegisub_check_compiler
+}
 
 src_prepare() {
 	default_src_prepare
@@ -78,6 +91,12 @@ src_prepare() {
 	config_rpath_update "${S}"/config.rpath
 
 	eautoreconf
+
+	cat <<- EOF > build/git_version.h || die
+		#define BUILD_GIT_VERSION_NUMBER 8897
+		#define BUILD_GIT_VERSION_STRING "${PV}"
+		#define TAGGED_RELEASE 0
+	EOF
 }
 
 src_configure() {

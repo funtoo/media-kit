@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	test? (
-		~dev-cpp/gtest-1.7.0
+		>=dev-cpp/gtest-1.8.1
 		dev-lua/busted
 		dev-lua/luarocks
 	)
@@ -60,7 +60,7 @@ PATCHES=(
 	"${FILESDIR}/${PV}/${P}-support-system-gtest.patch"
 	"${FILESDIR}/${PV}/${P}-fix-icu59-build.patch"
 	"${FILESDIR}/${PV}/${P}-fix-icu62-build.patch"
-
+	"${FILESDIR}/${PV}/${P}-fix-boost170-build.patch"
 )
 
 aegisub_check_compiler() {
