@@ -23,11 +23,13 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2.14[${PYTHON_USEDEP}]
 	virtual/jpeg
-	dev-python/pillow[${PYTHON_USEDEP}]
+	>=dev-python/pillow-5.2.0[${PYTHON_USEDEP}]
 	x11-libs/gdk-pixbuf
 	!media-gfx/comix"
 
 DOCS=( ChangeLog README )
+
+PATCHES=( "${FILESDIR}/${P}-PIL_version.patch" )
 
 src_prepare() {
 	local checklocales
