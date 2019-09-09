@@ -1,15 +1,15 @@
---- SDL2-2.0.6/configure.in
-+++ SDL2-2.0.6/configure.in
-@@ -3546,7 +3546,7 @@
+--- SDL2-2.0.10/configure.ac
++++ SDL2-2.0.10/configure.ac
+@@ -3648,7 +3648,7 @@
          if test -f /lib/w32api/libuuid.a; then
              LIBUUID=/lib/w32api/libuuid.a
          else
 -            LIBUUID=-luuid
 +            LIBUUID=-Wl,-luuid
          fi
-         EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion $LIBUUID -static-libgcc"
+         EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lsetupapi -lversion $LIBUUID -static-libgcc"
          # The Windows platform requires special setup
-@@ -3956,10 +3956,10 @@
+@@ -4069,10 +4069,10 @@
  
  VERSION_OBJECTS=`echo $VERSION_SOURCES`
  VERSION_DEPENDS=`echo $VERSION_SOURCES`
@@ -23,9 +23,9 @@
  
  SDLMAIN_OBJECTS=`echo $SDLMAIN_SOURCES`
  SDLMAIN_DEPENDS=`echo $SDLMAIN_SOURCES`
---- SDL2-2.0.6/Makefile.in
-+++ SDL2-2.0.6/Makefile.in
-@@ -143,13 +143,13 @@
+--- SDL2-2.0.10/Makefile.in
++++ SDL2-2.0.10/Makefile.in
+@@ -147,13 +147,13 @@
  .PHONY: all update-revision install install-bin install-hdrs install-lib install-data uninstall uninstall-bin uninstall-hdrs uninstall-lib uninstall-data clean distclean dist $(OBJECTS:.lo=.d)
  
  $(objects)/$(TARGET): $(GEN_HEADERS) $(GEN_OBJECTS) $(OBJECTS) $(VERSION_OBJECTS)
