@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-inherit autotools eutils multilib-minimal toolchain-funcs
+EAPI=6
+inherit multilib-minimal toolchain-funcs
 
 DESCRIPTION="GStreamer plugin for ICE (RFC 5245) support"
 HOMEPAGE="https://nice.freedesktop.org/wiki/"
@@ -10,8 +10,8 @@ MY_P=libnice-${PV}
 SRC_URI="https://nice.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
-SLOT="0.10"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+SLOT="1.0"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="
@@ -26,22 +26,23 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	default
 	sed -e 's:$(top_builddir)/nice/libnice.la:$(NICE_LIBS):' \
 		-i gst/Makefile.{am,in} || die "sed failed"
-
-	# https://bugs.freedesktop.org/show_bug.cgi?id=90801
-	epatch "${FILESDIR}"/${P}-gstreamer.patch
-	eautoreconf
 }
 
 multilib_src_configure() {
-	# gupnp is not used in the gst plugin
+	# gnutls vs openssl left intentionally automagic here - the chosen USE flag configuration of libnice will ensure
+	# one of them is present, configure will be happy, but gstreamer bits don't use it, so it doesn't matter.
+	# gupnp is not used in the gst plugin.
 	ECONF_SOURCE=${S} \
 	econf \
+		--enable-compile-warnings=yes \
 		--disable-static \
 		--disable-static-plugins \
-		--with-gstreamer-0.10 \
-		--without-gstreamer \
+		--without-gstreamer-0.10 \
+		--with-gstreamer \
+		--with-crypto-library=auto \
 		--disable-introspection \
 		--disable-gupnp
 }
@@ -60,5 +61,5 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	prune_libtool_files --modules
+	find "${ED}" -name '*.la' -delete || die
 }
