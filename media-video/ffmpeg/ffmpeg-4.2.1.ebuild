@@ -15,12 +15,6 @@ EAPI=6
 FFMPEG_SUBSLOT=56.58.58
 
 SCM=""
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="git-r3"
-	EGIT_MIN_CLONE_TYPE="single"
-	EGIT_REPO_URI="https://git.ffmpeg.org/ffmpeg.git"
-fi
-
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec"
@@ -54,9 +48,7 @@ LICENSE="
 	)
 	samba? ( GPL-3 )
 "
-if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-fi
+KEYWORDS="*"
 
 # Options to use as use_enable in the foo[:bar] form.
 # This will feed configure with $(use_enable foo bar)
@@ -64,7 +56,7 @@ fi
 # foo is added to IUSE.
 FFMPEG_FLAG_MAP=(
 		+bzip2:bzlib cpudetection:runtime-cpudetect debug gcrypt gnutls gmp
-		+gpl +hardcoded-tables +iconv libressl:libtls libxml2 lzma +network opencl
+		+gpl hardcoded-tables +iconv libressl:libtls libxml2 lzma +network opencl
 		openssl +postproc samba:libsmbclient sdl:ffplay sdl:sdl2 vaapi vdpau
 		X:xlib xcb:libxcb xcb:libxcb-shm xcb:libxcb-xfixes +zlib
 		# libavdevice options
@@ -284,6 +276,7 @@ GPL_REQUIRED_USE="
 	postproc? ( gpl )
 	frei0r? ( gpl )
 	cdio? ( gpl )
+	rubberband? ( gpl )
 	samba? ( gpl )
 	encode? (
 		x264? ( gpl )
@@ -431,6 +424,13 @@ multilib_src_configure() {
 				myconf+=( --target-os=linux )
 				;;
 		esac
+	else
+		# correct native arch support
+		if [ "$ARCH" == "arm" ] || [ "$ARCH" == "arm64" ]; then
+			myconf+=(
+				--arch=arm
+			)
+		fi
 	fi
 
 	# doc
