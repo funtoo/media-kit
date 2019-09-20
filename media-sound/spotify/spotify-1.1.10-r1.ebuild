@@ -7,29 +7,27 @@ inherit desktop pax-utils unpacker xdg
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
 SRC_BASE="http://repository.spotify.com/pool/non-free/s/${PN}-client/"
-BUILD_ID_AMD64="153.gf614956d-16"
+BUILD_ID_AMD64="546.ge08ef575-19"
 SRC_URI="${SRC_BASE}${PN}-client_${PV}.${BUILD_ID_AMD64}_amd64.deb"
 LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="libnotify libressl systray pax_kernel"
-RESTRICT="mirror strip"
+RESTRICT="strip"
 
 BDEPEND=">=dev-util/patchelf-0.10"
-# zenity needed for filepicker
 RDEPEND="
 	dev-libs/nss
 	dev-python/dbus-python
 	dev-python/pygobject:3
 	gnome-base/gconf
-	gnome-extra/zenity
 	libnotify? ( x11-libs/libnotify )
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/harfbuzz
-	media-libs/mesa
+	media-libs/mesa[X(+)]
 	net-misc/curl[ssl]
 	net-print/cups[ssl]
 	|| ( media-sound/pulseaudio media-sound/apulse )
@@ -75,6 +73,7 @@ src_install() {
 	dodir /usr/bin
 	cat <<-EOF >"${D}"/usr/bin/spotify || die
 		#! /bin/sh
+		LD_LIBRARY_PATH="/usr/$(get_libdir)/apulse" \\
 		exec ${SPOTIFY_HOME}/spotify "\$@"
 	EOF
 	fperms +x /usr/bin/spotify
@@ -91,7 +90,7 @@ src_install() {
 		pax-mark z "${ED}${SPOTIFY_HOME}/${PN}" || die
 		pax-mark m "${ED}${SPOTIFY_HOME}/${PN}" || die
 		eqawarn "You have set USE=pax_kernel meaning that you intend to run"
-		eqawarn "${PN} under a PaX enabled kernel.  To do so, we must modify"
+		eqawarn "${PN} under a PaX enabled kernel.	To do so, we must modify"
 		eqawarn "the ${PN} binary itself and this *may* lead to breakage!  If"
 		eqawarn "you suspect that ${PN} is being broken by this modification,"
 		eqawarn "please open a bug."
