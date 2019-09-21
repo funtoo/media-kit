@@ -399,6 +399,13 @@ multilib_src_configure() {
 				myconf+=( --target-os=linux )
 				;;
 		esac
+	else
+		# correct native arch support
+		if [ "$ARCH" == "arm" ] || [ "$ARCH" == "arm64" ]; then
+			myconf+=(
+				--arch=arm
+			)
+		fi
 	fi
 
 	# doc
