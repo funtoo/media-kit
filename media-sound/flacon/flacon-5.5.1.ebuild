@@ -1,10 +1,10 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-# Ignore rudimentary et, uz@Latn, zh_TW translation(s).
-PLOCALES="cs cs_CZ de el es es_MX fr gl hu it ja_JP lt ms_MY nb nl nl_BE pl pl_PL pt_BR pt_PT ro_RO ru sr sr@latin tr uk zh_CN"
+# Ignore rudimentary et, uz@Latn.
+PLOCALES="cs cs_CZ de el es es_MX fr gl he hu id it ja_JP lt ms_MY nb nl nl_BE pl pl_PL pt_BR pt_PT ro_RO ru ru_new sr sr@latin tr uk uz@Latn zh_CN"
 # Tests require lots of disk space
 CHECKREQS_DISK_BUILD=10G
 
@@ -38,6 +38,8 @@ DEPEND="${RDEPEND}
 		media-sound/wavpack
 	)
 "
+PATCHES=( "${FILESDIR}/${P}-resolve-cmp0058.patch"
+	  "${FILESDIR}/${P}-rm-gzip-cmd.patch" )
 
 pkg_pretend() {
 	use test && check-reqs_pkg_pretend
@@ -49,11 +51,6 @@ pkg_setup() {
 
 src_prepare() {
 	cmake-utils_src_prepare
-
-	# Ignore rudimentary et, uz@Latn, zh_TW translation(s).
-	rm "translations/${PN}_uz@Latn.desktop" || die
-	rm "translations/${PN}"_{et,zh_TW}.ts || die
-
 	remove_locale() {
 		rm "translations/${PN}_${1}".{ts,desktop} || die
 	}
