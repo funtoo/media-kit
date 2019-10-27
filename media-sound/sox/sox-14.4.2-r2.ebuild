@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,12 +7,21 @@ inherit autotools
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
-SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
+KEYWORDS="*"
 IUSE="alsa amr ao debug encode flac id3tag ladspa mad ogg openmp oss opus png pulseaudio sndfile static-libs twolame wavpack"
+
+GITHUB_REPO="$PN"
+GITHUB_USER="mansr"
+GITHUB_TAG="0be259eaa9ce3f3fa587a3ef0cf2c0b9c73167a2"
+SRC_URI="https://www.github.com/${GITHUB_USER}/${GITHUB_REPO}/tarball/${GITHUB_TAG} -> ${P}-github-${GITHUB_TAG}.tar.gz"
+
+src_unpack() {
+	unpack ${A}
+	mv "${WORKDIR}/${GITHUB_USER}-${PN}"-??????? "${S}" || die
+}
 
 RDEPEND="
 	dev-libs/libltdl:0=
@@ -47,14 +56,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README )
 
 PATCHES=(
-	"${FILESDIR}"/${P}-CVE-2017-11332.patch
 	"${FILESDIR}"/${P}-CVE-2017-11333.patch
-	"${FILESDIR}"/${P}-CVE-2017-11358.patch
-	"${FILESDIR}"/${P}-CVE-2017-11359.patch
-	"${FILESDIR}"/${P}-CVE-2017-15370.patch
-	"${FILESDIR}"/${P}-CVE-2017-15371.patch
-	"${FILESDIR}"/${P}-CVE-2017-15372.patch
-	"${FILESDIR}"/${P}-CVE-2017-15642.patch
 	"${FILESDIR}"/${P}-CVE-2017-18189.patch
 	"${FILESDIR}"/${P}-wavpack-chk-errors-on-init.patch
 )
@@ -63,6 +65,11 @@ src_prepare() {
 	default
 	sed -i -e 's:CFLAGS="-g":CFLAGS="$CFLAGS -g":' configure.ac || die #386027
 	eautoreconf
+}
+
+src_compile() {
+	emake README || die "README gen failed"
+	emake || die "build failed"
 }
 
 src_configure() {
