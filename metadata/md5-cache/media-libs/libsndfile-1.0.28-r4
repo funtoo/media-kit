@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig test? ( || ( dev-lang/python:3.6 dev-lang/python:3.5 dev-lang/python:3.4 >=dev-lang/python-2.7.5-r2:2.7 >=virtual/pypy3-5:0 >=virtual/pypy-5:0 ) )
+BDEPEND=virtual/pkgconfig test? ( || ( dev-lang/python:3.6 dev-lang/python:3.5 >=dev-lang/python-2.7.5-r2:2.7 >=virtual/pypy3-5:0 >=virtual/pypy-5:0 ) )
 DEFINED_PHASES=compile configure install setup test
 DEPEND=!minimal? ( >=media-libs/flac-1.2.1-r5[-mgorny(-)] >=media-libs/libogg-1.3.0[-mgorny(-)] >=media-libs/libvorbis-1.3.3-r1[-mgorny(-)] ) alsa? ( media-libs/alsa-lib ) sqlite? ( >=dev-db/sqlite-3.2 )
 DESCRIPTION=C library for reading and writing files containing sampled sound
@@ -10,5 +10,5 @@ LICENSE=LGPL-2.1
 RDEPEND=!minimal? ( >=media-libs/flac-1.2.1-r5[-mgorny(-)] >=media-libs/libogg-1.3.0[-mgorny(-)] >=media-libs/libvorbis-1.3.3-r1[-mgorny(-)] ) alsa? ( media-libs/alsa-lib ) sqlite? ( >=dev-db/sqlite-3.2 )
 SLOT=0
 SRC_URI=http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.28.tar.gz
-_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	b2f01ad412baf81650c23fcf0975fa33	multilib-build	68f3f04096539a1b4ccbddc19c744f4a	multilib-minimal	8bddda43703ba94d8341f4e247f97566	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	12114a2a9aab35b93efc037a196b3234	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
+_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	b2f01ad412baf81650c23fcf0975fa33	multilib-build	68f3f04096539a1b4ccbddc19c744f4a	multilib-minimal	8bddda43703ba94d8341f4e247f97566	python-any-r1	4900ae970f827a22d33d41bd8b8f9ace	python-utils-r1	0ccf24dbef2b7722ad46689d6feebe37	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
 _md5_=5d721d1861ed3aaef12a03bf72d77cf8
