@@ -11,12 +11,11 @@ MY_P="${P/_/}"
 
 DESCRIPTION="SVG based generic vector-drawing program"
 HOMEPAGE="https://inkscape.org/"
-SRC_URI="https://inkscape.global.ssl.fastly.net/media/resources/file/${P}.tar.bz2
-	https://dev.gentoo.org/~asturm/distfiles/${P}-poppler-patches-1.tar.xz"
+SRC_URI="https://inkscape.global.ssl.fastly.net/media/resources/file/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86"
+KEYWORDS="amd64 ~arm ~hppa ppc ppc64 ~x86"
 IUSE="cdr dia dbus exif gnome imagemagick openmp postscript inkjar jpeg latex"
 IUSE+=" lcms nls spell static-libs visio wpg"
 
@@ -38,7 +37,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-gfx/scour[${PYTHON_USEDEP}]
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	sci-libs/gsl:=
 	x11-libs/libX11
 	>=x11-libs/gtk+-2.10.7:2
@@ -98,13 +97,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.91_pre3-exif.patch"
 	"${FILESDIR}/${PN}-0.91_pre3-sk-man.patch"
 	"${FILESDIR}/${PN}-0.48.4-epython.patch"
-	"${FILESDIR}/${PN}-0.92.3-freetype_pkgconfig.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.64.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.65.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.64-2.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.69.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.71.patch"
-	"${WORKDIR}/${PN}-0.92.3-poppler-0.72.patch"
+	"${FILESDIR}/${PN}-0.92.4-poppler-0.76.0.patch" #684246
 )
 
 S="${WORKDIR}/${MY_P}"
@@ -112,7 +105,7 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="test"
 
 pkg_pretend() {
-	if use openmp; then
+	if [[ ${MERGE_TYPE} != binary ]] && use openmp; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
 }
@@ -163,16 +156,4 @@ src_install() {
 
 	find "${ED}" -name "*.la" -delete || die
 	python_optimize "${ED%/}"/usr/share/${PN}/extensions
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
 }
