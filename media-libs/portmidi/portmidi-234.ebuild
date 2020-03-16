@@ -1,49 +1,54 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3_{6,7,8} )
 DISTUTILS_OPTIONAL=1
-inherit cmake-utils desktop distutils-r1 java-pkg-opt-2
+
+inherit cmake-utils desktop xdg distutils-r1 java-pkg-opt-2
 
 DESCRIPTION="Library for real time MIDI input and output"
 HOMEPAGE="http://portmedia.sourceforge.net/"
-SRC_URI="mirror://sourceforge/portmedia/${PN}-src-${PV}.zip"
+SRC_URI="https://sourceforge.net/code-snapshots/svn/p/po/portmedia/code/portmedia-code-r${PV}-${PN}-trunk.zip -> ${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~sparc x86"
+KEYWORDS="*"
 IUSE="debug doc java python static-libs test-programs"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-COMMON_DEPEND="
-	media-libs/alsa-lib
-	python? ( ${PYTHON_DEPS} )"
-RDEPEND="${COMMON_DEPEND}
-	java? ( >=virtual/jre-1.6 )"
-DEPEND="${COMMON_DEPEND}
+BDEPEND="
 	app-arch/unzip
 	doc? (
 		app-doc/doxygen
-		dev-tex/xcolor
 		dev-texlive/texlive-fontsrecommended
 		dev-texlive/texlive-latexextra
 		virtual/latex-base
 	)
-	java? ( >=virtual/jdk-1.6 )
 	python? ( >=dev-python/cython-0.12.1[${PYTHON_USEDEP}] )
 "
+CDEPEND="
+	media-libs/alsa-lib
+	python? ( ${PYTHON_DEPS} )
+"
+RDEPEND="${CDEPEND}
+	java? ( >=virtual/jre-1.8 )
+"
+DEPEND="
+	${CDEPEND}
+	java? ( >=virtual/jdk-1.8 )
+"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/portmedia-code-r${PV}-${PN}-trunk"
 
 PATCHES=(
 	# fix parallel make failures, fix java support, and allow optional
 	# components like test programs and static libs to be skipped
 	"${FILESDIR}"/${P}-cmake.patch
-
-	# add include directories and remove references to missing files
+	# fix implicit function declarations
+	"${FILESDIR}"/${P}-headers.patch
+#	# add include directories and remove references to missing files
 	"${FILESDIR}"/${P}-python.patch
 )
 
@@ -52,7 +57,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cmake-utils_src_prepare
+cmake-utils_src_prepare
 
 	# install wrapper for pmdefaults
 	if use java ; then
@@ -71,7 +76,6 @@ src_configure() {
 	else
 		CMAKE_BUILD_TYPE=Release
 	fi
-
 	local mycmakeargs=(
 		-DPORTMIDI_ENABLE_JAVA=$(usex java)
 		-DPORTMIDI_ENABLE_STATIC=$(usex static-libs)
@@ -89,7 +93,6 @@ src_compile() {
 	cmake-utils_src_compile
 
 	if use python ; then
-		sed -i -e "/library_dirs=.*linux/s#./linux#${CMAKE_BUILD_DIR}#" pm_python/setup.py || die
 		pushd pm_python > /dev/null
 		distutils-r1_src_compile
 		popd > /dev/null
@@ -120,13 +123,5 @@ src_install() {
 		newdoc pm_java/README.txt README_JAVA.txt
 		newicon pm_java/pmdefaults/pmdefaults-icon.png pmdefaults.png
 		make_desktop_entry pmdefaults Pmdefaults pmdefaults "AudioVideo;Audio;Midi;"
-	fi
-
-	if use test-programs ; then
-		exeinto /usr/$(get_libdir)/${PN}
-		local app
-		for app in latency midiclock midithread midithru mm qtest sysex test ; do
-			doexe "${CMAKE_BUILD_DIR}"/${app}
-		done
 	fi
 }

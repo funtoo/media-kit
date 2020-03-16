@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -16,7 +15,7 @@ SRC_URI="https://github.com/musescore/MuseScore/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE="alsa debug jack portaudio portmidi pulseaudio vorbis webengine"
 REQUIRED_USE="portmidi? ( portaudio )"
 
@@ -33,7 +32,6 @@ DEPEND="
 	dev-qt/qthelp:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtprintsupport:5
-	>=dev-qt/qtsingleapplication-2.6.1_p20171024
 	dev-qt/qtsvg:5
 	dev-qt/qtxml:5
 	dev-qt/qtxmlpatterns:5
@@ -69,7 +67,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=ON
 		-DDOWNLOAD_SOUNDFONT=OFF
-		-DUSE_SYSTEM_QTSINGLEAPPLICATION=ON
+		-DUSE_SYSTEM_QTSINGLEAPPLICATION=OFF
 		-DUSE_PATH_WITH_EXPLICIT_QT_VERSION=ON
 		-DUSE_SYSTEM_FREETYPE=ON
 		-DBUILD_ALSA="$(usex alsa)"
