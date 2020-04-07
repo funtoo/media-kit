@@ -75,7 +75,6 @@ media-gfx/blender:test - Build the provided unit tests.
 media-gfx/blender:valgrind - Add support for memory debugging using dev-util/valgrind
 media-gfx/chafa:tools - Build command-line tools
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
-media-gfx/cura:usb - Access 3D printers via USB
 media-gfx/darktable:colord - Support color management using x11-misc/colord
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:geolocation - Enable geotagging support
@@ -296,7 +295,6 @@ media-libs/libyami:v4l - Add support for V4L2 hardware codecs.
 media-libs/libzmf:tools - Build conversion tools
 media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/
 media-libs/lsp-plugins:lv2 - build lv2 plugins
-media-libs/lv2:plugins - Enables examples plugins.
 media-libs/lvtk:gtk2 - Enable x11-libs/gtk+:2 based GUI support
 media-libs/lvtk:tools - Compile and install ttl2c tool
 media-libs/mediastreamer:amr - Use of AMR Narrow Band codec plugin
