@@ -1,40 +1,17 @@
-=media-fonts/terminus-font-4.46 python_single_target_python3_5 python_targets_python3_5
 =media-gfx/asymptote-2.41-r1 python_single_target_python2_7
-=media-gfx/cairosvg-1.0.22 python_single_target_python2_7
-=media-gfx/cairosvg-2.0.3 python_single_target_python3_5 python_targets_python3_5
 =media-gfx/graphite2-1.3.10 python_single_target_python2_7
 =media-gfx/graphviz-2.40.1-r1 python_single_target_python2_7
-=media-gfx/termtosvg-0.4.0 python_single_target_python3_5 python_targets_python3_5
-=media-gfx/xdot-1.0 python_single_target_python3_5 python_targets_python3_5
 =media-libs/alsa-lib-1.1.2 python_single_target_python2_7
-=media-libs/alsa-lib-1.1.6-r1 python_single_target_python2_7
 =media-libs/aubio-0.4.7 python_single_target_python2_7
 =media-libs/hamlib-3.1 python_single_target_python2_7
-=media-libs/hamlib-3.2 python_single_target_python2_7
-=media-libs/hamlib-3.3 python_single_target_python2_7
-=media-libs/libopenshot-0.2.2 python_single_target_python3_5 python_targets_python3_5
-=media-libs/libsndfile-1.0.28-r4 python_single_target_python2_7
-=media-libs/mutagen-1.35.1 python_single_target_python2_7
-=media-libs/mutagen-1.38 python_single_target_python2_7
-=media-libs/mutagen-1.39 python_single_target_python2_7
-=media-libs/mutagen-1.40.0 python_single_target_python2_7
-=media-libs/opencolorio-1.1.0-r1 python_single_target_python2_7
 =media-libs/vigra-1.11.1-r2 python_single_target_python2_7
 =media-libs/vigra-9999 python_single_target_python2_7
 =media-plugins/mda-lv2-1.0.0 python_single_target_python2_7
-=media-plugins/mda-lv2-1.2.2 python_single_target_python2_7
 =media-sound/gpodder-3.9.1 python_single_target_python2_7
 =media-sound/quodlibet-3.8.1-r1 python_single_target_python2_7
 =media-sound/quodlibet-3.9.1 python_single_target_python2_7
-=media-sound/quodlibet-4.1.0 python_single_target_python3_5 python_targets_python3_5
-=media-video/devedeng-4.10.0 python_single_target_python3_5 python_targets_python3_5
-=media-video/devedeng-4.11.0 python_single_target_python3_5 python_targets_python3_5
-=media-video/devedeng-9999 python_single_target_python3_5 python_targets_python3_5
-=media-video/gaupol-1.4 python_single_target_python3_5 python_targets_python3_5
-=media-video/openshot-2.4.0-r1 python_single_target_python3_5 python_targets_python3_5
 media-fonts/noto-emoji python_single_target_python2_7
 media-gfx/alembic python_single_target_python2_7
-media-gfx/birdfont python_single_target_python2_7
 media-gfx/comix python_single_target_python2_7
 media-gfx/cptutils python_single_target_python2_7
 media-gfx/cropgui python_single_target_python2_7
@@ -44,49 +21,32 @@ media-gfx/fontypython python_single_target_python2_7
 media-gfx/fr0st python_single_target_python2_7
 media-gfx/gimp python_single_target_python2_7
 media-gfx/gnofract4d python_single_target_python2_7
-media-gfx/hugin python_single_target_python2_7
-media-gfx/img2pdf python_single_target_python3_5 python_targets_python3_5
 media-gfx/inkscape python_single_target_python2_7
 media-gfx/mcomix python_single_target_python2_7
 media-gfx/mirage python_single_target_python2_7
 media-gfx/mypaint python_single_target_python2_7
-media-gfx/openvdb python_single_target_python2_7
 media-gfx/printrun python_single_target_python2_7
 media-gfx/pycam python_single_target_python2_7
-media-gfx/qrencode-python python_single_target_python2_7
-media-gfx/scour python_single_target_python2_7
-media-gfx/sigal python_single_target_python2_7
 media-gfx/svg2rlg python_single_target_python2_7
 media-gfx/uniconvertor python_single_target_python2_7
 media-gfx/zbar python_single_target_python2_7
 media-libs/ganv python_single_target_python2_7
-media-libs/gstreamer-editing-services python_single_target_python2_7
 media-libs/libcaca python_single_target_python2_7
-media-libs/libffado python_single_target_python2_7
 media-libs/libgpod python_single_target_python2_7
 media-libs/libkate python_single_target_python2_7
 media-libs/libmypaint python_single_target_python2_7
-media-libs/libxmlbird python_single_target_python2_7
-media-libs/lv2 python_single_target_python3+ python_targets_python3+
 media-libs/lvtk python_single_target_python2_7
 media-libs/ming python_single_target_python2_7
-media-libs/partio python_single_target_python2_7
-media-libs/pyliblo python_single_target_python2_7
 media-libs/pymemphis python_single_target_python2_7
 media-libs/raul python_single_target_python2_7
-media-libs/shaderc python_single_target_python2_7
 media-libs/slv2 python_single_target_python2_7
-media-libs/sratom python_single_target_python2_7
-media-libs/suil python_single_target_python2_7
 media-plugins/ams-lv2 python_single_target_python2_7
 media-plugins/gimp-resynthesizer python_single_target_python2_7
-media-plugins/gst-transcoder python_single_target_python3_5 python_targets_python3_5
 media-plugins/vamp-aubio-plugins python_single_target_python2_7
 media-sound/a2jmidid python_single_target_python2_7
 media-sound/apetag python_single_target_python2_7
 media-sound/ardour python_single_target_python2_7
 media-sound/ario python_single_target_python2_7
-media-sound/beets python_single_target_python3_5 python_targets_python3_5
 media-sound/codecgraph python_single_target_python2_7
 media-sound/cplay python_single_target_python2_7
 media-sound/csound python_single_target_python2_7
@@ -94,39 +54,28 @@ media-sound/dir2ogg python_single_target_python2_7
 media-sound/ecasound python_single_target_python2_7
 media-sound/edna python_single_target_python2_7
 media-sound/exaile python_single_target_python2_7
-media-sound/frescobaldi python_single_target_python3_5 python_targets_python3_5
 media-sound/gtklick python_single_target_python2_7
 media-sound/guitarix python_single_target_python2_7
 media-sound/idjc python_single_target_python2_7
 media-sound/jack python_single_target_python2_7
 media-sound/jack2 python_single_target_python2_7
-media-sound/jalv python_single_target_python2_7
-media-sound/klick python_single_target_python2_7
 media-sound/lash python_single_target_python2_7
 media-sound/lilycomp python_single_target_python2_7
 media-sound/lilypond python_single_target_python2_7
-media-sound/lollypop python_single_target_python3_6 python_targets_python3_6
-media-sound/lyvi python_single_target_python3_5 python_targets_python3_5
 media-sound/marrie python_single_target_python2_7
 media-sound/moosic python_single_target_python2_7
-media-sound/mps-youtube python_single_target_python3_5 python_targets_python3_5
 media-sound/patchage python_single_target_python2_7
-media-sound/pithos python_single_target_python3_5 python_targets_python3_5
 media-sound/positron python_single_target_python2_7
-media-sound/pulseeffects python_single_target_python3_5 python_targets_python3_5
 media-sound/pympd python_single_target_python2_7
 media-sound/rgain python_single_target_python2_7
-media-sound/rhythmbox python_single_target_python3_5 python_targets_python3_5
 media-sound/solfege python_single_target_python2_7
 media-sound/sonata python_single_target_python2_7
 media-sound/tunapie python_single_target_python2_7
 media-sound/volti python_single_target_python2_7
 media-sound/whipper python_single_target_python2_7
-media-sound/xmms2 python_single_target_python2_7
 media-tv/kodi python_single_target_python2_7
 media-tv/mythtv python_single_target_python2_7
 media-tv/plex-media-server python_single_target_python2_7
-media-tv/tvnamer python_single_target_python2_7
 media-video/flowblade python_single_target_python2_7
 media-video/griffith python_single_target_python2_7
 media-video/gtk-recordmydesktop python_single_target_python2_7
@@ -134,7 +83,6 @@ media-video/handbrake python_single_target_python2_7
 media-video/photofilmstrip python_single_target_python2_7
 media-video/pymp python_single_target_python2_7
 media-video/subdl python_single_target_python2_7
-media-video/subliminal python_single_target_python2_7
 media-video/syncplay python_single_target_python2_7
 media-video/tovid python_single_target_python2_7
 net-libs/farstream python_single_target_python2_7
