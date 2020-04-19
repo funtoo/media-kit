@@ -6,11 +6,11 @@ inherit autotools
 
 DESCRIPTION="Free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
-SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
+SRC_URI="https://github.com/gphoto/gphoto2/archive/gphoto2-2_5_23-release.tar.gz -> gphoto2-2_5_23-release.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 ~sparc x86"
+KEYWORDS="*"
 IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
@@ -29,10 +29,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.14.1 )
 "
 
-PATCHES=(
-	# https://github.com/gphoto/gphoto2/pull/179
-	"${FILESDIR}"/0001-Fix-unwanted-automagic-activation-of-aalib-support.patch
-)
+S=${WORKDIR}/${PN}-gphoto2-2_5_23-release
 
 src_prepare() {
 	default
@@ -42,7 +39,7 @@ src_prepare() {
 	fi
 	# Leave GCC debug builds under user control
 	sed -r '/(C|LD)FLAGS/ s/ -g( |")/\1/' \
-		-i configure{.ac,} || die
+		-i configure.ac || die
 	eautoreconf
 }
 
