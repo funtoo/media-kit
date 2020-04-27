@@ -292,7 +292,6 @@ media-libs/libyami:egl - Enable EGL support.
 media-libs/libyami:md5 - Add support for generating md5 sums for each frame.
 media-libs/libyami:v4l - Add support for V4L2 hardware codecs.
 media-libs/libzmf:tools - Build conversion tools
-media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/
 media-libs/lsp-plugins:lv2 - build lv2 plugins
 media-libs/lvtk:gtk2 - Enable x11-libs/gtk+:2 based GUI support
 media-libs/lvtk:tools - Compile and install ttl2c tool
