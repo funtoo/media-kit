@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/ldconfig.patch
 	epatch "${FILESDIR}"/${P}-raptor2-link.patch
-  sed -i -e 's/lv2core/lv2/' wscript || die "Sed failed!"
+	sed -i -e 's/lv2core/lv2/' wscript || die "Sed failed!"
 }
 
 src_configure() {
