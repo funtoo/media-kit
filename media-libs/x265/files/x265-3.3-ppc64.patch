@@ -2,8 +2,8 @@ More complete ppc64 matches.
 
 Index: x265_2.2/source/CMakeLists.txt
 ===================================================================
---- x265_2.2.orig/source/CMakeLists.txt
-+++ x265_2.2/source/CMakeLists.txt
+--- old/CMakeLists.txt
++++ new/CMakeLists.txt
 @@ -44,7 +44,7 @@ set(X86_ALIASES x86 i386 i686 x86_64 amd
  set(ARM_ALIASES armv6l armv6j armv7l armv7a)
  list(FIND X86_ALIASES "${SYSPROC}" X86MATCH)

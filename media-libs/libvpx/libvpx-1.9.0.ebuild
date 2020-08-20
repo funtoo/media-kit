@@ -1,39 +1,34 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI="7"
 inherit toolchain-funcs multilib-minimal
 
 # To create a new testdata tarball:
-# 1. Unpack source tarbll or checkout git tag
-# 2. export LIBVPX_TEST_DATA_PATH=libvpx-testdata
-# 3. configure --enable-unit-tests --enable-vp9-highbitdepth
-# 4. make testdata
-# 5. tar -cjf libvpx-testdata-${MY_PV}.tar.bz2 libvpx-testdata
+# 1. Unpack source tarball or checkout git tag
+# 2. mkdir libvpx-testdata
+# 3. export LIBVPX_TEST_DATA_PATH=libvpx-testdata
+# 4. configure --enable-unit-tests --enable-vp9-highbitdepth
+# 5. make testdata
+# 6. tar -caf libvpx-testdata-${MY_PV}.tar.xz libvpx-testdata
 
-LIBVPX_TESTDATA_VER=1.7.0
+LIBVPX_TESTDATA_VER=1.9.0
 
 DESCRIPTION="WebM VP8 and VP9 Codec SDK"
 HOMEPAGE="https://www.webmproject.org"
 SRC_URI="https://github.com/webmproject/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	test? ( mirror://gentoo/${PN}-testdata-${LIBVPX_TESTDATA_VER}.tar.xz )"
+	test? ( https://dev.gentoo.org/~whissi/dist/libvpx/${PN}-testdata-${LIBVPX_TESTDATA_VER}.tar.xz )"
 
 LICENSE="BSD"
-SLOT="0/5"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="cpu_flags_x86_avx cpu_flags_x86_avx2 doc cpu_flags_x86_mmx postproc cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4_1 +highbitdepth static-libs svc test +threads"
+SLOT="0/6"
+KEYWORDS="*"
+IUSE="doc +highbitdepth postproc static-libs svc test +threads"
 
-REQUIRED_USE="
-	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx )
-	cpu_flags_x86_ssse3? ( cpu_flags_x86_sse2 )
-	test? ( threads )
-"
+REQUIRED_USE="test? ( threads )"
 
 # Disable test phase when USE="-test"
 RESTRICT="!test? ( test )"
 
-RDEPEND=""
-DEPEND="abi_x86_32? ( dev-lang/yasm )
+BDEPEND="abi_x86_32? ( dev-lang/yasm )
 	abi_x86_64? ( dev-lang/yasm )
 	abi_x86_x32? ( dev-lang/yasm )
 	x86-fbsd? ( dev-lang/yasm )
@@ -52,10 +47,10 @@ src_configure() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=384585
 	# https://bugs.gentoo.org/show_bug.cgi?id=465988
 	# copied from php-pear-r1.eclass
-	addpredict /usr/share/snmp/mibs/.index
-	addpredict /var/lib/net-snmp/
-	addpredict /var/lib/net-snmp/mib_indexes
-	addpredict /session_mm_cli0.sem
+	addpredict /usr/share/snmp/mibs/.index #nowarn
+	addpredict /var/lib/net-snmp/ #nowarn
+	addpredict /var/lib/net-snmp/mib_indexes #nowarn
+	addpredict /session_mm_cli0.sem #nowarn
 	multilib-minimal_src_configure
 }
 
@@ -71,16 +66,8 @@ multilib_src_configure() {
 		--enable-vp9
 		--enable-shared
 		--extra-cflags="${CFLAGS}"
-		$(use_enable cpu_flags_x86_avx avx)
-		$(use_enable cpu_flags_x86_avx2 avx2)
-		$(use_enable cpu_flags_x86_mmx mmx)
 		$(use_enable postproc)
-		$(use cpu_flags_x86_sse2 && use_enable cpu_flags_x86_sse sse || echo --disable-sse)
-		$(use_enable cpu_flags_x86_sse2 sse2)
-		$(use_enable cpu_flags_x86_sse3 sse3)
-		$(use_enable cpu_flags_x86_sse4_1 sse4_1)
-		$(use_enable cpu_flags_x86_ssse3 ssse3)
-		$(use_enable svc experimental) $(use_enable svc spatial-svc)
+		$(use_enable svc experimental)
 		$(use_enable static-libs static)
 		$(use_enable test unit-tests)
 		$(use_enable threads multithread)
@@ -95,6 +82,9 @@ multilib_src_configure() {
 		x86_64*) export AS=yasm;;
 	esac
 
+	# powerpc toolchain is not recognized anymore, #694368
+	[[ ${CHOST} == powerpc-* ]] && myconfargs+=( --force-target=generic-gnu )
+
 	# Build with correct toolchain.
 	tc-export CC CXX AR NM
 	# Link with gcc by default, the build system should override this if needed.
@@ -107,6 +97,7 @@ multilib_src_configure() {
 		myconfargs+=( --disable-examples --disable-install-docs --disable-docs )
 	fi
 
+	echo "${S}"/configure "${myconfargs[@]}" >&2
 	"${S}"/configure "${myconfargs[@]}"
 }
 

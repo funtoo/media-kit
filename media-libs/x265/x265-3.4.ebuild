@@ -1,47 +1,38 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 inherit cmake-utils multilib-minimal multilib multibuild flag-o-matic
 
-if [[ ${PV} = 9999* ]]; then
-	inherit mercurial
-	EHG_REPO_URI="https://bitbucket.org/multicoreware/x265"
-else
-	SRC_URI="https://bitbucket.org/multicoreware/x265/downloads/${PN}_${PV}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-fi
-
 DESCRIPTION="Library for encoding video streams into the H.265/HEVC format"
-HOMEPAGE="http://x265.org/"
+HOMEPAGE="http://x265.org/ https://bitbucket.org/multicoreware/x265_git/wiki/Home"
+SRC_URI="https://bitbucket.org/multicoreware/x265_git/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="GPL-2"
 # subslot = libx265 soname
-SLOT="0/173"
-IUSE="+10bit +12bit cpu_flags_arm_neon numa pic power8 test"
+SLOT="0/192"
+IUSE="+10bit +12bit cpu_flags_arm_neon cpu_flags_ppc_vsx2 numa pic test"
+KEYWORDS="*"
+RESTRICT="!test? ( test )"
 
-ASM_DEPEND=">=dev-lang/yasm-1.2.0"
 RDEPEND="numa? ( >=sys-process/numactl-2.0.10-r1[${MULTILIB_USEDEP}] )"
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}"
+ASM_DEPEND=">=dev-lang/nasm-2.13"
+BDEPEND="
 	abi_x86_32? ( ${ASM_DEPEND} )
 	abi_x86_64? ( ${ASM_DEPEND} )"
 
 PATCHES=(
-	"${FILESDIR}/arm.patch"
+	"${FILESDIR}/arm-r1.patch"
 	"${FILESDIR}/neon.patch"
-	"${FILESDIR}/ppc64.patch"
+	"${FILESDIR}/x265-3.3-ppc64.patch"
+	"${FILESDIR}/tests.patch"
+	"${FILESDIR}/test-ns.patch"
 )
 
 src_unpack() {
-	if [[ ${PV} = 9999* ]]; then
-		mercurial_src_unpack
-		# Can't set it at global scope due to mercurial.eclass limitations...
-		export S=${WORKDIR}/${P}/source
-	else
-		unpack ${A}
-		export S="$(echo "${WORKDIR}/${PN}_"*"/source")"
-	fi
+	unpack ${A}
+	export S="$(echo "${WORKDIR}/multicoreware-x265_git-"*"/source" )"
 }
 
 # By default, the library and the encoder is configured for only one output bit
@@ -69,6 +60,8 @@ x265_variant_src_configure() {
 	mkdir -p "${BUILD_DIR}" || die
 	pushd "${BUILD_DIR}" >/dev/null || die
 
+	einfo "Configuring variant: ${MULTIBUILD_VARIANT} for ABI: ${ABI}"
+
 	local mycmakeargs=( "${myabicmakeargs[@]}" )
 	case "${MULTIBUILD_VARIANT}" in
 		"main12")
@@ -82,13 +75,16 @@ x265_variant_src_configure() {
 			if [[ ${ABI} = x86 ]] ; then
 				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF )
 			fi
-			if [[ ${ABI} = arm ]] ; then
+			if [[ ${ABI} = arm* ]] ; then
 				# 589674
 				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF )
 			fi
-			if [[ ${ABI} = ppc64 ]] ; then
-				# https://bugs.gentoo.org/show_bug.cgi?id=607802#c5
-				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF -DENABLE_ALTIVEC=OFF )
+			# disable altivec for 12bit build #607802#c5
+			if [[ ${ABI} = ppc* ]] ; then
+				mycmakeargs+=(
+					-DENABLE_ALTIVEC=OFF
+					-DCPU_POWER8=$(usex cpu_flags_ppc_vsx2 ON OFF)
+				)
 			fi
 			;;
 		"main10")
@@ -101,20 +97,23 @@ x265_variant_src_configure() {
 			if [[ ${ABI} = x86 ]] ; then
 				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF )
 			fi
-			if [[ ${ABI} = arm ]] ; then
+			if [[ ${ABI} = arm* ]] ; then
 				# 589674
 				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF )
 			fi
-			if [[ ${ABI} = ppc64 ]] ; then
-				# https://bugs.gentoo.org/show_bug.cgi?id=607802#c5
-				mycmakeargs+=( -DENABLE_ASSEMBLY=OFF -DENABLE_ALTIVEC=OFF )
+			# disable altivec for 10bit build #607802#c5
+			if [[ ${ABI} = ppc* ]] ; then
+				mycmakeargs+=(
+					-DENABLE_ALTIVEC=OFF
+					-DCPU_POWER8=$(usex cpu_flags_ppc_vsx2 ON OFF)
+				)
 			fi
 			;;
 		"main")
 			if (( "${#MULTIBUILD_VARIANTS[@]}" > 1 )) ; then
 				local myvariants=( "${MULTIBUILD_VARIANTS[@]}" )
 				unset myvariants[${#MULTIBUILD_VARIANTS[@]}-1]
-				local liblist=""
+				local liblist="" v=
 				for v in "${myvariants[@]}" ; do
 					ln -s "${BUILD_DIR%-*}-${v}/libx265.a" "libx265_${v}.a" ||	die
 					liblist+="libx265_${v}.a;"
@@ -125,6 +124,16 @@ x265_variant_src_configure() {
 					-DLINKED_10BIT=$(usex 10bit)
 					-DLINKED_12BIT=$(usex 12bit)
 				)
+				if [[ ${ABI} = ppc* ]] ; then
+					# upstream uses mix of altivec + power8 vectors
+					# it's impossible to enable altivec without CPU_POWER8
+					# and it does not work on ppc32
+					# so we toggle both variables together
+					mycmakeargs+=(
+						-DCPU_POWER8=$(usex cpu_flags_ppc_vsx2 ON OFF)
+						-DENABLE_ALTIVEC=$(usex cpu_flags_ppc_vsx2 ON OFF)
+					)
+				fi
 			fi
 			;;
 		*)
@@ -135,14 +144,11 @@ x265_variant_src_configure() {
 }
 
 multilib_src_configure() {
-	append-cflags -fPIC
-	append-cxxflags -fPIC
 	local myabicmakeargs=(
-		$(cmake-utils_use_enable test TESTS)
+		-DENABLE_TESTS=$(usex test ON OFF)
 		$(multilib_is_native_abi || echo "-DENABLE_CLI=OFF")
+		-DENABLE_PIC=ON
 		-DENABLE_LIBNUMA=$(usex numa ON OFF)
-		-DCPU_POWER8=$(usex power8 ON OFF)
-		-DENABLE_ALTIVEC=$(usex power8 ON OFF)
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 	)
 
@@ -192,4 +198,9 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	dodoc -r "${S}/../doc/"*
+
+	# we don't install *.a files for all variants,
+	# so just delete these files instead of pretending
+	# real USE=static-libs support
+	find "${ED}" -name "*.a" -delete || die
 }
