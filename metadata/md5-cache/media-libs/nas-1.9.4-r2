@@ -9,5 +9,5 @@ LICENSE=HPND MIT
 RDEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXau-1.0.7-r1[-mgorny(-)] x11-libs/libXaw x11-libs/libXext x11-libs/libXmu x11-libs/libXpm >=x11-libs/libXt-1.1.4[-mgorny(-)]
 SLOT=0
 SRC_URI=mirror://sourceforge/nas/nas-1.9.4.src.tar.gz
-_eclasses_=multibuild	40fe59465edacd730c644ec2bc197809	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
+_eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
 _md5_=2c14843424875caa77c816f2427c2063
