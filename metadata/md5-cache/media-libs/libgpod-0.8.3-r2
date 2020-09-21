@@ -3,12 +3,12 @@ DEPEND=>=app-pda/libplist-1.0:= >=dev-db/sqlite-3:3 >=dev-libs/glib-2.16:2 dev-l
 DESCRIPTION=Shared library to access the contents of an iPod
 EAPI=6
 HOMEPAGE=http://www.gtkpod.org/libgpod/
-IUSE=+gtk python +udev ios mono static-libs python_targets_python2_7
+IUSE=+gtk python +udev ios mono static-libs python_single_target_python2_7 python_targets_python2_7
 KEYWORDS=amd64 ppc x86
 LICENSE=LGPL-2
 RDEPEND=>=app-pda/libplist-1.0:= >=dev-db/sqlite-3:3 >=dev-libs/glib-2.16:2 dev-libs/libxml2:2 sys-apps/sg3_utils gtk? ( x11-libs/gdk-pixbuf:2 ) ios? ( app-pda/libimobiledevice:= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) >=media-libs/mutagen-1.8[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] >=dev-python/pygobject-2.8:2[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] ) udev? ( virtual/udev ) mono? ( >=dev-lang/mono-1.9.1 >=dev-dotnet/gtk-sharp-2.12 )
 REQUIRED_USE=python? ( ^^ ( python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkpod/libgpod-0.8.3.tar.bz2
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	mono-env	1f24c032c78290b0d9a07d5b343051a7	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	a811e2c445a5fb40db1a1eba728dca7f	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	udev	7752f306eec7b286d00bdb47b763e7ac	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	mono-env	1f24c032c78290b0d9a07d5b343051a7	multilib	1d91b03d42ab6308b5f4f6b598ed110e	preserve-libs	ef207dc62baddfddfd39a164d9797648	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	udev	7752f306eec7b286d00bdb47b763e7ac	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=d5c0a9cf1238cadd5f41e841904d67fc
