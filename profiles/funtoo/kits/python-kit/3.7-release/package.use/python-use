@@ -53,7 +53,6 @@ media-libs/libkate python_single_target_python2_7
 media-libs/libmypaint python_single_target_python2_7
 media-libs/lvtk python_single_target_python2_7
 media-libs/ming python_single_target_python2_7
-media-libs/pymemphis python_single_target_python2_7
 media-libs/raul python_single_target_python2_7
 media-libs/slv2 python_single_target_python2_7
 media-plugins/ams-lv2 python_single_target_python2_7
