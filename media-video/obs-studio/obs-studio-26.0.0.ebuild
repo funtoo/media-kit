@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3+ )
 
 inherit cmake-utils python-single-r1 xdg-utils
 
-SRC_URI="https://api.github.com/repos/obsproject/obs-studio/tarball/25.0.8 -> obs-studio-25.0.8.tar.gz"
+SRC_URI="https://api.github.com/repos/obsproject/obs-studio/tarball/26.0.0 -> obs-studio-26.0.0.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="Software for Recording and Streaming Live Video Content"
