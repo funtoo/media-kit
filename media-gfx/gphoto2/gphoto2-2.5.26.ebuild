@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
-SRC_URI="https://github.com/gphoto/gphoto2/archive/v2.5.26.tar.gz"
+SRC_URI="https://github.com/gphoto/gphoto2/archive/v2.5.26.tar.gz -> gphoto2-2.5.26.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,8 +28,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.14.1 )
 "
-
-S=${WORKDIR}/${PN}-v2.5.26
 
 src_prepare() {
 	default
