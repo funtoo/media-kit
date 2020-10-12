@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libxml2-2.9.1-r4:2[-mgorny(-)] dev-libs/libltdl:0[-mgorny(-)] >=virtual/libusb-1-r1:1[-mgorny(-)] cameras_ax203? ( >=media-libs/gd-2.0.35-r4:=[-mgorny(-)] ) cameras_st2205? ( >=media-libs/gd-2.0.35-r4:=[-mgorny(-)] ) exif? ( >=media-libs/libexif-0.6.21-r1:=[-mgorny(-)] ) gd? ( >=media-libs/gd-2.0.35-r4:=[jpeg=,-mgorny(-)] ) jpeg? ( >=virtual/jpeg-0-r2:0[-mgorny(-)] ) serial? ( >=dev-libs/lockdev-1.0.3.1.2-r2[-mgorny(-)] ) !<sys-fs/udev-201
 SLOT=0/6
-SRC_URI=https://github.com/gphoto/libgphoto2/archive/v2.5.25.tar.gz
+SRC_URI=https://github.com/gphoto/libgphoto2/archive/v2.5.26.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multibuild	b2c915190b051f55a23b9354b9849847	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multilib-build	5c1d48ed515f98242029611de215c727	multilib-minimal	8bddda43703ba94d8341f4e247f97566	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529	udev	7752f306eec7b286d00bdb47b763e7ac	user	e68863263b1e8611dacf381bec5c8b2b	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=c263144f98caf58f585ab0e16f22e6ae
+_md5_=69b14758b9f78c9d8ad7db68075107b3
