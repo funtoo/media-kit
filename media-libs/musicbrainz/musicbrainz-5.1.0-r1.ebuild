@@ -1,7 +1,6 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit cmake-utils flag-o-matic
 
@@ -11,8 +10,10 @@ SRC_URI="https://github.com/metabrainz/lib${PN}/releases/download/release-${PV}/
 
 LICENSE="LGPL-2.1"
 SLOT="5/1"	# soname of libmusicbrainz5.so
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="*"
 IUSE="examples test"
+
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-libs/libxml2
@@ -23,6 +24,8 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/lib${P}"
+
+PATCHES=( "${FILESDIR}/${P}-no-wildcards.patch" )
 
 src_prepare() {
 	use test || cmake_comment_add_subdirectory tests
