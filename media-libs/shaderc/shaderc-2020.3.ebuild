@@ -1,28 +1,27 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+PYTHON_COMPAT=( python3+ )
 
-inherit cmake-multilib python-any-r1 git-r3
+inherit cmake-utils python-any-r1
 
 DESCRIPTION="Collection of tools, libraries and tests for shader compilation"
-HOMEPAGE="https://github.com/google/shaderc"
-EGIT_REPO_URI="https://github.com/google/shaderc.git"
+HOMEPAGE="https://github.com/shaderc/google"
+SRC_URI="https://api.github.com/repos/google/shaderc/tarball/v2020.3 -> shaderc-2020.3.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="*"
 IUSE="doc test"
 
 RDEPEND="
-	~dev-util/glslang-9999[${MULTILIB_USEDEP}]
-	~dev-util/spirv-tools-9999[${MULTILIB_USEDEP}]
+	>=dev-util/glslang-10.11.0.0_pre20200924
+	>=dev-util/spirv-tools-2020.5_pre20201107
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	~dev-util/spirv-headers-9999
+	>=dev-util/spirv-headers-1.5.4
 	doc? ( dev-ruby/asciidoctor )
 	test? (
 		dev-cpp/gtest
@@ -33,12 +32,15 @@ DEPEND="${RDEPEND}
 # https://github.com/google/shaderc/issues/470
 RESTRICT=test
 
-PATCHES=( "${FILESDIR}/${PN}-2017.2-fix-glslang-link-order.patch" )
-
 python_check_deps() {
 	if use test; then
 		has_version --host-root "dev-python/nose[${PYTHON_USEDEP}]"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	mv "${WORKDIR}"/google-shaderc-* "${S}" || die
 }
 
 src_prepare() {
@@ -60,26 +62,30 @@ src_prepare() {
 		"$(best_version dev-util/glslang)\n"
 	EOF
 
+	# Fix GlslangToSpv.h path
+	sed -i \
+		-e 's|#include "SPIRV/GlslangToSpv.h"|#include "glslang/SPIRV/GlslangToSpv.h"|' \
+		libshaderc_util/src/compiler.cc || die
+
 	cmake-utils_src_prepare
 }
 
-multilib_src_configure() {
+src_configure() {
 	local mycmakeargs=(
 		-DSHADERC_SKIP_TESTS="$(usex !test)"
+		-DSHADERC_ENABLE_WERROR_COMPILE="false"
 	)
 	cmake-utils_src_configure
 }
 
-multilib_src_compile() {
-	if multilib_is_native_abi && use doc; then
-		cmake-utils_src_make glslc_doc_README
-	fi
+src_compile() {
+	use doc && cmake-utils_src_make glslc_doc_README
+
 	cmake-utils_src_compile
 }
 
-multilib_src_install() {
-	if multilib_is_native_abi; then
-		use doc && local HTML_DOCS=( "${BUILD_DIR}/glslc/README.html" )
-	fi
+src_install() {
+	use doc && local HTML_DOCS=( "${BUILD_DIR}/glslc/README.html" )
+
 	cmake-utils_src_install
 }
