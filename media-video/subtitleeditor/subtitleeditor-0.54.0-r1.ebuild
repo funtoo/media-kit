@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,12 +11,12 @@ SRC_URI="https://github.com/kitone/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE="debug nls"
 # opengl would mix gtk+:2 and :3 which is not possible
 
 RDEPEND="
-	>=app-text/enchant-1.4
+	>=app-text/enchant-1.4:0
 	app-text/iso-codes
 	>=dev-cpp/cairomm-1.12
 	>=dev-cpp/glibmm-2.46:2
