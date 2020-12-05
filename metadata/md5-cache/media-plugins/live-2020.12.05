@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=LGPL-2.1
 RDEPEND=ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
 SLOT=0/9
-SRC_URI=http://www.live555.com/liveMedia/public/live.2020.12.04.tar.gz
+SRC_URI=http://www.live555.com/liveMedia/public/live.2020.12.05.tar.gz
 _eclasses_=multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	8c7f9d80beedd16f2e5a7f612c609529
-_md5_=79dfba5ac3be78510818ceb5b87b8893
+_md5_=07374d7105450e3585f1ab099d6ee9a1
