@@ -52,7 +52,6 @@ clap-2.33.3
 clipboard-0.5.0
 clipboard-win-2.2.0
 cloudabi-0.0.3
-console_error_panic_hook-0.1.6
 const-random-0.1.13
 const-random-macro-0.1.13
 constant_time_eq-0.1.5
@@ -78,11 +77,11 @@ ctr-0.3.2
 cursive-0.15.0
 cursive_core-0.1.1
 darling-0.9.0
-darling-0.10.3
+darling-0.10.2
 darling_core-0.9.0
-darling_core-0.10.3
+darling_core-0.10.2
 darling_macro-0.9.0
-darling_macro-0.10.3
+darling_macro-0.10.2
 dbus-0.8.4
 dbus-0.9.0
 dbus-tree-0.9.0
@@ -137,7 +136,7 @@ heck-0.3.1
 hermit-abi-0.1.17
 hmac-0.7.1
 http-0.1.21
-http-0.2.1
+http-0.2.2
 http-body-0.1.0
 http-body-0.3.1
 httparse-1.3.4
@@ -152,7 +151,7 @@ hyper-tls-0.4.3
 ident_case-1.0.1
 idna-0.1.5
 idna-0.2.0
-indexmap-1.6.0
+indexmap-1.6.1
 iovec-0.1.4
 ipnet-2.3.0
 itertools-0.8.2
@@ -280,7 +279,7 @@ regex-syntax-0.6.21
 relay-0.1.1
 remove_dir_all-0.5.3
 reqwest-0.9.24
-reqwest-0.10.9
+reqwest-0.10.10
 rodio-0.9.0
 rspotify-0.10.0
 rust-argon2-0.8.3
@@ -292,7 +291,6 @@ ryu-1.0.5
 safemem-0.3.3
 schannel-0.1.19
 scoped-tls-0.1.2
-scoped-tls-1.0.0
 scopeguard-1.1.0
 security-framework-2.0.0
 security-framework-sys-2.0.0
@@ -321,7 +319,7 @@ stream-cipher-0.3.2
 string-0.2.1
 strsim-0.7.0
 strsim-0.8.0
-strsim-0.10.0
+strsim-0.9.3
 strum-0.8.0
 strum-0.20.0
 strum_macros-0.8.0
@@ -402,8 +400,6 @@ wasm-bindgen-futures-0.4.19
 wasm-bindgen-macro-0.2.69
 wasm-bindgen-macro-support-0.2.69
 wasm-bindgen-shared-0.2.69
-wasm-bindgen-test-0.3.19
-wasm-bindgen-test-macro-0.3.19
 web-sys-0.3.46
 webbrowser-0.5.5
 widestring-0.4.3
@@ -429,7 +425,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.2.5 -> ncspot-v0.2.5.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.2.6 -> ncspot-v0.2.6.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="BSD"
