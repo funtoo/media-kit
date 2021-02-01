@@ -5,6 +5,8 @@
 =media-libs/vigra-1.11.1-r2 python_single_target_python2_7
 =media-libs/vigra-9999 python_single_target_python2_7
 =media-sound/gpodder-3.9.1 python_single_target_python2_7
+=media-sound/jack2-1.9.12-r1 python_single_target_python2_7
+=media-sound/jack2-9999 python_single_target_python2_7
 =media-sound/quodlibet-3.8.1-r1 python_single_target_python2_7
 =media-sound/quodlibet-3.9.1 python_single_target_python2_7
 =media-tv/kodi-17.3-r1 python_single_target_python2_7
@@ -71,7 +73,6 @@ media-sound/gtklick python_single_target_python2_7
 media-sound/guitarix python_single_target_python2_7
 media-sound/idjc python_single_target_python2_7
 media-sound/jack python_single_target_python2_7
-media-sound/jack2 python_single_target_python2_7
 media-sound/lash python_single_target_python2_7
 media-sound/lilycomp python_single_target_python2_7
 media-sound/lilypond python_single_target_python2_7
