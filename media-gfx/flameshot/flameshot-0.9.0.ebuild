@@ -6,7 +6,7 @@ inherit cmake xdg-utils
 
 DESCRIPTION="Powerful yet simple to use screenshot software"
 HOMEPAGE="https://flameshot.js.org"
-SRC_URI="https://github.com/flameshot-org/flameshot/archive/v0.8.5.tar.gz"
+SRC_URI="https://github.com/flameshot-org/flameshot/archive/v0.9.0.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE="+dbus"
 
 FS_LINGUAS="
-	ca cs de_DE es eu fr hu it_IT ja ka ko nl nl_NL pl pt_BR ru sk sr_SP sv_SE tr uk zh_CN zh_TW
+	ca cs de_DE es eu fr hu it_IT ja ka ko nl nl_NL pl pt_BR ru sk sr_SP sv_SE tr uk zh_CN zh_HK zh_TW
 "
 
 for lingua in ${FS_LINGUAS}; do
