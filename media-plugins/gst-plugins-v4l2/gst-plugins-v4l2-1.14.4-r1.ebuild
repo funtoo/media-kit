@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -18,6 +17,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/os-headers
 "
+
+PATCHES=(
+	$FILESDIR/glibc-2.30-compat.patch
+)
 
 GST_PLUGINS_BUILD="gst_v4l2"
 
