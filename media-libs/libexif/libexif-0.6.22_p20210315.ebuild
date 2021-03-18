@@ -1,17 +1,19 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit libtool multilib-minimal
+inherit autotools multilib-minimal
 
+COMMIT="977d8ff093eb0e099fe3b0ef92326d0930a8b873"
 DESCRIPTION="Library for parsing, editing, and saving EXIF data"
 HOMEPAGE="https://libexif.github.io/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="https://github.com/libexif/libexif/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+#SRC_URI="https://github.com/${PN}/${PN}/releases/download/${PN}-${PV//./_}-release/${P}.tar.gz"
+S="${WORKDIR}/${PN}-${COMMIT}"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="*"
 IUSE="doc nls static-libs"
 
 RDEPEND="nls? ( virtual/libintl )"
@@ -23,19 +25,17 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.6.13-pkgconfig.patch
-	"${FILESDIR}"/${P}-fix-C89-compatibility-issue.patch
-	"${FILESDIR}"/${P}-CVE-2017-7544.patch
-	"${FILESDIR}"/${P}-CVE-2018-20030.patch
 )
 
 src_prepare() {
 	default
-	sed -i -e '/FLAGS=/s:-g::' configure || die #390249
-	elibtoolize # For *-bsd
+	sed -i -e '/FLAGS=/s:-g::' configure.ac || die #390249
+	# Previously elibtoolize for BSD
+	eautoreconf
 }
 
 multilib_src_configure() {
-	ECONF_SOURCE=${S} econf \
+	ECONF_SOURCE="${S}" econf \
 		$(use_enable doc docs) \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
@@ -47,6 +47,6 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	find "${D}" -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 	rm -f "${ED}"/usr/share/doc/${PF}/{ABOUT-NLS,COPYING} || die
 }
