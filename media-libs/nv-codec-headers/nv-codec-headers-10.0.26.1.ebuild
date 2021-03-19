@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="FFmpeg version of headers required to interface with Nvidias codec APIs"
 HOMEPAGE="https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git"
-SRC_URI="https://api.github.com/repos/FFmpeg/nv-codec-headers/tarball/n10.0.26.1 -> nv-codec-headers-10.0.26.1.tar.gz"
+SRC_URI="https://api.github.com/repos/FFmpeg/nv-codec-headers/tarball/refs/tags/n10.0.26.1 -> nv-codec-headers-10.0.26.1.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
