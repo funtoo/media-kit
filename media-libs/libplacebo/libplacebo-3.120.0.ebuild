@@ -9,7 +9,7 @@ inherit meson python-any-r1
 
 DESCRIPTION="Reusable library for GPU-accelerated image processing primitives"
 HOMEPAGE="https://code.videolan.org/videolan/libplacebo"
-SRC_URI="https://code.videolan.org/videolan/libplacebo/-/archive/v3.120.0/libplacebo-v3.120.0.tar.bz2 -> libplacebo-3.120.0.tar.bz2"
+SRC_URI="https://api.github.com/repos/haasn/libplacebo/tarball/refs/tags/v3.120.0 -> libplacebo-3.120.0.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/$(ver_cut 2)" # libplacebo.so version
@@ -35,7 +35,10 @@ BDEPEND="virtual/pkgconfig
 		$(python_gen_any_dep 'dev-python/mako[${PYTHON_USEDEP}]')
 	)"
 
-S="${WORKDIR}/${PN}-v${PV}"
+src_unpack() {
+	unpack "${A}"
+	mv "${WORKDIR}"/haasn-libplacebo-* "${S}" || die
+}
 
 python_check_deps() {
 	has_version -b "dev-python/mako[${PYTHON_USEDEP}]"
