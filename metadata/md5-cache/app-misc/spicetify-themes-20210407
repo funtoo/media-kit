@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=app-misc/spicetify-cli
+DESCRIPTION=A community-driven collection of themes for spicetify
+EAPI=7
+HOMEPAGE=https://github.com/morpheusthewhite/spicetify-themes
+KEYWORDS=*
+LICENSE=MIT
+RDEPEND=app-misc/spicetify-cli
+SLOT=0
+SRC_URI=https://github.com/morpheusthewhite/spicetify-themes/archive/c8d43b930bb8d9d660154ca287d2aaeeff179bb6.tar.gz -> spicetify-themes-20210407.tar.gz
+_md5_=eb57261545bab72ced407ef3be18a981
