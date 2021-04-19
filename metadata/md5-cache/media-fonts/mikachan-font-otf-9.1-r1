@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Mikachan Japanese TrueType Collection fonts
+EAPI=7
+HOMEPAGE=http://mikachan-font.com/
+IUSE=X
+KEYWORDS=*
+LICENSE=free-noncomm
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://gentoo/mikachan-font-otf-9.1.tar.bz2 https://dev.gentoo.org/~flameeyes/dist/mikachan-font-otf-9.1.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=e8a8b9cac346bced3647adf7f69af5ef

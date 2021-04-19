@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=TeX's Computer Modern Fonts for MathML
+EAPI=7
+HOMEPAGE=http://www.mozilla.org/projects/mathml/fonts/
+IUSE=X
+KEYWORDS=*
+LICENSE=bakoma
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~mgorny/dist/texcm-ttf-1.0.zip
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=682672cba462fdecf35547c9068b2e45

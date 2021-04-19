@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=A community developed derivatives of IPA Fonts
+EAPI=7
+HOMEPAGE=https://launchpad.net/takao-fonts
+IUSE=X
+KEYWORDS=*
+LICENSE=IPAfont
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=https://launchpad.net/takao-fonts/003.02/003.02.01/+download/takao-fonts-ttf-003.02.01.tar.gz
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=939518cc56bbcd5395597a528057e2db

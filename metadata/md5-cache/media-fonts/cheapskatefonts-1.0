@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Dustismo's decorative font collection
+EAPI=7
+HOMEPAGE=http://www.dustismo.com/site/fonts.html
+IUSE=X
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://www.dustismo.com/fonts/Domestic_Manners.zip http://www.dustismo.com/fonts/PenguinAttack.zip http://www.dustismo.com/fonts/Dustismo.zip http://www.dustismo.com/fonts/El_Abogado_Loco.zip http://www.dustismo.com/fonts/Progenisis.zip http://www.dustismo.com/fonts/flatline.zip http://www.dustismo.com/fonts/MarkedFool.zip http://www.dustismo.com/fonts/ItWasntMe.zip http://www.dustismo.com/fonts/balker.zip http://www.dustismo.com/fonts/Swift.zip http://www.dustismo.com/fonts/Wargames.zip http://www.dustismo.com/fonts/Winks.zip
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=5b7659a1045ba37edade67e7f680c3fb

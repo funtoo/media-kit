@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Kochi Japanese TrueType fonts with Wadalab Fonts
+EAPI=7
+HOMEPAGE=http://efont.sourceforge.jp/
+IUSE=X
+KEYWORDS=*
+LICENSE=free-noncomm
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/efont/5411/kochi-substitute-20030809.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=fcd8b6543e9668f9b49e7492c5974f96

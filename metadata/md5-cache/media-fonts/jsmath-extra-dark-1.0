@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Extra raster fonts for jsmath, dark version
+EAPI=7
+HOMEPAGE=http://www.math.union.edu/~dpvc/jsMath/download/extra-fonts/
+IUSE=X
+KEYWORDS=*
+LICENSE=Apache-2.0
+RDEPEND=media-fonts/jsmath !media-fonts/jsmath-extra-light
+SLOT=0
+SRC_URI=mirror://gentoo/jsmath-extra-dark-1.0.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=ec841c93edfb44751bd8fd11135f0e7b

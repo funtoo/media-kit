@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Very pretty Japanese proportional truetype font
+EAPI=7
+HOMEPAGE=http://aquablue.milkcafe.to/
+IUSE=X
+KEYWORDS=*
+LICENSE=aquafont
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=http://aquablue.milkcafe.to/tears/font/aquap2_6.zip
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=a80669c1c0321a889197e349e6436c3a

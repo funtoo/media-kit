@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Font that contains symbols needed for VDR
+EAPI=7
+HOMEPAGE=http://andreas.vdr-developer.org/fonts/
+IUSE=X
+KEYWORDS=*
+LICENSE=BitstreamVera
+SLOT=0
+SRC_URI=http://andreas.vdr-developer.org/fonts/download/vdrsymbols-ttf-20100612.tgz
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=c9060c9d6fda295d6f58539ffa53207d

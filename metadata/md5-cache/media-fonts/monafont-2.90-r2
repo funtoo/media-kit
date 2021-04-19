@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip dev-lang/perl x11-apps/bdftopcf x11-apps/mkfontscale
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Japanese bitmap and TrueType fonts suitable for browsing 2ch
+EAPI=7
+HOMEPAGE=http://monafont.sourceforge.net/
+IUSE=truetype X
+KEYWORDS=*
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge/monafont/monafont-2.90.tar.bz2 truetype? ( mirror://sourceforge/monafont/monafont-ttf-2.90.zip )
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=f2cd2f2582866e3181df4d3eb0d0ca16

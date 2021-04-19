@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=A small proportional bitmap font for use in webpages
+EAPI=7
+HOMEPAGE=http://www.proggyfonts.com/
+IUSE=X
+KEYWORDS=*
+LICENSE=MIT
+SLOT=0
+SRC_URI=http://dl.liveforge.org/fonts/webby-fonts-1.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=1767a14cc2ebc1cf117be98b9fea0081

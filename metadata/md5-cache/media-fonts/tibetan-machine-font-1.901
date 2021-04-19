@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Fonts for the Tibetan and Himalayan languages
+EAPI=7
+HOMEPAGE=http://www.thdl.org/
+IUSE=X
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/TibetanMachineUnicodeFont-1.901.zip
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=22d78f334de0fbf5ae07480ecc61d19f

@@ -1,7 +1,6 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=0
+EAPI=7
 
 inherit rpm font
 
@@ -15,10 +14,7 @@ SRC_URI="http://www.ogcio.gov.hk/en/business/tech_promotion/ccli/terms/doc/mandr
 
 LICENSE="HKSCS-2001"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
-IUSE=""
-
-DEPEND=""
+KEYWORDS="*"
 
 S=${WORKDIR}
 FONT_S="${S}/usr/share/inputmethod"

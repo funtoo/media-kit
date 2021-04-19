@@ -1,0 +1,14 @@
+BDEPEND=x11-apps/bdftopcf
+DEFINED_PHASES=compile configure install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Japanese bitmap fonts for X
+EAPI=7
+HOMEPAGE=http://openlab.jp/efont/shinonome/
+IUSE=X
+KEYWORDS=*
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=http://openlab.jp/efont/dist/shinonome/shinonome-0.9.11.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=271252c0338d4d095a00395d6006b318

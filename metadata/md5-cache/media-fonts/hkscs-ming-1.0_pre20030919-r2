@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm setup unpack
+DEPEND=>=app-arch/rpm2targz-9.0.0.3g X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Hong Kong Official Reference Chinese Font that implements ISO10646 & HKSCS-2001
+EAPI=7
+HOMEPAGE=http://www.ogcio.gov.hk/en/business/tech_promotion/ccli/hkscs/
+IUSE=X
+KEYWORDS=*
+LICENSE=HKSCS-2001
+RESTRICT=mirror strip binchecks
+SLOT=0
+SRC_URI=http://www.ogcio.gov.hk/en/business/tech_promotion/ccli/terms/doc/mandrake_setup.bin
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	font	dd073b36fe3fd8b868c23bc23209db45	rpm	f52cfa3a435468d86d3b49c357b9cb35
+_md5_=0119fed778180d4b5a9e1982a4957ff8

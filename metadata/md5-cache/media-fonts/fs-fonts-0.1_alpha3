@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Japanese TrueType fonts designed for screen and print
+EAPI=7
+HOMEPAGE=http://x-tt.sourceforge.jp/fs_fonts/
+IUSE=X
+KEYWORDS=*
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/x-tt/7862/fs-fonts-0.1test3.tar.gz
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=2aac778d18abc90eb78481e45397e47e

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) X? ( media-gfx/ebdftopcf )
+DESCRIPTION=Linux Font Project fixed-width fonts
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/xfonts/
+IUSE=X X
+KEYWORDS=*
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge/xfonts/lfpfonts-fix-src-0.83.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45	font-ebdftopcf	e23db122fd578442f37e3e79267eedd8
+_md5_=9a393dda304f5c3daed8dd6d75c74a83

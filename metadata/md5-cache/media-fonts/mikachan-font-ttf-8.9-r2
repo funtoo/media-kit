@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Mikachan Japanese TrueType fonts
+EAPI=7
+HOMEPAGE=http://mikachan-font.com/
+IUSE=X
+KEYWORDS=*
+LICENSE=free-noncomm
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/mikachan/5513/mikachanfont-8.9.tar.bz2 mirror://sourceforge.jp/mikachan/5514/mikachanfontP-8.9.tar.bz2 mirror://sourceforge.jp/mikachan/5515/mikachanfontPB-8.9.tar.bz2 mirror://sourceforge.jp/mikachan/5516/mikachanfontPS-8.9.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=4bb9ee9980e1f14f010d39a9f8d1d03a

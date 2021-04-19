@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm setup unpack
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) X? ( media-gfx/ebdftopcf )
+DESCRIPTION=Vico bitmap Fonts
+EAPI=7
+HOMEPAGE=http://vico.kleinplanet.de/
+IUSE=X X
+KEYWORDS=*
+LICENSE=GPL-2
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=http://vico.kleinplanet.de/files/vc-fonts-20020207.tar.bz2 mirror://gentoo/bleed3.bdf.gz
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45	font-ebdftopcf	e23db122fd578442f37e3e79267eedd8
+_md5_=1cd223eb9686a302789762de7ea6af1d

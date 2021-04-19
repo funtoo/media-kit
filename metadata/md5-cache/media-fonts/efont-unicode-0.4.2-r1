@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) X? ( media-gfx/ebdftopcf )
+DESCRIPTION=The /efont/ Unicode Bitmap Fonts
+EAPI=7
+HOMEPAGE=http://openlab.jp/efont/unicode/
+IUSE=X X
+KEYWORDS=*
+LICENSE=public-domain BAEKMUK BSD MIT HPND free-noncomm
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=http://openlab.jp/efont/dist/unicode-bdf/efont-unicode-bdf-0.4.2.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45	font-ebdftopcf	e23db122fd578442f37e3e79267eedd8
+_md5_=e7ed5b3f90144d0e9592d5e1983633ed

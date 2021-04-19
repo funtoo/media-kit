@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Sazanami Japanese TrueType fonts
+EAPI=7
+HOMEPAGE=http://efont.sourceforge.jp/
+IUSE=X
+KEYWORDS=*
+LICENSE=mplus-fonts public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/efont/10087/sazanami-20040629.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=1110ad68aea111972b74b1c2f670b03f

@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=SIL Ezra - Unicode Opentype fonts for Biblical Hebrew
+EAPI=7
+HOMEPAGE=http://scripts.sil.org/EzraSIL_Home
+IUSE=doc X
+KEYWORDS=*
+LICENSE=MIT OFL-1.1
+SLOT=0
+SRC_URI=mirror://gentoo/EzraSIL251.zip
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=ce6e7050e912f0b65e93d18c1ce6a8de
