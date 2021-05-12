@@ -48,6 +48,7 @@ SRC_URI="https://api.github.com/repos/khanhas/spicetify-cli/tarball/v1.2.1 -> sp
 LICENSE="Apache-2.0 BSD GPL-3 MIT"
 SLOT="0"
 KEYWORDS="*"
+IUSE="hook"
 
 INSTALLDIR="/opt/${PN}"
 
@@ -70,4 +71,9 @@ src_install() {
 	doins -r {CustomApps,Extensions,Themes,jsHelper,spicetify-cli}
 	fperms +x "${INSTALLDIR}/spicetify-cli"
 	dosym /opt/spicetify-cli/spicetify-cli /usr/bin/spicetify
+
+	if use hook; then
+		insinto "/etc/portage/env/media-sound"
+		newins "${FILESDIR}"/spotify-hook spotify
+	fi
 }
