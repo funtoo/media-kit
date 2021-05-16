@@ -109,17 +109,17 @@ fuchsia-cprng-0.1.1
 fuchsia-zircon-0.3.3
 fuchsia-zircon-sys-0.3.3
 futures-0.1.31
-futures-0.3.14
-futures-channel-0.3.14
-futures-core-0.3.14
+futures-0.3.15
+futures-channel-0.3.15
+futures-core-0.3.15
 futures-cpupool-0.1.8
-futures-executor-0.3.14
-futures-io-0.3.14
+futures-executor-0.3.15
+futures-io-0.3.15
 futures-lite-1.11.3
-futures-macro-0.3.14
-futures-sink-0.3.14
-futures-task-0.3.14
-futures-util-0.3.14
+futures-macro-0.3.15
+futures-sink-0.3.15
+futures-task-0.3.15
+futures-util-0.3.15
 generic-array-0.14.4
 getrandom-0.1.16
 getrandom-0.2.2
@@ -202,7 +202,7 @@ net2-0.2.37
 nix-0.17.0
 nix-0.20.0
 nom-5.1.2
-notify-rust-4.5.0
+notify-rust-4.5.1
 ntapi-0.3.6
 num-0.3.1
 num-bigint-0.4.0
@@ -311,9 +311,9 @@ semver-0.9.0
 semver-0.11.0
 semver-parser-0.7.0
 semver-parser-0.10.2
-serde-1.0.125
+serde-1.0.126
 serde_cbor-0.11.1
-serde_derive-1.0.125
+serde_derive-1.0.126
 serde_json-1.0.64
 serde_repr-0.1.6
 serde_urlencoded-0.5.5
@@ -445,7 +445,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.7.0 -> ncspot-v0.7.0.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.7.1 -> ncspot-v0.7.1.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="BSD"
