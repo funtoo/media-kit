@@ -31,7 +31,7 @@ bitflags-1.2.1
 blake2b_simd-0.5.11
 block-0.1.6
 block-buffer-0.9.0
-bumpalo-3.6.1
+bumpalo-3.7.0
 byteorder-1.4.3
 bytes-0.4.12
 bytes-0.5.6
@@ -60,7 +60,7 @@ coreaudio-sys-0.2.8
 cpal-0.13.3
 cpufeatures-0.1.4
 crossbeam-channel-0.5.1
-crossbeam-utils-0.8.4
+crossbeam-utils-0.8.5
 crypto-mac-0.11.0
 ctr-0.6.0
 cursive-0.16.3
@@ -119,6 +119,8 @@ h2-0.2.7
 h2-0.3.3
 half-1.7.1
 hashbrown-0.9.1
+headers-0.3.4
+headers-core-0.2.0
 heck-0.3.2
 hermit-abi-0.1.18
 hmac-0.11.0
@@ -131,6 +133,7 @@ httpdate-1.0.1
 humantime-1.3.0
 hyper-0.13.10
 hyper-0.14.8
+hyper-proxy-0.9.1
 hyper-tls-0.4.3
 hyper-tls-0.5.0
 ident_case-1.0.1
@@ -334,7 +337,7 @@ time-0.1.43
 tinyvec-1.2.0
 tinyvec_macros-0.1.0
 tokio-0.2.25
-tokio-1.6.0
+tokio-1.6.1
 tokio-macros-1.2.0
 tokio-native-tls-0.3.0
 tokio-socks-0.3.0
@@ -352,7 +355,7 @@ typenum-1.13.0
 ucd-trie-0.1.3
 unicase-2.6.0
 unicode-bidi-0.3.5
-unicode-normalization-0.1.17
+unicode-normalization-0.1.18
 unicode-segmentation-1.7.1
 unicode-width-0.1.8
 unicode-xid-0.0.4
@@ -410,7 +413,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.7.2 -> ncspot-v0.7.2.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.7.3 -> ncspot-v0.7.3.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="BSD"
