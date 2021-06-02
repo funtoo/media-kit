@@ -7,7 +7,10 @@ PYTHON_COMPAT=( python3+ )
 
 inherit cmake-utils python-single-r1 xdg-utils
 
-SRC_URI="https://api.github.com/repos/obsproject/obs-studio/tarball/27.0.0 -> obs-studio-27.0.0.tar.gz"
+SRC_URI="
+	https://api.github.com/repos/obsproject/obs-studio/tarball/27.0.0 -> obs-studio-27.0.0.tar.gz
+	browser? ( https://github.com/obsproject/obs-browser/archive/f1a61c5a2579e5673765c31a47c2053d4b502d4b.tar.gz https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 )
+"
 KEYWORDS="*"
 
 DESCRIPTION="Software for Recording and Streaming Live Video Content"
@@ -15,7 +18,7 @@ HOMEPAGE="https://obsproject.com"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+alsa fdk imagemagick jack luajit nvenc pulseaudio python speex +ssl truetype v4l vlc"
+IUSE="+alsa browser fdk imagemagick jack luajit nvenc pipewire pulseaudio python speex +ssl truetype v4l vlc"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 BDEPEND="
@@ -48,6 +51,22 @@ DEPEND="
 	x11-libs/libXrandr
 	x11-libs/libxcb
 	alsa? ( media-libs/alsa-lib )
+	browser? (
+		app-accessibility/at-spi2-atk
+		dev-libs/atk
+		dev-libs/expat
+		dev-libs/glib
+		dev-libs/nspr
+		dev-libs/nss
+		media-libs/fontconfig
+		x11-libs/libXcursor
+		x11-libs/libXdamage
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXrender
+		x11-libs/libXScrnSaver
+		x11-libs/libXtst
+	)
 	fdk? ( media-libs/fdk-aac:= )
 	imagemagick? ( media-gfx/imagemagick:= )
 	jack? ( virtual/jack )
@@ -58,6 +77,7 @@ DEPEND="
 			>=media-video/ffmpeg-4[video_cards_nvidia]
 		)
 	)
+	pipewire? ( media-video/pipewire )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( ${PYTHON_DEPS} )
 	speex? ( media-libs/speexdsp )
@@ -72,8 +92,12 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	unpack ${A} || die
+	default
 	mv ${WORKDIR}/obsproject-obs-studio-??????? ${P} || die
+	if use browser; then
+		rm -d "${P}/plugins/obs-browser" || die
+		mv ${WORKDIR}/obs-browser-* ${P}/plugins/obs-browser || die
+	fi
 }
 
 pkg_setup() {
@@ -84,9 +108,11 @@ src_configure() {
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
 		-DDISABLE_ALSA=$(usex !alsa)
+		-DBUILD_BROWSER=$(usex browser)
 		-DDISABLE_FREETYPE=$(usex !truetype)
 		-DDISABLE_JACK=$(usex !jack)
 		-DDISABLE_LIBFDK=$(usex !fdk)
+		-DENABLE_PIPEWIRE=$(usex pipewire)
 		-DDISABLE_PULSEAUDIO=$(usex !pulseaudio)
 		-DDISABLE_SPEEXDSP=$(usex !speex)
 		-DDISABLE_V4L2=$(usex !v4l)
@@ -96,7 +122,15 @@ src_configure() {
 		-DUNIX_STRUCTURE=1
 		-DWITH_RTMPS=$(usex ssl)
 		-DOBS_VERSION_OVERRIDE=${PV}
+		# FIXME: No info about this in the install instructions?
+		-DBUILD_VST=OFF
 	)
+
+	if use browser; then
+		mycmakeargs+=(
+			-DCEF_ROOT_DIR="../cef_binary_4280_linux64"
+		)
+	fi
 
 	if use luajit || use python; then
 		mycmakeargs+=(
