@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-inherit eutils multilib toolchain-funcs portability flag-o-matic multilib-minimal
+inherit multilib toolchain-funcs portability flag-o-matic multilib-minimal
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}_${PV}
@@ -14,25 +13,23 @@ SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="*"
 IUSE=""
 
 RDEPEND=""
 DEPEND=">=sys-apps/sed-4"
 
-S="${WORKDIR}/${MY_PN}"
+S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-properbuild.patch"
+)
+
+HTML_DOCS="doc/*.html"
 
 src_prepare() {
-	cd "${WORKDIR}/${MY_PN}/src"
-	epatch "${FILESDIR}"/${P}-properbuild.patch \
-		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-fbsd.patch \
-		"${FILESDIR}"/${P}-no-LD.patch
+	default
 
-	sed -i -e 's:-sndfile-play*:@echo Disabled \0:' \
-		makefile || die "sed makefile failed (sound playing tests)"
-
-	cd "${S}"
 	multilib_copy_sources
 }
 
@@ -59,7 +56,6 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	einstalldocs
-	dohtml doc/*.html
 
 	# Needed for apps like rezound
 	dodir /etc/env.d
