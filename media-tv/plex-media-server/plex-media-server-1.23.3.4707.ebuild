@@ -3,15 +3,15 @@
 EAPI=7
 
 PYTHON_COMPAT=( python2_7 )
-inherit eutils user unpacker pax-utils python-single-r1
+inherit user unpacker python-single-r1
 
 URI="https://downloads.plex.tv/plex-media-server-new"
 
 DESCRIPTION="A free media library that is intended for use with a plex client."
 HOMEPAGE="http://www.plex.tv/"
 SRC_URI="
-	amd64? ( https://downloads.plex.tv/plex-media-server-new/1.23.2.4656-85f0adf5b/debian/plexmediaserver_1.23.2.4656-85f0adf5b_amd64.deb )
-	x86? ( https://downloads.plex.tv/plex-media-server-new/1.23.2.4656-85f0adf5b/debian/plexmediaserver_1.23.2.4656-85f0adf5b_i386.deb )
+	amd64? ( https://downloads.plex.tv/plex-media-server-new/1.23.3.4707-ebb5fe9f3/debian/plexmediaserver_1.23.3.4707-ebb5fe9f3_amd64.deb )
+	x86? ( https://downloads.plex.tv/plex-media-server-new/1.23.3.4707-ebb5fe9f3/debian/plexmediaserver_1.23.3.4707-ebb5fe9f3_i386.deb )
 "
 
 SLOT="0"
@@ -24,7 +24,7 @@ IUSE="system-openssl avahi"
 
 DEPEND="
 	dev-python/virtualenv[${PYTHON_USEDEP}]
-	dev-util/patchelf"
+"
 
 RDEPEND="
 	avahi? ( net-dns/avahi )
@@ -96,9 +96,6 @@ src_install() {
 	# Mask Plex libraries so that revdep-rebuild doesn't try to rebuild them.
 	# Plex has its own precompiled libraries.
 	_mask_plex_libraries_revdep
-
-# Fix RPATH
-	patchelf --force-rpath --set-rpath '$ORIGIN:$ORIGIN/../../../../../../lib' "${ED%/}"/usr/lib/plexmediaserver/Resources/Python/lib/python2.7/lib-dynload/_codecs_kr.so || die
 
 	einfo "Configuring virtualenv"
 	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"/usr/lib/plexmediaserver/Resources/Python || die
