@@ -1,37 +1,37 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-
-inherit cmake-utils toolchain-funcs flag-o-matic gnome2-utils xdg-utils
+EAPI=7
 
 MY_P=${P/_rc/-rc}
+inherit cmake flag-o-matic toolchain-funcs xdg-utils
+
 DESCRIPTION="A powerful cross-platform raw image processing program"
-HOMEPAGE="http://www.rawtherapee.com/"
-SRC_URI="http://rawtherapee.com/shared/source/${MY_P}.tar.xz"
+HOMEPAGE="https://www.rawtherapee.com/"
+SRC_URI="https://rawtherapee.com/shared/source/rawtherapee-5.8.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
+IUSE="openmp tcmalloc"
 
-IUSE="openmp"
-
-RDEPEND="x11-libs/gtk+:3
+RDEPEND="
 	dev-libs/expat
 	dev-libs/libsigc++:2
-	media-libs/libcanberra[gtk3]
-	media-libs/tiff:0
-	media-libs/libpng:0
-	media-libs/libiptcdata
 	media-libs/lcms:2
 	media-libs/lensfun
-	sci-libs/fftw:3.0
+	media-libs/libcanberra[gtk3]
+	media-libs/libiptcdata
+	media-libs/libpng:0=
+	media-libs/tiff:0
+	sci-libs/fftw:3.0=
 	sys-libs/zlib
-	virtual/jpeg:0"
+	virtual/jpeg:0
+	x11-libs/gtk+:3
+	tcmalloc? ( dev-util/google-perftools )"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
-	virtual/pkgconfig
-	dev-cpp/gtkmm:3.0"
+	dev-cpp/gtkmm:3.0
+	gnome-base/librsvg"
+BDEPEND="virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -56,16 +56,17 @@ src_configure() {
 		-DLICENCEDIR=/usr/share/${PN}
 		-DCACHE_NAME_SUFFIX=""
 		-DWITH_SYSTEM_KLT="off"
+		-DENABLE_TCMALLOC=$(usex tcmalloc)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 }

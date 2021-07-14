@@ -1,20 +1,18 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 MY_P=${P/_rc/-rc}
-inherit cmake-utils flag-o-matic toolchain-funcs xdg-utils
+inherit cmake flag-o-matic toolchain-funcs xdg-utils
 
 DESCRIPTION="A powerful cross-platform raw image processing program"
 HOMEPAGE="https://www.rawtherapee.com/"
-SRC_URI="https://rawtherapee.com/shared/source/${MY_P}.tar.xz"
+SRC_URI="{{artifacts[0].src_uri}}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-
-IUSE="openmp"
+KEYWORDS="*"
+IUSE="openmp tcmalloc"
 
 RDEPEND="
 	dev-libs/expat
@@ -23,12 +21,13 @@ RDEPEND="
 	media-libs/lensfun
 	media-libs/libcanberra[gtk3]
 	media-libs/libiptcdata
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	media-libs/tiff:0
-	sci-libs/fftw:3.0
+	sci-libs/fftw:3.0=
 	sys-libs/zlib
 	virtual/jpeg:0
-	x11-libs/gtk+:3"
+	x11-libs/gtk+:3
+	tcmalloc? ( dev-util/google-perftools )"
 DEPEND="${RDEPEND}
 	dev-cpp/gtkmm:3.0
 	gnome-base/librsvg"
@@ -57,8 +56,9 @@ src_configure() {
 		-DLICENCEDIR=/usr/share/${PN}
 		-DCACHE_NAME_SUFFIX=""
 		-DWITH_SYSTEM_KLT="off"
+		-DENABLE_TCMALLOC=$(usex tcmalloc)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 pkg_postinst() {
