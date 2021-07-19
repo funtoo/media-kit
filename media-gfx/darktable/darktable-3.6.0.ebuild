@@ -1,23 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 inherit cmake flag-o-matic pax-utils toolchain-funcs xdg
 
-DOC_PV="2.6.0"
-MY_PV="${PV/_/}"
-MY_P="${P/_/.}"
-
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="https://www.darktable.org/"
-SRC_URI="https://github.com/darktable-org/${PN}/releases/download/release-${MY_PV}/${MY_P}.tar.xz
-	doc? ( https://github.com/darktable-org/${PN}/releases/download/release-${DOC_PV}/${PN}-usermanual.pdf -> ${PN}-usermanual-${DOC_PV}.pdf )"
+SRC_URI="https://github.com/darktable-org/darktable/releases/download/release-3.6.0/darktable-3.6.0.tar.xz"
 
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-LANGS=" ca cs da de es fr he hu it ja nb nl pl ru sl"
+KEYWORDS="*"
+LANGS=" af de eo es fr he hu it nl pt_BR ru sl uk"
 # TODO add lua once dev-lang/lua-5.2 is unmasked
 IUSE="colord cups cpu_flags_x86_sse3 doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet
 nls opencl openmp openexr pax_kernel webp
@@ -29,7 +23,7 @@ BDEPEND="
 	nls? ( sys-devel/gettext )
 "
 COMMON_DEPEND="
-	dev-db/sqlite:3
+	>=dev-db/sqlite-3.24
 	dev-libs/json-glib
 	dev-libs/libxml2:2
 	>=dev-libs/pugixml-1.8:0=
@@ -112,7 +106,6 @@ src_configure() {
 
 src_install() {
 	cmake_src_install
-	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-${DOC_PV}.pdf
 
 	if use nls ; then
 		for lang in ${LANGS} ; do
