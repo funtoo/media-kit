@@ -6,7 +6,7 @@ inherit font
 
 DESCRIPTION="A free and open-source typeface for developers"
 HOMEPAGE="https://www.jetbrains.com/lp/mono/"
-SRC_URI="https://github.com/JetBrains/JetBrainsMono/releases/download/v2.225/JetBrainsMono-2.225.zip -> jetbrains-mono-2.225.zip"
+SRC_URI="https://github.com/JetBrains/JetBrainsMono/releases/download/v2.241/JetBrainsMono-2.241.zip -> jetbrains-mono-2.241.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
