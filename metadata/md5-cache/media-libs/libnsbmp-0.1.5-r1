@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-util/netsurf-buildsystem virtual/pkgconfig
+DESCRIPTION=decoding library for BMP and ICO image file formats, written in C
+EAPI=7
+HOMEPAGE=http://www.netsurf-browser.org/projects/libnsbmp/
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~m68k-mint
+LICENSE=MIT
+SLOT=0/0.1.5
+SRC_URI=https://download.netsurf-browser.org/libs/releases/libnsbmp-0.1.5-src.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=e6da7f65f99ab7c6bacf3b248b12762b

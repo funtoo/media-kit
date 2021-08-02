@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,12 +7,12 @@ inherit autotools gnome2
 MY_P="${PN/gnome-}-${PV}"
 
 DESCRIPTION="A lightweight and fast raw image thumbnailer for GNOME"
-HOMEPAGE="https://libopenraw.freedesktop.org/wiki/RawThumbnailer"
+HOMEPAGE="https://libopenraw.pages.freedesktop.org/raw-thumbnailer/"
 SRC_URI="https://libopenraw.freedesktop.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="

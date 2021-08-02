@@ -1,32 +1,57 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
-inherit git-r3 multilib toolchain-funcs multilib-minimal flag-o-matic
+inherit multilib toolchain-funcs multilib-minimal flag-o-matic
 
 DESCRIPTION="RTMP client intended to stream audio or video flash content"
-HOMEPAGE="http://rtmpdump.mplayerhq.hu/"
-EGIT_REPO_URI="https://git.ffmpeg.org/rtmpdump.git"
+HOMEPAGE="https://rtmpdump.mplayerhq.hu/"
 
 # the library is LGPL-2.1, the command is GPL-2
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
-IUSE="gnutls polarssl ssl libressl"
+IUSE="gnutls ssl libressl"
 
 DEPEND="ssl? (
 		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP},nettle(+)] )
-		polarssl? ( !gnutls? ( >=net-libs/polarssl-1.3.4[${MULTILIB_USEDEP}] ) )
-		!gnutls? ( !polarssl? ( !libressl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] ) libressl? ( dev-libs/libressl ) ) )
+		!gnutls? (
+			!libressl? ( dev-libs/openssl:0=[${MULTILIB_USEDEP}] )
+			libressl? ( dev-libs/libressl:0=[${MULTILIB_USEDEP}] )
+		)
 		>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	)"
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-swf_vertification_type_2.patch"
+	"${FILESDIR}/${PN}-swf_vertification_type_2_part_2.patch"
+)
+
+if [[ ${PV} == *9999 ]] ; then
+	KEYWORDS=""
+	SRC_URI=""
+	EGIT_REPO_URI="https://git.ffmpeg.org/rtmpdump.git"
+	inherit git-r3
+else
+	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	SRC_URI="https://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+fi
+
 pkg_setup() {
-	if ! use ssl && { use gnutls || use polarssl; }; then
-		ewarn "USE='gnutls polarssl' are ignored without USE='ssl'."
+	if ! use ssl && use gnutls ; then
+		ewarn "USE='gnutls' is ignored without USE='ssl'."
 		ewarn "Please review the local USE flags for this package."
+	fi
+}
+
+src_unpack() {
+	if [[ ${PV} == *9999 ]] ; then
+		git-r3_src_unpack
+	else
+		mkdir -p "${S}" || die "Can't create source directory"
+		cd "${S}" || die
+		unpack ${A}
 	fi
 }
 
@@ -40,7 +65,8 @@ src_prepare() {
 		-e 's:OPT:OPTS:' \
 		-e 's:CFLAGS=.*:& $(OPT):' librtmp/Makefile \
 		|| die "failed to fix Makefile"
-	eapply_user
+	use ssl && use !gnutls && use !libressl && eapply "${FILESDIR}/${PN}-openssl-1.1-v2.patch"
+	default
 	multilib_copy_sources
 }
 
@@ -48,8 +74,6 @@ multilib_src_compile() {
 	if use ssl ; then
 		if use gnutls ; then
 			crypto="GNUTLS"
-		elif use polarssl ; then
-			crypto="POLARSSL"
 		else
 			crypto="OPENSSL"
 		fi

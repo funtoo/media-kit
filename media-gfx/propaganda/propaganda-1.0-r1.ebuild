@@ -1,11 +1,11 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 S="${WORKDIR}/Propaganda"
 DESCRIPTION="Propaganda Volume 1-14 + E. Tiling images for your desktop"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
-SITE="mirror://gentoo/"
+SITE="https://dev.gentoo.org/~andrey_utkin/distfiles/"
 SRC_URI="${SITE}Propaganda-Vol-01.tar.gz
 	${SITE}Propaganda-Vol-02.tar.gz
 	${SITE}Propaganda-Vol-03.tar.gz
@@ -24,7 +24,7 @@ SRC_URI="${SITE}Propaganda-Vol-01.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2+"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 src_prepare() {

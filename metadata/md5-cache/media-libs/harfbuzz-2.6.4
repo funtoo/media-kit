@@ -1,0 +1,15 @@
+BDEPEND=dev-util/gtk-doc-am virtual/pkgconfig >=app-portage/elt-patches-20170815
+DEFINED_PHASES=configure install prepare setup
+DEPEND=cairo? ( >=x11-libs/cairo-1.8.0:= ) glib? ( >=dev-libs/glib-2.38:2 ) graphite? ( >=media-gfx/graphite2-1.2.0:= ) icu? ( >=dev-libs/icu-51.2-r1:= ) introspection? ( >=dev-libs/gobject-introspection-1.34:= ) truetype? ( >=media-libs/freetype-2.4.2:2= ) test? ( || ( dev-lang/python:3.8 dev-lang/python:3.7 ) )
+DESCRIPTION=An OpenType text shaping engine
+EAPI=7
+HOMEPAGE=https://www.freedesktop.org/wiki/Software/HarfBuzz
+IUSE=+cairo debug +glib +graphite icu +introspection static-libs test +truetype
+KEYWORDS=*
+LICENSE=Old-MIT ISC icu
+RDEPEND=cairo? ( >=x11-libs/cairo-1.8.0:= ) glib? ( >=dev-libs/glib-2.38:2 ) graphite? ( >=media-gfx/graphite2-1.2.0:= ) icu? ( >=dev-libs/icu-51.2-r1:= ) introspection? ( >=dev-libs/gobject-introspection-1.34:= ) truetype? ( >=media-libs/freetype-2.4.2:2= )
+REQUIRED_USE=introspection? ( glib )
+SLOT=0/0.9.18
+SRC_URI=https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-2.6.4.tar.xz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=79b19238b4fd1a5f0de1528272310f7c

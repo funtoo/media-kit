@@ -1,11 +1,13 @@
+BDEPEND=>=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install postinst prepare unpack
-DEPEND=!dev-libs/boost:0/1.57.0 >=media-libs/libmpdclient-2.1 dev-libs/boost:=[nls,threads] net-misc/curl sys-libs/ncurses:= sys-libs/readline:* taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0= ) virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+DEPEND=!dev-libs/boost:0/1.57.0 >=media-libs/libmpdclient-2.1 dev-libs/boost:=[icu?,nls,threads] net-misc/curl sys-libs/ncurses:= sys-libs/readline:* icu? ( dev-libs/icu:= ) taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0= ) virtual/pkgconfig
 DESCRIPTION=featureful ncurses based MPD client inspired by ncmpc
-EAPI=6
-HOMEPAGE=http://ncmpcpp.rybczak.net/
-IUSE=clock outputs taglib visualizer
+EAPI=7
+HOMEPAGE=https://ncmpcpp.rybczak.net/
+IUSE=clock icu outputs taglib visualizer
 LICENSE=GPL-2
-RDEPEND=!dev-libs/boost:0/1.57.0 >=media-libs/libmpdclient-2.1 dev-libs/boost:=[nls,threads] net-misc/curl sys-libs/ncurses:= sys-libs/readline:* taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0= )
+PROPERTIES=live
+RDEPEND=!dev-libs/boost:0/1.57.0 >=media-libs/libmpdclient-2.1 dev-libs/boost:=[icu?,nls,threads] net-misc/curl sys-libs/ncurses:= sys-libs/readline:* icu? ( dev-libs/icu:= ) taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0= )
 SLOT=0
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	git-r3	52a888802d25387c2c74cb845d1219bc	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=c241fa61cd34a2ea6870c848e077f8a6
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=4a2742eb7a5e348e1af753c6cbab4b17

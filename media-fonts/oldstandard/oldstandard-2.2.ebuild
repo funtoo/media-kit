@@ -1,5 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
 
 inherit font
 
@@ -10,13 +11,13 @@ SRC_URI="http://www.thessalonica.org.ru/downloads/${P}.otf.zip
 
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="*"
 IUSE=""
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
-S="${WORKDIR}"
-FONT_S="${S}"
+S=${WORKDIR}
+FONT_S=${WORKDIR}
 FONT_SUFFIX="otf ttf"
-DOCS="OFL.txt OFL-FAQ.txt FONTLOG.txt"
+DOCS=( OFL.txt OFL-FAQ.txt FONTLOG.txt )

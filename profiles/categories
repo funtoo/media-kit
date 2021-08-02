@@ -1,4 +1,6 @@
 app-cdr
+app-misc
+app-pda
 dev-python
 media-fonts
 media-gfx
@@ -8,4 +10,6 @@ media-radio
 media-sound
 media-tv
 media-video
+net-libs
+spotify-tui
 virtual

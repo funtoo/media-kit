@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,9 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 RDEPEND="
-	>=dev-lang/erlang-18.1[smp,wxwidgets]
+	|| (
+		<dev-lang/erlang-21[smp,wxwidgets]
+		>dev-lang/erlang-21[wxwidgets]
+	)
 	dev-libs/cl
+	media-libs/glu
 	media-libs/libsdl[opengl]
+	virtual/opengl
 "
 DEPEND="${RDEPEND}"
 
@@ -25,6 +30,13 @@ src_prepare() {
 	sed -i \
 		-e '/include_lib/s|"wings/|"../|' \
 		$(find . -name '*'.erl) \
+		|| die
+
+	sed -i \
+		-e 's|-O3||g' \
+		-e 's|-Werror||g' \
+		-e 's|CFLAGS = |CFLAGS += |g' \
+		$(find . -name Makefile) \
 		|| die
 }
 

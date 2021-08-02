@@ -1,23 +1,22 @@
-# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
 
 inherit font
 
-MYPN=TeX-fonts-linux
+MY_PN=TeX-fonts-linux
 
 DESCRIPTION="Raster fonts for jsmath"
 HOMEPAGE="http://www.math.union.edu/~dpvc/jsMath/"
-SRC_URI="http://www.math.union.edu/~dpvc/jsMath/download/${MYPN}.tgz"
+SRC_URI="http://www.math.union.edu/~dpvc/jsMath/download/${MY_PN}.tgz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="*"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+S="${WORKDIR}/${MY_PN}"
 
-S="${WORKDIR}/${MYPN}"
 FONT_S="${S}"
 FONT_PN="jsMath"
 FONT_SUFFIX="ttf"

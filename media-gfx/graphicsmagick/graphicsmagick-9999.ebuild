@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 inherit autotools toolchain-funcs
 
 MY_P=${P/graphicsm/GraphicsM}
@@ -33,7 +33,7 @@ RDEPEND="dev-libs/libltdl:0
 	lcms? ( media-libs/lcms:2 )
 	lzma? ( app-arch/xz-utils )
 	perl? ( dev-lang/perl )
-	png? ( media-libs/libpng:0 )
+	png? ( media-libs/libpng:0= )
 	postscript? ( app-text/ghostscript-gpl )
 	svg? ( dev-libs/libxml2 )
 	tiff? ( media-libs/tiff:0 )
@@ -74,41 +74,42 @@ src_configure() {
 		openmp=enable
 	fi
 
-	econf \
-		--${openmp}-openmp \
-		--enable-largefile \
-		--enable-shared \
-		$(use_enable static-libs static) \
-		$(use_enable debug prof) \
-		$(use_enable debug gcov) \
-		$(use_enable imagemagick magick-compat) \
-		$(use_with threads) \
-		$(use_with modules) \
-		--with-quantum-depth=${depth} \
-		--without-frozenpaths \
-		$(use_with cxx magick-plus-plus) \
-		$(use_with perl) \
-		--with-perl-options=INSTALLDIRS=vendor \
-		$(use_with bzip2 bzlib) \
-		$(use_with postscript dps) \
-		$(use_with fpx) \
-		--without-gslib \
-		$(use_with jbig) \
-		$(use_with webp) \
-		$(use_with jpeg) \
-		$(use_with jpeg2k jp2) \
-		$(use_with lcms lcms2) \
-		$(use_with lzma) \
-		$(use_with png) \
-		$(use_with tiff) \
-		$(use_with truetype ttf) \
-		$(use_with wmf) \
-		--with-fontpath="${EPREFIX}"/usr/share/fonts \
-		--with-gs-font-dir="${EPREFIX}"/usr/share/fonts/urw-fonts \
-		--with-windows-font-dir="${EPREFIX}"/usr/share/fonts/corefonts \
-		$(use_with svg xml) \
-		$(use_with zlib) \
+	local myeconfargs=(
+		--${openmp}-openmp
+		--enable-largefile
+		--enable-shared
+		$(use_enable static-libs static)
+		$(use_enable debug prof)
+		$(use_enable debug gcov)
+		$(use_enable imagemagick magick-compat)
+		$(use_with threads)
+		$(use_with modules)
+		--with-quantum-depth=${depth}
+		--without-frozenpaths
+		$(use_with cxx magick-plus-plus)
+		$(use_with perl)
+		--with-perl-options=INSTALLDIRS=vendor
+		$(use_with bzip2 bzlib)
+		$(use_with postscript dps)
+		$(use_with fpx)
+		$(use_with jbig)
+		$(use_with webp)
+		$(use_with jpeg)
+		$(use_with jpeg2k jp2)
+		$(use_with lcms lcms2)
+		$(use_with lzma)
+		$(use_with png)
+		$(use_with tiff)
+		$(use_with truetype ttf)
+		$(use_with wmf)
+		--with-fontpath="${EPREFIX}"/usr/share/fonts
+		--with-gs-font-dir="${EPREFIX}"/usr/share/fonts/urw-fonts
+		--with-windows-font-dir="${EPREFIX}"/usr/share/fonts/corefonts
+		$(use_with svg xml)
+		$(use_with zlib)
 		$(use_with X x)
+	)
+	econf "${myeconfargs[@]}"
 }
 
 src_compile() {

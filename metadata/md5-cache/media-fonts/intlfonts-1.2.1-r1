@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst postrm prepare setup
+DEPEND=x11-apps/bdftopcf >=x11-apps/mkfontscale-1.2.0 X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=International X11 fixed fonts
+EAPI=7
+HOMEPAGE=https://www.gnu.org/directory/intlfonts.html
+IUSE=bdf non-free X
+KEYWORDS=*
+LICENSE=public-domain HPND non-free? ( free-noncomm )
+SLOT=0
+SRC_URI=mirror://gnu/intlfonts/intlfonts-1.2.1.tar.gz
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=6f80bd5e8d59cebb237473b862ca254f

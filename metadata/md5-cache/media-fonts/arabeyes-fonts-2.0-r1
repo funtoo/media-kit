@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DESCRIPTION=Arabeyes Arabic TrueType fonts
+EAPI=7
+HOMEPAGE=https://www.arabeyes.org/Khotot#2.0
+IUSE=X
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://sourceforge/arabeyes/ae_fonts_2.0.tar.bz2
+_eclasses_=font	dd073b36fe3fd8b868c23bc23209db45
+_md5_=ebad62ef2fe884c341e2b832898d5149

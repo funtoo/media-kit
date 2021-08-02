@@ -1,11 +1,14 @@
-DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-libs/atk dev-libs/expat dev-libs/glib:2 gnome-base/libglade:2.0 media-sound/fluidsynth virtual/jack x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango lash? ( media-sound/lash ) lv2? ( media-libs/lv2 ) virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=configure install postinst postrm preinst prepare unpack
+DEPEND=dev-libs/atk dev-libs/expat dev-libs/glib:2 media-sound/fluidsynth:= gtk? ( x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango ) jack? ( virtual/jack ) lash? ( media-sound/lash ) lv2? ( media-libs/lv2 ) dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=A set of open source instruments and effects for digital audio workstations
-EAPI=5
+EAPI=7
 HOMEPAGE=http://calf-studio-gear.org/
-IUSE=lash lv2 static-libs
+IUSE=cpu_flags_x86_sse experimental gtk jack lash lv2 static-libs
 LICENSE=LGPL-2.1
-RDEPEND=dev-libs/atk dev-libs/expat dev-libs/glib:2 gnome-base/libglade:2.0 media-sound/fluidsynth virtual/jack x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango lash? ( media-sound/lash ) lv2? ( media-libs/lv2 )
+PROPERTIES=live
+RDEPEND=dev-libs/atk dev-libs/expat dev-libs/glib:2 media-sound/fluidsynth:= gtk? ( x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/pango ) jack? ( virtual/jack ) lash? ( media-sound/lash ) lv2? ( media-libs/lv2 )
+REQUIRED_USE=jack? ( gtk )
 SLOT=0
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	autotools-utils	5a4611dfba155b1659528663fad4cd5e	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	git-r3	52a888802d25387c2c74cb845d1219bc	libtool	e32ea84bf82cf8987965b574672dba93	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=3b04220733a2f42496467d8d26b394f8
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	git-r3	7dcb8a92f5a091f13e82494fa317ca4b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=a263e4d57848cb51ff8d0c67712b045c

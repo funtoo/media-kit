@@ -1,5 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
+EAPI=7
 
 inherit font
 
@@ -11,14 +12,12 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE=""
+KEYWORDS="*"
 
-DEPEND="app-arch/unzip"
-RDEPEND=""
-
-DOCS=( FONTLOG.txt )
-FONT_SUFFIX="ttf"
+BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}/${MY_P}"
+
+DOCS=( FONTLOG.txt )
 FONT_S="${S}"
+FONT_SUFFIX="ttf"

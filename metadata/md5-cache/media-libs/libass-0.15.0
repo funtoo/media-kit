@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install test
+DEPEND=fontconfig? ( >=media-libs/fontconfig-2.10.92[-mgorny(-)] ) >=media-libs/freetype-2.5.0.1:2[-mgorny(-)] >=virtual/libiconv-0-r1[-mgorny(-)] >=dev-libs/fribidi-0.19.5-r1[-mgorny(-)] harfbuzz? ( >=media-libs/harfbuzz-0.9.12[truetype,-mgorny(-)] ) virtual/pkgconfig abi_x86_32? ( dev-lang/nasm ) abi_x86_64? ( dev-lang/nasm )
+DESCRIPTION=Library for SSA/ASS subtitles rendering
+EAPI=6
+HOMEPAGE=https://github.com/libass/libass
+IUSE=+fontconfig +harfbuzz static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS=*
+LICENSE=ISC
+RDEPEND=fontconfig? ( >=media-libs/fontconfig-2.10.92[-mgorny(-)] ) >=media-libs/freetype-2.5.0.1:2[-mgorny(-)] >=virtual/libiconv-0-r1[-mgorny(-)] >=dev-libs/fribidi-0.19.5-r1[-mgorny(-)] harfbuzz? ( >=media-libs/harfbuzz-0.9.12[truetype,-mgorny(-)] )
+SLOT=0/9
+SRC_URI=https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz
+_eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=45f01dcebe53e16afcfecd283ba1a2d1
