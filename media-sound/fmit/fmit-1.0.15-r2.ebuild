@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,12 +10,12 @@ SRC_URI="https://github.com/gillesdegottex/fmit/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL-2+ LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 IUSE="alsa jack oss portaudio"
 
 RDEPEND="
 	dev-qt/qtcore:5
-	dev-qt/qtgui:5[-gles2]
+	dev-qt/qtgui:5[-gles2-only]
 	dev-qt/qtmultimedia:5
 	dev-qt/qtopengl:5
 	dev-qt/qtsvg:5
