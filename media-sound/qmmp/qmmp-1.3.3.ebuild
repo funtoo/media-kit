@@ -1,25 +1,17 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 inherit cmake-utils xdg-utils
-[[ ${PV} = 9999 ]] && inherit subversion
 
 DESCRIPTION="Qt5-based audio player with winamp/xmms skins support"
 HOMEPAGE="http://qmmp.ylsoftware.com"
-if [[ ${PV} != 9999 ]]; then
-	SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2
-		mirror://sourceforge/${PN}-dev/files/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
-else
-	QMMP_DEV_BRANCH="1.3"
-	ESVN_REPO_URI="svn://svn.code.sf.net/p/${PN}-dev/code/branches/${PN}-${QMMP_DEV_BRANCH}"
-fi
+QMMP_DEV_BRANCH="1.3"
+ESVN_REPO_URI="svn://svn.code.sf.net/p/${PN}-dev/code/branches/${PN}-${QMMP_DEV_BRANCH}"
 
 LICENSE="GPL-2"
 SLOT="0"
-# KEYWORDS further up
+KEYWORDS="*"
 IUSE="aac +alsa analyzer archive bs2b cdda cover crossfade cue curl +dbus enca ffmpeg flac game
 gnome jack ladspa libav lyrics +mad midi mms modplug mplayer musepack notifier opus oss projectm
 pulseaudio qsui qtmedia scrobbler shout sid sndfile soxr stereo tray udisks +vorbis wavpack"
@@ -73,7 +65,7 @@ RDEPEND="
 	musepack? ( >=media-sound/musepack-tools-444 )
 	opus? ( media-libs/opusfile )
 	projectm? (
-		dev-qt/qtgui:5[-gles2]
+		dev-qt/qtgui:5[-gles2-only]
 		dev-qt/qtopengl:5
 		media-libs/libprojectm
 	)
