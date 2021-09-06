@@ -6,7 +6,7 @@ inherit cmake xdg-utils
 
 DESCRIPTION="Powerful yet simple to use screenshot software"
 HOMEPAGE="https://flameshot.js.org"
-SRC_URI="https://github.com/flameshot-org/flameshot/archive/v0.9.0.tar.gz -> flameshot-v0.9.0.tar.gz"
+SRC_URI="https://github.com/flameshot-org/flameshot/archive/v0.10.1.tar.gz -> flameshot-v0.10.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE="+dbus"
 
 FS_LINGUAS="
-	ca cs de_DE es eu fr hu it_IT ja ka ko nl nl_NL pl pt_BR ru sk sr_SP sv_SE tr uk zh_CN zh_HK zh_TW
+	ca cs de_DE el es eu fr gl he hu id it_IT ja ka ko nb_NO nl nl_NL pl pt_BR ru sk sr_SP sv_SE tr uk zh_CN zh_HK zh_TW
 "
 
 for lingua in ${FS_LINGUAS}; do
@@ -28,6 +28,8 @@ DEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtsvg:5
 	dev-qt/qtdbus:5
+	dev-qt/qtsingleapplication[qt5(+),X]
+	dev-libs/spdlog
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
@@ -37,6 +39,9 @@ BDEPEND="
 
 src_prepare() {
 	default
+
+	rm -r external/spdlog || die
+	rm -r external/singleapplication || die
 
 	# QA check in case linguas are added or removed
 	enum() {
@@ -57,6 +62,16 @@ src_prepare() {
 	done
 
 	cmake_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		-DUSE_EXTERNAL_SPDLOG=1
+		-DUSE_EXTERNAL_SINGLEAPPLICATION=1
+		-DENABLE_CACHE=0
+	)
+
+	cmake_src_configure
 }
 
 pkg_postinst(){
