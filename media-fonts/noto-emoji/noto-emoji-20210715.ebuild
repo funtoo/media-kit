@@ -13,7 +13,7 @@ SRC_URI="https://github.com/googlefonts/noto-emoji/archive/c05b4b47c8250ccd23278
 LICENSE="Apache-2.0 OFL-1.1"
 SLOT="0"
 KEYWORDS="*"
-IUSE="+buildfont"
+IUSE="buildfont"
 
 BDEPEND="
 	buildfont? (
