@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=virtual/libudev !elibc_glibc? ( sys-libs/argp-standalone ) jpeg? ( >=virtual/jpeg-0-r2:0= ) !media-tv/v4l2-ctl !<media-tv/ivtv-utils-1.4.0-r2
+DESCRIPTION=Separate libraries ebuild from upstream v4l-utils package
+EAPI=7
+HOMEPAGE=https://git.linuxtv.org/v4l-utils.git
+IUSE=dvb jpeg kernel_linux
+KEYWORDS=*
+LICENSE=LGPL-2.1+
+RDEPEND=virtual/libudev !elibc_glibc? ( sys-libs/argp-standalone ) jpeg? ( >=virtual/jpeg-0-r2:0= ) !media-tv/v4l2-ctl !<media-tv/ivtv-utils-1.4.0-r2
+SLOT=0/0
+SRC_URI=https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=29388e83dacddb9001efa904b5f454a1
