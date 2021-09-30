@@ -6,11 +6,11 @@ inherit cmake flag-o-matic pax-utils toolchain-funcs xdg
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="https://www.darktable.org/"
-SRC_URI="{{artifacts[0].src_uri}}"
+SRC_URI="https://github.com/darktable-org/darktable/releases/download/release-3.6.0/darktable-3.6.0.tar.xz"
 
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
-KEYWORDS="{{keywords}}"
+KEYWORDS="*"
 LANGS=" af de eo es fr he hu it nl pt_BR ru sl uk"
 # TODO add lua once dev-lang/lua-5.2 is unmasked
 IUSE="colord cups cpu_flags_x86_sse3 doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet
