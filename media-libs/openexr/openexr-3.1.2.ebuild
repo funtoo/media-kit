@@ -10,7 +10,7 @@ MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="ILM's OpenEXR high dynamic-range image file format libraries"
 HOMEPAGE="https://www.openexr.com/"
-SRC_URI="https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/openexr/tarball/refs/tags/v3.1.2 -> openexr-3.1.2-2eec453b01b1187873474f31eb5b127b0a52e4ff.tar.gz"
 
 LICENSE="BSD"
 SLOT="2/30" # based on SONAME
@@ -32,6 +32,10 @@ PATCHES=(
 )
 
 DOCS=( CHANGES.md GOVERNANCE.md PATENTS README.md SECURITY.md docs/SymbolVisibility.md )
+
+post_src_unpack() {
+	mv "${WORKDIR}/"AcademySoftwareFoundation-openexr* "${S}" || die
+}
 
 src_prepare() {
 	# Fix path for testsuite
