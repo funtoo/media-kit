@@ -13,7 +13,7 @@ HOMEPAGE="https://www.openexr.com/"
 SRC_URI="https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="1/30" # based on SONAME
+SLOT="2/30" # based on SONAME
 KEYWORDS="*"
 IUSE="cpu_flags_x86_avx doc examples large-stack static-libs utils test threads"
 RESTRICT="!test? ( test )"
