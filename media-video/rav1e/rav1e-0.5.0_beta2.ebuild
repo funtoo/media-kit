@@ -17,7 +17,7 @@ arrayvec-0.7.1
 assert_cmd-2.0.2
 atty-0.2.14
 autocfg-1.0.1
-av-metrics-0.7.1
+av-metrics-0.7.2
 backtrace-0.3.61
 bindgen-0.58.1
 bitflags-1.3.2
@@ -72,7 +72,7 @@ itertools-0.10.1
 itoa-0.4.8
 jobserver-0.1.24
 js-sys-0.3.55
-lab-0.10.0
+lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.103
