@@ -66,7 +66,6 @@ media-sound/edna python_single_target_python2_7
 media-sound/exaile python_single_target_python2_7
 media-sound/gtklick python_single_target_python2_7
 media-sound/guitarix python_single_target_python2_7
-media-sound/idjc python_single_target_python2_7
 media-sound/jack python_single_target_python2_7
 media-sound/lash python_single_target_python2_7
 media-sound/lilycomp python_single_target_python2_7
