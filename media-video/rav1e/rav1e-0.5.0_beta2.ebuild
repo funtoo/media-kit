@@ -18,7 +18,7 @@ assert_cmd-2.0.2
 atty-0.2.14
 autocfg-1.0.1
 av-metrics-0.7.2
-backtrace-0.3.61
+backtrace-0.3.62
 bindgen-0.58.1
 bitflags-1.3.2
 bitstream-io-1.2.0
@@ -92,7 +92,7 @@ num-iter-0.1.42
 num-rational-0.3.2
 num-traits-0.2.14
 num_cpus-1.13.0
-object-0.26.2
+object-0.27.0
 oorandom-11.1.3
 output_vt100-0.1.2
 paste-1.0.5
