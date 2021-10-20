@@ -23,7 +23,7 @@ bindgen-0.58.1
 bitflags-1.3.2
 bitstream-io-1.2.0
 bstr-0.2.17
-bumpalo-3.7.1
+bumpalo-3.8.0
 bytemuck-1.7.2
 byteorder-1.4.3
 cast-0.2.7
