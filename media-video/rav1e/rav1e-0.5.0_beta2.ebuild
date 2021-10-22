@@ -61,7 +61,7 @@ fern-0.6.0
 getrandom-0.2.3
 gimli-0.25.0
 glob-0.3.0
-half-1.8.1
+half-1.8.2
 heck-0.3.3
 hermit-abi-0.1.19
 humantime-2.1.0
@@ -92,12 +92,12 @@ num-iter-0.1.42
 num-rational-0.3.2
 num-traits-0.2.14
 num_cpus-1.13.0
-object-0.27.0
+object-0.27.1
 oorandom-11.1.3
 output_vt100-0.1.2
 paste-1.0.5
 peeking_take_while-0.1.2
-pkg-config-0.3.20
+pkg-config-0.3.21
 plotters-0.3.1
 plotters-backend-0.3.2
 plotters-svg-0.3.1
