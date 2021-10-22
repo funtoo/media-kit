@@ -61,7 +61,7 @@ fern-0.6.0
 getrandom-0.2.3
 gimli-0.25.0
 glob-0.3.0
-half-1.8.0
+half-1.8.1
 heck-0.3.3
 hermit-abi-0.1.19
 humantime-2.1.0
