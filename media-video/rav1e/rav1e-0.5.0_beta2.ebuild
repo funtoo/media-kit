@@ -97,12 +97,12 @@ oorandom-11.1.3
 output_vt100-0.1.2
 paste-1.0.5
 peeking_take_while-0.1.2
-pkg-config-0.3.21
+pkg-config-0.3.22
 plotters-0.3.1
 plotters-backend-0.3.2
 plotters-svg-0.3.1
 png-0.16.8
-ppv-lite86-0.2.14
+ppv-lite86-0.2.15
 predicates-2.0.3
 predicates-core-1.0.2
 predicates-tree-1.0.4
