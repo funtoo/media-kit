@@ -146,7 +146,7 @@ syn-1.0.80
 system-deps-3.1.2
 termcolor-1.1.2
 terminal_size-0.1.17
-termtree-0.2.2
+termtree-0.2.3
 textwrap-0.11.0
 thiserror-1.0.30
 thiserror-impl-1.0.30
