@@ -107,7 +107,7 @@ predicates-2.0.3
 predicates-core-1.0.2
 predicates-tree-1.0.4
 pretty_assertions-0.7.2
-proc-macro2-1.0.30
+proc-macro2-1.0.31
 quote-1.0.10
 rand-0.8.4
 rand_chacha-0.3.1
