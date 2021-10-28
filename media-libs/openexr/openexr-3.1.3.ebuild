@@ -10,10 +10,10 @@ MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="ILM's OpenEXR high dynamic-range image file format libraries"
 HOMEPAGE="https://www.openexr.com/"
-SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/openexr/tarball/refs/tags/v3.1.2 -> openexr-3.1.2-2eec453b01b1187873474f31eb5b127b0a52e4ff.tar.gz"
+SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/openexr/tarball/refs/tags/v3.1.3 -> openexr-3.1.3-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz"
 
 LICENSE="BSD"
-SLOT="2/30" # based on SONAME
+SLOT="3/30" # based on SONAME
 KEYWORDS="*"
 IUSE="cpu_flags_x86_avx doc examples large-stack static-libs utils test threads"
 RESTRICT="!test? ( test )"
