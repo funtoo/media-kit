@@ -13,7 +13,7 @@ anyhow-1.0.44
 aom-sys-0.3.0
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.1
-arrayvec-0.7.1
+arrayvec-0.7.2
 assert_cmd-2.0.2
 atty-0.2.14
 autocfg-1.0.1

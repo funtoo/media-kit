@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Portable OpenGL FrameWork"
 HOMEPAGE="https://www.glfw.org/"
-SRC_URI="https://api.github.com/repos/glfw/glfw/tarball/3.3.4 -> glfw-3.3.4.tar.gz"
+SRC_URI="https://api.github.com/repos/glfw/glfw/tarball/3.3.5 -> glfw-3.3.5.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
