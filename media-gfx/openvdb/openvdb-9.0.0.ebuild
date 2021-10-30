@@ -8,17 +8,17 @@ inherit cmake flag-o-matic python-single-r1
 
 DESCRIPTION="Library for the efficient manipulation of volumetric data"
 HOMEPAGE="https://www.openvdb.org"
-SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/openvdb/tarball/v8.1.0 -> openvdb-8.1.0.tar.gz"
+SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/openvdb/tarball/v9.0.0 -> openvdb-9.0.0.tar.gz"
 
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="*"
-IUSE="cpu_flags_x86_avx cpu_flags_x86_sse4_2 doc numpy python static-libs utils abi6-compat abi7-compat +abi8-compat"
+IUSE="cpu_flags_x86_avx cpu_flags_x86_sse4_2 doc numpy python static-libs utils abi6-compat abi7-compat abi8-compat +abi9-compat"
 RESTRICT="test"
 
 REQUIRED_USE="
 	numpy? ( python )
-	^^ ( abi6-compat abi7-compat abi8-compat )
+	^^ ( abi6-compat abi7-compat abi8-compat abi9-compat )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
 
@@ -88,6 +88,8 @@ src_configure() {
 		version=7
 	elif use abi8-compat; then
 		version=8
+	elif use abi9-compat; then
+		version=9
 	else
 		die "Openvdb abi version is not compatible"
 	fi
