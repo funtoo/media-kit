@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="
-addr2line-0.16.0
+addr2line-0.17.0
 adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
@@ -18,7 +18,7 @@ assert_cmd-2.0.2
 atty-0.2.14
 autocfg-1.0.1
 av-metrics-0.7.2
-backtrace-0.3.62
+backtrace-0.3.63
 bindgen-0.58.1
 bitflags-1.3.2
 bitstream-io-1.2.0
@@ -59,7 +59,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 fern-0.6.0
 getrandom-0.2.3
-gimli-0.25.0
+gimli-0.26.0
 glob-0.3.0
 half-1.8.2
 heck-0.3.3
