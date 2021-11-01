@@ -32,7 +32,7 @@ cexpr-0.4.0
 cfg-expr-0.7.4
 cfg-if-1.0.0
 chrono-0.4.19
-clang-sys-1.2.2
+clang-sys-1.3.0
 clap-2.33.3
 cmake-0.1.46
 color_quant-1.1.0
