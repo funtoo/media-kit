@@ -7,7 +7,7 @@ inherit python-single-r1 cmake toolchain-funcs
 
 DESCRIPTION="Open source multimedia framework for television broadcasting"
 HOMEPAGE="https://www.mltframework.org/"
-SRC_URI="https://github.com/mltframework/mlt/releases/download/v7.0.1/mlt-7.0.1.tar.gz -> mlt-7.0.1.tar.gz"
+SRC_URI="https://github.com/mltframework/mlt/releases/download/v7.2.0/mlt-7.2.0.tar.gz -> mlt-7.2.0.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
