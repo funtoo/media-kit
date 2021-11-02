@@ -59,7 +59,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 fern-0.6.0
 getrandom-0.2.3
-gimli-0.26.0
+gimli-0.26.1
 glob-0.3.0
 half-1.8.2
 heck-0.3.3
