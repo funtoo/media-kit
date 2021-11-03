@@ -6,7 +6,7 @@ inherit font
 
 DESCRIPTION="Google's CJK font family"
 HOMEPAGE="https://www.google.com/get/noto/ https://github.com/googlei18n/noto-cjk"
-SRC_URI="https://github.com/googlei18n/noto-cjk/archive/cee7438f5f8e66397090d483c15275d1af3d87c7.tar.gz -> noto-cjk-20210430-cee7438f5f8e66397090d483c15275d1af3d87c7.tar.gz"
+SRC_URI="https://github.com/googlei18n/noto-cjk/archive/9f7f3c38eab63e1d1fddd8d50937fe4f1eacdb1d.tar.gz -> noto-cjk-20211026-9f7f3c38eab63e1d1fddd8d50937fe4f1eacdb1d.tar.gz"
 
 LICENSE="OFL-1.1"
 SLOT="0"
