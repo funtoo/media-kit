@@ -95,7 +95,7 @@ num_cpus-1.13.0
 object-0.27.1
 oorandom-11.1.3
 output_vt100-0.1.2
-paste-1.0.5
+paste-1.0.6
 peeking_take_while-0.1.2
 pkg-config-0.3.22
 plotters-0.3.1
