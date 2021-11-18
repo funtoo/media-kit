@@ -12,7 +12,7 @@ ansi_term-0.12.1
 anyhow-1.0.45
 aom-sys-0.3.0
 arbitrary-0.4.7
-arg_enum_proc_macro-0.3.1
+arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
 assert_cmd-2.0.2
 atty-0.2.14
