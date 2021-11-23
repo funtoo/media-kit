@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.11.0
 ansi_term-0.12.1
-anyhow-1.0.47
+anyhow-1.0.48
 aom-sys-0.3.0
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -103,7 +103,7 @@ plotters-backend-0.3.2
 plotters-svg-0.3.1
 png-0.16.8
 ppv-lite86-0.2.15
-predicates-2.0.3
+predicates-2.1.0
 predicates-core-1.0.2
 predicates-tree-1.0.4
 pretty_assertions-0.7.2
