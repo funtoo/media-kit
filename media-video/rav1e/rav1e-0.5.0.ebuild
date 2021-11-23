@@ -37,7 +37,7 @@ clap-2.33.3
 cmake-0.1.46
 color_quant-1.1.0
 console-0.14.1
-crc32fast-1.2.1
+crc32fast-1.2.2
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
