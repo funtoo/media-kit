@@ -1,26 +1,18 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-
 EAPI=7
 
 MY_P="${P/_/-}"
 
-if [[ ${PV} == *9999 ]]; then
-	inherit autotools git-r3
-	EGIT_REPO_URI="https://github.com/audacious-media-player/audacious.git"
-else
-	SRC_URI="https://distfiles.audacious-media-player.org/${MY_P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
-fi
-inherit xdg
+
+inherit xdg autotools
 
 DESCRIPTION="Lightweight and versatile audio player"
 HOMEPAGE="https://audacious-media-player.org/"
-SRC_URI+=" mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
+SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.1 -> audacious-4.1.tar.gz mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="nls qt5"
+IUSE="nls"
 
 BDEPEND="
 	virtual/pkgconfig
@@ -29,24 +21,20 @@ BDEPEND="
 DEPEND="
 	>=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.28
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/pango-1.8.0
 	virtual/freedesktop-icon-theme
-	!qt5? ( x11-libs/gtk+:2 )
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtwidgets:5
-	)
 "
 RDEPEND="${DEPEND}"
 PDEPEND="~media-plugins/audacious-plugins-${PV}"
 
-S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	default
-	[[ ${PV} == *9999 ]] && git-r3_src_unpack
+
+post_src_unpack() {
+	mv "${WORKDIR}/"audacious-media-player-audacious* "${S}" || die
 }
 
 src_prepare() {
@@ -54,7 +42,7 @@ src_prepare() {
 	if ! use nls; then
 		sed -e "/SUBDIRS/s/ po//" -i Makefile || die # bug #512698
 	fi
-	[[ ${PV} == *9999 ]] && eautoreconf
+    eautoreconf
 }
 
 src_configure() {
@@ -63,12 +51,14 @@ src_configure() {
 	# Building without D-Bus is *unsupported* and a USE-flag
 	# will not be added due to the bug reports that will result.
 	# Bugs #197894, #199069, #207330, #208606
-	econf \
-		--disable-valgrind \
-		--enable-dbus \
-		$(use_enable nls) \
-		$(use_enable !qt5 gtk) \
-		$(use_enable qt5 qt)
+	local myeconfargs=(
+		--disable-valgrind
+		--disable-gtk
+		--enable-dbus
+		--enable-qt
+		$(use_enable nls)
+	)
+	econf "${myeconfargs[@]}"
 }
 
 src_install() {
