@@ -133,7 +133,7 @@ semver-1.0.4
 serde-1.0.130
 serde_cbor-0.11.2
 serde_derive-1.0.130
-serde_json-1.0.71
+serde_json-1.0.72
 shlex-1.1.0
 signal-hook-0.3.10
 signal-hook-registry-1.4.0
@@ -142,7 +142,7 @@ smallvec-1.7.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.81
+syn-1.0.82
 system-deps-3.1.2
 termcolor-1.1.2
 terminal_size-0.1.17
