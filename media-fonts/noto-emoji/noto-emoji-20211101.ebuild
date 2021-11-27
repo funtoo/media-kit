@@ -41,7 +41,9 @@ pkg_setup() {
 }
 
 post_src_unpack() {
-	mv ${WORKDIR}/noto-emoji-* ${S} || die
+	if [ ! -d "${S}" ]; then
+		mv ${WORKDIR}/googlefonts-noto-emoji-* ${S} || die
+	fi
 }
 
 src_prepare() {
