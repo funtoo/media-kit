@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.11.0
 ansi_term-0.12.1
-anyhow-1.0.49
+anyhow-1.0.50
 aom-sys-0.3.0
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -125,7 +125,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-ryu-1.0.5
+ryu-1.0.6
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
