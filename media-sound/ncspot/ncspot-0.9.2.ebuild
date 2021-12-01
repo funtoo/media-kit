@@ -11,7 +11,7 @@ ahash-0.6.3
 aho-corasick-0.7.18
 alsa-0.5.0
 alsa-sys-0.3.1
-ansi_term-0.11.0
+ansi_term-0.12.1
 array-macro-1.0.5
 arrayref-0.3.6
 arrayvec-0.5.2
@@ -39,7 +39,7 @@ chrono-0.4.19
 chunked_transfer-1.4.0
 cipher-0.2.5
 clang-sys-1.3.0
-clap-2.33.3
+clap-2.34.0
 clipboard-0.5.0
 clipboard-win-2.2.0
 combine-4.6.2
@@ -230,7 +230,7 @@ redox_users-0.4.0
 regex-1.5.4
 regex-syntax-0.6.25
 remove_dir_all-0.5.3
-reqwest-0.11.6
+reqwest-0.11.7
 ring-0.16.20
 rodio-0.14.0
 rspotify-0.11.3
@@ -374,7 +374,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.9.1 -> ncspot-v0.9.1.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.9.2 -> ncspot-v0.9.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="BSD"
