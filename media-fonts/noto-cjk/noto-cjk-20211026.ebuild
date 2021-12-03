@@ -20,6 +20,8 @@ FILESDIR="${REPODIR}/media-fonts/noto-gen/files"
 FONT_CONF=( "${FILESDIR}/70-noto-cjk.conf" ) # From ArchLinux
 FONT_SUFFIX="ttc"
 
+FONT_S=(Sans/OTC Sans/Variable/OTC Serif/OTC Serif/Variable/OTC)
+
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
 		mv ${WORKDIR}/googlefonts-noto-cjk-* ${S} || die
