@@ -67,7 +67,7 @@ humantime-2.1.0
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
-itertools-0.10.1
+itertools-0.10.3
 itoa-0.4.8
 jobserver-0.1.24
 js-sys-0.3.55
@@ -96,7 +96,7 @@ oorandom-11.1.3
 output_vt100-0.1.2
 paste-1.0.6
 peeking_take_while-0.1.2
-pkg-config-0.3.22
+pkg-config-0.3.23
 plotters-0.3.1
 plotters-backend-0.3.2
 plotters-svg-0.3.1
