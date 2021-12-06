@@ -9,9 +9,13 @@ HOMEPAGE="http://www.blender.org/"
 SRC_URI="https://download.blender.org/release/Blender3.0/blender-3.0.0-linux-x64.tar.xz"
 
 LICENSE="|| ( GPL-2 BL )"
-SLOT="${PV%.*}"
+SLOT="0"
 KEYWORDS="*"
 RESTRICT="bindist strip"
+RDEPEND="
+	!media-gfx/blender-bin:2
+	!media-gfx/blender-bin:3
+"
 
 DEPEND="|| ( sys-libs/ncurses[tinfo] sys-libs/ncurses-compat[tinfo] )"
 
