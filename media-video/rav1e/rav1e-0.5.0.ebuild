@@ -134,7 +134,7 @@ serde_cbor-0.11.2
 serde_derive-1.0.130
 serde_json-1.0.72
 shlex-1.1.0
-signal-hook-0.3.10
+signal-hook-0.3.11
 signal-hook-registry-1.4.0
 simd_helpers-0.1.0
 smallvec-1.7.0
