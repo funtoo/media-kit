@@ -74,7 +74,7 @@ js-sys-0.3.55
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.109
+libc-0.2.111
 libfuzzer-sys-0.3.5
 libloading-0.7.2
 log-0.4.14
@@ -96,7 +96,7 @@ oorandom-11.1.3
 output_vt100-0.1.2
 paste-1.0.6
 peeking_take_while-0.1.2
-pkg-config-0.3.23
+pkg-config-0.3.24
 plotters-0.3.1
 plotters-backend-0.3.2
 plotters-svg-0.3.1
