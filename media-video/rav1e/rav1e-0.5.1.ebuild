@@ -74,7 +74,7 @@ js-sys-0.3.55
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.111
+libc-0.2.112
 libfuzzer-sys-0.3.5
 libloading-0.7.2
 log-0.4.14
@@ -179,7 +179,7 @@ y4m-0.7.0
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.5.0 -> rav1e-0.5.0.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.5.1 -> rav1e-0.5.1.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
