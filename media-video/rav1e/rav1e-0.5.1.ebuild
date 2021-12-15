@@ -69,6 +69,7 @@ interpolate_name-0.2.3
 itertools-0.8.2
 itertools-0.10.3
 itoa-0.4.8
+itoa-1.0.1
 jobserver-0.1.24
 js-sys-0.3.55
 lab-0.11.0
@@ -106,7 +107,7 @@ predicates-2.1.0
 predicates-core-1.0.2
 predicates-tree-1.0.4
 pretty_assertions-0.7.2
-proc-macro2-1.0.33
+proc-macro2-1.0.34
 quote-1.0.10
 rand-0.8.4
 rand_chacha-0.3.1
@@ -132,7 +133,7 @@ semver-1.0.4
 serde-1.0.131
 serde_cbor-0.11.2
 serde_derive-1.0.131
-serde_json-1.0.72
+serde_json-1.0.73
 shlex-1.1.0
 signal-hook-0.3.12
 signal-hook-registry-1.4.0
