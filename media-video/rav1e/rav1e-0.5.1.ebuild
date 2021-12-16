@@ -23,7 +23,7 @@ bitflags-1.3.2
 bitstream-io-1.2.0
 bstr-0.2.17
 bumpalo-3.8.0
-bytemuck-1.7.2
+bytemuck-1.7.3
 byteorder-1.4.3
 cast-0.2.7
 cc-1.0.72
@@ -130,9 +130,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.4
-serde-1.0.131
+serde-1.0.132
 serde_cbor-0.11.2
-serde_derive-1.0.131
+serde_derive-1.0.132
 serde_json-1.0.73
 shlex-1.1.0
 signal-hook-0.3.12
