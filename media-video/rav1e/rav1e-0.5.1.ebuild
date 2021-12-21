@@ -91,7 +91,7 @@ num-integer-0.1.44
 num-iter-0.1.42
 num-rational-0.3.2
 num-traits-0.2.14
-num_cpus-1.13.0
+num_cpus-1.13.1
 object-0.27.1
 oorandom-11.1.3
 output_vt100-0.1.2
@@ -135,7 +135,7 @@ serde_cbor-0.11.2
 serde_derive-1.0.132
 serde_json-1.0.73
 shlex-1.1.0
-signal-hook-0.3.12
+signal-hook-0.3.13
 signal-hook-registry-1.4.0
 simd_helpers-0.1.0
 smallvec-1.7.0
