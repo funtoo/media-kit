@@ -142,7 +142,7 @@ smallvec-1.7.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.82
+syn-1.0.83
 system-deps-3.1.2
 termcolor-1.1.2
 terminal_size-0.1.17
