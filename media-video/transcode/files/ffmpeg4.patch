@@ -506,3 +506,4 @@ Index: transcode-1.1.7/import/import_ffmpeg.c
  #if LIBAVCODEC_VERSION_INT < ((52<<16)+(0<<8)+0)
      lavc_dec_context->error_resilience  = 2;
  #else
+

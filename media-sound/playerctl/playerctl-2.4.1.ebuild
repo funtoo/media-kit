@@ -1,45 +1,53 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit meson xdg-utils
+inherit bash-completion-r1 xdg-utils meson
 
 DESCRIPTION="A CLI utility to control media players over MPRIS"
 HOMEPAGE="https://github.com/acrisci/playerctl"
-SRC_URI="https://github.com/acrisci/playerctl/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/altdesktop/playerctl/tarball/e5304e9dc9a0c0c32b3689c3f141cf266d27f59c -> playerctl-2.4.1-e5304e9.tar.gz"
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="*"
 IUSE="doc introspection"
 
 RDEPEND="
 	dev-libs/glib:2
 	introspection? ( dev-libs/gobject-introspection:= )
 "
-# Override the meson dependency in MESON_DEPEND of meson.eclass
-# The eclass depends on '>=dev-util/meson-0.40.0' as of writing this
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}"
+BDEPEND="
+	doc? ( dev-util/gtk-doc )
 	dev-util/gdbus-codegen
 	dev-util/glib-utils
-	>=dev-util/meson-0.46.0
-	doc? ( dev-util/gtk-doc )
 	virtual/pkgconfig
 "
 
+post_src_unpack() {
+	mv "${WORKDIR}"/altdesktop-playerctl-* "${S}" || die
+}
+
 src_configure() {
 	local emesonargs=(
+		-Ddatadir=share
+		-Dbindir=bin
 		$(meson_use doc gtk-doc)
 		$(meson_use introspection)
 	)
 
-	xdg_environment_reset # 596166
+	xdg_environment_reset
 	meson_src_configure
 }
 
 src_install() {
 	meson_src_install
+
 	docinto examples
 	dodoc -r "${S}"/examples/.
 	docompress -x "/usr/share/doc/${PF}/examples"
+
+	newbashcomp data/playerctl.bash "${PN}"
+	insinto /usr/share/zsh/site-functions
+	newins data/playerctl.zsh _playerctl
 }
