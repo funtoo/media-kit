@@ -13,8 +13,12 @@ SLOT="0"
 KEYWORDS="*"
 RESTRICT="bindist strip"
 RDEPEND="
-	!media-gfx/blender-bin:2
-	!media-gfx/blender-bin:3
+	!media-gfx/blender-bin:2.83
+	!media-gfx/blender-bin:2.90
+	!media-gfx/blender-bin:2.91
+	!media-gfx/blender-bin:2.92
+	!media-gfx/blender-bin:2.93
+	!media-gfx/blender-bin:3.0
 "
 
 DEPEND="|| ( sys-libs/ncurses[tinfo] sys-libs/ncurses-compat[tinfo] )"
