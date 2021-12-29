@@ -158,7 +158,7 @@ unicode-width-0.1.9
 unicode-xid-0.2.2
 vec_map-0.8.2
 version-compare-0.0.11
-version_check-0.9.3
+version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.10.2+wasi-snapshot-preview1
