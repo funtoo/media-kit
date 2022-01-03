@@ -130,10 +130,10 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.4
-serde-1.0.132
+serde-1.0.133
 serde_cbor-0.11.2
-serde_derive-1.0.132
-serde_json-1.0.73
+serde_derive-1.0.133
+serde_json-1.0.74
 shlex-1.1.0
 signal-hook-0.3.13
 signal-hook-registry-1.4.0
