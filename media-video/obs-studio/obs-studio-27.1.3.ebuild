@@ -9,7 +9,7 @@ inherit cmake-utils python-single-r1 xdg-utils
 
 SRC_URI="
 	https://api.github.com/repos/obsproject/obs-studio/tarball/27.1.3 -> obs-studio-27.1.3.tar.gz
-	browser? ( https://github.com/obsproject/obs-browser/archive/3e76675a1a6c13fee9224c15b97dba24cb2539d3.tar.gz https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 )
+	browser? ( https://github.com/obsproject/obs-browser/archive/d78acd7d542810909693b4d37ad63e015e7c648e.tar.gz https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 )
 "
 KEYWORDS="*"
 
