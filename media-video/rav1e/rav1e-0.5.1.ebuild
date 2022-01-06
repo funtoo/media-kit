@@ -33,7 +33,7 @@ cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.3.0
 clap-2.34.0
-cmake-0.1.47
+cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
 crc32fast-1.3.0
@@ -142,7 +142,7 @@ smallvec-1.7.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.84
+syn-1.0.85
 system-deps-3.1.2
 termcolor-1.1.2
 terminal_size-0.1.17
