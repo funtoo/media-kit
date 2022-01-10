@@ -2,6 +2,8 @@
 
 EAPI=7
 
+inherit meson xdg-utils
+
 DESCRIPTION="Enlightenment image viewer written with EFL"
 HOMEPAGE="https://www.enlightenment.org/about-ephoto"
 SRC_URI="https://download.enlightenment.org/rel/apps/ephoto/ephoto-1.6.0.tar.xz"
@@ -17,9 +19,17 @@ BDEPEND="virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_configure() {
-	local myconf=(
-		$(use_enable nls)
+	local emesonargs=(
+		$(meson_use nls)
 	)
 
-	econf "${myconf[@]}"
+	meson_src_configure
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
