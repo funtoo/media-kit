@@ -13,7 +13,7 @@ aom-sys-0.3.0
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.2
+assert_cmd-2.0.3
 atty-0.2.14
 autocfg-1.0.1
 av-metrics-0.7.2
@@ -103,9 +103,9 @@ plotters-backend-0.3.2
 plotters-svg-0.3.1
 png-0.16.8
 ppv-lite86-0.2.16
-predicates-2.1.0
-predicates-core-1.0.2
-predicates-tree-1.0.4
+predicates-2.1.1
+predicates-core-1.0.3
+predicates-tree-1.0.5
 pretty_assertions-0.7.2
 proc-macro2-1.0.36
 quote-1.0.14
