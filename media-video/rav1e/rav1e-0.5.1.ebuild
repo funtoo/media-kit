@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
 anyhow-1.0.52
-aom-sys-0.3.0
+aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
@@ -18,7 +18,7 @@ atty-0.2.14
 autocfg-1.0.1
 av-metrics-0.7.2
 backtrace-0.3.63
-bindgen-0.58.1
+bindgen-0.59.2
 bitflags-1.3.2
 bitstream-io-1.2.0
 bstr-0.2.17
@@ -27,8 +27,9 @@ bytemuck-1.7.3
 byteorder-1.4.3
 cast-0.2.7
 cc-1.0.72
-cexpr-0.4.0
+cexpr-0.6.0
 cfg-expr-0.7.4
+cfg-expr-0.9.0
 cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.3.0
@@ -48,14 +49,14 @@ crossbeam-utils-0.8.6
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.21
-dav1d-sys-0.3.4
+dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.12
 difflib-0.4.0
 doc-comment-0.3.3
 either-1.6.1
 encode_unicode-0.3.6
-env_logger-0.8.4
+env_logger-0.9.0
 fern-0.6.0
 getrandom-0.2.4
 gimli-0.26.1
@@ -81,10 +82,11 @@ libloading-0.7.3
 log-0.4.14
 memchr-2.4.1
 memoffset-0.6.5
+minimal-lexical-0.2.1
 miniz_oxide-0.3.7
 miniz_oxide-0.4.4
-nasm-rs-0.2.2
-nom-5.1.2
+nasm-rs-0.2.3
+nom-7.1.0
 noop_proc_macro-0.3.0
 num-derive-0.3.3
 num-integer-0.1.44
@@ -133,7 +135,7 @@ semver-1.0.4
 serde-1.0.133
 serde_cbor-0.11.2
 serde_derive-1.0.133
-serde_json-1.0.74
+serde_json-1.0.75
 shlex-1.1.0
 signal-hook-0.3.13
 signal-hook-registry-1.4.0
@@ -144,6 +146,7 @@ strum-0.21.0
 strum_macros-0.21.1
 syn-1.0.85
 system-deps-3.1.2
+system-deps-6.0.0
 termcolor-1.1.2
 terminal_size-0.1.17
 termtree-0.2.4
@@ -158,6 +161,7 @@ unicode-width-0.1.9
 unicode-xid-0.2.2
 vec_map-0.8.2
 version-compare-0.0.11
+version-compare-0.1.0
 version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
@@ -168,7 +172,7 @@ wasm-bindgen-macro-0.2.78
 wasm-bindgen-macro-support-0.2.78
 wasm-bindgen-shared-0.2.78
 web-sys-0.3.55
-which-3.1.1
+which-4.2.2
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
