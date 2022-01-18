@@ -165,7 +165,7 @@ version-compare-0.1.0
 version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
-wasi-0.10.2+wasi-snapshot-preview1
+wasi-0.10.3+wasi-snapshot-preview1
 wasm-bindgen-0.2.78
 wasm-bindgen-backend-0.2.78
 wasm-bindgen-macro-0.2.78
