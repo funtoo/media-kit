@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=LGPL-2.1
 RDEPEND=ssl? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) )
 SLOT=0/9
-SRC_URI=http://www.live555.com/liveMedia/public/live.2022.01.17.tar.gz
+SRC_URI=http://www.live555.com/liveMedia/public/live.2022.01.20.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=271c0a6aa64f116b5901feccc781577c
+_md5_=29a36ffb4fb64230f69d44f34fea11f1
