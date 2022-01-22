@@ -8,7 +8,7 @@ adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.52
+anyhow-1.0.53
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -37,7 +37,7 @@ clap-2.34.0
 cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
-crc32fast-1.3.0
+crc32fast-1.3.1
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
@@ -110,7 +110,7 @@ predicates-core-1.0.3
 predicates-tree-1.0.5
 pretty_assertions-0.7.2
 proc-macro2-1.0.36
-quote-1.0.14
+quote-1.0.15
 rand-0.8.4
 rand_chacha-0.3.1
 rand_core-0.6.3
@@ -132,10 +132,10 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.4
-serde-1.0.133
+serde-1.0.134
 serde_cbor-0.11.2
-serde_derive-1.0.133
-serde_json-1.0.75
+serde_derive-1.0.134
+serde_json-1.0.76
 shlex-1.1.0
 signal-hook-0.3.13
 signal-hook-registry-1.4.0
