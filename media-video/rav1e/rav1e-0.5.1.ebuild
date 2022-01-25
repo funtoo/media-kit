@@ -76,7 +76,7 @@ js-sys-0.3.56
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.113
+libc-0.2.114
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.14
