@@ -12,6 +12,7 @@ SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/r
 
 LICENSE="BSD-2"
 SLOT="0"
+KEYWORDS="*"
 IUSE="nls"
 
 BDEPEND="
@@ -30,8 +31,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 PDEPEND="~media-plugins/audacious-plugins-${PV}"
-
-
 
 post_src_unpack() {
 	mv "${WORKDIR}/"audacious-media-player-audacious* "${S}" || die
