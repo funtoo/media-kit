@@ -8,7 +8,7 @@ inherit xdg autotools
 
 DESCRIPTION="Lightweight and versatile audio player"
 HOMEPAGE="https://audacious-media-player.org/"
-SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.1 -> audacious-4.1.tar.gz mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
+SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.1 -> audacious-4.1.tar.gz https://fastpull-us.funtoo.org/distfiles/gentoo_ice-xmms-0.2.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
