@@ -8,7 +8,7 @@ inherit check-reqs cmake flag-o-matic pax-utils python-single-r1 toolchain-funcs
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="https://www.blender.org"
-SRC_URI="https://download.blender.org/source/blender-3.0.0.tar.xz"
+SRC_URI="https://download.blender.org/source/blender-3.0.1.tar.xz"
 
 KEYWORDS="*"
 SLOT="${PV%.*}"
