@@ -17,7 +17,7 @@ assert_cmd-2.0.4
 atty-0.2.14
 autocfg-1.0.1
 av-metrics-0.7.2
-backtrace-0.3.63
+backtrace-0.3.64
 bindgen-0.59.2
 bitflags-1.3.2
 bitstream-io-1.2.0
