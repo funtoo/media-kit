@@ -12,4 +12,4 @@ REQUIRED_USE=chromecast? ( encode ) directx? ( ffmpeg ) fontconfig? ( truetype )
 SLOT=0/5-9
 SRC_URI=https://github.com/videolan/vlc/archive/3.0.16.tar.gz -> vlc-3.0.16.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=f93a3fd3ffb32916dc1b8ac0d7e40d15
+_md5_=83ad7ee03db24314b34222ae9f878436
