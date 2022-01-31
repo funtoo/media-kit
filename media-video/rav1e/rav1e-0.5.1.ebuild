@@ -63,6 +63,7 @@ gimli-0.26.1
 glob-0.3.0
 half-1.8.2
 heck-0.3.3
+heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
 image-0.23.14
@@ -146,7 +147,7 @@ strum-0.21.0
 strum_macros-0.21.1
 syn-1.0.86
 system-deps-3.1.2
-system-deps-6.0.0
+system-deps-6.0.1
 termcolor-1.1.2
 terminal_size-0.1.17
 termtree-0.2.4
