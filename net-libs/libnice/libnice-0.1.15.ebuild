@@ -1,31 +1,30 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 inherit multilib-minimal xdg
 
-DESCRIPTION="An implementation of the Interactive Connectivity Establishment standard (ICE)"
+DESCRIPTION="An implementation of the Interactice Connectivity Establishment standard (ICE)"
 HOMEPAGE="https://nice.freedesktop.org/wiki/"
 SRC_URI="https://nice.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="*"
-IUSE="+gnutls +introspection libressl +upnp"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+IUSE="+gnutls +introspection +upnp"
 
 RDEPEND="
 	>=dev-libs/glib-2.48:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1.30.0:= )
 	gnutls? ( >=net-libs/gnutls-2.12.0:0=[${MULTILIB_USEDEP}] )
 	!gnutls? (
-		libressl? ( dev-libs/libressl:0=[${MULTILIB_USEDEP}] )
-		!libressl? ( dev-libs/openssl:0=[${MULTILIB_USEDEP}] ) )
+		dev-libs/openssl:0=[${MULTILIB_USEDEP}] )
 	upnp? ( >=net-libs/gupnp-igd-0.2.4:=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	dev-util/glib-utils
 	>=dev-util/gtk-doc-am-1.10
-	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+	virtual/pkgconfig
 "
 
 multilib_src_configure() {
