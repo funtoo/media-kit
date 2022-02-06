@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst prepare setup unpack
+DEPEND=dev-python/virtualenv[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)]
+DESCRIPTION=A free media library that is intended for use with a plex client.
+EAPI=7
+HOMEPAGE=http://www.plex.tv/
+IUSE=system-openssl avahi python_single_target_python2_7 python_targets_python2_7
+KEYWORDS=*
+LICENSE=Plex
+RDEPEND=avahi? ( net-dns/avahi ) system-openssl? ( dev-libs/openssl:0 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] )
+REQUIRED_USE=^^ ( python_single_target_python2_7 )
+RESTRICT=mirror bindist strip
+SLOT=0
+SRC_URI=amd64? ( https://downloads.plex.tv/plex-media-server-new/1.25.4.5487-648a8f9f9/debian/plexmediaserver_1.25.4.5487-648a8f9f9_amd64.deb ) x86? ( https://downloads.plex.tv/plex-media-server-new/1.25.4.5487-648a8f9f9/debian/plexmediaserver_1.25.4.5487-648a8f9f9_i386.deb )
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	263e4bbfa6a84be6dc6272a6702aedca	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	user	e68863263b1e8611dacf381bec5c8b2b
+_md5_=0994bb2d9d3e0986a822b2d5db8b7d03
