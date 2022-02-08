@@ -15,7 +15,7 @@ arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
 assert_cmd-2.0.4
 atty-0.2.14
-autocfg-1.0.1
+autocfg-1.1.0
 av-metrics-0.7.2
 backtrace-0.3.64
 bindgen-0.59.2
@@ -37,7 +37,7 @@ clap-2.34.0
 cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
-crc32fast-1.3.1
+crc32fast-1.3.2
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
