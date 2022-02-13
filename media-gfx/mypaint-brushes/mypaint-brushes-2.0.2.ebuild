@@ -10,7 +10,7 @@ SRC_URI="https://api.github.com/repos/mypaint/mypaint-brushes/tarball/refs/tags/
 
 LICENSE="CC0-1.0"
 
-SLOT="2" # due to pkgconfig name "mypaint-brushes-2.0"
+SLOT="2" # This tracks major version
 KEYWORDS="*"
 
 # Chosen to exclude README symlink
