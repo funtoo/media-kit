@@ -112,10 +112,9 @@ predicates-tree-1.0.5
 pretty_assertions-0.7.2
 proc-macro2-1.0.36
 quote-1.0.15
-rand-0.8.4
+rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.3
-rand_hc-0.3.1
 rayon-1.5.1
 rayon-core-1.9.1
 regex-1.5.4
