@@ -29,7 +29,7 @@ cast-0.2.7
 cc-1.0.72
 cexpr-0.6.0
 cfg-expr-0.7.4
-cfg-expr-0.9.1
+cfg-expr-0.10.1
 cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.3.1
@@ -77,7 +77,7 @@ js-sys-0.3.56
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.117
+libc-0.2.118
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.14
@@ -146,7 +146,7 @@ strum-0.21.0
 strum_macros-0.21.1
 syn-1.0.86
 system-deps-3.1.2
-system-deps-6.0.1
+system-deps-6.0.2
 termcolor-1.1.2
 terminal_size-0.1.17
 termtree-0.2.4
