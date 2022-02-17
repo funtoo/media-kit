@@ -26,7 +26,7 @@ bumpalo-3.9.1
 bytemuck-1.7.3
 byteorder-1.4.3
 cast-0.2.7
-cc-1.0.72
+cc-1.0.73
 cexpr-0.6.0
 cfg-expr-0.7.4
 cfg-expr-0.10.1
