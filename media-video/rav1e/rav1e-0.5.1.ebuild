@@ -8,7 +8,7 @@ adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.53
+anyhow-1.0.54
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -77,7 +77,7 @@ js-sys-0.3.56
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.118
+libc-0.2.119
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.14
