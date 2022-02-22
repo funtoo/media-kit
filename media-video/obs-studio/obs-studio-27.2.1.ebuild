@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3+ )
 inherit cmake-utils python-single-r1 xdg-utils
 
 SRC_URI="
-	https://api.github.com/repos/obsproject/obs-studio/tarball/27.2.0 -> obs-studio-27.2.0.tar.gz
+	https://api.github.com/repos/obsproject/obs-studio/tarball/27.2.1 -> obs-studio-27.2.1.tar.gz
 	browser? ( https://github.com/obsproject/obs-browser/archive/915761778ec1eae99e740ad4bf63b40db3142ee2.tar.gz https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 )
 "
 KEYWORDS="*"
