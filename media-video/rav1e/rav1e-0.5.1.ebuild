@@ -29,7 +29,7 @@ cast-0.2.7
 cc-1.0.73
 cexpr-0.6.0
 cfg-expr-0.7.4
-cfg-expr-0.10.1
+cfg-expr-0.10.2
 cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.3.1
