@@ -7,7 +7,7 @@ inherit cmake
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="https://libjpeg-turbo.org/ https://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/ecf021bc0d6f435daacff7c35ccaeef0145df1b9 -> libjpeg-turbo-2.1.2-ecf021b.tar.gz"
+SRC_URI="https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/c5f269eb9665435271c05fbcaf8721fa58e9eafa -> libjpeg-turbo-2.1.3-c5f269e.tar.gz"
 
 LICENSE="BSD IJG ZLIB"
 SLOT="0/0.2"
