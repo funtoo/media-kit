@@ -4,7 +4,7 @@ EAPI=7
 
 inherit bash-completion-r1 xdg-utils meson
 
-DESCRIPTION="A CLI utility to control media players over MPRIS"
+DESCRIPTION="🎧 mpris media player command-line controller for vlc, mpv, RhythmBox, web browsers, cmus, mpd, spotify and others."
 HOMEPAGE="https://github.com/acrisci/playerctl"
 SRC_URI="https://github.com/altdesktop/playerctl/tarball/e5304e9dc9a0c0c32b3689c3f141cf266d27f59c -> playerctl-2.4.1-e5304e9.tar.gz"
 LICENSE="GPL-3+"
