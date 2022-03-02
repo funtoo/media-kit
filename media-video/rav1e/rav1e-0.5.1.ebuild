@@ -147,7 +147,7 @@ strum_macros-0.21.1
 syn-1.0.86
 system-deps-3.1.2
 system-deps-6.0.2
-termcolor-1.1.2
+termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
 textwrap-0.11.0
