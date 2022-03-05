@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libxml2-2.9.1-r4:2 dev-libs/libltdl:0 >=virtual/libusb-1-r1:1 cameras_ax203? ( >=media-libs/gd-2.0.35-r4:= ) cameras_st2205? ( >=media-libs/gd-2.0.35-r4:= ) exif? ( >=media-libs/libexif-0.6.21-r1:= ) gd? ( >=media-libs/gd-2.0.35-r4:=[jpeg] ) jpeg? ( >=virtual/jpeg-0-r2:0 ) serial? ( >=dev-libs/lockdev-1.0.3.1.2-r2 ) !<sys-fs/udev-201
 SLOT=0/6
-SRC_URI=https://github.com/gphoto/libgphoto2/archive/v2.5.28.tar.gz -> libgphoto2-2.5.28.tar.gz
+SRC_URI=https://github.com/gphoto/libgphoto2/archive/v2.5.29.tar.gz -> libgphoto2-2.5.29.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac	user	e68863263b1e8611dacf381bec5c8b2b	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=b633341323c8d9706bd82910a192bd91
+_md5_=651f35452d3498878294840111f3e391
