@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0/7.1.0.27
 SRC_URI=https://api.github.com/repos/ImageMagick/ImageMagick/tarball/7.1.0-27 -> imagemagick-7.1.0-27.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=b2e02ca2573823bbdaa2fccd5cdde139
+_md5_=1ffe02480041d8aba93fd99213323b7a
