@@ -6,7 +6,7 @@ inherit autotools flag-o-matic toolchain-funcs virtualx xdg
 
 DESCRIPTION="Media player and framework with support for most multimedia files and streaming"
 HOMEPAGE="https://www.videolan.org/vlc/"
-SRC_URI="https://github.com/videolan/vlc/archive/3.0.17.2.tar.gz -> vlc-3.0.17.2.tar.gz"
+SRC_URI="https://github.com/videolan/vlc/archive/3.0.17.3.tar.gz -> vlc-3.0.17.3.tar.gz"
 
 KEYWORDS="*"
 LICENSE="LGPL-2.1 GPL-2"
