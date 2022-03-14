@@ -77,7 +77,7 @@ js-sys-0.3.56
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.119
+libc-0.2.120
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.14
@@ -144,7 +144,7 @@ smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.86
+syn-1.0.87
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
