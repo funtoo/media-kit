@@ -41,11 +41,11 @@ crc32fast-1.3.2
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
-crossbeam-channel-0.5.2
+crossbeam-channel-0.5.3
 crossbeam-deque-0.8.1
-crossbeam-epoch-0.9.7
-crossbeam-queue-0.3.4
-crossbeam-utils-0.8.7
+crossbeam-epoch-0.9.8
+crossbeam-queue-0.3.5
+crossbeam-utils-0.8.8
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.21
