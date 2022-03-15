@@ -87,7 +87,7 @@ minimal-lexical-0.2.1
 miniz_oxide-0.3.7
 miniz_oxide-0.4.4
 nasm-rs-0.2.4
-nom-7.1.0
+nom-7.1.1
 noop_proc_macro-0.3.0
 num-derive-0.3.3
 num-integer-0.1.44
@@ -144,7 +144,7 @@ smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.87
+syn-1.0.88
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
@@ -162,7 +162,6 @@ unicode-xid-0.2.2
 vec_map-0.8.2
 version-compare-0.0.11
 version-compare-0.1.0
-version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.10.2+wasi-snapshot-preview1
