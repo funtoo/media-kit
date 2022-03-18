@@ -41,14 +41,14 @@ crc32fast-1.3.2
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
-crossbeam-channel-0.5.3
+crossbeam-channel-0.5.4
 crossbeam-deque-0.8.1
 crossbeam-epoch-0.9.8
 crossbeam-queue-0.3.5
 crossbeam-utils-0.8.8
 csv-1.1.6
 csv-core-0.1.10
-ctor-0.1.21
+ctor-0.1.22
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.12
@@ -111,7 +111,7 @@ predicates-core-1.0.3
 predicates-tree-1.0.5
 pretty_assertions-0.7.2
 proc-macro2-1.0.36
-quote-1.0.15
+quote-1.0.16
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.3
