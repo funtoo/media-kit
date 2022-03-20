@@ -171,7 +171,7 @@ wasm-bindgen-macro-0.2.79
 wasm-bindgen-macro-support-0.2.79
 wasm-bindgen-shared-0.2.79
 web-sys-0.3.56
-which-4.2.4
+which-4.2.5
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
