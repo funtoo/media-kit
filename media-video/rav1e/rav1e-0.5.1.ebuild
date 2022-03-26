@@ -20,7 +20,7 @@ av-metrics-0.7.2
 backtrace-0.3.64
 bindgen-0.59.2
 bitflags-1.3.2
-bitstream-io-1.2.0
+bitstream-io-1.3.0
 bstr-0.2.17
 bumpalo-3.9.1
 bytemuck-1.8.0
@@ -111,7 +111,7 @@ predicates-core-1.0.3
 predicates-tree-1.0.5
 pretty_assertions-0.7.2
 proc-macro2-1.0.36
-quote-1.0.16
+quote-1.0.17
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.3
