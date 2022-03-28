@@ -58,7 +58,7 @@ either-1.6.1
 encode_unicode-0.3.6
 env_logger-0.9.0
 fern-0.6.0
-getrandom-0.2.5
+getrandom-0.2.6
 gimli-0.26.1
 glob-0.3.0
 half-1.8.2
@@ -131,7 +131,7 @@ ryu-1.0.9
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
-semver-1.0.6
+semver-1.0.7
 serde-1.0.136
 serde_cbor-0.11.2
 serde_derive-1.0.136
