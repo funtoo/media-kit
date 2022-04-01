@@ -2,14 +2,14 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3+ )
 
-inherit python-any-r1 toolchain-funcs
+inherit python-any-r1 toolchain-funcs xdg
 
 
 DESCRIPTION="Library for making brushstrokes"
 HOMEPAGE="https://github.com/mypaint/libmypaint"
-SRC_URI="https://api.github.com/repos/mypaint/libmypaint/tarball/refs/tags/v1.6.1 -> libmypaint-1.6.1-2768251dacce3939136c839aeca413f4aa4241d0.tar.gz"
+SRC_URI="https://github.com/mypaint/libmypaint/releases/download/v1.6.1/libmypaint-1.6.1.tar.xz -> libmypaint-1.6.1.tar.xz"
 
 LICENSE="ISC"
 # See https://github.com/mypaint/libmypaint/releases/tag/v1.6.1
@@ -37,14 +37,6 @@ RDEPEND="
 	${DEPEND}
 	!<media-gfx/mypaint-1.2.1
 "
-post_src_unpack() {
-	mv "${WORKDIR}/"mypaint-libmypaint* "${S}" || die
-}
-
-src_prepare() {
-    default
-    ./autogen.sh || die
-}
 
 src_configure() {
 	tc-ld-disable-gold # bug 589266
