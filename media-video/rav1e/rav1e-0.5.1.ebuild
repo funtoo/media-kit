@@ -115,8 +115,8 @@ quote-1.0.18
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.3
-rayon-1.5.1
-rayon-core-1.9.1
+rayon-1.5.2
+rayon-core-1.9.2
 regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
