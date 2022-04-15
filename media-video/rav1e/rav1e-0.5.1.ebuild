@@ -57,7 +57,7 @@ doc-comment-0.3.3
 either-1.6.1
 encode_unicode-0.3.6
 env_logger-0.9.0
-fern-0.6.0
+fern-0.6.1
 getrandom-0.2.6
 gimli-0.26.1
 glob-0.3.0
