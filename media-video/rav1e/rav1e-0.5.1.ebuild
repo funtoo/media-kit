@@ -8,7 +8,7 @@ adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.56
+anyhow-1.0.57
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
