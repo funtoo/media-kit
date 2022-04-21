@@ -39,3 +39,5 @@ Copyright
 | Copyright 2017-2022 Sony Interactive Entertainment, Inc.
 | Copyright 2014-2022 Roman Kuzmitskii (https://github.com/damex) and GitHub repository contributors.
 | Copyright 2013-2022 Federico Moro (https://github.com/fmoro) and GitHub repository contributors.
+| Copyright 2017-2022 Brenton Horne (https://github.com/fusion809) and GitHub repository contributors.
+| Copyright 2019-2022 PF4Public (https://github.com/PF4Public) and GitHub repository contributors.
