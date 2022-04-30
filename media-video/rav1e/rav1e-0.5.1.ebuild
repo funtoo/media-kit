@@ -81,7 +81,7 @@ libc-0.2.125
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.16
-memchr-2.4.1
+memchr-2.5.0
 memoffset-0.6.5
 minimal-lexical-0.2.1
 miniz_oxide-0.3.7
@@ -135,7 +135,7 @@ semver-1.0.7
 serde-1.0.136
 serde_cbor-0.11.2
 serde_derive-1.0.136
-serde_json-1.0.79
+serde_json-1.0.80
 shlex-1.1.0
 signal-hook-0.3.13
 signal-hook-registry-1.4.0
