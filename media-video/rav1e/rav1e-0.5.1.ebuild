@@ -81,7 +81,7 @@ libc-0.2.125
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.16
-memchr-2.4.1
+memchr-2.5.0
 memoffset-0.6.5
 minimal-lexical-0.2.1
 miniz_oxide-0.3.7
@@ -90,7 +90,7 @@ nasm-rs-0.2.4
 nom-7.1.1
 noop_proc_macro-0.3.0
 num-derive-0.3.3
-num-integer-0.1.44
+num-integer-0.1.45
 num-iter-0.1.43
 num-rational-0.3.2
 num-traits-0.2.14
