@@ -132,9 +132,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.7
-serde-1.0.136
+serde-1.0.137
 serde_cbor-0.11.2
-serde_derive-1.0.136
+serde_derive-1.0.137
 serde_json-1.0.80
 shlex-1.1.0
 signal-hook-0.3.13
@@ -151,8 +151,8 @@ termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
 textwrap-0.11.0
-thiserror-1.0.30
-thiserror-impl-1.0.30
+thiserror-1.0.31
+thiserror-impl-1.0.31
 time-0.1.43
 tinytemplate-1.2.1
 toml-0.5.9
