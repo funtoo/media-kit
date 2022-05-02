@@ -158,7 +158,7 @@ tinytemplate-1.2.1
 toml-0.5.9
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
-unicode-xid-0.2.2
+unicode-xid-0.2.3
 vec_map-0.8.2
 version-compare-0.0.11
 version-compare-0.1.0
