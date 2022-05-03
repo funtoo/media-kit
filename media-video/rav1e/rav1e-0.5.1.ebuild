@@ -80,7 +80,7 @@ lazycell-1.3.0
 libc-0.2.125
 libfuzzer-sys-0.3.5
 libloading-0.7.3
-log-0.4.16
+log-0.4.17
 memchr-2.5.0
 memoffset-0.6.5
 minimal-lexical-0.2.1
