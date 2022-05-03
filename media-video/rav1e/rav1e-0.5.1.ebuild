@@ -93,7 +93,7 @@ num-derive-0.3.3
 num-integer-0.1.45
 num-iter-0.1.43
 num-rational-0.3.2
-num-traits-0.2.14
+num-traits-0.2.15
 num_cpus-1.13.1
 object-0.28.3
 oorandom-11.1.3
