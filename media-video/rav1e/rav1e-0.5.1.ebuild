@@ -95,7 +95,7 @@ num-iter-0.1.43
 num-rational-0.3.2
 num-traits-0.2.15
 num_cpus-1.13.1
-object-0.28.3
+object-0.28.4
 oorandom-11.1.3
 output_vt100-0.1.3
 paste-1.0.7
