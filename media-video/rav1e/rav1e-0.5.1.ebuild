@@ -116,7 +116,7 @@ rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.3
 rayon-1.5.2
-rayon-core-1.9.2
+rayon-core-1.9.3
 regex-1.5.5
 regex-automata-0.1.10
 regex-syntax-0.6.25
@@ -144,7 +144,7 @@ smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.93
+syn-1.0.94
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
