@@ -71,7 +71,7 @@ interpolate_name-0.2.3
 itertools-0.8.2
 itertools-0.10.3
 itoa-0.4.8
-itoa-1.0.1
+itoa-1.0.2
 jobserver-0.1.24
 js-sys-0.3.57
 lab-0.11.0
@@ -127,7 +127,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-ryu-1.0.9
+ryu-1.0.10
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
