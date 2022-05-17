@@ -77,7 +77,7 @@ js-sys-0.3.57
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.125
+libc-0.2.126
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.17
@@ -110,7 +110,7 @@ predicates-2.1.1
 predicates-core-1.0.3
 predicates-tree-1.0.5
 pretty_assertions-0.7.2
-proc-macro2-1.0.38
+proc-macro2-1.0.39
 quote-1.0.18
 rand-0.8.5
 rand_chacha-0.3.1
@@ -137,14 +137,14 @@ serde_cbor-0.11.2
 serde_derive-1.0.137
 serde_json-1.0.81
 shlex-1.1.0
-signal-hook-0.3.13
+signal-hook-0.3.14
 signal-hook-registry-1.4.0
 simd_helpers-0.1.0
 smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.94
+syn-1.0.95
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
@@ -156,9 +156,9 @@ thiserror-impl-1.0.31
 time-0.1.43
 tinytemplate-1.2.1
 toml-0.5.9
+unicode-ident-1.0.0
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
-unicode-xid-0.2.3
 vec_map-0.8.2
 version-compare-0.0.11
 version-compare-0.1.0
