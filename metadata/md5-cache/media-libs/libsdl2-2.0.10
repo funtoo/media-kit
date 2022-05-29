@@ -12,4 +12,4 @@ REQUIRED_USE=alsa? ( sound ) gles? ( video ) nas? ( sound ) opengl? ( video ) pu
 SLOT=0
 SRC_URI=http://www.libsdl.org/release/SDL2-2.0.10.tar.gz
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=2db07d4645df251294b74bf6e80d0beb
+_md5_=731d26ae4dd83804d1b9a0efb5ae4770
