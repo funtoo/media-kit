@@ -85,7 +85,7 @@ memchr-2.5.0
 memoffset-0.6.5
 minimal-lexical-0.2.1
 miniz_oxide-0.3.7
-miniz_oxide-0.5.1
+miniz_oxide-0.5.3
 nasm-rs-0.2.4
 nom-7.1.1
 noop_proc_macro-0.3.0
