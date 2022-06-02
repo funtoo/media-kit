@@ -144,7 +144,7 @@ smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.95
+syn-1.0.96
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
