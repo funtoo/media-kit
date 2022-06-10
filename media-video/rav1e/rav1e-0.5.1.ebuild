@@ -20,7 +20,7 @@ av-metrics-0.7.2
 backtrace-0.3.65
 bindgen-0.59.2
 bitflags-1.3.2
-bitstream-io-1.3.0
+bitstream-io-1.4.0
 bstr-0.2.17
 bumpalo-3.10.0
 bytemuck-1.9.1
@@ -131,7 +131,7 @@ ryu-1.0.10
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
-semver-1.0.9
+semver-1.0.10
 serde-1.0.137
 serde_cbor-0.11.2
 serde_derive-1.0.137
