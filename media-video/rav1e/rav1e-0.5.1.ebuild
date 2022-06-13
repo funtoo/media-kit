@@ -20,7 +20,7 @@ av-metrics-0.7.2
 backtrace-0.3.65
 bindgen-0.59.2
 bitflags-1.3.2
-bitstream-io-1.4.0
+bitstream-io-1.5.0
 bstr-0.2.17
 bumpalo-3.10.0
 bytemuck-1.9.1
