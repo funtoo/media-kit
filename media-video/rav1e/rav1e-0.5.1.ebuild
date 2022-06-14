@@ -58,7 +58,7 @@ either-1.6.1
 encode_unicode-0.3.6
 env_logger-0.9.0
 fern-0.6.1
-getrandom-0.2.6
+getrandom-0.2.7
 gimli-0.26.1
 glob-0.3.0
 half-1.8.2
@@ -153,10 +153,10 @@ termtree-0.2.4
 textwrap-0.11.0
 thiserror-1.0.31
 thiserror-impl-1.0.31
-time-0.1.43
+time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
-unicode-ident-1.0.0
+unicode-ident-1.0.1
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
 vec_map-0.8.2
@@ -164,7 +164,8 @@ version-compare-0.0.11
 version-compare-0.1.0
 wait-timeout-0.2.0
 walkdir-2.3.2
-wasi-0.10.2+wasi-snapshot-preview1
+wasi-0.10.0+wasi-snapshot-preview1
+wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.80
 wasm-bindgen-backend-0.2.80
 wasm-bindgen-macro-0.2.80
