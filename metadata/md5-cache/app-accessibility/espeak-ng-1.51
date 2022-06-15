@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig man? ( || ( app-text/ronn-ng app-text/ronn ) ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=!app-accessibility/espeak mbrola? ( app-accessibility/mbrola ) sound? ( media-libs/pcaudiolib )
+DESCRIPTION=Software speech synthesizer for English, and some other languages
+EAPI=7
+HOMEPAGE=https://github.com/espeak-ng/espeak-ng
+IUSE=+async +klatt l10n_ru l10n_zh man mbrola +sound
+KEYWORDS=*
+LICENSE=GPL-3+ unicode
+RDEPEND=!app-accessibility/espeak mbrola? ( app-accessibility/mbrola ) sound? ( media-libs/pcaudiolib ) sound? ( media-sound/sox )
+SLOT=0
+SRC_URI=https://github.com/espeak-ng/espeak-ng/archive/1.51.tar.gz -> espeak-ng-1.51.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=0d0625241578ca182056b9d05cb0201c
