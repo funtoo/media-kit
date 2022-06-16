@@ -41,11 +41,11 @@ crc32fast-1.3.2
 criterion-0.3.5
 criterion-plot-0.4.4
 crossbeam-0.8.1
-crossbeam-channel-0.5.4
+crossbeam-channel-0.5.5
 crossbeam-deque-0.8.1
-crossbeam-epoch-0.9.8
+crossbeam-epoch-0.9.9
 crossbeam-queue-0.3.5
-crossbeam-utils-0.8.8
+crossbeam-utils-0.8.9
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.22
@@ -96,6 +96,7 @@ num-rational-0.3.2
 num-traits-0.2.15
 num_cpus-1.13.1
 object-0.28.4
+once_cell-1.12.0
 oorandom-11.1.3
 output_vt100-0.1.3
 paste-1.0.7
