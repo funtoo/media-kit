@@ -8,7 +8,7 @@ adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.57
+anyhow-1.0.58
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -145,7 +145,7 @@ smallvec-1.8.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.96
+syn-1.0.97
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3
