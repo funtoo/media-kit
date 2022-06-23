@@ -45,7 +45,7 @@ crossbeam-channel-0.5.5
 crossbeam-deque-0.8.1
 crossbeam-epoch-0.9.9
 crossbeam-queue-0.3.5
-crossbeam-utils-0.8.9
+crossbeam-utils-0.8.10
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.22
