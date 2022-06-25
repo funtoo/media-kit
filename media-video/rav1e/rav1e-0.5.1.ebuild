@@ -141,7 +141,7 @@ shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
 simd_helpers-0.1.0
-smallvec-1.8.0
+smallvec-1.8.1
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
