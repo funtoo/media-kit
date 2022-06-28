@@ -3,95 +3,95 @@
 EAPI=7
 
 CMAKE_MAKEFILE_GENERATOR="emake"
-PYTHON_COMPAT=( python2+ )
+PYTHON_COMPAT=( python3+ )
 
-inherit cmake-utils python-single-r1
+inherit cmake flag-o-matic python-single-r1
 
 DESCRIPTION="Plugins for the video editor media-video/avidemux"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
+SRC_URI="https://api.github.com/repos/mean00/avidemux2/tarball/2.8.0 -> avidemux-2.8.0.tar.gz"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
-SLOT="2.7"
-IUSE="a52 aac aften alsa amr dcaenc debug dts fdk fontconfig fribidi jack lame libsamplerate cpu_flags_x86_mmx nvenc opengl opus oss pulseaudio qt5 truetype twolame vdpau vorbis vpx x264 x265 xv xvid"
-KEYWORDS="~amd64 ~x86"
-
-GITHUB_REPO="avidemux2"
-GITHUB_USER="mean00"
-GITHUB_TAG="${PV}"
-SRC_URI="https://www.github.com/${GITHUB_USER}/${GITHUB_REPO}/tarball/${GITHUB_TAG} -> ${PN}-${GITHUB_TAG}.tar.gz"
-
-src_unpack() {
-	unpack ${A}
-	mv "${WORKDIR}/${GITHUB_USER}-${GITHUB_REPO}"-??????? "${S}" || die
-}
+SLOT="$(ver_cut 1-2)"
+IUSE="a52 aac aften alsa amr dcaenc debug dts fdk fontconfig fribidi jack lame libsamplerate cpu_flags_x86_mmx opengl opus oss pulseaudio qt5 truetype twolame vdpau vorbis vpx x264 x265 xv xvid"
+KEYWORDS="*"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-COMMON_DEPEND="${PYTHON_DEPS}
+# dev-lang/spidermonkey is not required anymore
+# see https://github.com/mean00/avidemux2/blob/master/avidemux_plugins/ADM_scriptEngines/CMakeLists.txt
+COMMON_DEPEND="
+	${PYTHON_DEPS}
 	~media-libs/avidemux-core-${PV}:${SLOT}[vdpau?]
 	~media-video/avidemux-${PV}:${SLOT}[opengl?,qt5?]
-	dev-lang/spidermonkey
 	dev-libs/libxml2:2
-	media-libs/a52dec:0
+	media-libs/a52dec
 	media-libs/libass:0=
-	media-libs/libmad:0
-	media-libs/libmp4v2:0
+	media-libs/libmad
+	media-libs/libmp4v2
 	media-libs/libpng:0=
-	virtual/libiconv:0
+	virtual/libiconv
 	aac? (
-		>=media-libs/faac-1.29.9.2:0
-		media-libs/faad2:0
+		media-libs/faac
+		media-libs/faad2
 	)
-	aften? ( media-libs/aften:0 )
-	alsa? ( >=media-libs/alsa-lib-1.0.3b-r2:0 )
-	amr? ( media-libs/opencore-amr:0 )
-	dcaenc? ( media-sound/dcaenc:0 )
-	dts? ( media-libs/libdca:0 )
+	aften? ( media-libs/aften )
+	alsa? ( media-libs/alsa-lib )
+	amr? ( media-libs/opencore-amr )
+	dcaenc? ( media-sound/dcaenc )
+	dts? ( media-libs/libdca )
 	fdk? ( media-libs/fdk-aac:0= )
 	fontconfig? ( media-libs/fontconfig:1.0 )
-	fribidi? ( dev-libs/fribidi:0 )
+	fribidi? ( dev-libs/fribidi )
 	jack? (
-		media-sound/jack-audio-connection-kit:0
-		libsamplerate? ( media-libs/libsamplerate:0 )
+		virtual/jack
+		libsamplerate? ( media-libs/libsamplerate )
 	)
-	lame? ( media-sound/lame:0 )
-	nvenc? ( amd64? ( media-video/nvidia_video_sdk:0 ) )
-	opus? ( media-libs/opus:0 )
-	pulseaudio? ( media-sound/pulseaudio:0 )
+	lame? ( media-sound/lame )
+	opus? ( media-libs/opus )
+	pulseaudio? ( media-sound/pulseaudio )
 	qt5? (
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
 		dev-qt/qtwidgets:5
 	)
 	truetype? ( media-libs/freetype:2 )
-	twolame? ( media-sound/twolame:0 )
-	vorbis? ( media-libs/libvorbis:0 )
+	twolame? ( media-sound/twolame )
+	vorbis? ( media-libs/libvorbis )
 	vpx? ( media-libs/libvpx:0= )
 	x264? ( media-libs/x264:0= )
 	x265? ( media-libs/x265:0= )
 	xv? (
-		x11-libs/libX11:0
-		x11-libs/libXext:0
-		x11-libs/libXv:0
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXv
 	)
-	xvid? ( media-libs/xvid:0 )
+	xvid? ( media-libs/xvid )
 "
-DEPEND="${COMMON_DEPEND}
-	oss? ( virtual/os-headers:0 )
+DEPEND="
+	${COMMON_DEPEND}
+	oss? ( virtual/os-headers )
 "
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="
+	${COMMON_DEPEND}
 	!<media-libs/avidemux-plugins-${PV}
 "
 
 S="${WORKDIR}/avidemux2-${PV}"
 
-PATCHES=( "${FILESDIR}"/${PN}-2.6.20-optional-pulse.patch )
+PATCHES=( "${FILESDIR}/${PN}-2.8.0-optional-pulse.patch" )
+
+post_src_unpack() {
+	if [ ! -d "${S}" ]; then
+		mv mean00-avidemux2* "${S}" || die
+	fi
+}
 
 src_prepare() {
 	default
 
-	# Don't reapply PATCHES during cmake-utils_src_prepare
+	# Don't reapply PATCHES during cmake_src_prepare
 	unset PATCHES
 
 	processes="buildPluginsCommon:avidemux_plugins
@@ -99,7 +99,7 @@ src_prepare() {
 	use qt5 && processes+=" buildPluginsQt4:avidemux_plugins"
 
 	for process in ${processes} ; do
-		CMAKE_USE_DIR="${S}"/${process#*:} cmake-utils_src_prepare
+		CMAKE_USE_DIR="${S}"/${process#*:} cmake_src_prepare
 	done
 }
 
@@ -125,7 +125,8 @@ src_configure() {
 			-DFONTCONFIG="$(usex fontconfig)"
 			-DJACK="$(usex jack)"
 			-DLAME="$(usex lame)"
-			-DNVENC="$(usex nvenc)"
+			-DNVENC=no
+			-DOPENGL="$(usex opengl)"
 			-DOPUS="$(usex opus)"
 			-DOSS="$(usex oss)"
 			-DPULSEAUDIOSIMPLE="$(usex pulseaudio)"
@@ -146,28 +147,23 @@ src_configure() {
 			-DUSE_EXTERNAL_LIBMP4V2=yes
 		)
 
-		if use qt5 ; then
-			mycmakeargs+=( -DENABLE_QT5=True )
-		fi
+		use qt5 && mycmakeargs+=( -DENABLE_QT5=True )
+		use debug && mycmakeargs+=( -DVERBOSE=1 -DADM_DEBUG=1 )
 
-		if use debug ; then
-			mycmakeargs+=( -DVERBOSE=1 -DADM_DEBUG=1 )
-		fi
-
-		CMAKE_USE_DIR="${S}"/${process#*:} BUILD_DIR="${build}" cmake-utils_src_configure
+		CMAKE_USE_DIR="${S}"/${process#*:} BUILD_DIR="${build}" cmake_src_configure
 	done
 }
 
 src_compile() {
 	for process in ${processes} ; do
 		local build="${WORKDIR}/${P}_build/${process%%:*}"
-		BUILD_DIR="${build}" cmake-utils_src_compile
+		BUILD_DIR="${build}" cmake_src_compile
 	done
 }
 
 src_install() {
 	for process in ${processes} ; do
 		local build="${WORKDIR}/${P}_build/${process%%:*}"
-		BUILD_DIR="${build}" cmake-utils_src_install
+		BUILD_DIR="${build}" cmake_src_install
 	done
 }
