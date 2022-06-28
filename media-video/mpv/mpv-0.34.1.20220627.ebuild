@@ -9,7 +9,7 @@ inherit bash-completion-r1 eapi7-ver flag-o-matic gnome2-utils pax-utils python-
 
 DESCRIPTION="Media player based on MPlayer and mplayer2"
 HOMEPAGE="https://mpv.io/ https://github.com/mpv-player/mpv"
-SRC_URI="https://github.com/mpv-player/mpv/archive/602995fd40f03440f5fa64113b6188cb46ffcc9c.tar.gz -> mpv-0.34.1.20220611-602995fd40f03440f5fa64113b6188cb46ffcc9c.tar.gz https://waf.io/waf-2.0.20"
+SRC_URI="https://github.com/mpv-player/mpv/archive/8557ba76e2e87ea2caa341d4185d52cedc4958c1.tar.gz -> mpv-0.34.1.20220627-8557ba76e2e87ea2caa341d4185d52cedc4958c1.tar.gz https://waf.io/waf-2.0.20"
 
 DOCS=( RELEASE_NOTES README.md DOCS/{client-api,interface}-changes.rst )
 
@@ -95,6 +95,7 @@ COMMON_DEPEND="
 		>=dev-libs/wayland-1.6.0
 		>=dev-libs/wayland-protocols-1.14
 		>=x11-libs/libxkbcommon-0.3.0
+		vulkan? ( media-libs/vulkan-loader[wayland] )
 	)
 	X? (
 		x11-libs/libX11
