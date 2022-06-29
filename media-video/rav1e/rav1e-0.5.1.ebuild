@@ -51,7 +51,7 @@ csv-core-0.1.10
 ctor-0.1.22
 dav1d-sys-0.3.5
 deflate-0.8.6
-diff-0.1.12
+diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
 either-1.6.1
