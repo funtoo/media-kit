@@ -1,6 +1,7 @@
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="C library for encoding data in a QR Code symbol"
 HOMEPAGE="https://fukuchi.org/works/qrencode/"
@@ -8,8 +9,9 @@ SRC_URI="https://fukuchi.org/works/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0/4"
-KEYWORDS="*"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~x64-macos"
 IUSE="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="media-libs/libpng:0="
 DEPEND="${RDEPEND}
@@ -27,9 +29,7 @@ src_configure() {
 
 src_test() {
 	cd tests || die
-	# the configure test checks if reconfiguring works...
-	sed -i -e '/configure/d' test_all.sh || die
-	sh test_all.sh || die
+	./test_basic.sh || die
 }
 
 src_install() {

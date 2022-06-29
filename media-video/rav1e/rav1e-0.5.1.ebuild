@@ -54,7 +54,7 @@ deflate-0.8.6
 diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
-either-1.6.1
+either-1.7.0
 encode_unicode-0.3.6
 env_logger-0.9.0
 fern-0.6.1
@@ -136,7 +136,7 @@ semver-1.0.11
 serde-1.0.137
 serde_cbor-0.11.2
 serde_derive-1.0.137
-serde_json-1.0.81
+serde_json-1.0.82
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
