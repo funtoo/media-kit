@@ -274,8 +274,6 @@ HOMEPAGE="https://github.com/Rigellute/spotify-tui"
 SRC_URI="https://api.github.com/repos/Rigellute/spotify-tui/tarball/v0.25.0 -> spotify-tui-0.25.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
-RESTRICT="mirror"
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"

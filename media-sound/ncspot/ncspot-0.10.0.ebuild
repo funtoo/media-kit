@@ -385,7 +385,6 @@ DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
 SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.10.0 -> ncspot-v0.10.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
-RESTRICT="mirror"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="*"
