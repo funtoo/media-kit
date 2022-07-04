@@ -1,33 +1,27 @@
-# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit multilib-minimal toolchain-funcs
+inherit multilib-minimal toolchain-funcs user
 
 DESCRIPTION="small audio and MIDI framework part of the OpenBSD project"
 HOMEPAGE="http://www.sndio.org/"
-if [[ "${PV}" == "9999" ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://caoua.org/git/sndio"
-	EGIT_MIN_CLONE_TYPE="single+tags"
-else
-	SRC_URI="http://www.sndio.org/${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv sparc x86"
-fi
+SRC_URI="http://www.sndio.org/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0/7.1"
+KEYWORDS="*"
 IUSE="alsa"
 
 DEPEND="
 	dev-libs/libbsd[${MULTILIB_USEDEP}]
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 "
-RDEPEND="
-	${DEPEND}
-	acct-user/sndiod
-"
+RDEPEND="${DEPEND}"
+
+pkg_setup(){
+	enewuser sndiod -1 -1 -1 audio
+}
 
 src_prepare() {
 	default
