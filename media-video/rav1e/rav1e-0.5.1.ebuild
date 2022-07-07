@@ -26,6 +26,7 @@ bumpalo-3.10.0
 bytemuck-1.10.0
 byteorder-1.4.3
 cast-0.2.7
+cast-0.3.0
 cc-1.0.73
 cexpr-0.6.0
 cfg-expr-0.7.4
@@ -38,7 +39,7 @@ cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
 crc32fast-1.3.2
-criterion-0.3.5
+criterion-0.3.6
 criterion-plot-0.4.4
 crossbeam-0.8.1
 crossbeam-channel-0.5.5
