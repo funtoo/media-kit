@@ -157,7 +157,7 @@ thiserror-impl-1.0.31
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
-unicode-ident-1.0.1
+unicode-ident-1.0.2
 unicode-segmentation-1.9.0
 unicode-width-0.1.9
 vec_map-0.8.2

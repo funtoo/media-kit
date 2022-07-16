@@ -10,7 +10,7 @@ LICENSE=LGPL-2.1+
 RDEPEND=glslang? ( dev-util/glslang ) lcms? ( media-libs/lcms:2 ) opengl? ( media-libs/libepoxy ) shaderc? ( >=media-libs/shaderc-2017.2 ) vulkan? ( dev-util/vulkan-headers media-libs/vulkan-loader )
 REQUIRED_USE=vulkan? ( || ( glslang shaderc ) )
 RESTRICT=test
-SLOT=0/192
-SRC_URI=https://api.github.com/repos/haasn/libplacebo/tarball/refs/tags/v4.192.1 -> libplacebo-4.192.1.tar.gz
+SLOT=0/208
+SRC_URI=https://api.github.com/repos/haasn/libplacebo/tarball/refs/tags/v4.208.0 -> libplacebo-4.208.0.tar.gz
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	meson	2fbe03e3b496f82fd941bcdb9d351c91	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	32393cac272daca4c136cc44e6005b67	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=bb5c42586652ddd6a5cecb69d66a1041
+_md5_=c36ac0abeb7e725eba626671b99f6d2b
