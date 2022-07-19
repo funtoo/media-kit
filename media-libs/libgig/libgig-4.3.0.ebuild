@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="C++ library for loading Gigasampler and DLS level 1/2 files"
 HOMEPAGE="https://www.linuxsampler.org/libgig/"
-SRC_URI="https://download.linuxsampler.org/packages/libgig-4.3.0.tar.bz2"
+SRC_URI="https://download.linuxsampler.org/packages/libgig-4.3.0.tar.bz2 -> libgig-4.3.0.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit distutils-r1 xdg
 
 DESCRIPTION="Import your images efficiently and reliably"
 HOMEPAGE="http://damonlynch.net/rapid/"
-SRC_URI="https://launchpad.net/rapid/pyqt/0.9.26/+download/rapid-photo-downloader-0.9.26.tar.gz"
+SRC_URI="https://launchpad.net/rapid/pyqt/0.9.26/+download/rapid-photo-downloader-0.9.26.tar.gz -> rapid-photo-downloader-0.9.26.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

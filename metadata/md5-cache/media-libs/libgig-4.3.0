@@ -9,5 +9,5 @@ KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=media-libs/audiofile media-libs/libsndfile
 SLOT=0
-SRC_URI=https://download.linuxsampler.org/packages/libgig-4.3.0.tar.bz2
-_md5_=6813c20a8b44de35d5e8456c53122007
+SRC_URI=https://download.linuxsampler.org/packages/libgig-4.3.0.tar.bz2 -> libgig-4.3.0.tar.bz2
+_md5_=ceab31c3dd71abafe98de45001868765
