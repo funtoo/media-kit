@@ -8,7 +8,7 @@ MY_P="v4l-utils-${PV}"
 
 DESCRIPTION="Separate libraries ebuild from upstream v4l-utils package"
 HOMEPAGE="https://git.linuxtv.org/v4l-utils.git"
-SRC_URI="https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2"
+SRC_URI="https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2 -> v4l-utils-1.22.1.tar.bz2"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/0"

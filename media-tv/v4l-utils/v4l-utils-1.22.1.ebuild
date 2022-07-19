@@ -6,7 +6,7 @@ inherit autotools flag-o-matic udev xdg
 
 DESCRIPTION="Separate utilities ebuild from upstream v4l-utils package"
 HOMEPAGE="https://git.linuxtv.org/v4l-utils.git"
-SRC_URI="https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2"
+SRC_URI="https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2 -> v4l-utils-1.22.1.tar.bz2"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
