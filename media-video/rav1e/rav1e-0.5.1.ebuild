@@ -23,7 +23,7 @@ bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
 bumpalo-3.10.0
-bytemuck-1.10.0
+bytemuck-1.11.0
 byteorder-1.4.3
 cast-0.3.0
 cc-1.0.73
