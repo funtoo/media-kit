@@ -48,7 +48,7 @@ crossbeam-queue-0.3.6
 crossbeam-utils-0.8.11
 csv-1.1.6
 csv-core-0.1.10
-ctor-0.1.22
+ctor-0.1.23
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.13
