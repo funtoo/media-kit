@@ -8,7 +8,7 @@ adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
 ansi_term-0.12.1
-anyhow-1.0.58
+anyhow-1.0.59
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -133,9 +133,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.12
-serde-1.0.140
+serde-1.0.141
 serde_cbor-0.11.2
-serde_derive-1.0.140
+serde_derive-1.0.141
 serde_json-1.0.82
 shlex-1.1.0
 signal-hook-0.3.14
