@@ -1,0 +1,15 @@
+BDEPEND=dev-lang/yasm qt5? ( dev-qt/linguist-tools:5 ) sys-devel/make dev-util/cmake
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=~media-libs/avidemux-core-2.8.0:2.8[nls?,sdl?,vaapi?,vdpau?,xv?] opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Video editor designed for simple cutting, filtering and encoding tasks
+EAPI=7
+HOMEPAGE=http://fixounet.free.fr/avidemux
+IUSE=debug nls opengl qt5 sdl vaapi vdpau xv
+KEYWORDS=*
+LICENSE=GPL-1 GPL-2 MIT PSF-2 public-domain
+PDEPEND=~media-libs/avidemux-plugins-2.8.0:2.8[opengl?,qt5?]
+RDEPEND=~media-libs/avidemux-core-2.8.0:2.8[nls?,sdl?,vaapi?,vdpau?,xv?] opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= ) nls? ( virtual/libintl:0 ) !<media-video/avidemux-2.8.0
+SLOT=2.8
+SRC_URI=https://api.github.com/repos/mean00/avidemux2/tarball/2.8.0 -> avidemux-2.8.0.tar.gz https://api.github.com/repos/mean00/avidemux2_i18n/tarball/refs/tags/2.7.8 -> avidemux-i18n-2.7.8.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	desktop	b1d22ac8bdd4679ab79c71aca235009d	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=3cc179db6ee3e4b953b0e323c0be3c95
