@@ -7,6 +7,7 @@ addr2line-0.17.0
 adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
+android_system_properties-0.1.4
 ansi_term-0.12.1
 anyhow-1.0.60
 aom-sys-0.3.1
@@ -31,12 +32,14 @@ cexpr-0.6.0
 cfg-expr-0.7.4
 cfg-expr-0.10.3
 cfg-if-1.0.0
-chrono-0.4.20
+chrono-0.4.21
 clang-sys-1.3.3
 clap-2.34.0
 cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
+core-foundation-0.9.3
+core-foundation-sys-0.8.3
 crc32fast-1.3.2
 criterion-0.3.6
 criterion-plot-0.4.5
@@ -66,6 +69,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
+iana-time-zone-0.1.41
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
@@ -133,9 +137,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.13
-serde-1.0.142
+serde-1.0.143
 serde_cbor-0.11.2
-serde_derive-1.0.142
+serde_derive-1.0.143
 serde_json-1.0.83
 shlex-1.1.0
 signal-hook-0.3.14
