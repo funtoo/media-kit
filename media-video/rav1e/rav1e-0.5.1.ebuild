@@ -69,7 +69,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.41
+iana-time-zone-0.1.42
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
@@ -81,7 +81,7 @@ js-sys-0.3.59
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.127
+libc-0.2.129
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.17
