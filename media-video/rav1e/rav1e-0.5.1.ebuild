@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 android_system_properties-0.1.4
 ansi_term-0.12.1
-anyhow-1.0.60
+anyhow-1.0.61
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -38,7 +38,6 @@ clap-2.34.0
 cmake-0.1.48
 color_quant-1.1.0
 console-0.14.1
-core-foundation-0.9.3
 core-foundation-sys-0.8.3
 crc32fast-1.3.2
 criterion-0.3.6
@@ -69,7 +68,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.42
+iana-time-zone-0.1.44
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
