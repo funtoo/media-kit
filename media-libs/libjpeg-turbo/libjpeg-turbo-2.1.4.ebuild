@@ -6,7 +6,7 @@ inherit cmake java-pkg-opt-2
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="https://libjpeg-turbo.org/ https://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/c5f269eb9665435271c05fbcaf8721fa58e9eafa -> libjpeg-turbo-2.1.3-c5f269e.tar.gz"
+SRC_URI="https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/8162eddf041e0be26f5c671bb6528723c55fed9d -> libjpeg-turbo-2.1.4-8162edd.tar.gz"
 
 LICENSE="BSD IJG ZLIB"
 SLOT="0/0.2"
