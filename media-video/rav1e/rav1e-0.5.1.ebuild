@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 android_system_properties-0.1.4
 ansi_term-0.12.1
-anyhow-1.0.61
+anyhow-1.0.62
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -24,7 +24,7 @@ bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
 bumpalo-3.10.0
-bytemuck-1.12.0
+bytemuck-1.12.1
 byteorder-1.4.3
 cast-0.3.0
 cc-1.0.73
