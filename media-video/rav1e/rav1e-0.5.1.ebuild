@@ -23,7 +23,7 @@ bindgen-0.59.2
 bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
-bumpalo-3.10.0
+bumpalo-3.11.0
 bytemuck-1.12.1
 byteorder-1.4.3
 cast-0.3.0
@@ -56,7 +56,7 @@ deflate-0.8.6
 diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
-either-1.7.0
+either-1.8.0
 encode_unicode-0.3.6
 env_logger-0.9.0
 fern-0.6.1
@@ -68,7 +68,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.45
+iana-time-zone-0.1.46
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
