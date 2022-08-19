@@ -105,9 +105,9 @@ output_vt100-0.1.3
 paste-1.0.8
 peeking_take_while-0.1.2
 pkg-config-0.3.25
-plotters-0.3.2
+plotters-0.3.3
 plotters-backend-0.3.4
-plotters-svg-0.3.2
+plotters-svg-0.3.3
 png-0.16.8
 ppv-lite86-0.2.16
 predicates-2.1.1
