@@ -1,0 +1,10 @@
+DEFINED_PHASES=prepare
+DESCRIPTION=Icon themes for SMPlayer.
+EAPI=7
+HOMEPAGE=https://smplayer.info/
+KEYWORDS=*
+LICENSE=CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 CC0-1.0 GPL-2 GPL-3+ LGPL-3
+SLOT=0
+SRC_URI=https://github.com/smplayer-dev/smplayer-themes/tarball/a5345e67553cc3829dee210040c584da5448cd08 -> smplayer-themes-20.11.0-a5345e6.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=d41a5d951667f8e6518c0fdd334d6757
