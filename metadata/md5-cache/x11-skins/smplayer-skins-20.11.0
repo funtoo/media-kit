@@ -1,0 +1,10 @@
+DEFINED_PHASES=prepare
+DESCRIPTION=Skin themes for SMPlayer.
+EAPI=7
+HOMEPAGE=https://smplayer.info/
+KEYWORDS=*
+LICENSE=CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 GPL-2 LGPL-3
+SLOT=0
+SRC_URI=https://github.com/smplayer-dev/smplayer-skins/tarball/3cd5c6aed8539614ff949c4a8ac8b543e007e3f2 -> smplayer-skins-20.11.0-3cd5c6a.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=4b2b406ed57e97d6d2f496dcdc077929

@@ -1,9 +1,8 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 GNOME_TARBALL_SUFFIX="bz2"
-GNOME2_LA_PUNT="yes"
+GNOME2_LA_PUNT="no"
 
 inherit autotools gnome2 multilib-minimal
 
@@ -12,9 +11,9 @@ HOMEPAGE="https://www.levien.com/libart"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="*"
 
-DEPEND=">=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
+BDEPEND="virtual/pkgconfig"
 
 # The provided tests are interactive only
 RESTRICT="test"
@@ -45,4 +44,5 @@ multilib_src_configure() {
 
 multilib_src_install() {
 	gnome2_src_install
+	find "${ED}" -type f -name '*.la' -delete || die
 }
