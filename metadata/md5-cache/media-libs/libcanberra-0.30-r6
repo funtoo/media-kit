@@ -1,0 +1,15 @@
+BDEPEND=app-arch/xz-utils virtual/pkgconfig virtual/pkgconfig
+DEFINED_PHASES=compile configure install test
+DEPEND=dev-libs/libltdl:0[-mgorny(-)] media-libs/libvorbis[-mgorny(-)] alsa? ( media-libs/alsa-lib:=[-mgorny(-)] udev? ( virtual/libudev:=[-mgorny(-)] ) ) gstreamer? ( media-libs/gstreamer:1.0[-mgorny(-)] ) gtk2? ( >=dev-libs/glib-2.32:2[-mgorny(-)] >=x11-libs/gtk+-2.20.0:2[-mgorny(-)] x11-libs/libX11[-mgorny(-)] ) gtk3? ( >=dev-libs/glib-2.32:2[-mgorny(-)] x11-libs/gtk+:3[X,-mgorny(-)] x11-libs/libX11[-mgorny(-)] ) pulseaudio? ( >=media-sound/pulseaudio-0.9.11[-mgorny(-)] ) tdb? ( sys-libs/tdb:=[-mgorny(-)] )
+DESCRIPTION=Portable sound event library
+EAPI=7
+HOMEPAGE=http://0pointer.de/lennart/projects/libcanberra/
+IUSE=alsa gnome gstreamer +gtk2 +gtk3 oss pulseaudio +sound tdb udev abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS=*
+LICENSE=LGPL-2.1+
+RDEPEND=dev-libs/libltdl:0[-mgorny(-)] media-libs/libvorbis[-mgorny(-)] alsa? ( media-libs/alsa-lib:=[-mgorny(-)] udev? ( virtual/libudev:=[-mgorny(-)] ) ) gstreamer? ( media-libs/gstreamer:1.0[-mgorny(-)] ) gtk2? ( >=dev-libs/glib-2.32:2[-mgorny(-)] >=x11-libs/gtk+-2.20.0:2[-mgorny(-)] x11-libs/libX11[-mgorny(-)] ) gtk3? ( >=dev-libs/glib-2.32:2[-mgorny(-)] x11-libs/gtk+:3[X,-mgorny(-)] x11-libs/libX11[-mgorny(-)] ) pulseaudio? ( >=media-sound/pulseaudio-0.9.11[-mgorny(-)] ) tdb? ( sys-libs/tdb:=[-mgorny(-)] ) gnome? ( gnome-base/dconf gnome-base/gsettings-desktop-schemas ) sound? ( x11-themes/sound-theme-freedesktop )
+REQUIRED_USE=udev? ( alsa )
+SLOT=0
+SRC_URI=http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz
+_eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=895397e37c695aa553e87049848f805c
