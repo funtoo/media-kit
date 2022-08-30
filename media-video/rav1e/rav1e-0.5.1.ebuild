@@ -7,7 +7,7 @@ addr2line-0.17.0
 adler-1.0.2
 adler32-1.2.0
 aho-corasick-0.7.18
-android_system_properties-0.1.4
+android_system_properties-0.1.5
 ansi_term-0.12.1
 anyhow-1.0.62
 aom-sys-0.3.1
@@ -68,7 +68,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.46
+iana-time-zone-0.1.47
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
