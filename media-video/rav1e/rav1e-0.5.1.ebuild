@@ -102,7 +102,7 @@ object-0.29.0
 once_cell-1.13.1
 oorandom-11.1.3
 output_vt100-0.1.3
-paste-1.0.8
+paste-1.0.9
 peeking_take_while-0.1.2
 pkg-config-0.3.25
 plotters-0.3.3
@@ -176,7 +176,7 @@ wasm-bindgen-macro-0.2.82
 wasm-bindgen-macro-support-0.2.82
 wasm-bindgen-shared-0.2.82
 web-sys-0.3.59
-which-4.2.5
+which-4.3.0
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
