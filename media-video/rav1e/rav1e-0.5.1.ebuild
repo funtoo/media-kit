@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.18
 android_system_properties-0.1.5
 ansi_term-0.12.1
-anyhow-1.0.62
+anyhow-1.0.63
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -155,8 +155,8 @@ termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
 textwrap-0.11.0
-thiserror-1.0.32
-thiserror-impl-1.0.32
+thiserror-1.0.33
+thiserror-impl-1.0.33
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
