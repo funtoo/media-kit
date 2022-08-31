@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz ) wayland? ( dev-util/wayland-scanner ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile configure install
+DEPEND=alsa? ( media-libs/alsa-lib ) dbus? ( sys-apps/dbus ) fcitx? ( app-i18n/fcitx ) gles1? ( media-libs/mesa[gles1] ) gles2? ( media-libs/mesa[gles2] ) ibus? ( app-i18n/ibus ) jack? ( virtual/jack ) kms? ( x11-libs/libdrm media-libs/mesa[gbm(+)] ) libsamplerate? ( media-libs/libsamplerate ) nas? ( media-libs/nas x11-libs/libXt ) opengl? ( virtual/opengl virtual/glu ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) sndio? ( media-sound/sndio ) udev? ( virtual/libudev ) wayland? ( dev-libs/wayland media-libs/mesa[egl(+),gles2,wayland] x11-libs/libxkbcommon ) X? ( x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrandr xscreensaver? ( x11-libs/libXScrnSaver ) ) ibus? ( dev-libs/glib:2 ) vulkan? ( dev-util/vulkan-headers ) X? ( x11-base/xorg-proto )
+DESCRIPTION=Simple Direct Media Layer
+EAPI=7
+HOMEPAGE=https://www.libsdl.org/
+IUSE=alsa aqua cpu_flags_ppc_altivec cpu_flags_x86_3dnow cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 custom-cflags dbus doc fcitx gles1 gles2 haptic ibus jack +joystick kms libsamplerate nas opengl oss pipewire pulseaudio sndio +sound static-libs +threads udev +video video_cards_vc4 vulkan wayland X xscreensaver
+KEYWORDS=*
+LICENSE=ZLIB
+RDEPEND=alsa? ( media-libs/alsa-lib ) dbus? ( sys-apps/dbus ) fcitx? ( app-i18n/fcitx ) gles1? ( media-libs/mesa[gles1] ) gles2? ( media-libs/mesa[gles2] ) ibus? ( app-i18n/ibus ) jack? ( virtual/jack ) kms? ( x11-libs/libdrm media-libs/mesa[gbm(+)] ) libsamplerate? ( media-libs/libsamplerate ) nas? ( media-libs/nas x11-libs/libXt ) opengl? ( virtual/opengl virtual/glu ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) sndio? ( media-sound/sndio ) udev? ( virtual/libudev ) wayland? ( dev-libs/wayland media-libs/mesa[egl(+),gles2,wayland] x11-libs/libxkbcommon ) X? ( x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrandr xscreensaver? ( x11-libs/libXScrnSaver ) ) vulkan? ( media-libs/vulkan-loader )
+REQUIRED_USE=alsa? ( sound ) fcitx? ( dbus ) gles1? ( video ) gles2? ( video ) haptic? ( joystick ) ibus? ( dbus ) jack? ( sound ) nas? ( sound ) opengl? ( video ) pulseaudio? ( sound ) sndio? ( sound ) vulkan? ( video ) wayland? ( gles2 ) xscreensaver? ( X )
+SLOT=0
+SRC_URI=https://github.com/libsdl-org/SDL/tarball/8c9beb0c873f6ca5efbd88f1ad2648bfc793b2ac -> SDL-2.24.0-8c9beb0.tar.gz
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=19512c51eb29e6b17c61291d393a6e7a
