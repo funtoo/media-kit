@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=A youtube-dl fork with additional features and fixes
+EAPI=7
+HOMEPAGE=https://github.com/yt-dlp/yt-dlp
+IUSE=+ffmpeg certifi
+KEYWORDS=*
+LICENSE=Unlicense
+RDEPEND=>=dev-lang/python-3.7 ffmpeg? ( media-video/ffmpeg ) certifi? ( dev-python/certifi )
+SLOT=0
+SRC_URI=https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+_eclasses_=optfeature	8e0c2c8d30c10832f241f5e76ef3f0c7
+_md5_=ec96f9559b3644a2e56cec71db3a13b8
