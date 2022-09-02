@@ -99,7 +99,7 @@ num-rational-0.3.2
 num-traits-0.2.15
 num_cpus-1.13.1
 object-0.29.0
-once_cell-1.13.1
+once_cell-1.14.0
 oorandom-11.1.3
 output_vt100-0.1.3
 paste-1.0.9
