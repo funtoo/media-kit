@@ -6,7 +6,7 @@ CRATES="
 addr2line-0.17.0
 adler-1.0.2
 adler32-1.2.0
-aho-corasick-0.7.18
+aho-corasick-0.7.19
 android_system_properties-0.1.5
 ansi_term-0.12.1
 anyhow-1.0.63
@@ -88,7 +88,7 @@ memchr-2.5.0
 memoffset-0.6.5
 minimal-lexical-0.2.1
 miniz_oxide-0.3.7
-miniz_oxide-0.5.3
+miniz_oxide-0.5.4
 nasm-rs-0.2.4
 nom-7.1.1
 noop_proc_macro-0.3.0
