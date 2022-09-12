@@ -33,7 +33,7 @@ go-module_set_globals
 
 DESCRIPTION="Commandline tool to customize Spotify client."
 HOMEPAGE="https://github.com/khanhas/spicetify-cli"
-SRC_URI="https://github.com/spicetify/spicetify-cli/tarball/811877be58b90543e57995daf2a659b6d605fc57 -> spicetify-cli-2.13.0-811877b.tar.gz
+SRC_URI="https://github.com/spicetify/spicetify-cli/tarball/1bda2cffa39bb71d8bad6ff58c9712d1d60aef0a -> spicetify-cli-2.13.1-1bda2cf.tar.gz
 	${EGO_SUM_SRC_URI}
 "
 

@@ -76,7 +76,7 @@ itertools-0.10.3
 itoa-0.4.8
 itoa-1.0.3
 jobserver-0.1.24
-js-sys-0.3.59
+js-sys-0.3.60
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -170,12 +170,12 @@ wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.10.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.82
-wasm-bindgen-backend-0.2.82
-wasm-bindgen-macro-0.2.82
-wasm-bindgen-macro-support-0.2.82
-wasm-bindgen-shared-0.2.82
-web-sys-0.3.59
+wasm-bindgen-0.2.83
+wasm-bindgen-backend-0.2.83
+wasm-bindgen-macro-0.2.83
+wasm-bindgen-macro-support-0.2.83
+wasm-bindgen-shared-0.2.83
+web-sys-0.3.60
 which-4.3.0
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
