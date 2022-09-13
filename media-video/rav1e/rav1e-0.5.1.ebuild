@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.19
 android_system_properties-0.1.5
 ansi_term-0.12.1
-anyhow-1.0.64
+anyhow-1.0.65
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -72,7 +72,7 @@ iana-time-zone-0.1.48
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
-itertools-0.10.3
+itertools-0.10.4
 itoa-0.4.8
 itoa-1.0.3
 jobserver-0.1.24
@@ -155,8 +155,8 @@ termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
 textwrap-0.11.0
-thiserror-1.0.34
-thiserror-impl-1.0.34
+thiserror-1.0.35
+thiserror-impl-1.0.35
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
