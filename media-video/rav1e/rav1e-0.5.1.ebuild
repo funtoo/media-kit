@@ -118,7 +118,7 @@ proc-macro2-1.0.43
 quote-1.0.21
 rand-0.8.5
 rand_chacha-0.3.1
-rand_core-0.6.3
+rand_core-0.6.4
 rayon-1.5.3
 rayon-core-1.9.3
 regex-1.6.0
@@ -135,7 +135,7 @@ ryu-1.0.11
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
-semver-1.0.13
+semver-1.0.14
 serde-1.0.144
 serde_cbor-0.11.2
 serde_derive-1.0.144
