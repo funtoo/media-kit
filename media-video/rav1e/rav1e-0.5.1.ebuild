@@ -160,9 +160,9 @@ thiserror-impl-1.0.35
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
-unicode-ident-1.0.3
-unicode-segmentation-1.9.0
-unicode-width-0.1.9
+unicode-ident-1.0.4
+unicode-segmentation-1.10.0
+unicode-width-0.1.10
 vec_map-0.8.2
 version-compare-0.0.11
 version-compare-0.1.0
