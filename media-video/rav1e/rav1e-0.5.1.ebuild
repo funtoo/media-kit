@@ -58,7 +58,7 @@ difflib-0.4.0
 doc-comment-0.3.3
 either-1.8.0
 encode_unicode-0.3.6
-env_logger-0.9.0
+env_logger-0.9.1
 fern-0.6.1
 getrandom-0.2.7
 gimli-0.26.2
