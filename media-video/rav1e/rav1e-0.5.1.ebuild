@@ -72,7 +72,7 @@ iana-time-zone-0.1.48
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
-itertools-0.10.4
+itertools-0.10.5
 itoa-0.4.8
 itoa-1.0.3
 jobserver-0.1.24
@@ -80,7 +80,7 @@ js-sys-0.3.60
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.132
+libc-0.2.133
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 log-0.4.17
