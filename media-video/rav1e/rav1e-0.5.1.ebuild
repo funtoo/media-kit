@@ -72,7 +72,7 @@ iana-time-zone-0.1.48
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
-itertools-0.10.4
+itertools-0.10.5
 itoa-0.4.8
 itoa-1.0.3
 jobserver-0.1.24
