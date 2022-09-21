@@ -8,7 +8,7 @@ inherit cmake flag-o-matic toolchain-funcs
 
 DESCRIPTION="Core libraries for simple video cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
-SRC_URI="https://api.github.com/repos/mean00/avidemux2/tarball/2.8.0 -> avidemux-2.8.0.tar.gz"
+SRC_URI="https://api.github.com/repos/mean00/avidemux2/tarball/2.8.1 -> avidemux-2.8.1.tar.gz"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
