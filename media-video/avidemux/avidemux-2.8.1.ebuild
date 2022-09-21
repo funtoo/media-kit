@@ -11,8 +11,8 @@ I18N_PV=""
 DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 SRC_URI="
-	https://api.github.com/repos/mean00/avidemux2/tarball/2.8.0 -> avidemux-2.8.0.tar.gz
-	https://api.github.com/repos/mean00/avidemux2_i18n/tarball/refs/tags/2.7.8 -> avidemux-i18n-2.7.8.tar.gz
+	https://api.github.com/repos/mean00/avidemux2/tarball/2.8.1 -> avidemux-2.8.1.tar.gz
+	https://api.github.com/repos/mean00/avidemux2_i18n/tarball/refs/tags/2.8.1 -> avidemux-i18n-2.8.1.tar.gz
 "
 
 # Multiple licenses because of all the bundled stuff.
