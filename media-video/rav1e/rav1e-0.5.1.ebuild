@@ -68,7 +68,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.48
+iana-time-zone-0.1.49
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
@@ -136,9 +136,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.14
-serde-1.0.144
+serde-1.0.145
 serde_cbor-0.11.2
-serde_derive-1.0.144
+serde_derive-1.0.145
 serde_json-1.0.85
 shlex-1.1.0
 signal-hook-0.3.14
