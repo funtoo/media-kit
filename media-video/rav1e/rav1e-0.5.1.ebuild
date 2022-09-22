@@ -33,7 +33,7 @@ cfg-expr-0.7.4
 cfg-expr-0.10.3
 cfg-if-1.0.0
 chrono-0.4.22
-clang-sys-1.3.3
+clang-sys-1.4.0
 clap-2.34.0
 cmake-0.1.48
 color_quant-1.1.0
@@ -136,9 +136,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.14
-serde-1.0.144
+serde-1.0.145
 serde_cbor-0.11.2
-serde_derive-1.0.144
+serde_derive-1.0.145
 serde_json-1.0.85
 shlex-1.1.0
 signal-hook-0.3.14
