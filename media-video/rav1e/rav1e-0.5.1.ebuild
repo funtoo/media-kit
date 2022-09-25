@@ -155,8 +155,8 @@ termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
 textwrap-0.11.0
-thiserror-1.0.35
-thiserror-impl-1.0.35
+thiserror-1.0.36
+thiserror-impl-1.0.36
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
