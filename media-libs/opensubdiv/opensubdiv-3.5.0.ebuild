@@ -6,7 +6,7 @@ inherit cmake toolchain-funcs
 
 DESCRIPTION="An Open-Source subdivision surface library"
 HOMEPAGE="https://graphics.pixar.com/opensubdiv/docs/intro.html"
-SRC_URI="https://api.github.com/repos/PixarAnimationStudios/OpenSubdiv/tarball/refs/tags/v3_4_4 -> opensubdiv-3.4.4.tar.gz"
+SRC_URI="https://api.github.com/repos/PixarAnimationStudios/OpenSubdiv/tarball/refs/tags/v3_5_0 -> opensubdiv-3.5.0.tar.gz"
 
 # Modfied Apache-2.0 license, where section 6 has been replaced.
 # See for example CMakeLists.txt for details.
