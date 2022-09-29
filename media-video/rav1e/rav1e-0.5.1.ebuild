@@ -45,9 +45,9 @@ criterion-plot-0.4.5
 crossbeam-0.8.2
 crossbeam-channel-0.5.6
 crossbeam-deque-0.8.2
-crossbeam-epoch-0.9.10
+crossbeam-epoch-0.9.11
 crossbeam-queue-0.3.6
-crossbeam-utils-0.8.11
+crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.23
@@ -114,7 +114,7 @@ predicates-2.1.1
 predicates-core-1.0.3
 predicates-tree-1.0.5
 pretty_assertions-0.7.2
-proc-macro2-1.0.44
+proc-macro2-1.0.46
 quote-1.0.21
 rand-0.8.5
 rand_chacha-0.3.1
