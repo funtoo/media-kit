@@ -8,7 +8,7 @@ inherit xdg autotools
 
 DESCRIPTION="Lightweight and versatile audio player"
 HOMEPAGE="https://audacious-media-player.org/"
-SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.2 -> audacious-4.2.tar.gz https://fastpull-us.funtoo.org/distfiles/gentoo_ice-xmms-0.2.tar.bz2 -> gentoo_ice-xmms-0.2.tar.bz2"
+SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.2 -> audacious-4.2.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -58,14 +58,4 @@ src_configure() {
 		$(use_enable nls)
 	)
 	econf "${myeconfargs[@]}"
-}
-
-src_install() {
-	default
-
-	# Gentoo_ice skin installation; bug #109772
-	insinto /usr/share/audacious/Skins/gentoo_ice
-	doins -r "${WORKDIR}"/gentoo_ice/.
-	docinto gentoo_ice
-	dodoc "${WORKDIR}"/README
 }
