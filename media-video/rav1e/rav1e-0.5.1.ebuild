@@ -74,7 +74,7 @@ interpolate_name-0.2.3
 itertools-0.8.2
 itertools-0.10.5
 itoa-0.4.8
-itoa-1.0.3
+itoa-1.0.4
 jobserver-0.1.25
 js-sys-0.3.60
 lab-0.11.0
@@ -148,7 +148,7 @@ smallvec-1.10.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.101
+syn-1.0.102
 system-deps-3.1.2
 system-deps-6.0.2
 termcolor-1.1.3

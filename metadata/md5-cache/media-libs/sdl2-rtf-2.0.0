@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=media-libs/libsdl2-2.0 ttf? ( media-libs/sdl2-ttf )
+DESCRIPTION=Support for Rich Text Format files with SDL.
+EAPI=7
+HOMEPAGE=https://libsdl.org/projects/SDL_rtf/
+IUSE=+ttf static-libs test
+KEYWORDS=*
+LICENSE=ZLIB
+RDEPEND=>=media-libs/libsdl2-2.0 ttf? ( media-libs/sdl2-ttf )
+SLOT=0
+SRC_URI=https://github.com/libsdl-org/SDL_rtf/archive/db795a3502e03932081a1aebeeb4cd6147967297.tar.gz
+_md5_=31296da16e23b8680ada93b397c2f061
