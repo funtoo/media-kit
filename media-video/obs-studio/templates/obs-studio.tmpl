@@ -7,9 +7,18 @@ PYTHON_COMPAT=( python3+ )
 
 inherit cmake-utils python-single-r1 xdg-utils
 
+# 0 = obs-studio
+# 1 = cef-binary
+# 2 = obs-browser
+# 3 = obs-websocket
+# 4 = obs-amd-encoder
+
 SRC_URI="
 	{{artifacts[0].src_uri}}
-	browser? ( {{artifacts[1].src_uri}} {{artifacts[2].src_uri}} )
+	{{artifacts[1].src_uri}}
+	{{artifacts[2].src_uri}}
+	{{artifacts[3].src_uri}}
+	{{artifacts[4].src_uri}}
 "
 KEYWORDS="*"
 
@@ -18,11 +27,14 @@ HOMEPAGE="https://obsproject.com"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+alsa browser fdk jack luajit nvenc pipewire pulseaudio python speex +ssl truetype v4l vlc wayland"
+IUSE="+alsa browser fdk ftl jack luajit nvenc pipewire pulseaudio python speex +ssl truetype v4l vlc wayland"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 BDEPEND="
-	luajit? ( dev-lang/swig )
+	luajit? (
+		dev-lua/luajit
+		dev-lang/swig
+	)
 	python? ( dev-lang/swig )
 "
 DEPEND="
@@ -91,13 +103,24 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	default
+post_src_unpack() {
 	mv ${WORKDIR}/{{github_user}}-{{github_repo}}-??????? ${P} || die
-	if use browser; then
-		rm -d "${P}/plugins/obs-browser" || die
-		mv ${WORKDIR}/obs-browser-* ${P}/plugins/obs-browser || die
+
+{% for plugin in plugins %}
+	local pdir="${P}/plugins/{{ plugin.repo }}"
+	if [ -d ${pdir} ]; then
+		rm -d ${pdir} || die
 	fi
+	elog "Copying {{ plugin.repo }}-{{ plugin.version}} sources to OBS plugins directory."
+	mv ${WORKDIR}/{{ plugin.user }}-{{ plugin.repo }}-* ${pdir} || die
+{% endfor %}
+
+
+#	if use browser; then
+#		rm -d "${P}/plugins/obs-browser" || die
+#		mv ${WORKDIR}/obs-browser-* ${P}/plugins/obs-browser || die
+#	fi
+
 }
 
 pkg_setup() {
@@ -129,11 +152,11 @@ src_configure() {
 		-DBUILD_VST=OFF
 	)
 
-	if use browser; then
+#	if use browser; then
 		mycmakeargs+=(
 			-DCEF_ROOT_DIR="../{{cef_dir}}"
 		)
-	fi
+#	fi
 
 	if use luajit || use python; then
 		mycmakeargs+=(
