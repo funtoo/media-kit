@@ -147,7 +147,7 @@ semver-1.0.14
 serde-1.0.145
 serde_cbor-0.11.2
 serde_derive-1.0.145
-serde_json-1.0.85
+serde_json-1.0.86
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
