@@ -36,6 +36,7 @@ chrono-0.4.22
 clang-sys-1.4.0
 clap-2.34.0
 cmake-0.1.48
+codespan-reporting-0.11.1
 color_quant-1.1.0
 console-0.14.1
 core-foundation-sys-0.8.3
@@ -51,6 +52,10 @@ crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.23
+cxx-1.0.78
+cxx-build-1.0.78
+cxxbridge-flags-1.0.78
+cxxbridge-macro-1.0.78
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.13
@@ -68,7 +73,8 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.50
+iana-time-zone-0.1.51
+iana-time-zone-haiku-0.1.0
 image-0.23.14
 interpolate_name-0.2.3
 itertools-0.8.2
@@ -83,6 +89,7 @@ lazycell-1.3.0
 libc-0.2.134
 libfuzzer-sys-0.3.5
 libloading-0.7.3
+link-cplusplus-1.0.7
 log-0.4.17
 memchr-2.5.0
 memoffset-0.6.5
@@ -135,6 +142,7 @@ ryu-1.0.11
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
+scratch-1.0.2
 semver-1.0.14
 serde-1.0.145
 serde_cbor-0.11.2
@@ -160,7 +168,7 @@ thiserror-impl-1.0.37
 time-0.1.44
 tinytemplate-1.2.1
 toml-0.5.9
-unicode-ident-1.0.4
+unicode-ident-1.0.5
 unicode-segmentation-1.10.0
 unicode-width-0.1.10
 vec_map-0.8.2
