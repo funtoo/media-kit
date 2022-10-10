@@ -86,7 +86,7 @@ js-sys-0.3.60
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.134
+libc-0.2.135
 libfuzzer-sys-0.3.5
 libloading-0.7.3
 link-cplusplus-1.0.7
