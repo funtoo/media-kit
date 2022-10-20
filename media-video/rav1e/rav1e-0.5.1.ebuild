@@ -14,7 +14,7 @@ aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.4
+assert_cmd-2.0.5
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.7.2
@@ -23,14 +23,14 @@ bindgen-0.59.2
 bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
-bumpalo-3.11.0
+bumpalo-3.11.1
 bytemuck-1.12.1
 byteorder-1.4.3
 cast-0.3.0
 cc-1.0.73
 cexpr-0.6.0
 cfg-expr-0.7.4
-cfg-expr-0.10.3
+cfg-expr-0.11.0
 cfg-if-1.0.0
 chrono-0.4.22
 clang-sys-1.4.0
@@ -51,7 +51,7 @@ crossbeam-queue-0.3.6
 crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
-ctor-0.1.23
+ctor-0.1.26
 cxx-1.0.79
 cxx-build-1.0.79
 cxxbridge-flags-1.0.79
@@ -147,7 +147,7 @@ semver-1.0.14
 serde-1.0.145
 serde_cbor-0.11.2
 serde_derive-1.0.145
-serde_json-1.0.86
+serde_json-1.0.87
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
@@ -158,7 +158,7 @@ strum-0.21.0
 strum_macros-0.21.1
 syn-1.0.102
 system-deps-3.1.2
-system-deps-6.0.2
+system-deps-6.0.3
 termcolor-1.1.3
 terminal_size-0.1.17
 termtree-0.2.4
