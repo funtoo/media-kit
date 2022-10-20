@@ -14,7 +14,7 @@ aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.4
+assert_cmd-2.0.5
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.7.2
@@ -147,7 +147,7 @@ semver-1.0.14
 serde-1.0.145
 serde_cbor-0.11.2
 serde_derive-1.0.145
-serde_json-1.0.86
+serde_json-1.0.87
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
