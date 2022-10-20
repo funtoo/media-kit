@@ -9,7 +9,7 @@ adler32-1.2.0
 aho-corasick-0.7.19
 android_system_properties-0.1.5
 ansi_term-0.12.1
-anyhow-1.0.65
+anyhow-1.0.66
 aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -65,7 +65,7 @@ either-1.8.0
 encode_unicode-0.3.6
 env_logger-0.9.1
 fern-0.6.1
-getrandom-0.2.7
+getrandom-0.2.8
 gimli-0.26.2
 glob-0.3.0
 half-1.8.2
@@ -156,7 +156,7 @@ smallvec-1.10.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.102
+syn-1.0.103
 system-deps-3.1.2
 system-deps-6.0.3
 termcolor-1.1.3
