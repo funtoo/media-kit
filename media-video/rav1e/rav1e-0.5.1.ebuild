@@ -52,10 +52,10 @@ crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.26
-cxx-1.0.79
-cxx-build-1.0.79
-cxxbridge-flags-1.0.79
-cxxbridge-macro-1.0.79
+cxx-1.0.80
+cxx-build-1.0.80
+cxxbridge-flags-1.0.80
+cxxbridge-macro-1.0.80
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.13
@@ -144,9 +144,9 @@ scan_fmt-0.2.6
 scopeguard-1.1.0
 scratch-1.0.2
 semver-1.0.14
-serde-1.0.145
+serde-1.0.147
 serde_cbor-0.11.2
-serde_derive-1.0.145
+serde_derive-1.0.147
 serde_json-1.0.87
 shlex-1.1.0
 signal-hook-0.3.14
