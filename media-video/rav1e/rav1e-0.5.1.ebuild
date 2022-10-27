@@ -111,7 +111,7 @@ oorandom-11.1.3
 output_vt100-0.1.3
 paste-1.0.9
 peeking_take_while-0.1.2
-pkg-config-0.3.25
+pkg-config-0.3.26
 plotters-0.3.4
 plotters-backend-0.3.4
 plotters-svg-0.3.3
