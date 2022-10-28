@@ -73,7 +73,7 @@ heck-0.3.3
 heck-0.4.0
 hermit-abi-0.1.19
 humantime-2.1.0
-iana-time-zone-0.1.51
+iana-time-zone-0.1.53
 iana-time-zone-haiku-0.1.1
 image-0.23.14
 interpolate_name-0.2.3
