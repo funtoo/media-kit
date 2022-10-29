@@ -27,7 +27,7 @@ bumpalo-3.11.1
 bytemuck-1.12.1
 byteorder-1.4.3
 cast-0.3.0
-cc-1.0.73
+cc-1.0.74
 cexpr-0.6.0
 cfg-expr-0.7.4
 cfg-expr-0.11.0
@@ -35,7 +35,7 @@ cfg-if-1.0.0
 chrono-0.4.22
 clang-sys-1.4.0
 clap-2.34.0
-cmake-0.1.48
+cmake-0.1.49
 codespan-reporting-0.11.1
 color_quant-1.1.0
 console-0.14.1
@@ -106,7 +106,7 @@ num-rational-0.3.2
 num-traits-0.2.15
 num_cpus-1.13.1
 object-0.29.0
-once_cell-1.15.0
+once_cell-1.16.0
 oorandom-11.1.3
 output_vt100-0.1.3
 paste-1.0.9
