@@ -9,7 +9,7 @@ inherit bash-completion-r1 eapi7-ver flag-o-matic gnome2-utils pax-utils python-
 
 DESCRIPTION="Media player based on MPlayer and mplayer2"
 HOMEPAGE="https://mpv.io/ https://github.com/mpv-player/mpv"
-SRC_URI="https://github.com/mpv-player/mpv/archive/e5e918954f05b92d5c4921949c70aef442c115a1.tar.gz -> mpv-0.34.1.20221028-e5e918954f05b92d5c4921949c70aef442c115a1.tar.gz https://waf.io/waf-2.0.20 -> waf-2.0.20"
+SRC_URI="https://github.com/mpv-player/mpv/archive/e5e918954f05b92d5c4921949c70aef442c115a1.tar.gz -> mpv-0.34.1.20221028-e5e918954f05b92d5c4921949c70aef442c115a1.tar.gz https://waf.io/waf-2.0.24 -> waf-2.0.24"
 
 DOCS=( RELEASE_NOTES README.md DOCS/{client-api,interface}-changes.rst )
 
@@ -133,7 +133,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	cp "${DISTDIR}"/waf-2.0.20 "${S}"/waf || die
+	cp "${DISTDIR}"/waf-2.0.24 "${S}"/waf || die
 	chmod +x "${S}"/waf || die
 	default
 }
@@ -198,8 +198,6 @@ src_configure() {
 		$(use_enable drm)
 		$(usex cuda "$(use_enable drm cuda-hwaccel)" '--disable-cuda-hwaccel')
 		$(use_enable gbm)
-		$(use_enable wayland wayland-scanner)
-		$(use_enable wayland wayland-protocols)
 		$(use_enable wayland)
 		$(use_enable X x11)
 		$(use_enable xv)
