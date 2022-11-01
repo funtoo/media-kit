@@ -14,7 +14,7 @@ inherit cmake-utils python-single-r1 xdg-utils
 # 4 = obs-amd-encoder
 
 SRC_URI="
-	https://api.github.com/repos/obsproject/obs-studio/tarball/28.0.3 -> obs-studio-28.0.3.tar.gz
+	https://api.github.com/repos/obsproject/obs-studio/tarball/28.1.0 -> obs-studio-28.1.0.tar.gz
 	https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 -> cef_binary_4280_linux64.tar.bz2
 	https://api.github.com/repos/obsproject/obs-browser/tarball/refs/tags/2.17.9 -> obs-browser-2.17.9.tar.gz
 	https://api.github.com/repos/obsproject/obs-websocket/tarball/refs/tags/5.0.2 -> obs-websocket-5.0.2.tar.gz

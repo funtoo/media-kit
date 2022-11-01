@@ -8,7 +8,7 @@ inherit cmake flag-o-matic python-single-r1
 
 DESCRIPTION="A color management framework for visual effects and animation"
 HOMEPAGE="https://opencolorio.org https://github.com/AcademySoftwareFoundation/OpenColorIO"
-SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/OpenColorIO/tarball/v2.1.2 -> opencolorio-2.1.2.tar.gz"
+SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/OpenColorIO/tarball/v2.2.0 -> opencolorio-2.2.0.tar.gz"
 
 KEYWORDS="*"
 LICENSE="BSD"
