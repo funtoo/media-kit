@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND==sci-libs/fftw-3*
 SLOT=0
 SRC_URI=https://www.github.com/swh/ladspa/tarball/1f4bd122323d66e76a360efc494c1a146dcf301d -> swh-plugins-1f4bd122323d66e76a360efc494c1a146dcf301d.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=1949900270a1f35685321db73a6d5873

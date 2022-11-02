@@ -11,5 +11,5 @@ RDEPEND=fontconfig? ( >=media-libs/fontconfig-2.10.92[-mgorny(-)] ) jpeg? ( >=vi
 REQUIRED_USE=prefix? ( fontconfig )
 SLOT=2/3
 SRC_URI=https://github.com/libgd/libgd/releases/download/gd-2.3.0/libgd-2.3.0.tar.xz test? ( https://github.com/libgd/libgd/raw/e0cb1b76c305db68b251fe782faa12da5d357593/tests/gif/ossfuzz5700.gif -> libgd-2.3.0-ossfuzz5700.dat https://github.com/libgd/libgd/raw/e0cb1b76c305db68b251fe782faa12da5d357593/tests/gif/php_bug_75571.gif -> libgd-2.3.0-php_bug_75571.dat )
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=9c245f7da348edc445c56c0923c607de
