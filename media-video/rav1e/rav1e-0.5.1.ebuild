@@ -104,7 +104,7 @@ num-integer-0.1.45
 num-iter-0.1.43
 num-rational-0.3.2
 num-traits-0.2.15
-num_cpus-1.13.1
+num_cpus-1.14.0
 object-0.29.0
 once_cell-1.16.0
 oorandom-11.1.3
