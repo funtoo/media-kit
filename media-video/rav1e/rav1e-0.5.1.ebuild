@@ -14,7 +14,7 @@ aom-sys-0.3.1
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.5
+assert_cmd-2.0.6
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.7.2
@@ -23,6 +23,7 @@ bindgen-0.59.2
 bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
+bstr-1.0.1
 bumpalo-3.11.1
 bytemuck-1.12.2
 byteorder-1.4.3
