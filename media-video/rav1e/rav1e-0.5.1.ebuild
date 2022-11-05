@@ -117,7 +117,7 @@ plotters-0.3.4
 plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.16.8
-ppv-lite86-0.2.16
+ppv-lite86-0.2.17
 predicates-2.1.1
 predicates-core-1.0.3
 predicates-tree-1.0.5
