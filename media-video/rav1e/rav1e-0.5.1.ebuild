@@ -118,9 +118,9 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.16.8
 ppv-lite86-0.2.17
-predicates-2.1.1
-predicates-core-1.0.3
-predicates-tree-1.0.5
+predicates-2.1.2
+predicates-core-1.0.4
+predicates-tree-1.0.6
 pretty_assertions-0.7.2
 proc-macro2-1.0.47
 quote-1.0.21
@@ -162,7 +162,7 @@ system-deps-3.1.2
 system-deps-6.0.3
 termcolor-1.1.3
 terminal_size-0.1.17
-termtree-0.2.4
+termtree-0.4.0
 textwrap-0.11.0
 thiserror-1.0.37
 thiserror-impl-1.0.37
