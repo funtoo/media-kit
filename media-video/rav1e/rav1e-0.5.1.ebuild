@@ -28,7 +28,7 @@ bumpalo-3.11.1
 bytemuck-1.12.3
 byteorder-1.4.3
 cast-0.3.0
-cc-1.0.74
+cc-1.0.75
 cexpr-0.6.0
 cfg-expr-0.7.4
 cfg-expr-0.11.0
@@ -53,10 +53,10 @@ crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.26
-cxx-1.0.80
-cxx-build-1.0.80
-cxxbridge-flags-1.0.80
-cxxbridge-macro-1.0.80
+cxx-1.0.81
+cxx-build-1.0.81
+cxxbridge-flags-1.0.81
+cxxbridge-macro-1.0.81
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.13
@@ -64,7 +64,7 @@ difflib-0.4.0
 doc-comment-0.3.3
 either-1.8.0
 encode_unicode-0.3.6
-env_logger-0.9.1
+env_logger-0.9.3
 fern-0.6.1
 getrandom-0.2.8
 gimli-0.26.2
@@ -89,7 +89,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.137
 libfuzzer-sys-0.3.5
-libloading-0.7.3
+libloading-0.7.4
 link-cplusplus-1.0.7
 log-0.4.17
 memchr-2.5.0
