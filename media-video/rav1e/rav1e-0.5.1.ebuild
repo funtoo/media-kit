@@ -174,7 +174,7 @@ unicode-segmentation-1.10.0
 unicode-width-0.1.10
 vec_map-0.8.2
 version-compare-0.0.11
-version-compare-0.1.0
+version-compare-0.1.1
 wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.10.0+wasi-snapshot-preview1
