@@ -16,7 +16,7 @@ inherit cmake-utils python-single-r1 xdg-utils
 SRC_URI="
 	https://api.github.com/repos/obsproject/obs-studio/tarball/28.1.2 -> obs-studio-28.1.2.tar.gz
 	https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 -> cef_binary_4280_linux64.tar.bz2
-	https://api.github.com/repos/obsproject/obs-browser/tarball/refs/tags/2.17.9 -> obs-browser-2.17.9.tar.gz
+	https://api.github.com/repos/obsproject/obs-browser/tarball/refs/tags/2.18.7 -> obs-browser-2.18.7.tar.gz
 	https://api.github.com/repos/obsproject/obs-websocket/tarball/refs/tags/5.0.2 -> obs-websocket-5.0.2.tar.gz
 	https://api.github.com/repos/obsproject/obs-amd-encoder/tarball/refs/tags/2.7.0 -> obs-amd-encoder-2.7.0.tar.gz
 "
@@ -111,7 +111,7 @@ post_src_unpack() {
 	if [ -d ${pdir} ]; then
 		rm -d ${pdir} || die
 	fi
-	elog "Copying obs-browser-2.17.9 sources to OBS plugins directory."
+	elog "Copying obs-browser-2.18.7 sources to OBS plugins directory."
 	mv ${WORKDIR}/obsproject-obs-browser-* ${pdir} || die
 
 	local pdir="${P}/plugins/obs-websocket"

@@ -10,7 +10,7 @@ aho-corasick-0.7.19
 android_system_properties-0.1.5
 ansi_term-0.12.1
 anyhow-1.0.66
-aom-sys-0.3.1
+aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
@@ -20,6 +20,7 @@ autocfg-1.1.0
 av-metrics-0.7.2
 backtrace-0.3.66
 bindgen-0.59.2
+bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.5.0
 bstr-0.2.17
@@ -33,7 +34,7 @@ cexpr-0.6.0
 cfg-expr-0.7.4
 cfg-expr-0.11.0
 cfg-if-1.0.0
-chrono-0.4.22
+chrono-0.4.23
 clang-sys-1.4.0
 clap-2.34.0
 cmake-0.1.49
@@ -118,9 +119,9 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.16.8
 ppv-lite86-0.2.17
-predicates-2.1.2
-predicates-core-1.0.4
-predicates-tree-1.0.6
+predicates-2.1.3
+predicates-core-1.0.5
+predicates-tree-1.0.7
 pretty_assertions-0.7.2
 proc-macro2-1.0.47
 quote-1.0.21
