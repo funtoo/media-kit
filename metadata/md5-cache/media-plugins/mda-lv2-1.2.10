@@ -1,6 +1,6 @@
 BDEPEND=dev-util/meson dev-util/ninja >=dev-util/meson-0.48.2 >=dev-util/ninja-1.7.2
 DEFINED_PHASES=compile configure install setup test
-DEPEND=|| ( dev-lang/python:3.10[threads(+)] dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] )
+DEPEND=|| ( dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] dev-lang/python:3.10[threads(+)] )
 DESCRIPTION=LV2 port of the MDA plugins by Paul Kellett
 EAPI=7
 HOMEPAGE=http://drobilla.net/software/mda-lv2/

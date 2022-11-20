@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prepare setup unpack
-DEPEND=dev-python/virtualenv[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)] sys-apps/shadow
+DEPEND=dev-python/virtualenv[python_targets_python2_7(-)?,-python_single_target_python3_10(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-)] sys-apps/shadow
 DESCRIPTION=A free media library that is intended for use with a plex client.
 EAPI=7
 HOMEPAGE=http://www.plex.tv/

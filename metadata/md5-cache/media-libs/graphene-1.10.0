@@ -1,4 +1,4 @@
-BDEPEND=|| ( dev-lang/python:3.10 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 ) doc? ( dev-util/gtk-doc app-text/docbook-xml-dtd:4.3 ) virtual/pkgconfig >=dev-util/meson-0.48.2 >=dev-util/ninja-1.7.2
+BDEPEND=|| ( dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 ) doc? ( dev-util/gtk-doc app-text/docbook-xml-dtd:4.3 ) virtual/pkgconfig >=dev-util/meson-0.48.2 >=dev-util/ninja-1.7.2
 DEFINED_PHASES=compile configure install prepare setup test
 DEPEND=>=dev-libs/glib-2.62.0:2 introspection? ( dev-libs/gobject-introspection:= )
 DESCRIPTION=A thin layer of types for graphic libraries
