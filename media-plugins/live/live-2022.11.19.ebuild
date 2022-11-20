@@ -6,7 +6,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Libraries for standards-based RTP/RTCP/RTSP multimedia streaming"
 HOMEPAGE="http://www.live555.com/"
-SRC_URI="http://www.live555.com/liveMedia/public/live.2022.10.01.tar.gz -> live.2022.10.01.tar.gz"
+SRC_URI="http://www.live555.com/liveMedia/public/live.2022.11.19.tar.gz -> live.2022.11.19.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="*"

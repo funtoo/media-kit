@@ -22,7 +22,7 @@ backtrace-0.3.66
 bindgen-0.59.2
 bindgen-0.61.0
 bitflags-1.3.2
-bitstream-io-1.5.0
+bitstream-io-1.6.0
 bstr-0.2.17
 bstr-1.0.1
 bumpalo-3.11.1
@@ -54,10 +54,10 @@ crossbeam-utils-0.8.12
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.26
-cxx-1.0.81
-cxx-build-1.0.81
-cxxbridge-flags-1.0.81
-cxxbridge-macro-1.0.81
+cxx-1.0.82
+cxx-build-1.0.82
+cxxbridge-flags-1.0.82
+cxxbridge-macro-1.0.82
 dav1d-sys-0.3.5
 deflate-0.8.6
 diff-0.1.13
@@ -128,8 +128,8 @@ quote-1.0.21
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
-rayon-1.5.3
-rayon-core-1.9.3
+rayon-1.6.0
+rayon-core-1.10.1
 regex-1.7.0
 regex-automata-0.1.10
 regex-syntax-0.6.28
@@ -149,7 +149,7 @@ semver-1.0.14
 serde-1.0.147
 serde_cbor-0.11.2
 serde_derive-1.0.147
-serde_json-1.0.87
+serde_json-1.0.88
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0

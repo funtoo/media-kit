@@ -1,4 +1,4 @@
-BDEPEND=doc? ( || ( dev-lang/python:3.10 >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 ) app-doc/doxygen dev-libs/libxslt media-gfx/graphviz virtual/pkgconfig ) nls? ( sys-devel/gettext ) dev-util/ninja >=dev-util/cmake-3.9.6
+BDEPEND=doc? ( || ( >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python:3.8 dev-lang/python:3.9 dev-lang/python:3.7 dev-lang/python:3.10 ) app-doc/doxygen dev-libs/libxslt media-gfx/graphviz virtual/pkgconfig ) nls? ( sys-devel/gettext ) dev-util/ninja >=dev-util/cmake-3.9.6
 DEFINED_PHASES=compile configure install prepare setup test
 DEPEND=>=virtual/libiconv-0-r1[-mgorny(-)] nls? ( >=virtual/libintl-0-r1[-mgorny(-)] ) png? ( sys-libs/zlib[-mgorny(-)] ) webready? ( net-libs/libssh[-mgorny(-)] net-misc/curl[-mgorny(-)] ) xmp? ( dev-libs/expat[-mgorny(-)] )
 DESCRIPTION=EXIF, IPTC and XMP metadata C++ library and command line utility

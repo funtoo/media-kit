@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install setup
-DEPEND=>=dev-libs/serd-0.14.0 >=dev-libs/sord-0.12.0 >=media-libs/lilv-0.24.0 >=media-libs/lv2-1.6.0 >=media-libs/sratom-0.6.0 >=media-libs/suil-0.10.0 gtk? ( >=x11-libs/gtk+-3.0.0:3 ) gtk2? ( >=x11-libs/gtk+-2.18.0:2 ) gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 ) portaudio? ( media-libs/portaudio ) !portaudio? ( virtual/jack ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) || ( dev-lang/python:3.10[threads(+)] >=dev-lang/python-2.7.5-r2:2.7[threads(+)] dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] ) virtual/pkgconfig
+DEPEND=>=dev-libs/serd-0.14.0 >=dev-libs/sord-0.12.0 >=media-libs/lilv-0.24.0 >=media-libs/lv2-1.6.0 >=media-libs/sratom-0.6.0 >=media-libs/suil-0.10.0 gtk? ( >=x11-libs/gtk+-3.0.0:3 ) gtk2? ( >=x11-libs/gtk+-2.18.0:2 ) gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 ) portaudio? ( media-libs/portaudio ) !portaudio? ( virtual/jack ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) || ( >=dev-lang/python-2.7.5-r2:2.7[threads(+)] dev-lang/python:3.8[threads(+)] dev-lang/python:3.9[threads(+)] dev-lang/python:3.7[threads(+)] dev-lang/python:3.10[threads(+)] ) virtual/pkgconfig
 DESCRIPTION=Simple but fully featured LV2 host for Jack
 EAPI=6
 HOMEPAGE=http://drobilla.net/software/jalv/
