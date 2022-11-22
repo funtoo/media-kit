@@ -6,7 +6,7 @@ CRATES="
 addr2line-0.17.0
 adler-1.0.2
 adler32-1.2.0
-aho-corasick-0.7.19
+aho-corasick-0.7.20
 android_system_properties-0.1.5
 ansi_term-0.12.1
 anyhow-1.0.66
@@ -48,9 +48,9 @@ criterion-plot-0.4.5
 crossbeam-0.8.2
 crossbeam-channel-0.5.6
 crossbeam-deque-0.8.2
-crossbeam-epoch-0.9.12
-crossbeam-queue-0.3.7
-crossbeam-utils-0.8.13
+crossbeam-epoch-0.9.13
+crossbeam-queue-0.3.8
+crossbeam-utils-0.8.14
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.26
@@ -149,7 +149,7 @@ semver-1.0.14
 serde-1.0.147
 serde_cbor-0.11.2
 serde_derive-1.0.147
-serde_json-1.0.88
+serde_json-1.0.89
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
