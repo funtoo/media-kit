@@ -167,7 +167,7 @@ termtree-0.4.0
 textwrap-0.11.0
 thiserror-1.0.37
 thiserror-impl-1.0.37
-time-0.1.44
+time-0.1.45
 tinytemplate-1.2.1
 toml-0.5.9
 unicode-ident-1.0.5

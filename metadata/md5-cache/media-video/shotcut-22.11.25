@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=GPL-3+
 RDEPEND=>=dev-qt/qtcore-5.11.1:5 >=dev-qt/qtdeclarative-5.11.1:5[widgets] >=dev-qt/qtgui-5.11.1:5 >=dev-qt/qtmultimedia-5.11.1:5 >=dev-qt/qtnetwork-5.11.1:5 >=dev-qt/qtopengl-5.11.1:5 >=dev-qt/qtprintsupport-5.11.1:5 >=dev-qt/qtquickcontrols2-5.11.1:5 >=dev-qt/qtsql-5.11.1:5 >=dev-qt/qtwebsockets-5.11.1:5 >=dev-qt/qtwidgets-5.11.1:5 >=dev-qt/qtxml-5.11.1:5 media-libs/mlt[ffmpeg,frei0r,fftw(+),jack,opengl,qt5,sdl,xml] media-video/ffmpeg >=dev-qt/qtgraphicaleffects-5.11.1:5 >=dev-qt/qtquickcontrols-5.11.1:5 virtual/jack >=kde-frameworks/kf-env-4 || ( >=kde-frameworks/breeze-icons-5.57.0:5 kde-frameworks/oxygen-icons:* ) >=dev-qt/qtcore-5.11.1:5
 SLOT=0
-SRC_URI=https://github.com/mltframework/shotcut/tarball/f804ef2fdfd9288a5dd486cbd2b62d0dfb358b89 -> shotcut-22.10.25-f804ef2.tar.gz
+SRC_URI=https://github.com/mltframework/shotcut/tarball/86f3e3c628a090585fcbb1abe3a6be96731a0c57 -> shotcut-22.11.25-86f3e3c.tar.gz
 _eclasses_=cmake-utils	77cd39e6009811bf97a59d91ffd5b54f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	kde5	2fdeef30e575094b67b94f367f8b72cf	kde5-functions	2dbbfc21b2646d8a3418041b240656a9	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=8dc11b40758d5417679b5ada1716af6e
+_md5_=5e677e5e98dfc8c359875838602ebb63
