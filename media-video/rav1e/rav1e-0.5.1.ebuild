@@ -146,9 +146,9 @@ scan_fmt-0.2.6
 scopeguard-1.1.0
 scratch-1.0.2
 semver-1.0.14
-serde-1.0.147
+serde-1.0.148
 serde_cbor-0.11.2
-serde_derive-1.0.147
+serde_derive-1.0.148
 serde_json-1.0.89
 shlex-1.1.0
 signal-hook-0.3.14
@@ -158,7 +158,7 @@ smallvec-1.10.0
 strsim-0.8.0
 strum-0.21.0
 strum_macros-0.21.1
-syn-1.0.103
+syn-1.0.104
 system-deps-3.1.2
 system-deps-6.0.3
 termcolor-1.1.3
