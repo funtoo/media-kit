@@ -60,10 +60,10 @@ crossbeam-epoch-0.9.13
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.14
 ctor-0.1.26
-cxx-1.0.82
-cxx-build-1.0.82
-cxxbridge-flags-1.0.82
-cxxbridge-macro-1.0.82
+cxx-1.0.83
+cxx-build-1.0.83
+cxxbridge-flags-1.0.83
+cxxbridge-macro-1.0.83
 dav1d-sys-0.7.0
 diff-0.1.13
 difflib-0.4.0
@@ -101,7 +101,7 @@ js-sys-0.3.60
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.137
+libc-0.2.138
 libfuzzer-sys-0.3.5
 libgit2-sys-0.12.26+1.3.0
 libloading-0.7.4
