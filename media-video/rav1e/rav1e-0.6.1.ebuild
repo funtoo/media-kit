@@ -23,11 +23,11 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
 bstr-1.0.1
-built-0.5.1
+built-0.5.2
 bumpalo-3.11.1
 bytemuck-1.12.3
 byteorder-1.4.3
-cargo-lock-7.1.0
+cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.77
 cexpr-0.6.0
@@ -78,7 +78,7 @@ flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
 gimli-0.26.2
-git2-0.13.25
+git2-0.15.0
 glob-0.3.0
 half-1.8.2
 hashbrown-0.12.3
@@ -103,7 +103,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.138
 libfuzzer-sys-0.3.5
-libgit2-sys-0.12.26+1.3.0
+libgit2-sys-0.14.0+1.5.0
 libloading-0.7.4
 libz-sys-1.1.8
 link-cplusplus-1.0.7
@@ -189,7 +189,6 @@ termtree-0.4.0
 textwrap-0.16.0
 thiserror-1.0.37
 thiserror-impl-1.0.37
-time-0.1.45
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
@@ -205,7 +204,6 @@ version-compare-0.1.1
 version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
-wasi-0.10.0+wasi-snapshot-preview1
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.83
 wasm-bindgen-backend-0.2.83

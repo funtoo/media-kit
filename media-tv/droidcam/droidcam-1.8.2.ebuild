@@ -7,7 +7,7 @@ inherit desktop eutils linux-mod readme.gentoo-r1 xdg
 DESCRIPTION="Use android phone as webcam, using a v4l device driver and app"
 HOMEPAGE="https://www.dev47apps.com/droidcam/linux/
 	https://github.com/aramg/droidcam"
-SRC_URI="https://api.github.com/repos/dev47apps/droidcam/tarball/v1.8.2 -> droidcam-1.8.2.tar.gz"
+SRC_URI="https://github.com/dev47apps/droidcam/tarball/00846d3b1547aa80877c42108b7950d94c2aa8b4 -> droidcam-1.8.2-00846d3.tar.gz"
 
 KEYWORDS="*"
 LICENSE="GPL-2"
@@ -67,6 +67,7 @@ src_unpack() {
 src_prepare() {
 	default
 
+	sed -i 's/USBMUXD = -lusbmuxd/USBMUXD = -lusbmuxd-2.0/g' Makefile
 	# Fix libturbojpeg location
 	sed -i \
 		-e 's/libturbojpeg.a/libturbojpeg.so/g' \

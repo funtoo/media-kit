@@ -7,7 +7,7 @@ inherit cmake
 
 DESCRIPTION="A software implementation of the OpenAL 3D audio API"
 HOMEPAGE="https://www.openal-soft.org/"
-SRC_URI="https://www.openal-soft.org/openal-releases/openal-soft-1.22.2.tar.bz2 -> openal-soft-1.22.2.tar.bz2"
+SRC_URI="https://github.com/kcat/openal-soft/tarball/dc83d99c95a42c960150ddeee06c124134b52208 -> openal-soft-1.22.2-dc83d99.tar.gz"
 
 # See https://github.com/kcat/openal-soft/blob/e0097c18b82d5da37248c4823fde48b6e0002cdd/BSD-3Clause
 # Some components are under BSD
@@ -38,7 +38,10 @@ DEPEND="${RDEPEND}
 
 DOCS=( alsoftrc.sample docs/env-vars.txt docs/hrtf.txt ChangeLog README.md )
 
-S="${WORKDIR}/openal-soft-${PV}"
+src_unpack() {
+	unpack ${A}
+	mv "${WORKDIR}"/kcat-openal-soft-* "${S}"
+}
 
 src_configure() {
 # -DEXAMPLES=OFF to avoid FFmpeg dependency wrt #481670
