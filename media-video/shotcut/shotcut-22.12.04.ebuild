@@ -6,7 +6,7 @@ inherit cmake-utils kde5
 
 DESCRIPTION="A free, open source, cross-platform video editor"
 HOMEPAGE="https://www.shotcut.org/ https://github.com/mltframework/mltframework/"
-SRC_URI="https://github.com/mltframework/shotcut/tarball/86f3e3c628a090585fcbb1abe3a6be96731a0c57 -> shotcut-22.11.25-86f3e3c.tar.gz"
+SRC_URI="https://github.com/mltframework/shotcut/tarball/922bdcd9ee3d2eb31b28ceadb92fb917b147d897 -> shotcut-22.12.04-922bdcd.tar.gz"
 KEYWORDS="*"
 
 IUSE="debug"
