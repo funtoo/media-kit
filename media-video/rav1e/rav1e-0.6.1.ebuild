@@ -107,7 +107,7 @@ libgit2-sys-0.14.0+1.5.0
 libloading-0.7.4
 libz-sys-1.1.8
 link-cplusplus-1.0.7
-linux-raw-sys-0.1.3
+linux-raw-sys-0.1.4
 log-0.4.17
 maybe-rayon-0.1.0
 memchr-2.5.0
@@ -130,7 +130,7 @@ once_cell-1.16.0
 oorandom-11.1.3
 os_str_bytes-6.4.1
 output_vt100-0.1.3
-paste-1.0.9
+paste-1.0.10
 peeking_take_while-0.1.2
 percent-encoding-2.2.0
 pkg-config-0.3.26
@@ -192,7 +192,7 @@ thiserror-impl-1.0.37
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
-toml-0.5.9
+toml-0.5.10
 unicode-bidi-0.3.8
 unicode-ident-1.0.5
 unicode-normalization-0.1.22
