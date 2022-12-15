@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="
-addr2line-0.17.0
+addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
 android_system_properties-0.1.5
@@ -18,7 +18,7 @@ atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
 av1-grain-0.2.2
-backtrace-0.3.66
+backtrace-0.3.67
 bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
@@ -29,7 +29,7 @@ bytemuck-1.12.3
 byteorder-1.4.3
 cargo-lock-8.0.3
 cast-0.3.0
-cc-1.0.77
+cc-1.0.78
 cexpr-0.6.0
 cfg-expr-0.11.0
 cfg-if-1.0.0
@@ -77,7 +77,7 @@ fern-0.6.1
 flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
-gimli-0.26.2
+gimli-0.27.0
 git2-0.15.0
 glob-0.3.0
 half-1.8.2
@@ -113,7 +113,6 @@ maybe-rayon-0.1.0
 memchr-2.5.0
 memoffset-0.7.1
 minimal-lexical-0.2.1
-miniz_oxide-0.5.4
 miniz_oxide-0.6.2
 nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
@@ -125,7 +124,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.14.0
-object-0.29.0
+object-0.30.0
 once_cell-1.16.0
 oorandom-11.1.3
 os_str_bytes-6.4.1
