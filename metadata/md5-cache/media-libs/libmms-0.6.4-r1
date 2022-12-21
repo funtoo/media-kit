@@ -1,0 +1,10 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DESCRIPTION=Library for accessing Microsoft Media Server (MMS) media streaming protocol
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/libmms/ https://launchpad.net/libmms/
+KEYWORDS=*
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=mirror://sourceforge/libmms/libmms-0.6.4.tar.gz
+_md5_=bfe29361bb687e7e5151f270216d7367
