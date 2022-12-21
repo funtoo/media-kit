@@ -39,7 +39,7 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.4.0
 clap-3.2.23
-clap-4.0.29
+clap-4.0.30
 clap_complete-4.0.6
 clap_derive-4.0.21
 clap_lex-0.2.4
@@ -92,7 +92,7 @@ image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
 io-lifetimes-1.0.3
-is-terminal-0.4.1
+is-terminal-0.4.2
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.5
@@ -123,7 +123,7 @@ num-derive-0.3.3
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
-num_cpus-1.14.0
+num_cpus-1.15.0
 object-0.30.0
 once_cell-1.16.0
 oorandom-11.1.3
