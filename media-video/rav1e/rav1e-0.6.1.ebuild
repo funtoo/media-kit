@@ -39,8 +39,8 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.4.0
 clap-3.2.23
-clap-4.0.30
-clap_complete-4.0.6
+clap-4.0.31
+clap_complete-4.0.7
 clap_derive-4.0.21
 clap_lex-0.2.4
 clap_lex-0.3.0
@@ -101,7 +101,7 @@ js-sys-0.3.60
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.138
+libc-0.2.139
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.0+1.5.0
 libloading-0.7.4
