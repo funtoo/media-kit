@@ -6,7 +6,6 @@ CRATES="
 addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
-android_system_properties-0.1.5
 anes-0.1.6
 anyhow-1.0.68
 aom-sys-0.3.2
@@ -33,7 +32,6 @@ cc-1.0.78
 cexpr-0.6.0
 cfg-expr-0.11.0
 cfg-if-1.0.0
-chrono-0.4.23
 ciborium-0.2.0
 ciborium-io-0.2.0
 ciborium-ll-0.2.0
@@ -45,11 +43,9 @@ clap_derive-4.0.21
 clap_lex-0.2.4
 clap_lex-0.3.0
 cmake-0.1.49
-codespan-reporting-0.11.1
 color_quant-1.1.0
 console-0.15.2
 const_fn_assert-0.1.2
-core-foundation-sys-0.8.3
 crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
@@ -60,10 +56,6 @@ crossbeam-epoch-0.9.13
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.14
 ctor-0.1.26
-cxx-1.0.85
-cxx-build-1.0.85
-cxxbridge-flags-1.0.85
-cxxbridge-macro-1.0.85
 dav1d-sys-0.7.0
 diff-0.1.13
 difflib-0.4.0
@@ -85,8 +77,6 @@ hashbrown-0.12.3
 heck-0.4.0
 hermit-abi-0.1.19
 hermit-abi-0.2.6
-iana-time-zone-0.1.53
-iana-time-zone-haiku-0.1.1
 idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
@@ -106,7 +96,6 @@ libfuzzer-sys-0.3.5
 libgit2-sys-0.14.0+1.5.0
 libloading-0.7.4
 libz-sys-1.1.8
-link-cplusplus-1.0.8
 linux-raw-sys-0.1.4
 log-0.4.17
 maybe-rayon-0.1.0
@@ -168,7 +157,6 @@ ryu-1.0.12
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
-scratch-1.0.3
 semver-1.0.16
 serde-1.0.151
 serde-big-array-0.4.1
@@ -231,7 +219,7 @@ yansi-0.5.1
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.1 -> rav1e-0.6.1.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.2 -> rav1e-0.6.2.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
