@@ -44,7 +44,7 @@ clap_lex-0.2.4
 clap_lex-0.3.0
 cmake-0.1.49
 color_quant-1.1.0
-console-0.15.2
+console-0.15.3
 const_fn_assert-0.1.2
 crc32fast-1.3.2
 criterion-0.4.0
@@ -152,15 +152,15 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.5
+rustix-0.36.6
 ryu-1.0.12
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.16
-serde-1.0.151
+serde-1.0.152
 serde-big-array-0.4.1
-serde_derive-1.0.151
+serde_derive-1.0.152
 serde_json-1.0.91
 shlex-1.1.0
 signal-hook-0.3.14
@@ -170,7 +170,6 @@ smallvec-1.10.0
 syn-1.0.107
 system-deps-6.0.3
 termcolor-1.1.3
-terminal_size-0.1.17
 terminal_size-0.2.3
 termtree-0.4.0
 textwrap-0.16.0
