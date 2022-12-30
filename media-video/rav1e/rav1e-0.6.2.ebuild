@@ -114,7 +114,7 @@ num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
 object-0.30.0
-once_cell-1.16.0
+once_cell-1.17.0
 oorandom-11.1.3
 os_str_bytes-6.4.1
 output_vt100-0.1.3
@@ -127,7 +127,7 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.17.7
 ppv-lite86-0.2.17
-predicates-2.1.4
+predicates-2.1.5
 predicates-core-1.0.5
 predicates-tree-1.0.7
 pretty_assertions-1.3.0
