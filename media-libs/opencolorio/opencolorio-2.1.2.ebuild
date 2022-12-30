@@ -6,9 +6,9 @@ PYTHON_COMPAT=( python3+ )
 
 inherit cmake flag-o-matic python-single-r1
 
-DESCRIPTION="A color management framework for visual effects and animation"
-HOMEPAGE="https://opencolorio.org https://github.com/AcademySoftwareFoundation/OpenColorIO"
-SRC_URI="https://api.github.com/repos/AcademySoftwareFoundation/OpenColorIO/tarball/v2.2.0 -> opencolorio-2.2.0.tar.gz"
+DESCRIPTION="A color management framework for visual effects and animation."
+HOMEPAGE="https://github.com/AcademySoftwareFoundation/OpenColorIO"
+SRC_URI="https://github.com/AcademySoftwareFoundation/OpenColorIO/tarball/e670cd98d794e83cd5a9d079f8979d9204466128 -> OpenColorIO-2.1.2-e670cd9.tar.gz"
 
 KEYWORDS="*"
 LICENSE="BSD"
@@ -20,6 +20,11 @@ REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
 
+# For versions v2.2.0 and beyond OpenColorIO requires sys-libs/minizip-ng.
+# Right now it does not configure properly due to errors around minizip, zlib, and zlib-ng
+# Funtoo Bug is tracking this effort: https://bugs.funtoo.org/browse/FL-10885
+# Once this is resolved, the autogen version can be unlocked
+# and sys-libs/minizip-ng can be added to RDEPEND
 RDEPEND="
 	dev-cpp/pystring
 	dev-python/pybind11
@@ -51,7 +56,7 @@ BDEPEND="
 # Restricting tests, bugs #439790 and #447908
 RESTRICT="test"
 
-CMAKE_BUILD_TYPE=RelWithDebInfo
+CMAKE_BUILD_TYPE="Release"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -66,8 +71,8 @@ src_unpack() {
 src_prepare() {
 	cmake_src_prepare
 
-	sed -i -e "s|LIBRARY DESTINATION lib|LIBRARY DESTINATION $(get_libdir)|g" {,src/bindings/python/,src/OpenColorIO/,src/libutils/oiiohelpers/,src/libutils/oglapphelpers/}CMakeLists.txt || die
-	sed -i -e "s|ARCHIVE DESTINATION lib|ARCHIVE DESTINATION $(get_libdir)|g" {,src/bindings/python/,src/OpenColorIO/,src/libutils/oiiohelpers/,src/libutils/oglapphelpers/}CMakeLists.txt || die
+	sed -i -e "s|LIBRARY DESTINATION lib|LIBRARY DESTINATION $(get_libdir)|g" {,src/bindings/python/,src/OpenColorIO/,src/libutils/,src/libutils/oglapphelpers/}CMakeLists.txt || die
+	sed -i -e "s|ARCHIVE DESTINATION lib|ARCHIVE DESTINATION $(get_libdir)|g" {,src/bindings/python/,src/OpenColorIO/,src/libutils/,src/libutils/oglapphelpers/}CMakeLists.txt || die
 }
 
 src_configure() {
