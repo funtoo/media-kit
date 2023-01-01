@@ -7,7 +7,7 @@ inherit python-single-r1 xdg cmake
 
 DESCRIPTION="Free (libre) font editor for Windows, Mac OS X and GNU+Linux"
 HOMEPAGE="https://fontforge.org/"
-SRC_URI="https://github.com/fontforge/fontforge/tarball/582bd41a9bf04326300fc02a677fe3610d6d3ccd -> fontforge-20220308-582bd41.tar.gz"
+SRC_URI="https://github.com/fontforge/fontforge/tarball/a1dad3e81da03d5d5f3c4c1c1b9b5ca5ebcfcecf -> fontforge-20230101-a1dad3e.tar.gz"
 
 LICENSE="BSD GPL-3+"
 SLOT="0"

@@ -105,7 +105,7 @@ minimal-lexical-0.2.1
 miniz_oxide-0.6.2
 nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
-nom-7.1.1
+nom-7.1.2
 noop_proc_macro-0.3.0
 num-bigint-0.4.3
 num-derive-0.3.3
