@@ -4,7 +4,7 @@ EAPI=7
 
 inherit autotools xdg
 
-SRC_URI="https://github.com/strukturag/libheif/releases/download/v1.14.0/libheif-1.14.0.tar.gz -> libheif-1.14.0.tar.gz"
+SRC_URI="https://github.com/strukturag/libheif/releases/download/v1.14.1/libheif-1.14.1.tar.gz -> libheif-1.14.1.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"

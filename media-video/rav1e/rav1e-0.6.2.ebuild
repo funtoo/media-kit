@@ -44,7 +44,7 @@ clap_lex-0.2.4
 clap_lex-0.3.0
 cmake-0.1.49
 color_quant-1.1.0
-console-0.15.3
+console-0.15.4
 const_fn_assert-0.1.2
 crc32fast-1.3.2
 criterion-0.4.0
