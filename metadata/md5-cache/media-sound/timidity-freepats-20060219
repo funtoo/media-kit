@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install postinst
+DESCRIPTION=Free and open set of instrument patches
+EAPI=7
+HOMEPAGE=http://freepats.opensrc.org/
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=app-eselect/eselect-timidity
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=http://freepats.opensrc.org/freepats-20060219.tar.bz2
+_md5_=656898cfd5cdeca81f4f2163a304f3d0

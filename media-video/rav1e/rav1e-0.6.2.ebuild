@@ -71,7 +71,7 @@ form_urlencoded-1.1.0
 getrandom-0.2.8
 gimli-0.27.0
 git2-0.15.0
-glob-0.3.0
+glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
 heck-0.4.0
@@ -113,7 +113,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
-object-0.30.0
+object-0.30.1
 once_cell-1.17.0
 oorandom-11.1.3
 os_str_bytes-6.4.1
