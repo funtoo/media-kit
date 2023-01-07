@@ -11,5 +11,5 @@ RDEPEND=net-dns/libidn:= sys-libs/zlib[minizip] virtual/libintl virtual/opengl a
 REQUIRED_USE=chromecast? ( encode ) directx? ( ffmpeg ) fontconfig? ( truetype ) libcaca? ( X ) libtar? ( skins ) libtiger? ( kate ) live? ( ssl ) skins? ( qt5 truetype X xml ) ssl? ( gcrypt ) vaapi? ( ffmpeg X ) vdpau? ( ffmpeg X )
 SLOT=0/5-9
 SRC_URI=https://github.com/videolan/vlc/archive/3.0.18.tar.gz -> vlc-3.0.18.tar.gz
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
 _md5_=7b7f850ccf4b31a3808fc05f48d9245e
