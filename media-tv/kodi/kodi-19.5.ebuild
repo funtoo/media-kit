@@ -2,14 +2,14 @@
 
 EAPI=7
 
-PYTHON_REQ_USE="libressl?,sqlite,ssl"
+PYTHON_REQ_USE="sqlite,ssl"
 LIBDVDCSS_VERSION="1.4.2-Leia-Beta-5"
 LIBDVDREAD_VERSION="6.0.0-Leia-Alpha-3"
 LIBDVDNAV_VERSION="6.0.0-Leia-Alpha-3"
 FFMPEG_VERSION="4.3.2"
 CODENAME="Matrix"
 FFMPEG_KODI_VERSION="19.1"
-PYTHON_COMPAT=( python3+ )
+PYTHON_COMPAT=( python3_8+ )
 SRC_URI="https://github.com/xbmc/libdvdcss/archive/${LIBDVDCSS_VERSION}.tar.gz -> libdvdcss-${LIBDVDCSS_VERSION}.tar.gz
 	https://github.com/xbmc/libdvdread/archive/${LIBDVDREAD_VERSION}.tar.gz -> libdvdread-${LIBDVDREAD_VERSION}.tar.gz
 	https://github.com/xbmc/libdvdnav/archive/${LIBDVDNAV_VERSION}.tar.gz -> libdvdnav-${LIBDVDNAV_VERSION}.tar.gz
@@ -18,16 +18,19 @@ MY_PV=${PV/_p/_r}
 MY_PV=${MY_PV/_alpha/a}
 MY_PV=${MY_PV/_beta/b}
 MY_PV=${MY_PV/_rc/RC}
+MY_PV="${MY_PV}-${CODENAME}"
 MY_P="${PN}-${MY_PV}"
-SRC_URI+=" https://github.com/xbmc/xbmc/archive/refs/tags/${PV}-${CODENAME}.tar.gz -> ${MY_P}.tar.gz"
-KEYWORDS="~amd64 ~arm arm64 ~x86"
-S=${WORKDIR}/xbmc-${MY_PV}-${CODENAME}
+SRC_URI+=" https://github.com/xbmc/xbmc/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
+KEYWORDS="*"
+S=${WORKDIR}/xbmc-${MY_PV}
+
+
+inherit autotools cmake desktop libtool linux-info pax-utils python-single-r1 xdg
 
 PATCHES=(
-	"${FILESDIR}/${P}-fmt-8.patch"
+	"${FILESDIR}/${PN}-19.4-atomic.patch"
+	"${FILESDIR}/${PN}-19.4-dav1d-1.0.0.patch"
 )
-
-inherit autotools cmake-utils eutils gnome2-utils linux-info pax-utils python-single-r1 xdg-utils
 
 DESCRIPTION="A free and open source media-player and entertainment hub"
 HOMEPAGE="https://kodi.tv/ https://kodi.wiki/"
@@ -37,13 +40,12 @@ SLOT="0"
 # use flag is called libusb so that it doesn't fool people in thinking that
 # it is _required_ for USB support. Otherwise they'll disable udev and
 # that's going to be worse.
-IUSE="airplay alsa bluetooth bluray caps cec +css dav1d dbus dvd eventclients gbm gles lcms libressl libusb lirc mariadb mysql nfs +opengl +optical power-control pulseaudio raspberry-pi samba systemd +system-ffmpeg test udf udev udisks upnp upower vaapi vdpau wayland webserver +X +xslt zeroconf"
+IUSE="airplay alsa bluetooth bluray caps cec +css dav1d dbus eventclients gbm gles lcms libusb lirc mariadb mysql nfs +optical power-control pulseaudio raspberry-pi samba +system-ffmpeg udf udev udisks upnp upower vaapi vdpau wayland webserver +X +xslt zeroconf"
 IUSE="${IUSE} cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1 cpu_flags_x86_sse4_2 cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_arm_neon"
 REQUIRED_USE="
-        ${PYTHON_REQUIRED_USE}                                                          
-        || ( gles opengl )                                                                                                                          
-        ^^ ( gbm wayland X )                                                                          
-        ?? ( mariadb mysql )
+	${PYTHON_REQUIRED_USE}
+	|| ( gbm wayland X )
+	?? ( mariadb mysql )
 	bluray? ( udf )
 	udev? ( !libusb )
 	udisks? ( dbus )
@@ -56,11 +58,10 @@ REQUIRED_USE="
 	)
 	zeroconf? ( dbus )
 "
-RESTRICT="!test? ( test )"
 
 COMMON_DEPEND="
 	>=dev-libs/lzo-2.04
-	>=dev-libs/flatbuffers-1.12.0:=
+	>=dev-libs/flatbuffers-1.11.0:=
 	>=media-libs/libjpeg-turbo-2.0.4:=
 	>=media-libs/libpng-1.6.26:0=
 "
@@ -90,7 +91,7 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 	dev-libs/libfstrcmp
 	gbm? (
 		>=dev-libs/libinput-1.10.5
-		media-libs/mesa[gbm]
+		media-libs/mesa[gbm(+)]
 		x11-libs/libxkbcommon
 	)
 	gles? (
@@ -102,27 +103,24 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 	media-fonts/roboto
 	>=media-libs/freetype-2.10.1
 	>=media-libs/libass-0.13.4
-	!raspberry-pi? ( media-libs/mesa[egl] )
+	!raspberry-pi? ( media-libs/mesa[egl(+)] )
 	>=media-libs/taglib-1.11.1
 	system-ffmpeg? (
 		>=media-video/ffmpeg-${FFMPEG_VERSION}:=[dav1d?,encode,postproc]
-		media-video/ffmpeg[openssl]
+		=media-video/ffmpeg-4*[openssl]
 	)
 	!system-ffmpeg? (
 		app-arch/bzip2
-		dav1d? ( media-libs/dav1d )
+		dav1d? ( media-libs/dav1d:= )
 	)
 	mysql? ( dev-db/mysql-connector-c:= )
 	mariadb? ( dev-db/mariadb-connector-c:= )
 	>=net-misc/curl-7.68.0[http2]
 	nfs? ( >=net-fs/libnfs-2.0.0:= )
-	opengl? ( media-libs/glu )                                                   
-        !libressl? ( >=dev-libs/openssl-1.0.2l:0= )                                                                                                                                                                           
-        libressl? ( dev-libs/libressl:0= )                         
 	!gles? ( media-libs/glu )
-	>=dev-libs/openssl-1.0.2l:0=
+	>=dev-libs/openssl-1.1.1k:0=
 	raspberry-pi? (
-		|| ( media-libs/raspberrypi-userland media-libs/raspberrypi-userland-bin media-libs/mesa[egl,gles2,video_cards_vc4] )
+		|| ( media-libs/raspberrypi-userland media-libs/raspberrypi-userland-bin media-libs/mesa[egl(+),gles2,video_cards_vc4] )
 	)
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( >=net-fs/samba-3.4.6[smbclient(+)] )
@@ -130,12 +128,10 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 	udf? ( >=dev-libs/libudfread-1.0.0 )
 	udev? ( virtual/udev )
 	vaapi? (
-		x11-libs/libva:=
-		opengl? ( x11-libs/libva[opengl] )
+		media-libs/libva:=
 		system-ffmpeg? ( media-video/ffmpeg[vaapi] )
-		vdpau? ( x11-libs/libva[vdpau] )
-		wayland? ( x11-libs/libva[wayland] )
-		X? ( x11-libs/libva[X] )
+		wayland? ( media-libs/libva[wayland] )
+		X? ( media-libs/libva[X] )
 	)
 	virtual/libiconv
 	vdpau? (
@@ -172,13 +168,11 @@ RDEPEND="${COMMON_DEPEND} ${COMMON_TARGET_DEPEND}
 "
 DEPEND="${COMMON_DEPEND} ${COMMON_TARGET_DEPEND}
 	dev-libs/rapidjson
-	test? ( >=dev-cpp/gtest-1.10.0 )
 "
 BDEPEND="${COMMON_DEPEND}
 	dev-lang/swig
 	dev-util/cmake
 	media-libs/giflib
-	>=dev-libs/flatbuffers-1.11.0
 	>=media-libs/libjpeg-turbo-2.0.4:=
 	>=media-libs/libpng-1.6.26:0=
 	virtual/pkgconfig
@@ -196,8 +190,21 @@ pkg_setup() {
 	python-single-r1_pkg_setup
 }
 
+src_unpack() {
+	if [[ ${PV} == *9999 ]] ; then
+		git-r3_src_unpack
+	else
+		default
+	fi
+}
+
 src_prepare() {
-	cmake-utils_src_prepare
+	# https://bugs.gentoo.org/885419
+	if has_version ">=media-libs/mesa-22.3.0"; then
+		PATCHES+=( "${FILESDIR}/${PN}-19.4-fix-mesa-22.3.0-build.patch" )
+	fi
+
+	cmake_src_prepare
 
 	# avoid long delays when powerkit isn't running #348580
 	sed -i \
@@ -276,13 +283,13 @@ src_configure() {
 		-DENABLE_MYSQLCLIENT=$(usex mysql)
 		-DENABLE_NFS=$(usex nfs)
 		-DENABLE_OPENGLES=$(usex gles)
-		-DENABLE_OPENGL=$(usex opengl)
-		-DENABLE_OPTICAL=$(usex dvd)
+		-DENABLE_OPENGL=$(usex !gles)
+		-DENABLE_OPTICAL=$(usex optical)
 		-DENABLE_PLIST=$(usex airplay)
 		-DENABLE_PULSEAUDIO=$(usex pulseaudio)
 		-DENABLE_SMBCLIENT=$(usex samba)
 		-DENABLE_SNDIO=OFF
-		-DENABLE_TESTING=$(usex test)
+		-DENABLE_TESTING=OFF
 		-DENABLE_UDEV=$(usex udev)
 		-DENABLE_UDFREAD=$(usex udf)
 		-DENABLE_UPNP=$(usex upnp)
@@ -313,49 +320,23 @@ src_configure() {
 		CXXFLAGS+=' -DNDEBUG'
 	fi
 
-        if use gbm; then                                                                                                                                                                                                      
-                mycmakeargs+=(                                                          
-                        -DCORE_PLATFORM_NAME="gbm"                                                                                                  
-                        -DGBM_RENDER_SYSTEM="$(usex opengl gl gles)"                                                               
-                )                                                                       
-        fi                                                                                                                                          
-                                                                                                                                                                                                                              
-        if use wayland; then                                                      
-                mycmakeargs+=(                                                                                                                                                                                                
-                        -DCORE_PLATFORM_NAME="wayland"                                                
-                        -DWAYLAND_RENDER_SYSTEM="$(usex opengl gl gles)"                
-                )                                                                                                                                   
-        fi                                                                                            
-                                                                                        
-        if use X; then                                                                                                                              
-                mycmakeargs+=( -DCORE_PLATFORM_NAME="x11" )                                                                        
-        fi                                                                              
-                                                                                                                                                    
-        cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_compile() {
-	cmake-utils_src_compile all
-}
-
-src_test() {
-	# see https://github.com/xbmc/xbmc/issues/17860#issuecomment-630120213
-	KODI_HOME="${BUILD_DIR}" cmake_build check
+	cmake_src_compile all
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
-	pax-mark Em "${ED%/}"/usr/$(get_libdir)/${PN}/${PN}.bin
+	pax-mark Em "${ED}"/usr/$(get_libdir)/${PN}/${PN}.bin
 
 	newicon media/icon48x48.png kodi.png
 
-	rm "${ED%/}"/usr/share/kodi/addons/skin.estuary/fonts/Roboto-Thin.ttf || die
+	rm "${ED}"/usr/share/kodi/addons/skin.estuary/fonts/Roboto-Thin.ttf || die
 	dosym ../../../../fonts/roboto/Roboto-Thin.ttf \
 		usr/share/kodi/addons/skin.estuary/fonts/Roboto-Thin.ttf
-
-        python_domodule tools/EventClients/lib/python/xbmcclient.py                                                                                 
-        python_newscript "tools/EventClients/Clients/KodiSend/kodi-send.py" kodi-send
 
 	if use !eventclients ; then
 		rm -f "${ED}"/usr/bin/kodi-ps3remote || die
@@ -366,14 +347,4 @@ src_install() {
 	fi
 
 	python_optimize "${D}$(python_get_sitedir)"
-}
-
-pkg_postinst() {                                                                                                                   
-        gnome2_icon_cache_update                                                        
-        xdg_desktop_database_update                                                                                                                 
-}                                                                                                                                  
-                                                                                        
-pkg_postrm() {                                                                                                                                      
-        gnome2_icon_cache_update                                                                                                   
-        xdg_desktop_database_update                                                     
 }
