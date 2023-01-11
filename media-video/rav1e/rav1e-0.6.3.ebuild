@@ -12,7 +12,7 @@ aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.7
+assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
@@ -93,7 +93,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.139
 libfuzzer-sys-0.3.5
-libgit2-sys-0.14.0+1.5.0
+libgit2-sys-0.14.1+1.5.0
 libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
@@ -113,7 +113,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
-object-0.30.1
+object-0.30.2
 once_cell-1.17.0
 oorandom-11.1.3
 os_str_bytes-6.4.1
@@ -218,7 +218,7 @@ yansi-0.5.1
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.2 -> rav1e-0.6.2.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.3 -> rav1e-0.6.3.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
