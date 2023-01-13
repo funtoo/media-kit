@@ -81,7 +81,7 @@ idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
-io-lifetimes-1.0.3
+io-lifetimes-1.0.4
 is-terminal-0.4.2
 itertools-0.8.2
 itertools-0.10.5
@@ -203,13 +203,13 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
-windows_aarch64_gnullvm-0.42.0
-windows_aarch64_msvc-0.42.0
-windows_i686_gnu-0.42.0
-windows_i686_msvc-0.42.0
-windows_x86_64_gnu-0.42.0
-windows_x86_64_gnullvm-0.42.0
-windows_x86_64_msvc-0.42.0
+windows_aarch64_gnullvm-0.42.1
+windows_aarch64_msvc-0.42.1
+windows_i686_gnu-0.42.1
+windows_i686_msvc-0.42.1
+windows_x86_64_gnu-0.42.1
+windows_x86_64_gnullvm-0.42.1
+windows_x86_64_msvc-0.42.1
 y4m-0.7.0
 yansi-0.5.1
 
