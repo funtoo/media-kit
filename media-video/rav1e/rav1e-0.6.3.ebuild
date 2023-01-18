@@ -23,7 +23,7 @@ bitflags-1.3.2
 bitstream-io-1.6.0
 bstr-1.1.0
 built-0.5.2
-bumpalo-3.11.1
+bumpalo-3.12.0
 bytemuck-1.12.3
 byteorder-1.4.3
 cargo-lock-8.0.3
@@ -44,7 +44,7 @@ clap_lex-0.2.4
 clap_lex-0.3.1
 cmake-0.1.49
 color_quant-1.1.0
-console-0.15.4
+console-0.15.5
 const_fn_assert-0.1.2
 crc32fast-1.3.2
 criterion-0.4.0
@@ -105,7 +105,7 @@ minimal-lexical-0.2.1
 miniz_oxide-0.6.2
 nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
-nom-7.1.2
+nom-7.1.3
 noop_proc_macro-0.3.0
 num-bigint-0.4.3
 num-derive-0.3.3
@@ -133,7 +133,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.49
+proc-macro2-1.0.50
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.23
@@ -152,7 +152,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.6
+rustix-0.36.7
 ryu-1.0.12
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -169,7 +169,7 @@ simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.107
 system-deps-6.0.3
-termcolor-1.1.3
+termcolor-1.2.0
 terminal_size-0.2.3
 termtree-0.4.0
 textwrap-0.16.0
@@ -184,7 +184,7 @@ unicode-ident-1.0.6
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
-v_frame-0.3.1
+v_frame-0.3.3
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4

@@ -8,7 +8,7 @@ MY_P=${P/graphicsm/GraphicsM}
 DESCRIPTION="Collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.graphicsmagick.org/ https://hg.osdn.net/view/graphicsmagick/GM"
 
-SRC_URI="https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.39/GraphicsMagick-1.3.39.tar.xz -> GraphicsMagick-1.3.39.tar.xz"
+SRC_URI="https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.40/GraphicsMagick-1.3.40.tar.xz -> GraphicsMagick-1.3.40.tar.xz"
 S="${WORKDIR}/${MY_P}"
 
 KEYWORDS="*"
@@ -56,7 +56,6 @@ DEPEND="${RDEPEND}"
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.3.36-flags.patch
 	"${FILESDIR}"/${PN}-1.3.19-perl.patch
-	"${FILESDIR}"/${P}-configure-bashism.patch
 )
 
 pkg_pretend() {
