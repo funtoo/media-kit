@@ -179,7 +179,7 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.0
 toml-0.5.10
-unicode-bidi-0.3.8
+unicode-bidi-0.3.9
 unicode-ident-1.0.6
 unicode-normalization-0.1.22
 unicode-width-0.1.10
