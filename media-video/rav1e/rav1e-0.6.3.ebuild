@@ -24,7 +24,7 @@ bitstream-io-1.6.0
 bstr-1.1.0
 built-0.5.2
 bumpalo-3.12.0
-bytemuck-1.12.3
+bytemuck-1.12.4
 byteorder-1.4.3
 cargo-lock-8.0.3
 cast-0.3.0
