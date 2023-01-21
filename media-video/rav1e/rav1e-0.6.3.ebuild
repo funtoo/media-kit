@@ -93,7 +93,7 @@ lazy_static-1.4.0
 lazycell-1.3.0
 libc-0.2.139
 libfuzzer-sys-0.3.5
-libgit2-sys-0.14.1+1.5.0
+libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
