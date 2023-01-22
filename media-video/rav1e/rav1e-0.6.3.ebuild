@@ -141,7 +141,7 @@ rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.6.1
-rayon-core-1.10.1
+rayon-core-1.10.2
 regex-1.7.1
 regex-automata-0.1.10
 regex-syntax-0.6.28
