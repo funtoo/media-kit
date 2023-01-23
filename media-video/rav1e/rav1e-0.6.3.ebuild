@@ -38,7 +38,7 @@ ciborium-ll-0.2.0
 clang-sys-1.4.0
 clap-3.2.23
 clap-4.1.2
-clap_complete-4.1.0
+clap_complete-4.1.1
 clap_derive-4.1.0
 clap_lex-0.2.4
 clap_lex-0.3.1
