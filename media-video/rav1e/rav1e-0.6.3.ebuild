@@ -28,7 +28,7 @@ bytemuck-1.13.0
 byteorder-1.4.3
 cargo-lock-8.0.3
 cast-0.3.0
-cc-1.0.78
+cc-1.0.79
 cexpr-0.6.0
 cfg-expr-0.11.0
 cfg-if-1.0.0
