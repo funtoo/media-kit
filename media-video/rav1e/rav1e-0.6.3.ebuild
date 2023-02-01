@@ -21,7 +21,7 @@ backtrace-0.3.67
 bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
-bstr-1.1.0
+bstr-1.2.0
 built-0.5.2
 bumpalo-3.12.0
 bytemuck-1.13.0
@@ -74,7 +74,7 @@ git2-0.15.0
 glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
-heck-0.4.0
+heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
 idna-0.3.0
@@ -87,7 +87,7 @@ itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.5
 jobserver-0.1.25
-js-sys-0.3.60
+js-sys-0.3.61
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -102,7 +102,7 @@ maybe-rayon-0.1.0
 memchr-2.5.0
 memoffset-0.7.1
 minimal-lexical-0.2.1
-miniz_oxide-0.6.2
+miniz_oxide-0.6.3
 nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
 nom-7.1.3
@@ -191,12 +191,12 @@ version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.2
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.83
-wasm-bindgen-backend-0.2.83
-wasm-bindgen-macro-0.2.83
-wasm-bindgen-macro-support-0.2.83
-wasm-bindgen-shared-0.2.83
-web-sys-0.3.60
+wasm-bindgen-0.2.84
+wasm-bindgen-backend-0.2.84
+wasm-bindgen-macro-0.2.84
+wasm-bindgen-macro-support-0.2.84
+wasm-bindgen-shared-0.2.84
+web-sys-0.3.61
 which-4.4.0
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
