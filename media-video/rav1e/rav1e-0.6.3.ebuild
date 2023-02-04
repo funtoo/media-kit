@@ -77,12 +77,13 @@ hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
+hermit-abi-0.3.0
 idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
 io-lifetimes-1.0.5
-is-terminal-0.4.2
+is-terminal-0.4.3
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.5
@@ -98,7 +99,7 @@ libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
 log-0.4.17
-maybe-rayon-0.1.0
+maybe-rayon-0.1.1
 memchr-2.5.0
 memoffset-0.7.1
 minimal-lexical-0.2.1
@@ -152,7 +153,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.7
+rustix-0.36.8
 ryu-1.0.12
 same-file-1.0.6
 scan_fmt-0.2.6
