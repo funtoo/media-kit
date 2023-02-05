@@ -7,7 +7,7 @@ addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
 anes-0.1.6
-anyhow-1.0.68
+anyhow-1.0.69
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -134,7 +134,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.50
+proc-macro2-1.0.51
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.23
@@ -162,7 +162,7 @@ semver-1.0.16
 serde-1.0.152
 serde-big-array-0.4.1
 serde_derive-1.0.152
-serde_json-1.0.91
+serde_json-1.0.92
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
