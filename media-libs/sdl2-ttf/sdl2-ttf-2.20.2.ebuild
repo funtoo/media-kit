@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Support for TrueType fonts in SDL applications."
 HOMEPAGE="https://www.libsdl.org/projects/SDL_ttf/"
-SRC_URI="https://github.com/libsdl-org/SDL_ttf/tarball/0a652b598625d16ea7016665095cb1e9bce9ef4f -> SDL_ttf-2.20.1-0a652b5.tar.gz"
+SRC_URI="https://github.com/libsdl-org/SDL_ttf/tarball/89d1692fd8fe91a679bb943d377bfbd709b52c23 -> SDL_ttf-2.20.2-89d1692.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
