@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
 bstr-1.2.0
-built-0.5.2
+built-0.5.3
 bumpalo-3.12.0
 bytemuck-1.13.0
 byteorder-1.4.3
@@ -70,14 +70,14 @@ flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
 gimli-0.27.1
-git2-0.15.0
+git2-0.16.1
 glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
-hermit-abi-0.3.0
+hermit-abi-0.3.1
 idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
