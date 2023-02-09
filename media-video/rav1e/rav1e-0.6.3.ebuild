@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
 bstr-1.2.0
-built-0.5.3
+built-0.5.2
 bumpalo-3.12.0
 bytemuck-1.13.0
 byteorder-1.4.3
@@ -70,7 +70,7 @@ flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
 gimli-0.27.1
-git2-0.16.1
+git2-0.15.0
 glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
@@ -162,7 +162,7 @@ semver-1.0.16
 serde-1.0.152
 serde-big-array-0.4.1
 serde_derive-1.0.152
-serde_json-1.0.92
+serde_json-1.0.93
 shlex-1.1.0
 signal-hook-0.3.14
 signal-hook-registry-1.4.0
