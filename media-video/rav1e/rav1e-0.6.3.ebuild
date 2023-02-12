@@ -164,8 +164,8 @@ serde-big-array-0.4.1
 serde_derive-1.0.152
 serde_json-1.0.93
 shlex-1.1.0
-signal-hook-0.3.14
-signal-hook-registry-1.4.0
+signal-hook-0.3.15
+signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.107
