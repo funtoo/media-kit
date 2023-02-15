@@ -171,7 +171,7 @@ smallvec-1.10.0
 syn-1.0.107
 system-deps-6.0.3
 termcolor-1.2.0
-terminal_size-0.2.3
+terminal_size-0.2.5
 termtree-0.4.0
 textwrap-0.16.0
 thiserror-1.0.38
