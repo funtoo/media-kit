@@ -115,7 +115,7 @@ num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
 object-0.30.3
-once_cell-1.17.0
+once_cell-1.17.1
 oorandom-11.1.3
 os_str_bytes-6.4.1
 output_vt100-0.1.3
@@ -171,7 +171,7 @@ smallvec-1.10.0
 syn-1.0.107
 system-deps-6.0.3
 termcolor-1.2.0
-terminal_size-0.2.3
+terminal_size-0.2.5
 termtree-0.4.0
 textwrap-0.16.0
 thiserror-1.0.38
