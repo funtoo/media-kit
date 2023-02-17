@@ -37,8 +37,8 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.4.0
 clap-3.2.23
-clap-4.1.4
-clap_complete-4.1.1
+clap-4.1.6
+clap_complete-4.1.2
 clap_derive-4.1.0
 clap_lex-0.2.4
 clap_lex-0.3.1
@@ -69,7 +69,7 @@ fern-0.6.1
 flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
-gimli-0.27.1
+gimli-0.27.2
 git2-0.15.0
 glob-0.3.1
 half-1.8.2
