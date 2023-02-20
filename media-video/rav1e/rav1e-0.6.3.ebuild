@@ -21,7 +21,7 @@ backtrace-0.3.67
 bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
-bstr-1.2.0
+bstr-1.3.0
 built-0.5.2
 bumpalo-3.12.0
 bytemuck-1.13.0
