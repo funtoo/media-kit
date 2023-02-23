@@ -38,10 +38,10 @@ ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
 clap-4.1.6
-clap_complete-4.1.2
+clap_complete-4.1.3
 clap_derive-4.1.0
 clap_lex-0.2.4
-clap_lex-0.3.1
+clap_lex-0.3.2
 cmake-0.1.49
 color_quant-1.1.0
 console-0.15.5
@@ -83,7 +83,7 @@ image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
 io-lifetimes-1.0.5
-is-terminal-0.4.3
+is-terminal-0.4.4
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.5
@@ -168,7 +168,7 @@ signal-hook-0.3.15
 signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
-syn-1.0.107
+syn-1.0.108
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
