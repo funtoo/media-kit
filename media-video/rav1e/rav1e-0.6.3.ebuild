@@ -56,7 +56,7 @@ crossbeam-epoch-0.9.13
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.14
 ctor-0.1.26
-dav1d-sys-0.7.0
+dav1d-sys-0.7.1
 diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
