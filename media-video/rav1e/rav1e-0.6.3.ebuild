@@ -37,9 +37,9 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
-clap-4.1.6
-clap_complete-4.1.3
-clap_derive-4.1.0
+clap-4.1.7
+clap_complete-4.1.4
+clap_derive-4.1.7
 clap_lex-0.2.4
 clap_lex-0.3.2
 cmake-0.1.49
