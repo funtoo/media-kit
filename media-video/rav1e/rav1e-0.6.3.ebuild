@@ -37,9 +37,9 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
-clap-4.1.7
+clap-4.1.8
 clap_complete-4.1.4
-clap_derive-4.1.7
+clap_derive-4.1.8
 clap_lex-0.2.4
 clap_lex-0.3.2
 cmake-0.1.49
@@ -50,11 +50,11 @@ crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
 crossbeam-0.8.2
-crossbeam-channel-0.5.6
-crossbeam-deque-0.8.2
-crossbeam-epoch-0.9.13
+crossbeam-channel-0.5.7
+crossbeam-deque-0.8.3
+crossbeam-epoch-0.9.14
 crossbeam-queue-0.3.8
-crossbeam-utils-0.8.14
+crossbeam-utils-0.8.15
 ctor-0.1.26
 dav1d-sys-0.7.1
 diff-0.1.13
@@ -87,7 +87,7 @@ is-terminal-0.4.4
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.5
-jobserver-0.1.25
+jobserver-0.1.26
 js-sys-0.3.61
 lab-0.11.0
 lazy_static-1.4.0
@@ -101,7 +101,7 @@ linux-raw-sys-0.1.4
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
-memoffset-0.7.1
+memoffset-0.8.0
 minimal-lexical-0.2.1
 miniz_oxide-0.6.2
 nasm-rs-0.2.4
