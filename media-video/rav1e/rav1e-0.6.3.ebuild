@@ -86,7 +86,7 @@ io-lifetimes-1.0.5
 is-terminal-0.4.4
 itertools-0.8.2
 itertools-0.10.5
-itoa-1.0.5
+itoa-1.0.6
 jobserver-0.1.26
 js-sys-0.3.61
 lab-0.11.0
@@ -141,8 +141,8 @@ quote-1.0.23
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
-rayon-1.6.1
-rayon-core-1.10.2
+rayon-1.7.0
+rayon-core-1.11.0
 regex-1.7.1
 regex-automata-0.1.10
 regex-syntax-0.6.28
@@ -153,8 +153,8 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.8
-ryu-1.0.12
+rustix-0.36.9
+ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
@@ -162,7 +162,7 @@ semver-1.0.16
 serde-1.0.152
 serde-big-array-0.4.1
 serde_derive-1.0.152
-serde_json-1.0.93
+serde_json-1.0.94
 shlex-1.1.0
 signal-hook-0.3.15
 signal-hook-registry-1.4.1
@@ -181,7 +181,7 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
 unicode-bidi-0.3.10
-unicode-ident-1.0.6
+unicode-ident-1.0.7
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
