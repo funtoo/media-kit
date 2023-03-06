@@ -82,7 +82,7 @@ idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
-io-lifetimes-1.0.5
+io-lifetimes-1.0.6
 is-terminal-0.4.4
 itertools-0.8.2
 itertools-0.10.5
