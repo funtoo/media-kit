@@ -119,7 +119,7 @@ once_cell-1.17.1
 oorandom-11.1.3
 os_str_bytes-6.4.1
 output_vt100-0.1.3
-paste-1.0.11
+paste-1.0.12
 peeking_take_while-0.1.2
 percent-encoding-2.2.0
 pkg-config-0.3.26
@@ -174,14 +174,14 @@ termcolor-1.2.0
 terminal_size-0.2.5
 termtree-0.4.0
 textwrap-0.16.0
-thiserror-1.0.38
-thiserror-impl-1.0.38
+thiserror-1.0.39
+thiserror-impl-1.0.39
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
 unicode-bidi-0.3.10
-unicode-ident-1.0.7
+unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
