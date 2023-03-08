@@ -159,9 +159,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.16
-serde-1.0.153
+serde-1.0.154
 serde-big-array-0.4.1
-serde_derive-1.0.153
+serde_derive-1.0.154
 serde_json-1.0.94
 shlex-1.1.0
 signal-hook-0.3.15
@@ -180,7 +180,7 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-unicode-bidi-0.3.10
+unicode-bidi-0.3.11
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
