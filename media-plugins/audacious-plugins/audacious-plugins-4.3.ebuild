@@ -5,17 +5,17 @@ MY_P="${P/_/-}"
 
 inherit autotools
 
-DESCRIPTION="Lightweight and versatile audio player"
+DESCRIPTION="Plugins for Audacious music player"
 HOMEPAGE="https://audacious-media-player.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="*"
-IUSE="aac +alsa ampache bs2b cdda cue ffmpeg flac fluidsynth gme +http jack
-	lame libnotify libsamplerate lirc mms modplug mp3 nls opengl pulseaudio
+IUSE="+aac +alsa ampache bs2b cdda cue ffmpeg flac fluidsynth gme +http jack lame
+	libnotify libsamplerate lirc mms modplug +mp3 nls opengl opus osd pulseaudio
 	scrobbler sdl sid sndfile soxr speedpitch streamtuner vorbis wavpack X"
 REQUIRED_USE="ampache? ( http ) streamtuner? ( http )"
-SRC_URI="https://api.github.com/repos/audacious-media-player/audacious-plugins/tarball/refs/tags/audacious-plugins-4.3 -> audacious-plugins-4.3.tar.gz"
+SRC_URI="https://github.com/audacious-media-player/audacious-plugins/tarball/6772e80d80bc9e86776fc952de158122af29630c -> audacious-plugins-4.3-6772e80.tar.gz"
 
 # The following plugins REQUIRE a GUI build of audacious, because non-GUI
 # builds do NOT install the libaudgui library & headers.
@@ -33,6 +33,7 @@ SRC_URI="https://api.github.com/repos/audacious-media-player/audacious-plugins/t
 #   gtkui
 #   hotkey
 #   notify
+#   aosd
 #   statusicon
 BDEPEND="
 	dev-util/gdbus-codegen
@@ -78,6 +79,7 @@ DEPEND="
 	modplug? ( media-libs/libmodplug )
 	mp3? ( >=media-sound/mpg123-1.12.1 )
 	opengl? ( dev-qt/qtopengl:5 )
+	opus? ( >=media-libs/opus-1.0.1 >=media-libs/opusfile-0.4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? ( media-libs/libsdl2[sound] )
@@ -96,8 +98,9 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 post_src_unpack() {
-	pwd
-	mv "${WORKDIR}/"audacious-media-player-audacious-plugins* "${S}" || die
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}/"audacious-media-player-audacious-plugins* "${S}" || die
+	fi
 }
 
 pkg_setup() {
@@ -124,6 +127,7 @@ src_configure() {
 		--disable-oss4
 		--disable-coreaudio
 		--disable-sndio
+		--with-libsdl=2
 		$(use_enable aac)
 		$(use_enable alsa)
 		$(use_enable ampache)
@@ -133,6 +137,7 @@ src_configure() {
 		$(use_enable flac)
 		$(use_enable flac filewriter)
 		$(use_enable fluidsynth amidiplug)
+		$(use_enable ffmpeg ffaudio )
 		$(use_enable gme console)
 		$(use_enable http neon)
 		$(use_enable jack)
@@ -145,6 +150,7 @@ src_configure() {
 		$(use_enable mp3 mpg123)
 		$(use_enable nls)
 		$(use_enable opengl qtglspectrum)
+		$(use_enable opus )
 		$(use_enable pulseaudio pulse)
 		$(use_enable scrobbler scrobbler2)
 		$(use_enable sdl sdlout)
@@ -156,7 +162,6 @@ src_configure() {
 		$(use_enable vorbis)
 		$(use_enable wavpack)
 		$(use_enable X qthotkey)
-		$(use_with ffmpeg ffmpeg ffmpeg)
 	)
 
 	econf "${myeconfargs[@]}"

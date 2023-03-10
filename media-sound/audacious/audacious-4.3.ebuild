@@ -8,7 +8,7 @@ inherit xdg autotools
 
 DESCRIPTION="Lightweight and versatile audio player"
 HOMEPAGE="https://audacious-media-player.org/"
-SRC_URI="https://api.github.com/repos/audacious-media-player/audacious/tarball/refs/tags/audacious-4.3 -> audacious-4.3.tar.gz"
+SRC_URI="https://github.com/audacious-media-player/audacious/tarball/f185cdf6356d4f6393d7fbae5e16e1bfd509a0e6 -> audacious-4.3-f185cdf.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -33,7 +33,9 @@ RDEPEND="${DEPEND}"
 PDEPEND="~media-plugins/audacious-plugins-${PV}"
 
 post_src_unpack() {
-	mv "${WORKDIR}/"audacious-media-player-audacious* "${S}" || die
+	if [ ! -d "${S}" ]; then
+		mv "${WORKDIR}/"audacious-media-player-audacious* "${S}" || die
+	fi
 }
 
 src_prepare() {
@@ -41,6 +43,7 @@ src_prepare() {
 	if ! use nls; then
 		sed -e "/SUBDIRS/s/ po//" -i Makefile || die # bug #512698
 	fi
+	sed -i -e 's/SingleMainWindow/X-SingleMainWindow/g' "${S}"/audacious.desktop || die
     eautoreconf
 }
 
@@ -52,6 +55,7 @@ src_configure() {
 	# Bugs #197894, #199069, #207330, #208606
 	local myeconfargs=(
 		--disable-valgrind
+		--disable-libarchive
 		--disable-gtk
 		--enable-dbus
 		--enable-qt
