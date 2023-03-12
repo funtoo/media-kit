@@ -159,9 +159,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.16
-serde-1.0.154
+serde-1.0.155
 serde-big-array-0.4.1
-serde_derive-1.0.154
+serde_derive-1.0.155
 serde_json-1.0.94
 shlex-1.1.0
 signal-hook-0.3.15
