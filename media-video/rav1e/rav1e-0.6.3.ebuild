@@ -134,10 +134,10 @@ predicates-tree-1.0.7
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.51
+proc-macro2-1.0.52
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.23
+quote-1.0.24
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -158,7 +158,7 @@ ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
-semver-1.0.16
+semver-1.0.17
 serde-1.0.155
 serde-big-array-0.4.1
 serde_derive-1.0.155
