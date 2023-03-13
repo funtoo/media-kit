@@ -137,7 +137,7 @@ proc-macro-error-attr-1.0.4
 proc-macro2-1.0.52
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.25
+quote-1.0.24
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -205,14 +205,14 @@ winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
 windows-sys-0.45.0
-windows-targets-0.42.1
-windows_aarch64_gnullvm-0.42.1
-windows_aarch64_msvc-0.42.1
-windows_i686_gnu-0.42.1
-windows_i686_msvc-0.42.1
-windows_x86_64_gnu-0.42.1
-windows_x86_64_gnullvm-0.42.1
-windows_x86_64_msvc-0.42.1
+windows-targets-0.42.2
+windows_aarch64_gnullvm-0.42.2
+windows_aarch64_msvc-0.42.2
+windows_i686_gnu-0.42.2
+windows_i686_msvc-0.42.2
+windows_x86_64_gnu-0.42.2
+windows_x86_64_gnullvm-0.42.2
+windows_x86_64_msvc-0.42.2
 y4m-0.7.0
 yansi-0.5.1
 
