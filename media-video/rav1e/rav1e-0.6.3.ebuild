@@ -137,7 +137,7 @@ proc-macro-error-attr-1.0.4
 proc-macro2-1.0.52
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.24
+quote-1.0.25
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
