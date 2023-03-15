@@ -137,7 +137,7 @@ proc-macro-error-attr-1.0.4
 proc-macro2-1.0.52
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.24
+quote-1.0.26
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -159,9 +159,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.155
+serde-1.0.156
 serde-big-array-0.4.1
-serde_derive-1.0.155
+serde_derive-1.0.156
 serde_json-1.0.94
 shlex-1.1.0
 signal-hook-0.3.15
