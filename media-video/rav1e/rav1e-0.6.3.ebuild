@@ -7,12 +7,13 @@ addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
 anes-0.1.6
+anstyle-0.3.1
 anyhow-1.0.69
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.8
+assert_cmd-2.0.9
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
@@ -128,7 +129,7 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.17.7
 ppv-lite86-0.2.17
-predicates-2.1.5
+predicates-3.0.1
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
