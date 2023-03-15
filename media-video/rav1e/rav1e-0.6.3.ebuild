@@ -172,7 +172,7 @@ syn-1.0.109
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
-termtree-0.4.0
+termtree-0.4.1
 textwrap-0.16.0
 thiserror-1.0.39
 thiserror-impl-1.0.39
