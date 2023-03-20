@@ -84,7 +84,7 @@ idna-0.3.0
 image-0.24.5
 indexmap-1.9.2
 interpolate_name-0.2.3
-io-lifetimes-1.0.8
+io-lifetimes-1.0.9
 is-terminal-0.4.5
 itertools-0.8.2
 itertools-0.10.5
@@ -155,15 +155,15 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.21
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.10
+rustix-0.36.11
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.157
+serde-1.0.158
 serde-big-array-0.4.1
-serde_derive-1.0.157
+serde_derive-1.0.158
 serde_json-1.0.94
 shlex-1.1.0
 signal-hook-0.3.15
@@ -171,7 +171,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.2
+syn-2.0.3
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
@@ -183,7 +183,7 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-unicode-bidi-0.3.12
+unicode-bidi-0.3.13
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10

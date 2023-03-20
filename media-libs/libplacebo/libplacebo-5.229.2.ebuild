@@ -9,7 +9,7 @@ inherit meson python-any-r1
 
 DESCRIPTION="Reusable library for GPU-accelerated image processing primitives"
 HOMEPAGE="https://code.videolan.org/videolan/libplacebo"
-SRC_URI="https://direct.funtoo.org/36/e2/3e/36e23e4b50d0b7246d4aaaa304503e676ae017d36bc60ae22a582935fdebf84d7c6ae6b88347bf11f5e8f92e6bc05cc383184952749da8750a68384a0f502219 -> libplacebo-5.229.2-with-submodules.tar.xz"
+SRC_URI="https://direct.funtoo.org/ed/1c/6a/ed1c6a19a03161814589ca03b2a8e1b411f7b7afb0a43eb52382b8f1563d95b5650d759b4e9319febe6f5dab787ba55e1bd4f83283736c5a0fb4de1922483d4e -> libplacebo-5.229.2-with-submodules.tar.xz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/$(ver_cut 2)" # libplacebo.so version
