@@ -145,9 +145,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.7.1
+regex-1.7.2
 regex-automata-0.1.10
-regex-syntax-0.6.28
+regex-syntax-0.6.29
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -171,7 +171,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.3
+syn-2.0.4
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
