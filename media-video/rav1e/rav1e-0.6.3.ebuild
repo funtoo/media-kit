@@ -136,7 +136,7 @@ predicates-tree-1.0.9
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.52
+proc-macro2-1.0.53
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.26
@@ -171,7 +171,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.4
+syn-2.0.5
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
