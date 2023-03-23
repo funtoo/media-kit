@@ -39,9 +39,9 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
-clap-4.1.11
+clap-4.1.12
 clap_complete-4.1.5
-clap_derive-4.1.9
+clap_derive-4.1.12
 clap_lex-0.2.4
 clap_lex-0.3.3
 cmake-0.1.49
@@ -67,7 +67,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 errno-0.2.8
 errno-dragonfly-0.1.2
-fern-0.6.1
+fern-0.6.2
 flate2-1.0.25
 form_urlencoded-1.1.0
 getrandom-0.2.8
@@ -134,8 +134,6 @@ predicates-3.0.1
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
-proc-macro-error-1.0.4
-proc-macro-error-attr-1.0.4
 proc-macro2-1.0.53
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
@@ -152,7 +150,7 @@ rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
 rust_hawktracer_sys-0.4.2
-rustc-demangle-0.1.21
+rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.36.11
@@ -171,7 +169,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.5
+syn-2.0.8
 system-deps-6.0.3
 termcolor-1.2.0
 terminal_size-0.2.5
@@ -191,7 +189,6 @@ url-2.3.1
 v_frame-0.3.3
 vcpkg-0.2.15
 version-compare-0.1.1
-version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1

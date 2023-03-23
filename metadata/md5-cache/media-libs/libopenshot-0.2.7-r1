@@ -1,0 +1,15 @@
+BDEPEND=doc? ( app-doc/doxygen ) python? ( dev-lang/swig ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=dev-libs/jsoncpp:0= dev-libs/protobuf:= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5[widgets] >=media-libs/libopenshot-audio-0.2.1:0= media-video/ffmpeg:0=[encode,x264,xvid,vpx,mp3,theora,vorbis] net-libs/cppzmq net-libs/zeromq imagemagick? ( >=media-gfx/imagemagick-7:0=[cxx] ) opencv? ( >=media-libs/opencv-4.5.2:=[contrib,contribdnn] ) python? ( python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
+DESCRIPTION=Video editing library used by OpenShot
+EAPI=7
+HOMEPAGE=https://www.openshot.org/
+IUSE=doc examples +imagemagick +opencv +python python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_targets_python3_10 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8
+KEYWORDS=amd64 x86
+LICENSE=GPL-3+
+RDEPEND=dev-libs/jsoncpp:0= dev-libs/protobuf:= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5[widgets] >=media-libs/libopenshot-audio-0.2.1:0= media-video/ffmpeg:0=[encode,x264,xvid,vpx,mp3,theora,vorbis] net-libs/cppzmq net-libs/zeromq imagemagick? ( >=media-gfx/imagemagick-7:0=[cxx] ) opencv? ( >=media-libs/opencv-4.5.2:=[contrib,contribdnn] ) python? ( python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 ) )
+SLOT=0/21
+SRC_URI=https://github.com/OpenShot/libopenshot/archive/v0.2.7.tar.gz -> libopenshot-0.2.7.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=4979a2968b20b7b646ae3317aa1b6c3d
