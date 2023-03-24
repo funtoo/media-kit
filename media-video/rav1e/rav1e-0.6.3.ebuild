@@ -21,7 +21,6 @@ av1-grain-0.2.2
 backtrace-0.3.67
 bindgen-0.61.0
 bitflags-1.3.2
-bitflags-2.0.2
 bitstream-io-1.6.0
 bstr-1.4.0
 built-0.5.2
@@ -32,14 +31,14 @@ cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.79
 cexpr-0.6.0
-cfg-expr-0.11.0
+cfg-expr-0.14.0
 cfg-if-1.0.0
 ciborium-0.2.0
 ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
-clap-4.1.12
+clap-4.1.13
 clap_complete-4.1.5
 clap_derive-4.1.12
 clap_lex-0.2.4
@@ -130,7 +129,7 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.17.7
 ppv-lite86-0.2.17
-predicates-3.0.1
+predicates-3.0.2
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
@@ -163,6 +162,7 @@ serde-1.0.158
 serde-big-array-0.4.1
 serde_derive-1.0.158
 serde_json-1.0.94
+serde_spanned-0.6.1
 shlex-1.1.0
 signal-hook-0.3.15
 signal-hook-registry-1.4.1
@@ -170,7 +170,7 @@ simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
 syn-2.0.8
-system-deps-6.0.3
+system-deps-6.0.4
 termcolor-1.2.0
 terminal_size-0.2.5
 termtree-0.4.1
@@ -181,6 +181,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
+toml-0.7.3
+toml_datetime-0.6.1
+toml_edit-0.19.8
 unicode-bidi-0.3.13
 unicode-ident-1.0.8
 unicode-normalization-0.1.22
@@ -213,6 +216,7 @@ windows_i686_msvc-0.42.2
 windows_x86_64_gnu-0.42.2
 windows_x86_64_gnullvm-0.42.2
 windows_x86_64_msvc-0.42.2
+winnow-0.4.1
 y4m-0.7.0
 yansi-0.5.1
 
