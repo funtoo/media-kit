@@ -169,7 +169,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.8
+syn-2.0.9
 system-deps-6.0.4
 termcolor-1.2.0
 terminal_size-0.2.5
