@@ -80,8 +80,8 @@ hermit-abi-0.1.19
 hermit-abi-0.2.6
 hermit-abi-0.3.1
 idna-0.3.0
-image-0.24.5
-indexmap-1.9.2
+image-0.24.6
+indexmap-1.9.3
 interpolate_name-0.2.3
 io-lifetimes-1.0.9
 is-terminal-0.4.5
@@ -142,7 +142,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.7.2
+regex-1.7.3
 regex-automata-0.1.10
 regex-syntax-0.6.29
 rust_hawktracer-0.7.0
@@ -169,7 +169,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.9
+syn-2.0.10
 system-deps-6.0.4
 termcolor-1.2.0
 terminal_size-0.2.5
