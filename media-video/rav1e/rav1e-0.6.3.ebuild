@@ -133,7 +133,7 @@ predicates-3.0.2
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
-proc-macro2-1.0.53
+proc-macro2-1.0.54
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.26
