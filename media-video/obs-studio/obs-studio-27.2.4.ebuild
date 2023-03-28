@@ -17,7 +17,7 @@ SRC_URI="
 	https://api.github.com/repos/obsproject/obs-studio/tarball/29.0.2 -> obs-studio-29.0.2.tar.gz
 	https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2 -> cef_binary_4280_linux64.tar.bz2
 	https://api.github.com/repos/obsproject/obs-browser/tarball/refs/tags/2.18.7 -> obs-browser-2.18.7.tar.gz
-	https://api.github.com/repos/obsproject/obs-websocket/tarball/refs/tags/5.2.0 -> obs-websocket-5.2.0.tar.gz
+	https://api.github.com/repos/obsproject/obs-websocket/tarball/refs/tags/5.2.1 -> obs-websocket-5.2.1.tar.gz
 	https://api.github.com/repos/obsproject/obs-amd-encoder/tarball/refs/tags/2.8.0 -> obs-amd-encoder-2.8.0.tar.gz
 "
 KEYWORDS="*"
@@ -118,7 +118,7 @@ post_src_unpack() {
 	if [ -d ${pdir} ]; then
 		rm -d ${pdir} || die
 	fi
-	elog "Copying obs-websocket-5.2.0 sources to OBS plugins directory."
+	elog "Copying obs-websocket-5.2.1 sources to OBS plugins directory."
 	mv ${WORKDIR}/obsproject-obs-websocket-* ${pdir} || die
 
 	local pdir="${P}/plugins/obs-amd-encoder"
