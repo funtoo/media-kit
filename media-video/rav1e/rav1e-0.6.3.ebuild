@@ -7,7 +7,10 @@ addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
 anes-0.1.6
+anstream-0.2.6
 anstyle-0.3.5
+anstyle-parse-0.1.1
+anstyle-wincon-0.2.0
 anyhow-1.0.70
 aom-sys-0.3.2
 arbitrary-0.4.7
@@ -38,14 +41,16 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.0
 clap-3.2.23
-clap-4.1.14
-clap_builder-4.1.14
-clap_complete-4.1.6
-clap_derive-4.1.14
+clap-4.2.1
+clap_builder-4.2.1
+clap_complete-4.2.0
+clap_derive-4.2.0
 clap_lex-0.2.4
 clap_lex-0.4.1
 cmake-0.1.50
 color_quant-1.1.0
+concolor-override-1.0.0
+concolor-query-0.3.3
 console-0.15.5
 const_fn_assert-0.1.2
 crc32fast-1.3.2
@@ -66,6 +71,7 @@ either-1.8.1
 encode_unicode-0.3.6
 env_logger-0.8.4
 errno-0.2.8
+errno-0.3.0
 errno-dragonfly-0.1.2
 fern-0.6.2
 flate2-1.0.25
@@ -85,7 +91,7 @@ image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
 io-lifetimes-1.0.9
-is-terminal-0.4.5
+is-terminal-0.4.6
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.6
@@ -100,6 +106,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
+linux-raw-sys-0.3.0
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -154,6 +161,7 @@ rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.36.11
+rustix-0.37.5
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -172,7 +180,6 @@ smallvec-1.10.0
 syn-1.0.109
 syn-2.0.11
 system-deps-6.0.4
-termcolor-1.2.0
 terminal_size-0.2.5
 termtree-0.4.1
 textwrap-0.16.0
@@ -190,6 +197,7 @@ unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
+utf8parse-0.2.1
 v_frame-0.3.3
 vcpkg-0.2.15
 version-compare-0.1.1
