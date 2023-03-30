@@ -18,11 +18,11 @@ EGO_SUM=(
 	"github.com/stretchr/objx v0.1.0/go.mod"
 	"github.com/stretchr/testify v1.7.1"
 	"github.com/stretchr/testify v1.7.1/go.mod"
-	"golang.org/x/net v0.7.0"
-	"golang.org/x/net v0.7.0/go.mod"
+	"golang.org/x/net v0.8.0"
+	"golang.org/x/net v0.8.0/go.mod"
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
-	"golang.org/x/sys v0.5.0"
-	"golang.org/x/sys v0.5.0/go.mod"
+	"golang.org/x/sys v0.6.0"
+	"golang.org/x/sys v0.6.0/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c"
 	"gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod"
@@ -32,7 +32,7 @@ go-module_set_globals
 
 DESCRIPTION="Commandline tool to customize Spotify client."
 HOMEPAGE="https://github.com/khanhas/spicetify-cli"
-SRC_URI="https://github.com/spicetify/spicetify-cli/tarball/4a7710171e9692f273b5750aeefeadc0937df168 -> spicetify-cli-2.16.2-4a77101.tar.gz
+SRC_URI="https://github.com/spicetify/spicetify-cli/tarball/63e2d49c527707243ed010ed99003648db7c8665 -> spicetify-cli-2.17.0-63e2d49.tar.gz
 	${EGO_SUM_SRC_URI}
 "
 
