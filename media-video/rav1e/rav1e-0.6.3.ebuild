@@ -39,10 +39,10 @@ cfg-if-1.0.0
 ciborium-0.2.0
 ciborium-io-0.2.0
 ciborium-ll-0.2.0
-clang-sys-1.6.0
+clang-sys-1.6.1
 clap-3.2.23
-clap-4.2.0
-clap_builder-4.2.0
+clap-4.2.1
+clap_builder-4.2.1
 clap_complete-4.2.0
 clap_derive-4.2.0
 clap_lex-0.2.4
@@ -71,6 +71,7 @@ either-1.8.1
 encode_unicode-0.3.6
 env_logger-0.8.4
 errno-0.2.8
+errno-0.3.0
 errno-dragonfly-0.1.2
 fern-0.6.2
 flate2-1.0.25
@@ -90,7 +91,7 @@ image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
 io-lifetimes-1.0.9
-is-terminal-0.4.5
+is-terminal-0.4.6
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.6
@@ -105,6 +106,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
+linux-raw-sys-0.3.0
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -159,6 +161,7 @@ rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.36.11
+rustix-0.37.5
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
