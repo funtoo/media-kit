@@ -106,7 +106,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
 linux-raw-sys-0.1.4
-linux-raw-sys-0.3.0
+linux-raw-sys-0.3.1
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -178,7 +178,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.11
+syn-2.0.12
 system-deps-6.0.4
 terminal_size-0.2.5
 termtree-0.4.1
