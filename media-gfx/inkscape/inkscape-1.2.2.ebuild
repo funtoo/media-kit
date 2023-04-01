@@ -9,7 +9,7 @@ inherit cmake flag-o-matic xdg toolchain-funcs python-single-r1
 
 DESCRIPTION="SVG based generic vector-drawing program"
 HOMEPAGE="https://inkscape.org/ https://gitlab.com/inkscape/inkscape/"
-SRC_URI="https://inkscape.org//gallery/item/40035/inkscape-1.3alpha0.tar.xz -> inkscape-1.3alpha0.tar.xz"
+SRC_URI="https://inkscape.org//gallery/item/37360/inkscape-1.2.2.tar.xz -> inkscape-1.2.2.tar.xz"
 KEYWORDS="*"
 
 LICENSE="GPL-2 LGPL-2.1"
