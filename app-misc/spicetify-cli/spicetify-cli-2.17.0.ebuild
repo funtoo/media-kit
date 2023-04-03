@@ -40,6 +40,7 @@ LICENSE="Apache-2.0 BSD GPL-3 MIT"
 SLOT="0"
 KEYWORDS="*"
 IUSE="hook"
+S="${WORKDIR}/spicetify-spicetify-cli-63e2d49"
 
 INSTALLDIR="/opt/${PN}"
 
@@ -49,8 +50,6 @@ PATCHES=(
 
 src_unpack() {
 	go-module_src_unpack
-	rm -rf ${S}
-	mv ${WORKDIR}/spicetify-spicetify-cli-* ${S} || die
 }
 
 src_compile() {

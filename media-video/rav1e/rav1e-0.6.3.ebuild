@@ -70,7 +70,6 @@ doc-comment-0.3.3
 either-1.8.1
 encode_unicode-0.3.6
 env_logger-0.8.4
-errno-0.2.8
 errno-0.3.0
 errno-dragonfly-0.1.2
 fern-0.6.2
@@ -105,7 +104,6 @@ libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
-linux-raw-sys-0.1.4
 linux-raw-sys-0.3.1
 log-0.4.17
 maybe-rayon-0.1.1
@@ -141,7 +139,7 @@ predicates-3.0.2
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
-proc-macro2-1.0.55
+proc-macro2-1.0.56
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.26
@@ -160,7 +158,6 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.36.11
 rustix-0.37.6
 ryu-1.0.13
 same-file-1.0.6
@@ -180,7 +177,7 @@ smallvec-1.10.0
 syn-1.0.109
 syn-2.0.13
 system-deps-6.0.4
-terminal_size-0.2.5
+terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
 thiserror-1.0.40
@@ -217,14 +214,23 @@ winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
 windows-sys-0.45.0
+windows-sys-0.48.0
 windows-targets-0.42.2
+windows-targets-0.48.0
 windows_aarch64_gnullvm-0.42.2
+windows_aarch64_gnullvm-0.48.0
 windows_aarch64_msvc-0.42.2
+windows_aarch64_msvc-0.48.0
 windows_i686_gnu-0.42.2
+windows_i686_gnu-0.48.0
 windows_i686_msvc-0.42.2
+windows_i686_msvc-0.48.0
 windows_x86_64_gnu-0.42.2
+windows_x86_64_gnu-0.48.0
 windows_x86_64_gnullvm-0.42.2
+windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
+windows_x86_64_msvc-0.48.0
 winnow-0.4.1
 y4m-0.7.0
 yansi-0.5.1
