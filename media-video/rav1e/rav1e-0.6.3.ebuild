@@ -141,7 +141,7 @@ predicates-3.0.2
 predicates-core-1.0.6
 predicates-tree-1.0.9
 pretty_assertions-1.3.0
-proc-macro2-1.0.54
+proc-macro2-1.0.55
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.26
@@ -161,7 +161,7 @@ rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.36.11
-rustix-0.37.5
+rustix-0.37.6
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -178,7 +178,7 @@ signal-hook-registry-1.4.1
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.12
+syn-2.0.13
 system-deps-6.0.4
 terminal_size-0.2.5
 termtree-0.4.1
