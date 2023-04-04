@@ -99,7 +99,7 @@ js-sys-0.3.61
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.140
+libc-0.2.141
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -158,7 +158,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.6
+rustix-0.37.7
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
