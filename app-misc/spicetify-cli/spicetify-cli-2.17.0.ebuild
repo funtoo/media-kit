@@ -33,8 +33,7 @@ go-module_set_globals
 DESCRIPTION="Commandline tool to customize Spotify client."
 HOMEPAGE="https://github.com/khanhas/spicetify-cli"
 SRC_URI="https://github.com/spicetify/spicetify-cli/tarball/63e2d49c527707243ed010ed99003648db7c8665 -> spicetify-cli-2.17.0-63e2d49.tar.gz
-	${EGO_SUM_SRC_URI}
-"
+https://direct.funtoo.org/b5/85/ef/b585ef36571611d02d7e18738266e234273a8194ff691f188a53d9dfc1b5e6f735107cbf8c338614a7063ef6a1d128745d0ca29f3ae417d80e4b2e70ec1f2d04 -> spicetify-cli-2.17.0-funtoo-go-bundle-90af3042bd9a84f00c6a6d0859ac45cc4b29e79f6835ab58c63acd67e5618f89abd6a0efff0e6dd70d7195d6aff5b6aff6b81ecc557f2e19c9a6cc032f846ab1.tar.gz"
 
 LICENSE="Apache-2.0 BSD GPL-3 MIT"
 SLOT="0"
@@ -47,10 +46,6 @@ INSTALLDIR="/opt/${PN}"
 PATCHES=(
 	"${FILESDIR}/${PN}-recognize_funtoo_install_path.patch"
 )
-
-src_unpack() {
-	go-module_src_unpack
-}
 
 src_compile() {
 	go build \
