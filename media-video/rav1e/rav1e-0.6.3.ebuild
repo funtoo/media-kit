@@ -75,7 +75,7 @@ errno-dragonfly-0.1.2
 fern-0.6.2
 flate2-1.0.25
 form_urlencoded-1.1.0
-getrandom-0.2.8
+getrandom-0.2.9
 gimli-0.27.2
 git2-0.15.0
 glob-0.3.1
