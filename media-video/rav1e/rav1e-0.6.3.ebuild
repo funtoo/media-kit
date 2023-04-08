@@ -70,7 +70,7 @@ doc-comment-0.3.3
 either-1.8.1
 encode_unicode-0.3.6
 env_logger-0.8.4
-errno-0.3.0
+errno-0.3.1
 errno-dragonfly-0.1.2
 fern-0.6.2
 flate2-1.0.25
@@ -158,7 +158,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.22
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.8
+rustix-0.37.11
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
