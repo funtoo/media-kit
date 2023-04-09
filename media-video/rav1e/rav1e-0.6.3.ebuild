@@ -57,7 +57,7 @@ crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
 crossbeam-0.8.2
-crossbeam-channel-0.5.7
+crossbeam-channel-0.5.8
 crossbeam-deque-0.8.3
 crossbeam-epoch-0.9.14
 crossbeam-queue-0.3.8
