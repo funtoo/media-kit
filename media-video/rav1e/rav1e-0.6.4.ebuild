@@ -7,16 +7,12 @@ addr2line-0.19.0
 adler-1.0.2
 aho-corasick-0.7.20
 anes-0.1.6
-anstream-0.2.6
-anstyle-0.3.5
-anstyle-parse-0.1.1
-anstyle-wincon-0.2.0
 anyhow-1.0.70
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
 arrayvec-0.7.2
-assert_cmd-2.0.10
+assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
@@ -41,16 +37,13 @@ ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.1
 clap-3.2.23
-clap-4.2.1
-clap_builder-4.2.1
-clap_complete-4.2.0
-clap_derive-4.2.0
+clap-4.0.32
+clap_complete-4.0.7
+clap_derive-4.0.21
 clap_lex-0.2.4
-clap_lex-0.4.1
+clap_lex-0.3.0
 cmake-0.1.50
 color_quant-1.1.0
-concolor-override-1.0.0
-concolor-query-0.3.3
 console-0.15.5
 const_fn_assert-0.1.2
 crc32fast-1.3.2
@@ -74,6 +67,7 @@ errno-0.3.1
 errno-dragonfly-0.1.2
 fern-0.6.2
 flate2-1.0.25
+float-cmp-0.9.0
 form_urlencoded-1.1.0
 getrandom-0.2.9
 gimli-0.27.2
@@ -115,6 +109,7 @@ nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
 nom-7.1.3
 noop_proc_macro-0.3.0
+normalize-line-endings-0.3.0
 num-bigint-0.4.3
 num-derive-0.3.3
 num-integer-0.1.45
@@ -135,10 +130,12 @@ plotters-backend-0.3.4
 plotters-svg-0.3.3
 png-0.17.7
 ppv-lite86-0.2.17
-predicates-3.0.2
-predicates-core-1.0.6
-predicates-tree-1.0.9
+predicates-2.1.5
+predicates-core-1.0.5
+predicates-tree-1.0.7
 pretty_assertions-1.3.0
+proc-macro-error-1.0.4
+proc-macro-error-attr-1.0.4
 proc-macro2-1.0.56
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
@@ -177,6 +174,7 @@ smallvec-1.10.0
 syn-1.0.109
 syn-2.0.13
 system-deps-6.0.4
+termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
@@ -194,10 +192,10 @@ unicode-ident-1.0.8
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
-utf8parse-0.2.1
 v_frame-0.3.3
 vcpkg-0.2.15
 version-compare-0.1.1
+version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
@@ -213,9 +211,7 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.42.0
-windows-sys-0.45.0
 windows-sys-0.48.0
-windows-targets-0.42.2
 windows-targets-0.48.0
 windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.0
@@ -240,7 +236,7 @@ yansi-0.5.1
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.3 -> rav1e-0.6.3.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.4 -> rav1e-0.6.4.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
