@@ -65,6 +65,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 errno-0.3.1
 errno-dragonfly-0.1.2
+fdeflate-0.3.0
 fern-0.6.2
 flate2-1.0.25
 float-cmp-0.9.0
@@ -105,6 +106,7 @@ memchr-2.5.0
 memoffset-0.8.0
 minimal-lexical-0.2.1
 miniz_oxide-0.6.2
+miniz_oxide-0.7.1
 nasm-rs-0.2.4
 new_debug_unreachable-1.0.4
 nom-7.1.3
@@ -128,7 +130,7 @@ pkg-config-0.3.26
 plotters-0.3.4
 plotters-backend-0.3.4
 plotters-svg-0.3.3
-png-0.17.7
+png-0.17.8
 ppv-lite86-0.2.17
 predicates-2.1.5
 predicates-core-1.0.5
@@ -169,6 +171,7 @@ serde_spanned-0.6.1
 shlex-1.1.0
 signal-hook-0.3.15
 signal-hook-registry-1.4.1
+simd-adler32-0.3.5
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
