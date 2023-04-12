@@ -1,0 +1,15 @@
+BDEPEND=sys-apps/help2man virtual/pkgconfig doc? ( dev-lang/perl dev-perl/Readonly dev-tex/hevea gnome-base/librsvg media-gfx/graphviz media-gfx/transfig sci-visualization/gnuplot[gd] virtual/imagemagick-tools virtual/latex-base ) dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=media-libs/lcms:2 media-libs/tiff:= media-libs/vigra[openexr] sci-libs/gsl:= debug? ( dev-libs/dmalloc ) tcmalloc? ( dev-util/google-perftools ) dev-libs/boost media-libs/libpng:0 media-libs/libjpeg-turbo:=
+DESCRIPTION=Image Blending with Multiresolution Splines
+EAPI=7
+HOMEPAGE=http://enblend.sourceforge.net/
+IUSE=cpu_flags_x86_sse2 debug doc openmp tcmalloc
+KEYWORDS=*
+LICENSE=GPL-2+ FDL-1.2+
+RDEPEND=media-libs/lcms:2 media-libs/tiff:= media-libs/vigra[openexr] sci-libs/gsl:= debug? ( dev-libs/dmalloc ) tcmalloc? ( dev-util/google-perftools )
+REQUIRED_USE=tcmalloc? ( !debug )
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~soap/distfiles/enblend-4.2.0_p20161007.tar.xz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=81af22df2b76a4f7d31017fa7a7dd89e
