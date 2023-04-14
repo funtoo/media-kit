@@ -1,7 +1,6 @@
-# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
 	lt lv nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
@@ -12,7 +11,7 @@ inherit autotools gnome2-utils l10n xdg-utils
 
 SRC_URI="https://github.com/DeaDBeeF-Player/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 
 DESCRIPTION="foobar2k-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net"
@@ -164,7 +163,7 @@ src_prepare() {
 	eapply_user
 
 	config_rpath_update "${S}/config.rpath"
-	eautoreconf
+	/bin/sh autogen.sh
 }
 
 src_configure() {

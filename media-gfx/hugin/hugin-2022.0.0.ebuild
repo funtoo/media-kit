@@ -1,28 +1,26 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-WX_GTK_VER="3.0"
-PYTHON_COMPAT=( python{2_7,3_5,3_6} )
+WX_GTK_VER="3.0-gtk3"
+PYTHON_COMPAT=( python3+ )
 
-inherit mercurial python-single-r1 wxwidgets cmake-utils eapi7-ver xdg
+inherit python-single-r1 wxwidgets cmake xdg
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
-SRC_URI=""
-EHG_REPO_URI="http://hg.code.sf.net/p/hugin/hugin"
-EHG_PROJECT="${PN}-${PN}"
+SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2+ BSD BSD-2 MIT wxWinLL-3 ZLIB FDL-1.2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="*"
 
 LANGS=" ca ca-valencia cs da de en-GB es eu fi fr hu it ja nl pl pt-BR ro ru sk sv zh-CN zh-TW"
-IUSE="debug lapack python sift $(echo ${LANGS//\ /\ l10n_})"
+IUSE="debug lapack python raw sift $(echo ${LANGS//\ /\ l10n_})"
 
+# media-libs/vigra-1.11.1.20190826 is not a stable version and doesn't seem to
+# enable correctly the openexr support needed by hugin.
 CDEPEND="
-	!!dev-util/cocom
 	dev-db/sqlite:3
 	dev-libs/boost:=
 	dev-libs/zthread
@@ -30,23 +28,25 @@ CDEPEND="
 	media-gfx/exiv2:=
 	media-libs/freeglut
 	media-libs/glew:=
-	>=media-libs/libpano13-2.9.19_beta1:0=
-	media-libs/libpng:0=
+	media-libs/libjpeg-turbo:=
+	>=media-libs/libpano13-2.9.19_beta1:=
+	media-libs/libpng:=
 	media-libs/openexr:=
-	media-libs/tiff:0
-	>=media-libs/vigra-1.11.0[openexr]
+	media-libs/tiff:=
+	>=media-libs/vigra-1.11.1[openexr]
+	!=media-libs/vigra-1.11.1.20190826
 	sci-libs/fftw:3.0=
 	sci-libs/flann
 	sys-libs/zlib
 	virtual/glu
-	virtual/jpeg:0
 	virtual/opengl
-	x11-libs/wxGTK:3.0=[X,opengl]
+	x11-libs/wxGTK:${WX_GTK_VER}=[X,opengl]
 	lapack? ( virtual/blas virtual/lapack )
 	python? ( ${PYTHON_DEPS} )
 	sift? ( media-gfx/autopano-sift-C )"
 RDEPEND="${CDEPEND}
-	media-libs/exiftool"
+	media-libs/exiftool
+	raw? ( media-gfx/dcraw )"
 DEPEND="${CDEPEND}
 	dev-cpp/tclap
 	sys-devel/gettext
@@ -65,7 +65,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cmake-utils_src_prepare
+	sed -i \
+		-e "/COMMAND.*GZIP/d" \
+		-e "s/\.gz//g" \
+		"${S}"/doc/CMakeLists.txt || die
+	cmake_src_prepare
 }
 
 src_configure() {
@@ -73,11 +77,11 @@ src_configure() {
 		-DBUILD_HSI=$(usex python)
 		-DENABLE_LAPACK=$(usex lapack)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 	use python && python_optimize
 
 	local lang
@@ -89,7 +93,7 @@ src_install() {
 			*) dir=${lang/-/_};;
 		esac
 		if ! use l10n_${lang} ; then
-			rm -r "${ED%/}"/usr/share/locale/${dir} || die
+			rm -r "${ED}"/usr/share/locale/${dir} || die
 		fi
 	done
 }
