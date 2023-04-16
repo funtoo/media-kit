@@ -154,7 +154,7 @@ rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
 rust_hawktracer_sys-0.4.2
-rustc-demangle-0.1.22
+rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.11
