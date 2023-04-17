@@ -231,7 +231,9 @@ post_src_unpack() {
 	if [ ! -d "${S}" ]; then
 		mv opencv-opencv-* "${S}" || die
 	fi
-	mv opencv-opencv_contrib-* opencv_contrib || die
+	if use contrib; then
+		mv opencv-opencv_contrib-* opencv_contrib || die
+	fi
 }
 
 src_prepare() {
