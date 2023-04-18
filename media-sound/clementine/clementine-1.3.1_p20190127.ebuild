@@ -1,4 +1,3 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,15 +5,9 @@ EAPI=7
 PLOCALES="af ar be bg bn br bs ca cs cy da de el en en_CA en_GB eo es et eu fa fi fr ga gl he he_IL hi hr hu hy ia id is it ja ka kk ko lt lv mk_MK mr ms my nb nl oc pa pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr tr_TR uk uz vi zh_CN zh_TW"
 
 MY_P="${P/_}"
-if [[ ${PV} == *9999* ]]; then
-	EGIT_BRANCH="qt5"
-	EGIT_REPO_URI="https://github.com/clementine-player/Clementine.git"
-	inherit git-r3
-else
-	COMMIT=610566d25271c67d1625fd62041f6a27435b0a9d
-	SRC_URI="https://github.com/${PN}-player/${PN^}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 x86"
-fi
+COMMIT=610566d25271c67d1625fd62041f6a27435b0a9d
+SRC_URI="https://github.com/${PN}-player/${PN^}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="*"
 inherit cmake-utils flag-o-matic l10n virtualx xdg
 
 DESCRIPTION="Modern music player and library organizer based on Amarok 1.4 and Qt"
@@ -104,6 +97,10 @@ RESTRICT="test"
 S="${WORKDIR}/${PN^}-${COMMIT}"
 
 DOCS=( Changelog README.md )
+
+PATCHES=(
+	"${FILESDIR}/${P}-QPainterPath_include.patch" #725678
+)
 
 src_prepare() {
 	l10n_find_plocales_changes "src/translations" "" ".po"
