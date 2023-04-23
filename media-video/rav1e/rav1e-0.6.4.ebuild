@@ -15,7 +15,7 @@ arrayvec-0.7.2
 assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
-av-metrics-0.9.0
+av-metrics-0.9.1
 av1-grain-0.2.2
 backtrace-0.3.67
 bindgen-0.61.0
