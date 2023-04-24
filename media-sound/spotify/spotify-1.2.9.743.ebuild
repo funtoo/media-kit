@@ -5,7 +5,7 @@ inherit desktop pax-utils unpacker xdg
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-SRC_URI="http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.2.8.923.g4f94bf0d_amd64.deb -> spotify-1.2.8.923.deb"
+SRC_URI="http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.2.9.743.g85d9593d_amd64.deb -> spotify-1.2.9.743.deb"
 LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="~amd64"
