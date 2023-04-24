@@ -177,7 +177,7 @@ smallvec-1.10.0
 syn-1.0.109
 syn-2.0.15
 system-deps-6.0.5
-target-lexicon-0.12.6
+target-lexicon-0.12.7
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
