@@ -36,7 +36,7 @@ ciborium-0.2.0
 ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.1
-clap-3.2.24
+clap-3.2.25
 clap-4.0.32
 clap_complete-4.0.7
 clap_derive-4.0.21
@@ -99,7 +99,7 @@ libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.8
-linux-raw-sys-0.3.4
+linux-raw-sys-0.3.6
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
