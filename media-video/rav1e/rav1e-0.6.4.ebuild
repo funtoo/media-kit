@@ -67,7 +67,7 @@ errno-0.3.1
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
-flate2-1.0.25
+flate2-1.0.26
 float-cmp-0.9.0
 form_urlencoded-1.1.0
 getrandom-0.2.9
@@ -98,7 +98,7 @@ libc-0.2.142
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
-libz-sys-1.1.8
+libz-sys-1.1.9
 linux-raw-sys-0.3.6
 log-0.4.17
 maybe-rayon-0.1.1
