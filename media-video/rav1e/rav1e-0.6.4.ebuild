@@ -7,7 +7,7 @@ addr2line-0.19.0
 adler-1.0.2
 aho-corasick-1.0.1
 anes-0.1.6
-anyhow-1.0.70
+anyhow-1.0.71
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
