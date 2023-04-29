@@ -36,7 +36,7 @@ ciborium-0.2.0
 ciborium-io-0.2.0
 ciborium-ll-0.2.0
 clang-sys-1.6.1
-clap-3.2.24
+clap-3.2.25
 clap-4.0.32
 clap_complete-4.0.7
 clap_derive-4.0.21
@@ -67,7 +67,7 @@ errno-0.3.1
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
-flate2-1.0.25
+flate2-1.0.26
 float-cmp-0.9.0
 form_urlencoded-1.1.0
 getrandom-0.2.9
@@ -98,8 +98,8 @@ libc-0.2.142
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
-libz-sys-1.1.8
-linux-raw-sys-0.3.4
+libz-sys-1.1.9
+linux-raw-sys-0.3.6
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -157,7 +157,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.15
+rustix-0.37.17
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -231,7 +231,7 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.1
+winnow-0.4.4
 y4m-0.7.0
 yansi-0.5.1
 
