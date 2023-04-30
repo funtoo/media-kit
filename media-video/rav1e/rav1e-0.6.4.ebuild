@@ -157,7 +157,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.17
+rustix-0.37.18
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
