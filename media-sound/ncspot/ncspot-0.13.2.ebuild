@@ -10,17 +10,25 @@ aes-ctr-0.6.0
 aes-soft-0.6.4
 aesni-0.10.0
 ahash-0.8.3
-aho-corasick-0.7.20
+aho-corasick-1.0.1
 alsa-0.6.0
 alsa-sys-0.3.1
 android_system_properties-0.1.5
-anstream-0.2.6
-anstyle-0.3.5
-anstyle-parse-0.1.1
-anstyle-wincon-0.2.0
+anstream-0.3.2
+anstyle-1.0.0
+anstyle-parse-0.2.0
+anstyle-query-1.0.0
+anstyle-wincon-1.0.1
 async-broadcast-0.5.1
+async-channel-1.8.0
+async-executor-1.5.1
+async-fs-1.6.0
+async-io-1.13.0
+async-lock-2.7.0
 async-recursion-1.0.4
+async-task-4.4.0
 async-trait-0.1.68
+atomic-waker-1.1.1
 autocfg-1.1.0
 backtrace-0.3.67
 base64-0.13.1
@@ -30,6 +38,7 @@ bitflags-1.3.2
 block-0.1.6
 block-buffer-0.9.0
 block-buffer-0.10.4
+blocking-1.3.1
 bumpalo-3.12.0
 bytecount-0.6.3
 byteorder-1.4.3
@@ -41,17 +50,17 @@ cfg-if-1.0.0
 chrono-0.4.24
 cipher-0.2.5
 clang-sys-1.6.1
-clap-4.2.1
-clap_builder-4.2.1
-clap_complete-4.2.0
+clap-4.2.7
+clap_builder-4.2.7
+clap_complete-4.2.1
 clap_lex-0.4.1
 clap_mangen-0.2.10
 clipboard-0.5.0
 clipboard-win-2.2.0
 codespan-reporting-0.11.1
+colorchoice-1.0.0
 combine-4.6.6
-concolor-override-1.0.0
-concolor-query-0.3.3
+concurrent-queue-2.2.0
 cookie-0.16.2
 cookie_store-0.19.0
 core-foundation-0.9.3
@@ -78,7 +87,6 @@ darling_core-0.13.4
 darling_core-0.14.4
 darling_macro-0.13.4
 darling_macro-0.14.4
-dbus-0.9.7
 derivative-2.2.0
 derive-new-0.5.9
 digest-0.9.0
@@ -112,6 +120,7 @@ futures-channel-0.3.28
 futures-core-0.3.28
 futures-executor-0.3.28
 futures-io-0.3.28
+futures-lite-1.13.0
 futures-macro-0.3.28
 futures-sink-0.3.28
 futures-task-0.3.28
@@ -156,8 +165,7 @@ js-sys-0.3.61
 lazy_static-1.4.0
 lazycell-1.3.0
 lewton-0.10.2
-libc-0.2.141
-libdbus-sys-0.2.4
+libc-0.2.142
 libloading-0.7.4
 libm-0.2.6
 libpulse-binding-2.27.1
@@ -231,6 +239,7 @@ ordered-stream-0.2.0
 os_pipe-1.1.3
 owning_ref-0.4.1
 pancurses-0.17.0
+parking-2.1.0
 parking_lot-0.11.2
 parking_lot-0.12.1
 parking_lot_core-0.8.6
@@ -245,6 +254,7 @@ pin-project-lite-0.2.9
 pin-utils-0.1.0
 pkg-config-0.3.26
 platform-dirs-0.3.0
+polling-2.8.0
 portaudio-rs-0.3.2
 portaudio-sys-0.1.1
 ppv-lite86-0.2.17
@@ -264,9 +274,9 @@ redox_syscall-0.2.16
 redox_syscall-0.3.5
 redox_termios-0.1.2
 redox_users-0.4.3
-regex-1.7.3
-regex-syntax-0.6.29
-reqwest-0.11.16
+regex-1.8.1
+regex-syntax-0.7.1
+reqwest-0.11.17
 ring-0.16.20
 rodio-0.15.0
 roff-0.2.1
@@ -334,11 +344,11 @@ time-core-0.1.0
 time-macros-0.2.8
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
-tokio-1.27.0
-tokio-macros-2.0.0
+tokio-1.28.0
+tokio-macros-2.1.0
 tokio-native-tls-0.3.1
-tokio-stream-0.1.12
-tokio-util-0.7.7
+tokio-stream-0.1.14
+tokio-util-0.7.8
 toml-0.7.3
 toml_datetime-0.6.1
 toml_edit-0.19.8
@@ -363,6 +373,7 @@ uuid-1.3.0
 vcpkg-0.2.15
 vergen-3.2.0
 version_check-0.9.4
+waker-fn-1.1.0
 walkdir-2.3.3
 want-0.3.0
 wasi-0.10.0+wasi-snapshot-preview1
@@ -433,7 +444,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.13.1 -> ncspot-v0.13.1.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v0.13.2 -> ncspot-v0.13.2.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 LICENSE="BSD"
 SLOT="0"
