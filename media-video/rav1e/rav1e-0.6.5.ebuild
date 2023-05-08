@@ -45,7 +45,6 @@ clap_lex-0.3.0
 cmake-0.1.50
 color_quant-1.1.0
 console-0.15.5
-const_fn_assert-0.1.2+deprecated
 crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
@@ -94,7 +93,7 @@ js-sys-0.3.61
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.143
+libc-0.2.144
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -176,7 +175,7 @@ simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
 syn-2.0.15
-system-deps-6.0.5
+system-deps-6.1.0
 target-lexicon-0.12.7
 termcolor-1.2.0
 terminal_size-0.2.6
@@ -240,7 +239,7 @@ yansi-0.5.1
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.4 -> rav1e-0.6.4.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.5 -> rav1e-0.6.5.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
