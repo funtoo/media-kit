@@ -32,9 +32,9 @@ cc-1.0.79
 cexpr-0.6.0
 cfg-expr-0.15.1
 cfg-if-1.0.0
-ciborium-0.2.0
-ciborium-io-0.2.0
-ciborium-ll-0.2.0
+ciborium-0.2.1
+ciborium-io-0.2.1
+ciborium-ll-0.2.1
 clang-sys-1.6.1
 clap-3.2.25
 clap-4.0.32
@@ -140,7 +140,7 @@ proc-macro-error-attr-1.0.4
 proc-macro2-1.0.56
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.26
+quote-1.0.27
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
