@@ -25,15 +25,15 @@ RDEPEND="
 	sys-fs/udisks
 	x11-libs/libnotify
 	x11-themes/hicolor-icon-theme
-	dev-python/Babel[${PYTHON_USEDEP}]
-	dev-python/PyQt5[${PYTHON_USEDEP}]
 	dev-python/arrow[${PYTHON_USEDEP}]
+	dev-python/Babel[${PYTHON_USEDEP}]
 	dev-python/colour[${PYTHON_USEDEP}]
 	dev-python/easygui[${PYTHON_USEDEP}]
 	dev-python/gphoto2[${PYTHON_USEDEP}]
+	dev-python/pymediainfo[${PYTHON_USEDEP}]
+	dev-python/PyQt5[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
-	dev-python/pymediainfo[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/pyzmq[${PYTHON_USEDEP}]
