@@ -15,7 +15,7 @@ arrayvec-0.7.2
 assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
-av-metrics-0.9.1
+av-metrics-0.9.0
 av1-grain-0.2.2
 backtrace-0.3.67
 bindgen-0.61.0
@@ -230,8 +230,8 @@ windows_x86_64_gnullvm-0.42.2
 windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
-winnow-0.4.6
-y4m-0.7.0
+winnow-0.4.1
+y4m-0.8.0
 yansi-0.5.1
 
 "
@@ -239,7 +239,7 @@ yansi-0.5.1
 inherit cargo
 
 SRC_URI="
-	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.5 -> rav1e-0.6.5.tar.gz
+	https://api.github.com/repos/xiph/rav1e/tarball/v0.6.6 -> rav1e-0.6.6.tar.gz
 	$(cargo_crate_uris ${CRATES})
 "
 KEYWORDS="*"
