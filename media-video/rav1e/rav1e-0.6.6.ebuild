@@ -44,7 +44,7 @@ clap_lex-0.2.4
 clap_lex-0.3.0
 cmake-0.1.50
 color_quant-1.1.0
-console-0.15.5
+console-0.15.6
 crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
@@ -166,7 +166,7 @@ serde-1.0.163
 serde-big-array-0.4.1
 serde_derive-1.0.163
 serde_json-1.0.96
-serde_spanned-0.6.1
+serde_spanned-0.6.2
 shlex-1.1.0
 signal-hook-0.3.15
 signal-hook-registry-1.4.1
@@ -188,7 +188,7 @@ tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
 toml-0.7.3
-toml_datetime-0.6.1
+toml_datetime-0.6.2
 toml_edit-0.19.8
 unicode-bidi-0.3.13
 unicode-ident-1.0.8
@@ -213,8 +213,9 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
-windows-sys-0.42.0
+windows-sys-0.45.0
 windows-sys-0.48.0
+windows-targets-0.42.2
 windows-targets-0.48.0
 windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.0
