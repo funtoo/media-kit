@@ -23,7 +23,7 @@ bitflags-1.3.2
 bitstream-io-1.6.0
 bstr-1.5.0
 built-0.5.2
-bumpalo-3.12.2
+bumpalo-3.13.0
 bytemuck-1.13.1
 byteorder-1.4.3
 cargo-lock-8.0.3
@@ -146,9 +146,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.8.1
+regex-1.8.2
 regex-automata-0.1.10
-regex-syntax-0.7.1
+regex-syntax-0.7.2
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
