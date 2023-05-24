@@ -21,9 +21,9 @@ backtrace-0.3.67
 bindgen-0.61.0
 bitflags-1.3.2
 bitstream-io-1.6.0
-bstr-1.4.0
+bstr-1.5.0
 built-0.5.2
-bumpalo-3.12.2
+bumpalo-3.13.0
 bytemuck-1.13.1
 byteorder-1.4.3
 cargo-lock-8.0.3
@@ -44,7 +44,7 @@ clap_lex-0.2.4
 clap_lex-0.3.0
 cmake-0.1.50
 color_quant-1.1.0
-console-0.15.6
+console-0.15.7
 crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
@@ -83,7 +83,7 @@ idna-0.3.0
 image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
-io-lifetimes-1.0.10
+io-lifetimes-1.0.11
 is-terminal-0.4.7
 itertools-0.8.2
 itertools-0.10.5
@@ -98,7 +98,7 @@ libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.9
-linux-raw-sys-0.3.7
+linux-raw-sys-0.3.8
 log-0.4.17
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -146,9 +146,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.8.1
+regex-1.8.2
 regex-automata-0.1.10
-regex-syntax-0.7.1
+regex-syntax-0.7.2
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -191,7 +191,7 @@ toml-0.7.3
 toml_datetime-0.6.2
 toml_edit-0.19.8
 unicode-bidi-0.3.13
-unicode-ident-1.0.8
+unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
