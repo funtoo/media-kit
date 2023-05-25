@@ -146,7 +146,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.8.2
+regex-1.8.3
 regex-automata-0.1.10
 regex-syntax-0.7.2
 rust_hawktracer-0.7.0
@@ -191,7 +191,7 @@ toml-0.7.3
 toml_datetime-0.6.2
 toml_edit-0.19.8
 unicode-bidi-0.3.13
-unicode-ident-1.0.8
+unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.3.1
