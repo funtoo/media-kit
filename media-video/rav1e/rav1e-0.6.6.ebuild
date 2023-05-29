@@ -118,7 +118,7 @@ num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
 object-0.30.3
-once_cell-1.17.1
+once_cell-1.17.2
 oorandom-11.1.3
 os_str_bytes-6.5.0
 output_vt100-0.1.3
