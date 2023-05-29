@@ -99,7 +99,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
-log-0.4.17
+log-0.4.18
 maybe-rayon-0.1.1
 memchr-2.5.0
 memoffset-0.8.0
@@ -118,7 +118,7 @@ num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
 object-0.30.3
-once_cell-1.17.1
+once_cell-1.17.2
 oorandom-11.1.3
 os_str_bytes-6.5.0
 output_vt100-0.1.3
@@ -174,7 +174,7 @@ simd-adler32-0.3.5
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.17
+syn-2.0.18
 system-deps-6.1.0
 target-lexicon-0.12.7
 termcolor-1.2.0
