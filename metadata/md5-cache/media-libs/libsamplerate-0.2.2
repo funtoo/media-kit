@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=test? ( media-libs/alsa-lib media-libs/libsndfile sci-libs/fftw:3.0 )
+DESCRIPTION=Secret Rabbit Code (aka libsamplerate) is a Sample Rate Converter for audio
+EAPI=7
+HOMEPAGE=https://libsndfile.github.io/libsamplerate/
+IUSE=test
+KEYWORDS=*
+LICENSE=BSD-2
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/libsndfile/libsamplerate/tarball/c96f5e3de9c4488f4e6c97f59f5245f22fda22f7 -> libsamplerate-0.2.2-c96f5e3.tar.gz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=9580327bcc7df335c34d25f9cdaebf82
