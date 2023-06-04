@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.19.0
 adler-1.0.2
-aho-corasick-1.0.1
+aho-corasick-1.0.2
 anes-0.1.6
 anyhow-1.0.71
 aom-sys-0.3.2
@@ -93,7 +93,7 @@ js-sys-0.3.63
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.144
+libc-0.2.145
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -118,7 +118,7 @@ num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
 object-0.30.3
-once_cell-1.17.2
+once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.0
 output_vt100-0.1.3
