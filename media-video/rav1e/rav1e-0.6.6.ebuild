@@ -68,8 +68,8 @@ fdeflate-0.3.0
 fern-0.6.2
 flate2-1.0.26
 float-cmp-0.9.0
-form_urlencoded-1.1.0
-getrandom-0.2.9
+form_urlencoded-1.2.0
+getrandom-0.2.10
 gimli-0.27.2
 git2-0.15.0
 glob-0.3.1
@@ -79,7 +79,7 @@ heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.2.6
 hermit-abi-0.3.1
-idna-0.3.0
+idna-0.4.0
 image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
@@ -93,7 +93,7 @@ js-sys-0.3.63
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.145
+libc-0.2.146
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -117,14 +117,14 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
-object-0.30.3
+object-0.30.4
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.0
 output_vt100-0.1.3
 paste-1.0.12
 peeking_take_while-0.1.2
-percent-encoding-2.2.0
+percent-encoding-2.3.0
 pkg-config-0.3.27
 plotters-0.3.4
 plotters-backend-0.3.4
@@ -146,7 +146,7 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.8.3
+regex-1.8.4
 regex-automata-0.1.10
 regex-syntax-0.7.2
 rust_hawktracer-0.7.0
@@ -194,7 +194,7 @@ unicode-bidi-0.3.13
 unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
-url-2.3.1
+url-2.4.0
 v_frame-0.3.3
 vcpkg-0.2.15
 version-compare-0.1.1
