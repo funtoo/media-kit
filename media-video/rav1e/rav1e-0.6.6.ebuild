@@ -69,7 +69,7 @@ fern-0.6.2
 flate2-1.0.26
 float-cmp-0.9.0
 form_urlencoded-1.2.0
-getrandom-0.2.9
+getrandom-0.2.10
 gimli-0.27.2
 git2-0.15.0
 glob-0.3.1
@@ -93,7 +93,7 @@ js-sys-0.3.63
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.145
+libc-0.2.146
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -117,7 +117,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.15.0
-object-0.30.3
+object-0.30.4
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.0
