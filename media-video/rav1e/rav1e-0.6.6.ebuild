@@ -137,7 +137,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.3.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.59
+proc-macro2-1.0.60
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.28
@@ -162,9 +162,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.163
+serde-1.0.164
 serde-big-array-0.4.1
-serde_derive-1.0.163
+serde_derive-1.0.164
 serde_json-1.0.96
 serde_spanned-0.6.2
 shlex-1.1.0
