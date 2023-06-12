@@ -99,7 +99,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
-log-0.4.18
+log-0.4.19
 maybe-rayon-0.1.1
 memchr-2.5.0
 memoffset-0.8.0
@@ -120,7 +120,7 @@ num_cpus-1.15.0
 object-0.30.4
 once_cell-1.18.0
 oorandom-11.1.3
-os_str_bytes-6.5.0
+os_str_bytes-6.5.1
 output_vt100-0.1.3
 paste-1.0.12
 peeking_take_while-0.1.2
@@ -129,7 +129,7 @@ pkg-config-0.3.27
 plotters-0.3.4
 plotters-backend-0.3.4
 plotters-svg-0.3.3
-png-0.17.8
+png-0.17.9
 ppv-lite86-0.2.17
 predicates-2.1.5
 predicates-core-1.0.5
@@ -156,7 +156,7 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.19
+rustix-0.37.20
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
