@@ -11,7 +11,7 @@ anyhow-1.0.71
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
-arrayvec-0.7.2
+arrayvec-0.7.3
 assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
@@ -51,9 +51,9 @@ criterion-plot-0.5.0
 crossbeam-0.8.2
 crossbeam-channel-0.5.8
 crossbeam-deque-0.8.3
-crossbeam-epoch-0.9.14
+crossbeam-epoch-0.9.15
 crossbeam-queue-0.3.8
-crossbeam-utils-0.8.15
+crossbeam-utils-0.8.16
 ctor-0.1.26
 dav1d-sys-0.7.1
 diff-0.1.13
@@ -70,7 +70,7 @@ flate2-1.0.26
 float-cmp-0.9.0
 form_urlencoded-1.2.0
 getrandom-0.2.10
-gimli-0.27.2
+gimli-0.27.3
 git2-0.15.0
 glob-0.3.1
 half-1.8.2
@@ -89,7 +89,7 @@ itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.6
 jobserver-0.1.26
-js-sys-0.3.63
+js-sys-0.3.64
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -102,7 +102,7 @@ linux-raw-sys-0.3.8
 log-0.4.19
 maybe-rayon-0.1.1
 memchr-2.5.0
-memoffset-0.8.0
+memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.6.2
 miniz_oxide-0.7.1
@@ -202,12 +202,12 @@ version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.3.3
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.86
-wasm-bindgen-backend-0.2.86
-wasm-bindgen-macro-0.2.86
-wasm-bindgen-macro-support-0.2.86
-wasm-bindgen-shared-0.2.86
-web-sys-0.3.63
+wasm-bindgen-0.2.87
+wasm-bindgen-backend-0.2.87
+wasm-bindgen-macro-0.2.87
+wasm-bindgen-macro-support-0.2.87
+wasm-bindgen-shared-0.2.87
+web-sys-0.3.64
 which-4.4.0
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
