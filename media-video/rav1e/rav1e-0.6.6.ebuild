@@ -11,7 +11,7 @@ anyhow-1.0.71
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
-arrayvec-0.7.3
+arrayvec-0.7.4
 assert_cmd-2.0.8
 atty-0.2.14
 autocfg-1.1.0
@@ -126,9 +126,9 @@ paste-1.0.12
 peeking_take_while-0.1.2
 percent-encoding-2.3.0
 pkg-config-0.3.27
-plotters-0.3.4
-plotters-backend-0.3.4
-plotters-svg-0.3.3
+plotters-0.3.5
+plotters-backend-0.3.5
+plotters-svg-0.3.5
 png-0.17.9
 ppv-lite86-0.2.17
 predicates-2.1.5
