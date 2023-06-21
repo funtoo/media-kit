@@ -30,7 +30,7 @@ cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.79
 cexpr-0.6.0
-cfg-expr-0.15.2
+cfg-expr-0.15.3
 cfg-if-1.0.0
 ciborium-0.2.1
 ciborium-io-0.2.1
@@ -176,7 +176,7 @@ smallvec-1.10.0
 syn-1.0.109
 syn-2.0.18
 system-deps-6.1.0
-target-lexicon-0.12.7
+target-lexicon-0.12.8
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
