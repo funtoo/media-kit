@@ -175,7 +175,7 @@ simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
 syn-2.0.18
-system-deps-6.1.0
+system-deps-6.1.1
 target-lexicon-0.12.8
 termcolor-1.2.0
 terminal_size-0.2.6
