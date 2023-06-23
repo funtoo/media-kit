@@ -195,7 +195,7 @@ unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
-v_frame-0.3.3
+v_frame-0.3.4
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4
