@@ -175,8 +175,8 @@ simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
 syn-2.0.18
-system-deps-6.1.0
-target-lexicon-0.12.7
+system-deps-6.1.1
+target-lexicon-0.12.8
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
@@ -195,7 +195,7 @@ unicode-ident-1.0.9
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
-v_frame-0.3.3
+v_frame-0.3.4
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4
