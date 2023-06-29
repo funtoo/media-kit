@@ -77,7 +77,6 @@ half-1.8.2
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.2.6
 hermit-abi-0.3.1
 idna-0.4.0
 image-0.24.6
@@ -116,7 +115,7 @@ num-derive-0.3.3
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
-num_cpus-1.15.0
+num_cpus-1.16.0
 object-0.30.4
 once_cell-1.18.0
 oorandom-11.1.3
@@ -140,7 +139,7 @@ proc-macro-error-attr-1.0.4
 proc-macro2-1.0.63
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.28
+quote-1.0.29
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
@@ -216,7 +215,7 @@ winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.45.0
 windows-sys-0.48.0
 windows-targets-0.42.2
-windows-targets-0.48.0
+windows-targets-0.48.1
 windows_aarch64_gnullvm-0.42.2
 windows_aarch64_gnullvm-0.48.0
 windows_aarch64_msvc-0.42.2
