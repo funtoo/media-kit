@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="
-addr2line-0.19.0
+addr2line-0.20.0
 adler-1.0.2
 aho-corasick-1.0.2
 anes-0.1.6
@@ -17,9 +17,10 @@ atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
 av1-grain-0.2.2
-backtrace-0.3.67
+backtrace-0.3.68
 bindgen-0.61.0
 bitflags-1.3.2
+bitflags-2.3.3
 bitstream-io-1.6.0
 bstr-1.5.0
 built-0.5.2
@@ -83,7 +84,7 @@ image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
 io-lifetimes-1.0.11
-is-terminal-0.4.7
+is-terminal-0.4.8
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.6
@@ -98,12 +99,12 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.9
 linux-raw-sys-0.3.8
+linux-raw-sys-0.4.3
 log-0.4.19
 maybe-rayon-0.1.1
 memchr-2.5.0
 memoffset-0.9.0
 minimal-lexical-0.2.1
-miniz_oxide-0.6.2
 miniz_oxide-0.7.1
 nasm-rs-0.2.5
 new_debug_unreachable-1.0.4
@@ -116,7 +117,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
 num_cpus-1.16.0
-object-0.30.4
+object-0.31.1
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
@@ -155,7 +156,8 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.20
+rustix-0.37.21
+rustix-0.38.1
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
