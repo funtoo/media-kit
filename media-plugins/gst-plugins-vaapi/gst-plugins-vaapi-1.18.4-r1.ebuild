@@ -1,4 +1,3 @@
-# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -75,7 +74,7 @@ RESTRICT="test"
 multilib_src_configure() {
 	local emesonargs=(
 		-Dwith_encoders=yes
-		-Ddrm=$(usex drm yes no)
+		-Dwith_drm=$(usex drm yes no)
 		-Dwith_x11=$(usex X yes no)
 		-Dwith_wayland=$(usex wayland yes no)
 	)
