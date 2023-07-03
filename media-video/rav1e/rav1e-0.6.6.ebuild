@@ -156,8 +156,8 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.21
-rustix-0.38.1
+rustix-0.37.22
+rustix-0.38.2
 ryu-1.0.13
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -175,7 +175,7 @@ simd-adler32-0.3.5
 simd_helpers-0.1.0
 smallvec-1.10.0
 syn-1.0.109
-syn-2.0.22
+syn-2.0.23
 system-deps-6.1.1
 target-lexicon-0.12.8
 termcolor-1.2.0
