@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=BSD IJG ZLIB
 RDEPEND=!media-libs/jpeg:0 !media-libs/jpeg:62 java? ( >=virtual/jre-1.8:* ) java? ( >=dev-java/java-config-2.2.0-r3 )
 SLOT=0/0.2
-SRC_URI=https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/6c610333497302c52ff36046f9ff72f0c3a6dc2e -> libjpeg-turbo-2.1.91-6c61033.tar.gz
+SRC_URI=https://github.com/libjpeg-turbo/libjpeg-turbo/tarball/6c87537f60941f3c265c339fe60d1e31d2a42ccf -> libjpeg-turbo-3.0.0-6c87537.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	java-pkg-opt-2	77d2e22d0de7640f817d20e861c0ff3f	java-utils-2	dd352559d0e143500ec878acc74da909	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=e5c5180346702e200938702a60473cf9
+_md5_=b53ab446bbb45a8e121758876c667136

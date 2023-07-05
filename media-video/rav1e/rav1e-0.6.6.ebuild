@@ -78,7 +78,7 @@ half-1.8.2
 hashbrown-0.12.3
 heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.3.1
+hermit-abi-0.3.2
 idna-0.4.0
 image-0.24.6
 indexmap-1.9.3
@@ -87,7 +87,7 @@ io-lifetimes-1.0.11
 is-terminal-0.4.8
 itertools-0.8.2
 itertools-0.10.5
-itoa-1.0.6
+itoa-1.0.8
 jobserver-0.1.26
 js-sys-0.3.64
 lab-0.11.0
@@ -122,7 +122,7 @@ once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
 output_vt100-0.1.3
-paste-1.0.12
+paste-1.0.13
 peeking_take_while-0.1.2
 percent-encoding-2.3.0
 pkg-config-0.3.27
@@ -158,15 +158,15 @@ rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.22
 rustix-0.38.2
-ryu-1.0.13
+ryu-1.0.14
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.164
+serde-1.0.166
 serde-big-array-0.4.1
-serde_derive-1.0.164
-serde_json-1.0.99
+serde_derive-1.0.166
+serde_json-1.0.100
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.15
@@ -182,8 +182,8 @@ termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.40
-thiserror-impl-1.0.40
+thiserror-1.0.41
+thiserror-impl-1.0.41
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
@@ -192,7 +192,7 @@ toml-0.7.3
 toml_datetime-0.6.3
 toml_edit-0.19.8
 unicode-bidi-0.3.13
-unicode-ident-1.0.9
+unicode-ident-1.0.10
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
