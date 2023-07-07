@@ -10,6 +10,6 @@ LICENSE=GPL-3
 PDEPEND==media-radio/wsjtx_improved-2.7.0
 RDEPEND=!!media-radio/wsjtx dev-libs/boost:=[nls,python] dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtconcurrent:5 dev-qt/qtserialport:5 dev-qt/qtsql:5 dev-qt/qttest:5 dev-qt/qtprintsupport:5 virtual/libusb:1 >=media-libs/hamlib-4.0:= media-libs/portaudio sci-libs/fftw:3.0[threads,fortran] virtual/fortran app-text/asciidoc doc? ( dev-ruby/asciidoctor )
 SLOT=0
-SRC_URI=https://downloads.sourceforge.net/wsjt-x-improved/WSJT-X_v2.7.0/Source%20code/wsjtx-2.7.0-rc1_improved_widescreen.tgz -> wsjtx-2.7.0-rc1_improved_widescreen.tgz
+SRC_URI=https://downloads.sourceforge.net/wsjt-x-improved/WSJT-X_v2.7.0/Source%20code/wsjtx-2.7.0-rc2_improved_widescreen.tgz -> wsjtx-2.7.0-rc2_improved_widescreen.tgz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=c80da23222a696d2fd7b7d4cad490911
+_md5_=6b3e7b55482f0e22a349f6e0847269fa

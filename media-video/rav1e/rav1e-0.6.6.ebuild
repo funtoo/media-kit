@@ -21,8 +21,8 @@ backtrace-0.3.68
 bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.3.3
-bitstream-io-1.6.0
-bstr-1.5.0
+bitstream-io-1.7.0
+bstr-1.6.0
 built-0.5.2
 bumpalo-3.13.0
 bytemuck-1.13.1
@@ -55,7 +55,6 @@ crossbeam-deque-0.8.3
 crossbeam-epoch-0.9.15
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.16
-ctor-0.1.26
 dav1d-sys-0.7.1
 diff-0.1.13
 difflib-0.4.0
@@ -84,7 +83,7 @@ image-0.24.6
 indexmap-1.9.3
 interpolate_name-0.2.3
 io-lifetimes-1.0.11
-is-terminal-0.4.8
+is-terminal-0.4.9
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.8
@@ -113,6 +112,7 @@ noop_proc_macro-0.3.0
 normalize-line-endings-0.3.0
 num-bigint-0.4.3
 num-derive-0.3.3
+num-derive-0.4.0
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.15
@@ -121,7 +121,6 @@ object-0.31.1
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
-output_vt100-0.1.3
 paste-1.0.13
 peeking_take_while-0.1.2
 percent-encoding-2.3.0
@@ -134,7 +133,7 @@ ppv-lite86-0.2.17
 predicates-2.1.5
 predicates-core-1.0.5
 predicates-tree-1.0.7
-pretty_assertions-1.3.0
+pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
 proc-macro2-1.0.63
@@ -147,7 +146,6 @@ rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
 regex-1.9.0
-regex-automata-0.1.10
 regex-automata-0.3.0
 regex-syntax-0.7.3
 rust_hawktracer-0.7.0
@@ -164,9 +162,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.1.0
 semver-1.0.17
-serde-1.0.166
+serde-1.0.167
 serde-big-array-0.4.1
-serde_derive-1.0.166
+serde_derive-1.0.167
 serde_json-1.0.100
 serde_spanned-0.6.3
 shlex-1.1.0
@@ -174,7 +172,7 @@ signal-hook-0.3.15
 signal-hook-registry-1.4.1
 simd-adler32-0.3.5
 simd_helpers-0.1.0
-smallvec-1.10.0
+smallvec-1.11.0
 syn-1.0.109
 syn-2.0.23
 system-deps-6.1.1
@@ -183,8 +181,8 @@ termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.41
-thiserror-impl-1.0.41
+thiserror-1.0.43
+thiserror-impl-1.0.43
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
@@ -197,7 +195,7 @@ unicode-ident-1.0.10
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
-v_frame-0.3.4
+v_frame-0.3.5
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4

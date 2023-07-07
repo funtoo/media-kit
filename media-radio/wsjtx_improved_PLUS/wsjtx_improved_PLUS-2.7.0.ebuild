@@ -4,7 +4,7 @@ inherit cmake edos2unix flag-o-matic
 
 DESCRIPTION="Weak signal ham radio communication"
 HOMEPAGE="https://wsjt.sourceforge.io/wsjtx.html"
-SRC_URI="https://downloads.sourceforge.net/wsjt-x-improved/WSJT-X_v2.7.0/Source%20code/wsjtx-2.7.0-rc1_improved_PLUS.tgz -> wsjtx-2.7.0-rc1_improved_PLUS.tgz"
+SRC_URI="https://downloads.sourceforge.net/wsjt-x-improved/WSJT-X_v2.7.0/Source%20code/wsjtx-2.7.0-rc2_improved_PLUS.tgz -> wsjtx-2.7.0-rc2_improved_PLUS.tgz"
 S=${WORKDIR}/wsjtx
 
 LICENSE="GPL-3"
