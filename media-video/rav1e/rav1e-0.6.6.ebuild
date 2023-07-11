@@ -147,7 +147,7 @@ rayon-1.7.0
 rayon-core-1.11.0
 regex-1.9.1
 regex-automata-0.3.2
-regex-syntax-0.7.3
+regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -156,7 +156,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.3
+rustix-0.38.4
 ryu-1.0.14
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -176,7 +176,7 @@ smallvec-1.11.0
 syn-1.0.109
 syn-2.0.25
 system-deps-6.1.1
-target-lexicon-0.12.8
+target-lexicon-0.12.9
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
