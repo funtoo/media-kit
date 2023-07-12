@@ -165,7 +165,7 @@ semver-1.0.17
 serde-1.0.171
 serde-big-array-0.4.1
 serde_derive-1.0.171
-serde_json-1.0.100
+serde_json-1.0.102
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.15
