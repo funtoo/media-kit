@@ -146,7 +146,7 @@ rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
 regex-1.9.1
-regex-automata-0.3.2
+regex-automata-0.3.3
 regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -165,7 +165,7 @@ semver-1.0.17
 serde-1.0.171
 serde-big-array-0.4.1
 serde_derive-1.0.171
-serde_json-1.0.100
+serde_json-1.0.102
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.15
