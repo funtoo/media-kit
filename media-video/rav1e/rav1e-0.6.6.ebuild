@@ -62,6 +62,7 @@ doc-comment-0.3.3
 either-1.8.1
 encode_unicode-0.3.6
 env_logger-0.8.4
+equivalent-1.0.1
 errno-0.3.1
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
@@ -75,12 +76,14 @@ git2-0.15.0
 glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
+hashbrown-0.14.0
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.3.2
 idna-0.4.0
 image-0.24.6
 indexmap-1.9.3
+indexmap-2.0.0
 interpolate_name-0.2.3
 io-lifetimes-1.0.11
 is-terminal-0.4.9
@@ -187,9 +190,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.3
+toml-0.7.6
 toml_datetime-0.6.3
-toml_edit-0.19.8
+toml_edit-0.19.13
 unicode-bidi-0.3.13
 unicode-ident-1.0.10
 unicode-normalization-0.1.22
@@ -232,6 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
+winnow-0.5.0
 y4m-0.8.0
 yansi-0.5.1
 
