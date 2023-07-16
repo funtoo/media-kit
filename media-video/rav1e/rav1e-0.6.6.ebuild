@@ -139,10 +139,10 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.65
+proc-macro2-1.0.66
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
-quote-1.0.30
+quote-1.0.31
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
