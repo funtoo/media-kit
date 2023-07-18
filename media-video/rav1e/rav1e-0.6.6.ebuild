@@ -163,7 +163,7 @@ rustix-0.38.4
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
-scopeguard-1.1.0
+scopeguard-1.2.0
 semver-1.0.18
 serde-1.0.171
 serde-big-array-0.4.1
@@ -171,7 +171,7 @@ serde_derive-1.0.171
 serde_json-1.0.103
 serde_spanned-0.6.3
 shlex-1.1.0
-signal-hook-0.3.16
+signal-hook-0.3.17
 signal-hook-registry-1.4.1
 simd-adler32-0.3.5
 simd_helpers-0.1.0
@@ -179,7 +179,7 @@ smallvec-1.11.0
 syn-1.0.109
 syn-2.0.26
 system-deps-6.1.1
-target-lexicon-0.12.9
+target-lexicon-0.12.10
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
