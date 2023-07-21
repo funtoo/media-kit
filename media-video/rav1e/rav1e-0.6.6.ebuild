@@ -118,7 +118,7 @@ num-derive-0.3.3
 num-derive-0.4.0
 num-integer-0.1.45
 num-rational-0.4.1
-num-traits-0.2.15
+num-traits-0.2.16
 num_cpus-1.16.0
 object-0.31.1
 once_cell-1.18.0
