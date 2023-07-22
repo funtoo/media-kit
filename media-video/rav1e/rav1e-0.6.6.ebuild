@@ -59,7 +59,7 @@ dav1d-sys-0.7.1
 diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
-either-1.8.1
+either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
