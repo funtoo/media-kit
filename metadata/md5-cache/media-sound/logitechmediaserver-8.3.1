@@ -1,0 +1,14 @@
+DEFINED_PHASES=config install postinst prepare setup
+DEPEND=!media-sound/squeezecenter !media-sound/squeezeboxserver !media-sound/logitechmediaserver-bin app-arch/unzip dev-lang/nasm sys-apps/shadow
+DESCRIPTION=Logitech Media Server (streaming audio server)
+EAPI=7
+HOMEPAGE=http://www.mysqueezebox.com/
+IUSE=mp3 alac wavpack flac ogg aac mac freetype l10n_he
+KEYWORDS=*
+LICENSE=logitechmediaserver
+RDEPEND=virtual/logger dev-db/sqlite >=dev-lang/perl-5.8.8[ithreads] >=dev-perl/Data-UUID-1.202 >=dev-perl/Audio-Scan-1.20.0 >=dev-perl/Class-XSAccessor-1.180.0 dev-perl/CGI dev-perl/Class-C3-XS dev-perl/DBD-SQLite dev-perl/DBI dev-perl/Digest-SHA1 dev-perl/Encode-Detect dev-perl/EV dev-perl/HTML-Parser dev-perl/Image-Scale[gif,jpeg,png] dev-perl/IO-AIO dev-perl/IO-Interface dev-perl/JSON-XS dev-perl/Linux-Inotify2 dev-perl/Sub-Name dev-perl/Template-Toolkit[gd] dev-perl/XML-Parser dev-perl/YAML-LibYAML dev-perl/MP3-Cut-Gapless l10n_he? ( dev-perl/Locale-Hebrew ) mp3? ( media-sound/lame ) wavpack? ( media-sound/wavpack ) flac? ( media-libs/flac media-sound/sox[flac] ) ogg? ( media-sound/sox[ogg] ) aac? ( media-libs/slim-faad ) alac? ( media-libs/slim-faad ) mac? ( media-sound/mac ) freetype? ( dev-perl/Font-FreeType )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://downloads.slimdevices.com/LogitechMediaServer_v8.3.1/logitechmediaserver-8.3.1-noCPAN.tgz
+_eclasses_=user	875055ddd565382c728563992ae3abf7
+_md5_=5552723883392c7eff38ded81697f588
