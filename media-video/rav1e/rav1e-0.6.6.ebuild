@@ -173,7 +173,7 @@ serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
-simd-adler32-0.3.5
+simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.0
+winnow-0.5.1
 y4m-0.8.0
 yansi-0.5.1
 
