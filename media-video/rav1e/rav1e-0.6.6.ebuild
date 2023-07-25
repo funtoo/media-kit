@@ -99,7 +99,7 @@ libc-0.2.147
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
-libz-sys-1.1.10
+libz-sys-1.1.11
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.3
 log-0.4.19
