@@ -99,7 +99,7 @@ libc-0.2.147
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
-libz-sys-1.1.11
+libz-sys-1.1.12
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.3
 log-0.4.19
@@ -165,10 +165,10 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.175
+serde-1.0.176
 serde-big-array-0.4.1
-serde_derive-1.0.175
-serde_json-1.0.103
+serde_derive-1.0.176
+serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.17
