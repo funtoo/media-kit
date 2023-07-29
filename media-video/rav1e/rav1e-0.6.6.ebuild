@@ -31,7 +31,7 @@ cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.79
 cexpr-0.6.0
-cfg-expr-0.15.3
+cfg-expr-0.15.4
 cfg-if-1.0.0
 ciborium-0.2.1
 ciborium-io-0.2.1
@@ -99,7 +99,7 @@ libc-0.2.147
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
-libz-sys-1.1.10
+libz-sys-1.1.12
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.3
 log-0.4.19
@@ -149,7 +149,7 @@ rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
 regex-1.9.1
-regex-automata-0.3.3
+regex-automata-0.3.4
 regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -165,10 +165,10 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.175
+serde-1.0.178
 serde-big-array-0.4.1
-serde_derive-1.0.175
-serde_json-1.0.103
+serde_derive-1.0.178
+serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.17
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.0
+winnow-0.5.1
 y4m-0.8.0
 yansi-0.5.1
 

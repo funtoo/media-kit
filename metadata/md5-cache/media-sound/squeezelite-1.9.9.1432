@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=!pulseaudio? ( media-libs/alsa-lib ) media-libs/flac media-libs/faad2 media-libs/libvorbis media-libs/libmad media-sound/mpg123 hw_raspi? ( dev-embedded/wiringpi ) alac? ( media-libs/alac ) ffmpeg? ( media-video/ffmpeg ) lirc? ( lib-misc/lirc ) resample? ( media-libs/soxr ) opus? ( media-sound/opusfile ) pulseaudio? ( media-sound/pulseaudio ) ssl? ( dev-libs/openssl ) sys-apps/shadow
+DESCRIPTION=Squeezelite is a small headless Squeezebox emulator for Linux using ALSA audio output
+EAPI=7
+HOMEPAGE=https://github.com/ralph-irving/squeezelite
+IUSE=alac +dsd +faad +ffmpeg hw_raspi gpio pulseaudio +resample +ssl lirc opus visexport
+KEYWORDS=*
+LICENSE=GPL-3
+RDEPEND=!pulseaudio? ( media-libs/alsa-lib ) media-libs/flac media-libs/faad2 media-libs/libvorbis media-libs/libmad media-sound/mpg123 hw_raspi? ( dev-embedded/wiringpi ) alac? ( media-libs/alac ) ffmpeg? ( media-video/ffmpeg ) lirc? ( lib-misc/lirc ) resample? ( media-libs/soxr ) opus? ( media-sound/opusfile ) pulseaudio? ( media-sound/pulseaudio ) ssl? ( dev-libs/openssl ) media-sound/alsa-utils
+REQUIRED_USE=hw_raspi? ( gpio )
+SLOT=0
+SRC_URI=https://www.github.com/ralph-irving/squeezelite/tarball/575b593 -> squeezelite-575b593.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	user	875055ddd565382c728563992ae3abf7
+_md5_=36cbb71345bfbe9ce5b6e43be3b689e0
