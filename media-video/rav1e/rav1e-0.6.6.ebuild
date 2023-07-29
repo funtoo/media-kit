@@ -149,7 +149,7 @@ rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
 regex-1.9.1
-regex-automata-0.3.3
+regex-automata-0.3.4
 regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -165,9 +165,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.177
+serde-1.0.178
 serde-big-array-0.4.1
-serde_derive-1.0.177
+serde_derive-1.0.178
 serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
