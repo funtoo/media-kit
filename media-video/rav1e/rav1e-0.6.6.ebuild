@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.1
+errno-0.3.2
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.1
+winnow-0.5.2
 y4m-0.8.0
 yansi-0.5.1
 
