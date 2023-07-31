@@ -165,9 +165,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.178
+serde-1.0.179
 serde-big-array-0.4.1
-serde_derive-1.0.178
+serde_derive-1.0.179
 serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
@@ -177,7 +177,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.27
+syn-2.0.28
 system-deps-6.1.1
 target-lexicon-0.12.10
 termcolor-1.2.0
