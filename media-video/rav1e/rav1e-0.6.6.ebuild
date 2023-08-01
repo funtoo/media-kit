@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.1
+errno-0.3.2
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
@@ -101,7 +101,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.3
+linux-raw-sys-0.4.5
 log-0.4.19
 maybe-rayon-0.1.1
 memchr-2.5.0
@@ -165,9 +165,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.178
+serde-1.0.180
 serde-big-array-0.4.1
-serde_derive-1.0.178
+serde_derive-1.0.180
 serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
@@ -177,9 +177,9 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.27
+syn-2.0.28
 system-deps-6.1.1
-target-lexicon-0.12.10
+target-lexicon-0.12.11
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
@@ -198,7 +198,7 @@ unicode-ident-1.0.11
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
-v_frame-0.3.5
+v_frame-0.3.6
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.1
+winnow-0.5.2
 y4m-0.8.0
 yansi-0.5.1
 
