@@ -198,7 +198,7 @@ unicode-ident-1.0.11
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.0
-v_frame-0.3.5
+v_frame-0.3.6
 vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.2
+winnow-0.5.3
 y4m-0.8.0
 yansi-0.5.1
 
