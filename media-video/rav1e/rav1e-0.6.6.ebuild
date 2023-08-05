@@ -148,8 +148,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.9.1
-regex-automata-0.3.4
+regex-1.9.2
+regex-automata-0.3.5
 regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -159,7 +159,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.6
+rustix-0.38.7
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
