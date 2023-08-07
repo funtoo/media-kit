@@ -29,7 +29,7 @@ bytemuck-1.13.1
 byteorder-1.4.3
 cargo-lock-8.0.3
 cast-0.3.0
-cc-1.0.81
+cc-1.0.82
 cexpr-0.6.0
 cfg-expr-0.15.4
 cfg-if-1.0.0
@@ -148,8 +148,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.9.2
-regex-automata-0.3.5
+regex-1.9.3
+regex-automata-0.3.6
 regex-syntax-0.7.4
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -165,9 +165,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.181
+serde-1.0.183
 serde-big-array-0.4.1
-serde_derive-1.0.181
+serde_derive-1.0.183
 serde_json-1.0.104
 serde_spanned-0.6.3
 shlex-1.1.0
