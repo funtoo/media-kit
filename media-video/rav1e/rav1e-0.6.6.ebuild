@@ -20,7 +20,7 @@ av1-grain-0.2.2
 backtrace-0.3.68
 bindgen-0.61.0
 bitflags-1.3.2
-bitflags-2.3.3
+bitflags-2.4.0
 bitstream-io-1.7.0
 bstr-1.6.0
 built-0.5.2
@@ -102,7 +102,7 @@ libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
 linux-raw-sys-0.4.5
-log-0.4.19
+log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.5.0
 memoffset-0.9.0
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.0
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.0
 winnow-0.4.1
-winnow-0.5.7
+winnow-0.5.10
 y4m-0.8.0
 yansi-0.5.1
 
