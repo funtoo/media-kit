@@ -7,7 +7,7 @@ addr2line-0.20.0
 adler-1.0.2
 aho-corasick-1.0.4
 anes-0.1.6
-anyhow-1.0.72
+anyhow-1.0.73
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.2
@@ -184,8 +184,8 @@ termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.44
-thiserror-impl-1.0.44
+thiserror-1.0.45
+thiserror-impl-1.0.45
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
