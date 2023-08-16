@@ -6,7 +6,7 @@ inherit elisp-common qmake-utils xdg
 
 DESCRIPTION="The Programmers Solid 3D CAD Modeller"
 HOMEPAGE="https://www.openscad.org/"
-SRC_URI="https://github.com/openscad/openscad/releases/download/openscad-2021.01/openscad-2021.01.src.tar.gz -> openscad-2021.01.tar.gz"
+SRC_URI="https://github.com/openscad/openscad/releases/download/openscad-2021.01/openscad-2021.01.src.tar.gz -> openscad-2021.01.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

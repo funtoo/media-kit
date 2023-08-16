@@ -168,7 +168,7 @@ semver-1.0.18
 serde-1.0.183
 serde-big-array-0.4.1
 serde_derive-1.0.183
-serde_json-1.0.104
+serde_json-1.0.105
 serde_spanned-0.6.3
 shlex-1.1.0
 signal-hook-0.3.17
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.2
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.2
 winnow-0.4.1
-winnow-0.5.10
+winnow-0.5.12
 y4m-0.8.0
 yansi-0.5.1
 
