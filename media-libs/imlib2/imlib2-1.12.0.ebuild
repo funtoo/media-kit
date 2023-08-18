@@ -7,7 +7,7 @@ inherit multilib-minimal toolchain-funcs
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="https://www.enlightenment.org/
 	https://sourceforge.net/projects/enlightenment/files/imlib2-src/"
-SRC_URI="https://downloads.sourceforge.net/enlightenment/imlib2-1.11.1.tar.xz -> imlib2-1.11.1.tar.xz"
+SRC_URI="https://downloads.sourceforge.net/enlightenment/imlib2-1.12.0.tar.xz -> imlib2-1.12.0.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"

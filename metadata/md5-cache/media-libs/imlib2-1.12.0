@@ -10,6 +10,6 @@ LICENSE=BSD
 RDEPEND=media-libs/freetype:2[-mgorny(-)] bzip2? ( app-arch/bzip2[-mgorny(-)] ) gif? ( media-libs/giflib:=[-mgorny(-)] ) heif? ( media-libs/libheif:=[-mgorny(-)] ) jpeg? ( virtual/jpeg:0=[-mgorny(-)] ) lzma? ( app-arch/xz-utils[-mgorny(-)] ) mp3? ( media-libs/libid3tag:=[-mgorny(-)] ) png? ( >=media-libs/libpng-1.6.10:0=[-mgorny(-)] ) postscript? ( app-text/libspectre[-mgorny(-)] ) svg? ( gnome-base/librsvg:=[-mgorny(-)] ) tiff? ( >=media-libs/tiff-4.0.4:0[-mgorny(-)] ) webp? ( media-libs/libwebp:=[-mgorny(-)] ) X? ( x11-libs/libX11[-mgorny(-)] x11-libs/libXext[-mgorny(-)] ) zlib? ( sys-libs/zlib[-mgorny(-)] ) !<media-plugins/imlib2_loaders-1.7.0
 REQUIRED_USE=shm? ( X )
 SLOT=0
-SRC_URI=https://downloads.sourceforge.net/enlightenment/imlib2-1.11.1.tar.xz -> imlib2-1.11.1.tar.xz
+SRC_URI=https://downloads.sourceforge.net/enlightenment/imlib2-1.12.0.tar.xz -> imlib2-1.12.0.tar.xz
 _eclasses_=multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=a614ae9b1e903b2587fbacd9a1e65b41
+_md5_=71606ff2d936bf833095c3306fd05ec3
