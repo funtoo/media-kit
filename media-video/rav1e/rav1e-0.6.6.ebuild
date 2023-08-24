@@ -3,7 +3,7 @@
 EAPI=7
 
 CRATES="
-addr2line-0.20.0
+addr2line-0.21.0
 adler-1.0.2
 aho-corasick-1.0.4
 anes-0.1.6
@@ -17,7 +17,7 @@ atty-0.2.14
 autocfg-1.1.0
 av-metrics-0.9.0
 av1-grain-0.2.2
-backtrace-0.3.68
+backtrace-0.3.69
 bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.4.0
@@ -71,7 +71,7 @@ flate2-1.0.27
 float-cmp-0.9.0
 form_urlencoded-1.2.0
 getrandom-0.2.10
-gimli-0.27.3
+gimli-0.28.0
 git2-0.15.0
 glob-0.3.1
 half-1.8.2
@@ -113,14 +113,14 @@ new_debug_unreachable-1.0.4
 nom-7.1.3
 noop_proc_macro-0.3.0
 normalize-line-endings-0.3.0
-num-bigint-0.4.3
+num-bigint-0.4.4
 num-derive-0.3.3
 num-derive-0.4.0
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.16
 num_cpus-1.16.0
-object-0.31.1
+object-0.32.0
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
@@ -165,9 +165,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.183
+serde-1.0.186
 serde-big-array-0.4.1
-serde_derive-1.0.183
+serde_derive-1.0.186
 serde_json-1.0.105
 serde_spanned-0.6.3
 shlex-1.1.0
