@@ -148,9 +148,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.9.3
-regex-automata-0.3.6
-regex-syntax-0.7.4
+regex-1.9.4
+regex-automata-0.3.7
+regex-syntax-0.7.5
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -159,15 +159,15 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.8
+rustix-0.38.9
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.18
-serde-1.0.186
+serde-1.0.188
 serde-big-array-0.4.1
-serde_derive-1.0.186
+serde_derive-1.0.188
 serde_json-1.0.105
 serde_spanned-0.6.3
 shlex-1.1.0
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 winnow-0.4.1
-winnow-0.5.14
+winnow-0.5.15
 y4m-0.8.0
 yansi-0.5.1
 
