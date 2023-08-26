@@ -4,7 +4,7 @@ inherit flag-o-matic
 
 DESCRIPTION="Transceiver control program for Amateur Radio use"
 HOMEPAGE="http://www.w1hkj.com/flrig-help/index.html"
-SRC_URI="https://downloads.sourceforge.net/fldigi/flrig/flrig-2.0.02.tar.gz -> flrig-2.0.02.tar.gz"
+SRC_URI="https://downloads.sourceforge.net/fldigi/flrig/flrig-2.0.03.tar.gz -> flrig-2.0.03.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
