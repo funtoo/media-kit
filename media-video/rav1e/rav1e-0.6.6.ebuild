@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.4.0
 bitstream-io-1.7.0
-bstr-1.6.1
+bstr-1.6.2
 built-0.5.2
 bumpalo-3.13.0
 bytemuck-1.13.1
@@ -104,7 +104,7 @@ linux-raw-sys-0.3.8
 linux-raw-sys-0.4.5
 log-0.4.20
 maybe-rayon-0.1.1
-memchr-2.6.1
+memchr-2.6.2
 memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
