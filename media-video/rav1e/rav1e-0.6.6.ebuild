@@ -148,8 +148,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.9.4
-regex-automata-0.3.7
+regex-1.9.5
+regex-automata-0.3.8
 regex-syntax-0.7.5
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
