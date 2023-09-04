@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.21.0
 adler-1.0.2
-aho-corasick-1.0.4
+aho-corasick-1.0.5
 anes-0.1.6
 anyhow-1.0.75
 aom-sys-0.3.2
@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.4.0
 bitstream-io-1.7.0
-bstr-1.6.0
+bstr-1.6.2
 built-0.5.2
 bumpalo-3.13.0
 bytemuck-1.13.1
@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.2
+errno-0.3.3
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
@@ -104,7 +104,7 @@ linux-raw-sys-0.3.8
 linux-raw-sys-0.4.5
 log-0.4.20
 maybe-rayon-0.1.1
-memchr-2.5.0
+memchr-2.6.3
 memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
@@ -120,7 +120,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.16
 num_cpus-1.16.0
-object-0.32.0
+object-0.32.1
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
@@ -148,8 +148,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.7.0
 rayon-core-1.11.0
-regex-1.9.4
-regex-automata-0.3.7
+regex-1.9.5
+regex-automata-0.3.8
 regex-syntax-0.7.5
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
@@ -159,7 +159,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.9
+rustix-0.38.11
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -177,15 +177,15 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.29
+syn-2.0.31
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.47
-thiserror-impl-1.0.47
+thiserror-1.0.48
+thiserror-impl-1.0.48
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
@@ -197,7 +197,7 @@ unicode-bidi-0.3.13
 unicode-ident-1.0.11
 unicode-normalization-0.1.22
 unicode-width-0.1.10
-url-2.4.0
+url-2.4.1
 v_frame-0.3.6
 vcpkg-0.2.15
 version-compare-0.1.1

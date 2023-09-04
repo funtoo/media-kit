@@ -5,7 +5,7 @@ inherit autotools eutils udev user
 
 DESCRIPTION="Library that implements support for numerous digital cameras"
 HOMEPAGE="http://www.gphoto.org/"
-SRC_URI="https://github.com/gphoto/libgphoto2/archive/v2.5.30.tar.gz -> libgphoto2-2.5.30.tar.gz"
+SRC_URI="https://github.com/gphoto/libgphoto2/archive/v2.5.31.tar.gz -> libgphoto2-2.5.31.tar.gz"
 
 LICENSE="GPL-2"
 
