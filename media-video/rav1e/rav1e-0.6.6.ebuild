@@ -80,6 +80,7 @@ hashbrown-0.14.0
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.3.2
+home-0.5.5
 idna-0.4.0
 image-0.24.7
 indexmap-1.9.3
@@ -211,7 +212,7 @@ wasm-bindgen-macro-0.2.87
 wasm-bindgen-macro-support-0.2.87
 wasm-bindgen-shared-0.2.87
 web-sys-0.3.64
-which-4.4.0
+which-4.4.2
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
