@@ -104,7 +104,7 @@ linux-raw-sys-0.3.8
 linux-raw-sys-0.4.5
 log-0.4.20
 maybe-rayon-0.1.1
-memchr-2.6.2
+memchr-2.6.3
 memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
@@ -120,7 +120,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.16
 num_cpus-1.16.0
-object-0.32.0
+object-0.32.1
 once_cell-1.18.0
 oorandom-11.1.3
 os_str_bytes-6.5.1
@@ -177,15 +177,15 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.29
+syn-2.0.31
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.47
-thiserror-impl-1.0.47
+thiserror-1.0.48
+thiserror-impl-1.0.48
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
