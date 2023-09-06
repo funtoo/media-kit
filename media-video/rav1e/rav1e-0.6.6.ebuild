@@ -25,7 +25,7 @@ bitstream-io-1.7.0
 bstr-1.6.2
 built-0.5.2
 bumpalo-3.13.0
-bytemuck-1.13.1
+bytemuck-1.14.0
 byteorder-1.4.3
 cargo-lock-8.0.3
 cast-0.3.0
@@ -171,7 +171,7 @@ serde-big-array-0.4.1
 serde_derive-1.0.188
 serde_json-1.0.105
 serde_spanned-0.6.3
-shlex-1.1.0
+shlex-1.2.0
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
 simd-adler32-0.3.7
@@ -204,7 +204,7 @@ vcpkg-0.2.15
 version-compare-0.1.1
 version_check-0.9.4
 wait-timeout-0.2.0
-walkdir-2.3.3
+walkdir-2.4.0
 wasi-0.11.0+wasi-snapshot-preview1
 wasm-bindgen-0.2.87
 wasm-bindgen-backend-0.2.87
