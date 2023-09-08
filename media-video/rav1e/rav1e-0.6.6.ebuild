@@ -31,7 +31,7 @@ cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.83
 cexpr-0.6.0
-cfg-expr-0.15.4
+cfg-expr-0.15.5
 cfg-if-1.0.0
 ciborium-0.2.1
 ciborium-io-0.2.1
@@ -191,9 +191,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.6
+toml-0.7.7
 toml_datetime-0.6.3
-toml_edit-0.19.14
+toml_edit-0.19.15
 unicode-bidi-0.3.13
 unicode-ident-1.0.11
 unicode-normalization-0.1.22
