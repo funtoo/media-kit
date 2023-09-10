@@ -102,7 +102,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.5
+linux-raw-sys-0.4.7
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.3
@@ -160,7 +160,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.11
+rustix-0.38.12
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -169,7 +169,7 @@ semver-1.0.18
 serde-1.0.188
 serde-big-array-0.4.1
 serde_derive-1.0.188
-serde_json-1.0.105
+serde_json-1.0.106
 serde_spanned-0.6.3
 shlex-1.2.0
 signal-hook-0.3.17
