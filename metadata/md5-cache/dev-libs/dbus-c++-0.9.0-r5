@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig test? ( sys-apps/dbus[X] ) >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/expat sys-apps/dbus ecore? ( dev-libs/efl ) glib? ( dev-libs/glib:2 ) dev-util/cppunit
+DESCRIPTION=Provides a C++ API for D-BUS
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/dbus-cplusplus/
+IUSE=ecore glib test test
+KEYWORDS=*
+LICENSE=LGPL-2.1+
+RDEPEND=dev-libs/expat sys-apps/dbus ecore? ( dev-libs/efl ) glib? ( dev-libs/glib:2 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://sourceforge/dbus-cplusplus/libdbus-c++-0.9.0.tar.gz
+_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5
+_md5_=df5d49ff37841f7dd7fbe349490f977c

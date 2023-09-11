@@ -160,7 +160,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.12
+rustix-0.38.13
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -178,7 +178,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.31
+syn-2.0.32
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
