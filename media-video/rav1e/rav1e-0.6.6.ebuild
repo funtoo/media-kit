@@ -10,7 +10,7 @@ anes-0.1.6
 anyhow-1.0.75
 aom-sys-0.3.2
 arbitrary-0.4.7
-arg_enum_proc_macro-0.3.2
+arg_enum_proc_macro-0.3.4
 arrayvec-0.7.4
 assert_cmd-2.0.8
 atty-0.2.14
@@ -85,7 +85,7 @@ idna-0.4.0
 image-0.24.7
 indexmap-1.9.3
 indexmap-2.0.0
-interpolate_name-0.2.3
+interpolate_name-0.2.4
 io-lifetimes-1.0.11
 is-terminal-0.4.9
 itertools-0.8.2
