@@ -96,7 +96,7 @@ js-sys-0.3.64
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.147
+libc-0.2.148
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -140,7 +140,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.66
+proc-macro2-1.0.67
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.33
@@ -178,7 +178,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.32
+syn-2.0.33
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
@@ -195,7 +195,7 @@ toml-0.7.8
 toml_datetime-0.6.3
 toml_edit-0.19.15
 unicode-bidi-0.3.13
-unicode-ident-1.0.11
+unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.10
 url-2.4.1
