@@ -24,7 +24,7 @@ bitflags-2.4.0
 bitstream-io-1.7.0
 bstr-1.6.2
 built-0.5.2
-bumpalo-3.13.0
+bumpalo-3.14.0
 bytemuck-1.14.0
 byteorder-1.4.3
 cargo-lock-8.0.3
