@@ -178,7 +178,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.33
+syn-2.0.34
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
