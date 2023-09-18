@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="libharu - free PDF library"
 HOMEPAGE="http://www.libharu.org/ https://github.com/libharu/libharu"
-SRC_URI="https://github.com/libharu/libharu/tarball/8dbcfe470581edc4bc52c3ef132d410e66cadc20 -> libharu-2.4.3-8dbcfe4.tar.gz"
+SRC_URI="https://github.com/libharu/libharu/tarball/0c598becaadaef8e3d12b883f9fc2864a118c12d -> libharu-2.4.4-0c598be.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0/${PV}"

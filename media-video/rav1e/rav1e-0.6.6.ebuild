@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.21.0
 adler-1.0.2
-aho-corasick-1.0.5
+aho-corasick-1.1.0
 anes-0.1.6
 anyhow-1.0.75
 aom-sys-0.3.2
@@ -178,7 +178,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.0
 syn-1.0.109
-syn-2.0.36
+syn-2.0.37
 system-deps-6.1.1
 target-lexicon-0.12.11
 termcolor-1.2.0
