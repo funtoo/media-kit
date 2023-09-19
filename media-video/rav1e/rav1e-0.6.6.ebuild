@@ -181,7 +181,7 @@ syn-1.0.109
 syn-2.0.37
 system-deps-6.1.1
 target-lexicon-0.12.11
-termcolor-1.2.0
+termcolor-1.3.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
