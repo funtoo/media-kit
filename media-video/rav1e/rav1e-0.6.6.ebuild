@@ -79,7 +79,7 @@ hashbrown-0.12.3
 hashbrown-0.14.0
 heck-0.4.1
 hermit-abi-0.1.19
-hermit-abi-0.3.2
+hermit-abi-0.3.3
 home-0.5.5
 idna-0.4.0
 image-0.24.7
@@ -197,7 +197,7 @@ toml_edit-0.19.15
 unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
-unicode-width-0.1.10
+unicode-width-0.1.11
 url-2.4.1
 v_frame-0.3.6
 vcpkg-0.2.15
