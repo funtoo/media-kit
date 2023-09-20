@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.21.0
 adler-1.0.2
-aho-corasick-1.1.0
+aho-corasick-1.1.1
 anes-0.1.6
 anyhow-1.0.75
 aom-sys-0.3.2
@@ -215,7 +215,7 @@ web-sys-0.3.64
 which-4.4.2
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
-winapi-util-0.1.5
+winapi-util-0.1.6
 winapi-x86_64-pc-windows-gnu-0.4.0
 windows-sys-0.45.0
 windows-sys-0.48.0
