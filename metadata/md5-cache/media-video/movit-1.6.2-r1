@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=media-libs/mesa[X(+)] dev-cpp/eigen media-libs/libepoxy sci-libs/fftw media-libs/libsdl2
+DESCRIPTION=Modern Video Toolkit
+EAPI=7
+HOMEPAGE=https://movit.sesse.net/
+KEYWORDS=*
+LICENSE=GPL-2+
+RDEPEND=media-libs/mesa[X(+)] dev-cpp/eigen media-libs/libepoxy sci-libs/fftw media-libs/libsdl2
+SLOT=0
+SRC_URI=https://movit.sesse.net/movit-1.6.2.tar.gz https://github.com/google/googletest/archive/refs/tags/release-1.7.0.tar.gz -> googletest-1.7.0.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8
+_md5_=72862ba9ca2b1a9a5a16046ffe9e4e69

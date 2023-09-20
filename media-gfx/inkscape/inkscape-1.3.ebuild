@@ -10,7 +10,7 @@ inherit cmake flag-o-matic xdg toolchain-funcs python-single-r1
 DESCRIPTION="SVG based generic vector-drawing program"
 HOMEPAGE="https://inkscape.org/ https://gitlab.com/inkscape/inkscape/"
 SRC_URI="https://inkscape.org//gallery/item/42328/inkscape-1.3.tar.xz -> inkscape-1.3.tar.xz"
-KEYWORDS="*"
+KEYWORDS="next"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -33,7 +33,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-cpp/gtkmm:3.0
 	>=dev-cpp/pangomm-2.40:1.4
 	>=dev-libs/boehm-gc-7.1:=
-	dev-libs/boost:=
+	dev-libs/boost:=[stacktrace]
 	dev-libs/double-conversion:=
 	>=dev-libs/glib-2.41
 	>=dev-libs/libsigc++-2.8:2
