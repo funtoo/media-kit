@@ -164,7 +164,7 @@ ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
-semver-1.0.18
+semver-1.0.19
 serde-1.0.188
 serde-big-array-0.4.1
 serde_derive-1.0.188
