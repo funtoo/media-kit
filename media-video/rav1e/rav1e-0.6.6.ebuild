@@ -120,7 +120,6 @@ num-derive-0.4.0
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.16
-num_cpus-1.16.0
 object-0.32.1
 once_cell-1.18.0
 oorandom-11.1.3
@@ -147,8 +146,8 @@ quote-1.0.33
 rand-0.8.5
 rand_chacha-0.3.1
 rand_core-0.6.4
-rayon-1.7.0
-rayon-core-1.11.0
+rayon-1.8.0
+rayon-core-1.12.0
 regex-1.9.5
 regex-automata-0.3.8
 regex-syntax-0.7.5
@@ -160,7 +159,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.23
-rustix-0.38.13
+rustix-0.38.14
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -176,7 +175,7 @@ signal-hook-0.3.17
 signal-hook-registry-1.4.1
 simd-adler32-0.3.7
 simd_helpers-0.1.0
-smallvec-1.11.0
+smallvec-1.11.1
 syn-1.0.109
 syn-2.0.37
 system-deps-6.1.1
