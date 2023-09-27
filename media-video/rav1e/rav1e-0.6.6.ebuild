@@ -184,8 +184,8 @@ termcolor-1.3.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.48
-thiserror-impl-1.0.48
+thiserror-1.0.49
+thiserror-impl-1.0.49
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
