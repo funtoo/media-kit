@@ -84,7 +84,7 @@ home-0.5.5
 idna-0.4.0
 image-0.24.7
 indexmap-1.9.3
-indexmap-2.0.0
+indexmap-2.0.1
 interpolate_name-0.2.4
 io-lifetimes-1.0.11
 is-terminal-0.4.9
