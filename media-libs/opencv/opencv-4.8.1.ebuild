@@ -10,7 +10,8 @@ inherit python-r1 toolchain-funcs cmake-multilib
 DESCRIPTION="A collection of algorithms and sample code for various computer vision problems"
 HOMEPAGE="https://opencv.org"
 SRC_URI="
-	https://github.com/opencv/opencv/tarball/53296de62872b5e7d042ddffb49679fbdcca99f6 -> opencv-4.8.0-53296de.tar.gz
+	https://github.com/opencv/opencv/tarball/7d2cb72b9276aa2c411e71901aa2229946ced456 -> opencv-4.8.1-7d2cb72.tar.gz
+	contrib? ( https://github.com/opencv/opencv_contrib/tarball/f10c84d48b0714f2b408c9e5cccfac1277c8e6cc -> opencv_contrib-4.8.1-f10c84d.tar.gz )
 "
 
 LICENSE="BSD"
