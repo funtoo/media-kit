@@ -102,7 +102,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.7
+linux-raw-sys-0.4.8
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.3
@@ -148,8 +148,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.8.0
 rayon-core-1.12.0
-regex-1.9.5
-regex-automata-0.3.8
+regex-1.9.6
+regex-automata-0.3.9
 regex-syntax-0.7.5
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
