@@ -84,7 +84,7 @@ home-0.5.5
 idna-0.4.0
 image-0.24.7
 indexmap-1.9.3
-indexmap-2.0.1
+indexmap-2.0.2
 interpolate_name-0.2.4
 io-lifetimes-1.0.11
 is-terminal-0.4.9
@@ -159,7 +159,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.24
-rustix-0.38.14
+rustix-0.38.15
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
