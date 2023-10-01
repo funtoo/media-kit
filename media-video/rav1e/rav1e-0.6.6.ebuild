@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.3
+errno-0.3.4
 errno-dragonfly-0.1.2
 fdeflate-0.3.0
 fern-0.6.2
@@ -105,7 +105,7 @@ linux-raw-sys-0.3.8
 linux-raw-sys-0.4.8
 log-0.4.20
 maybe-rayon-0.1.1
-memchr-2.6.3
+memchr-2.6.4
 memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
