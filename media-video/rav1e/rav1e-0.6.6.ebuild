@@ -159,7 +159,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.24
-rustix-0.38.15
+rustix-0.38.17
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -177,8 +177,8 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.1
 syn-1.0.109
-syn-2.0.37
-system-deps-6.1.1
+syn-2.0.38
+system-deps-6.1.2
 target-lexicon-0.12.11
 termcolor-1.3.0
 terminal_size-0.2.6
@@ -190,9 +190,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.7.8
+toml-0.8.2
 toml_datetime-0.6.3
-toml_edit-0.19.15
+toml_edit-0.20.2
 unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
