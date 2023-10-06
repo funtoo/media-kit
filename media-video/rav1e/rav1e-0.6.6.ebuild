@@ -26,7 +26,7 @@ bstr-1.6.2
 built-0.5.2
 bumpalo-3.14.0
 bytemuck-1.14.0
-byteorder-1.4.3
+byteorder-1.5.0
 cargo-lock-8.0.3
 cast-0.3.0
 cc-1.0.83
@@ -139,7 +139,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.67
+proc-macro2-1.0.68
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.33
@@ -235,7 +235,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 winnow-0.4.1
-winnow-0.5.15
+winnow-0.5.16
 y4m-0.8.0
 yansi-0.5.1
 
