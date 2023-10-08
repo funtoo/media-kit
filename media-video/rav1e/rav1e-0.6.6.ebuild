@@ -116,10 +116,10 @@ noop_proc_macro-0.3.0
 normalize-line-endings-0.3.0
 num-bigint-0.4.4
 num-derive-0.3.3
-num-derive-0.4.0
+num-derive-0.4.1
 num-integer-0.1.45
 num-rational-0.4.1
-num-traits-0.2.16
+num-traits-0.2.17
 object-0.32.1
 once_cell-1.18.0
 oorandom-11.1.3
