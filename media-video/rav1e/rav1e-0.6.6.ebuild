@@ -102,7 +102,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.8
+linux-raw-sys-0.4.9
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.4
