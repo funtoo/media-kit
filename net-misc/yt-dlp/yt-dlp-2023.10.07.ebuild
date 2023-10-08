@@ -7,7 +7,7 @@ inherit optfeature python-single-r1
 
 DESCRIPTION="A youtube-dl fork with additional features and fixes"
 HOMEPAGE="https://github.com/yt-dlp/yt-dlp"
-SRC_URI="https://github.com/yt-dlp/yt-dlp/tarball/c54ddfba0f7d68034339426223d75373c5fc86df -> yt-dlp-2023.09.24-c54ddfb.tar.gz"
+SRC_URI="https://github.com/yt-dlp/yt-dlp/tarball/4392c4680c383b221b6aa26d25c6e4b5581a5ad6 -> yt-dlp-2023.10.07-4392c46.tar.gz"
 
 LICENSE="Unlicense"
 SLOT="0"
@@ -17,7 +17,10 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	>=dev-lang/python-3.7
-	app-text/pandoc
+	|| (
+		app-text/pandoc-bin
+		app-text/pandoc
+	)
 	brotli? ( app-arch/brotli )
 	certifi? ( dev-python/certifi )
 	ffmpeg? ( media-video/ffmpeg )
