@@ -101,7 +101,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.9
+linux-raw-sys-0.4.10
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.4
@@ -138,7 +138,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.68
+proc-macro2-1.0.69
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.33
