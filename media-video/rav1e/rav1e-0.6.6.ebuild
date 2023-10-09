@@ -5,7 +5,7 @@ EAPI=7
 CRATES="
 addr2line-0.21.0
 adler-1.0.2
-aho-corasick-1.1.1
+aho-corasick-1.1.2
 anes-0.1.6
 anyhow-1.0.75
 aom-sys-0.3.2
@@ -158,7 +158,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.24
-rustix-0.38.17
+rustix-0.38.18
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
