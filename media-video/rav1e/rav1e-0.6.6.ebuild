@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.4.0
 bitstream-io-1.7.0
-bstr-1.6.2
+bstr-1.7.0
 built-0.5.2
 bumpalo-3.14.0
 bytemuck-1.14.0
@@ -90,7 +90,7 @@ is-terminal-0.4.9
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.9
-jobserver-0.1.26
+jobserver-0.1.27
 js-sys-0.3.64
 lab-0.11.0
 lazy_static-1.4.0
@@ -147,9 +147,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.8.0
 rayon-core-1.12.0
-regex-1.9.6
-regex-automata-0.3.9
-regex-syntax-0.7.5
+regex-1.10.0
+regex-automata-0.4.1
+regex-syntax-0.8.0
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -163,7 +163,7 @@ ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
-semver-1.0.19
+semver-1.0.20
 serde-1.0.188
 serde-big-array-0.4.1
 serde_derive-1.0.188
