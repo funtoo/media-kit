@@ -149,7 +149,7 @@ rayon-1.8.0
 rayon-core-1.12.0
 regex-1.10.0
 regex-automata-0.4.1
-regex-syntax-0.8.0
+regex-syntax-0.8.1
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
