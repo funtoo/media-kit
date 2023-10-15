@@ -8,7 +8,7 @@ inherit cmake-utils python-any-r1
 
 DESCRIPTION="Collection of tools, libraries and tests for shader compilation"
 HOMEPAGE="https://github.com/shaderc/google"
-SRC_URI="https://api.github.com/repos/google/shaderc/tarball/refs/tags/v2023.6 -> shaderc-2023.6.tar.gz"
+SRC_URI="https://api.github.com/repos/google/shaderc/tarball/refs/tags/v2023.7 -> shaderc-2023.7.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

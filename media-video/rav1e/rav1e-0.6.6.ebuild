@@ -66,7 +66,7 @@ equivalent-1.0.1
 errno-0.3.5
 fdeflate-0.3.0
 fern-0.6.2
-flate2-1.0.27
+flate2-1.0.28
 float-cmp-0.9.0
 form_urlencoded-1.2.0
 getrandom-0.2.10
@@ -122,7 +122,7 @@ num-traits-0.2.17
 object-0.32.1
 once_cell-1.18.0
 oorandom-11.1.3
-os_str_bytes-6.5.1
+os_str_bytes-6.6.1
 paste-1.0.14
 peeking_take_while-0.1.2
 percent-encoding-2.3.0
@@ -147,9 +147,9 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.8.0
 rayon-core-1.12.0
-regex-1.10.0
-regex-automata-0.4.1
-regex-syntax-0.8.1
+regex-1.10.1
+regex-automata-0.4.2
+regex-syntax-0.8.2
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
 rust_hawktracer_proc_macro-0.4.1
@@ -157,16 +157,16 @@ rust_hawktracer_sys-0.4.2
 rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
-rustix-0.37.24
-rustix-0.38.18
+rustix-0.37.25
+rustix-0.38.19
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.20
-serde-1.0.188
+serde-1.0.189
 serde-big-array-0.4.1
-serde_derive-1.0.188
+serde_derive-1.0.189
 serde_json-1.0.107
 serde_spanned-0.6.3
 shlex-1.2.0
@@ -234,7 +234,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 winnow-0.4.1
-winnow-0.5.16
+winnow-0.5.17
 y4m-0.8.0
 yansi-0.5.1
 
