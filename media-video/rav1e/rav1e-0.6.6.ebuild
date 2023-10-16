@@ -20,7 +20,7 @@ av1-grain-0.2.2
 backtrace-0.3.69
 bindgen-0.61.0
 bitflags-1.3.2
-bitflags-2.4.0
+bitflags-2.4.1
 bitstream-io-1.7.0
 bstr-1.7.0
 built-0.5.2
@@ -147,8 +147,8 @@ rand_chacha-0.3.1
 rand_core-0.6.4
 rayon-1.8.0
 rayon-core-1.12.0
-regex-1.10.1
-regex-automata-0.4.2
+regex-1.10.2
+regex-automata-0.4.3
 regex-syntax-0.8.2
 rust_hawktracer-0.7.0
 rust_hawktracer_normal_macro-0.4.1
