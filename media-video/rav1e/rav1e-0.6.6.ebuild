@@ -178,13 +178,13 @@ smallvec-1.11.1
 syn-1.0.109
 syn-2.0.38
 system-deps-6.1.2
-target-lexicon-0.12.11
+target-lexicon-0.12.12
 termcolor-1.3.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.49
-thiserror-impl-1.0.49
+thiserror-1.0.50
+thiserror-impl-1.0.50
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
