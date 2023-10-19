@@ -6,7 +6,7 @@ inherit desktop xdg
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
-SRC_URI="https://download.blender.org/release/Blender3.6/blender-3.6.4-linux-x64.tar.xz -> blender-3.6.4-linux-x64.tar.xz"
+SRC_URI="https://download.blender.org/release/Blender3.6/blender-3.6.5-linux-x64.tar.xz -> blender-3.6.5-linux-x64.tar.xz"
 
 LICENSE="|| ( GPL-2 BL )"
 SLOT="0"
