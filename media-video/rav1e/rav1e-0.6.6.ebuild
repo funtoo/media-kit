@@ -168,7 +168,7 @@ serde-1.0.189
 serde-big-array-0.4.1
 serde_derive-1.0.189
 serde_json-1.0.107
-serde_spanned-0.6.3
+serde_spanned-0.6.4
 shlex-1.2.0
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
@@ -189,9 +189,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.2
-toml_datetime-0.6.3
-toml_edit-0.20.2
+toml-0.8.4
+toml_datetime-0.6.5
+toml_edit-0.20.4
 unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
