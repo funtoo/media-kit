@@ -189,9 +189,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.5
+toml-0.8.6
 toml_datetime-0.6.5
-toml_edit-0.20.6
+toml_edit-0.20.7
 unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
