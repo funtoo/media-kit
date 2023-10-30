@@ -9,6 +9,6 @@ KEYWORDS=*
 LICENSE=GPL-2+ BSD-2
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5= dev-qt/qtnetwork:5[ssl] dev-qt/qtscript:5 dev-qt/qtsingleapplication[X,qt5(+)] dev-qt/qtwidgets:5 dev-qt/qtxml:5 sys-libs/zlib autoshutdown? ( dev-qt/qtdbus:5 ) mpris? ( dev-qt/qtdbus:5 ) media-video/mpv[libass(+),X]
 SLOT=0
-SRC_URI=https://github.com/smplayer-dev/smplayer/tarball/aff9170c5f053ec493597f7e340475fdfb7b0b0e -> smplayer-23.6.0-aff9170.tar.gz
+SRC_URI=https://github.com/smplayer-dev/smplayer/tarball/dced4bc540ee9de268ba0b4c8f7f325e39285ece -> smplayer-23.6.0.10170-dced4bc.tar.gz
 _eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	plocale	89c6aac5da68423465e6fd79fb4ad5fb	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=4cdabdee2994d08d6fe5f0f2cd84bda1
+_md5_=50c2ec07e75f187a3546cb5dd09c8f0e
