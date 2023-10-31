@@ -55,7 +55,7 @@ crossbeam-deque-0.8.3
 crossbeam-epoch-0.9.15
 crossbeam-queue-0.3.8
 crossbeam-utils-0.8.16
-dav1d-sys-0.7.2
+dav1d-sys-0.7.3
 diff-0.1.13
 difflib-0.4.0
 doc-comment-0.3.3
@@ -167,7 +167,7 @@ semver-1.0.20
 serde-1.0.190
 serde-big-array-0.4.1
 serde_derive-1.0.190
-serde_json-1.0.107
+serde_json-1.0.108
 serde_spanned-0.6.4
 shlex-1.2.0
 signal-hook-0.3.17
@@ -177,7 +177,7 @@ simd_helpers-0.1.0
 smallvec-1.11.1
 syn-1.0.109
 syn-2.0.38
-system-deps-6.1.2
+system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.3.0
 terminal_size-0.2.6
@@ -234,7 +234,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 winnow-0.4.1
-winnow-0.5.17
+winnow-0.5.18
 y4m-0.8.0
 yansi-0.5.1
 
