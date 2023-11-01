@@ -64,7 +64,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
 errno-0.3.5
-fdeflate-0.3.0
+fdeflate-0.3.1
 fern-0.6.2
 flate2-1.0.28
 float-cmp-0.9.0
@@ -83,7 +83,7 @@ home-0.5.5
 idna-0.4.0
 image-0.24.7
 indexmap-1.9.3
-indexmap-2.0.2
+indexmap-2.1.0
 interpolate_name-0.2.4
 io-lifetimes-1.0.11
 is-terminal-0.4.9
@@ -91,7 +91,7 @@ itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.9
 jobserver-0.1.27
-js-sys-0.3.64
+js-sys-0.3.65
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -204,12 +204,12 @@ version_check-0.9.4
 wait-timeout-0.2.0
 walkdir-2.4.0
 wasi-0.11.0+wasi-snapshot-preview1
-wasm-bindgen-0.2.87
-wasm-bindgen-backend-0.2.87
-wasm-bindgen-macro-0.2.87
-wasm-bindgen-macro-support-0.2.87
-wasm-bindgen-shared-0.2.87
-web-sys-0.3.64
+wasm-bindgen-0.2.88
+wasm-bindgen-backend-0.2.88
+wasm-bindgen-macro-0.2.88
+wasm-bindgen-macro-support-0.2.88
+wasm-bindgen-shared-0.2.88
+web-sys-0.3.65
 which-4.4.2
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
