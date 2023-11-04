@@ -234,7 +234,7 @@ windows_x86_64_gnullvm-0.48.5
 windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 winnow-0.4.1
-winnow-0.5.18
+winnow-0.5.19
 y4m-0.8.0
 yansi-0.5.1
 
