@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=Commandline tool to customize Spotify client.
+EAPI=7
+HOMEPAGE=https://github.com/khanhas/spicetify-cli
+IUSE=hook
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD GPL-3 MIT
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/spicetify/spicetify-cli/tarball/c1ec1244167f36f4cb40ef593f62787b9aaf0d5e -> spicetify-cli-2.26.0-c1ec124.tar.gz https://direct.funtoo.org/0f/c9/18/0fc91814ffbd3535b74cf485a24ff7893ec26bf0957c41545a0097b9d15ab5365528e3c35fbddcd123fb86144107b7477dd64cd3ca7710070c0627b454d0c2cb -> spicetify-cli-2.26.0-funtoo-go-bundle-ba161f37e7b5cc8e9ff6659cb0d00b5a94fc3bcc242798252ad04a75f863670fe39ce9281237ded065e3cc5ebbe2b0c746da6a692e2a77e5b28a08972265c811.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=4cfa29faf7c59b3a1a576108d67a5870

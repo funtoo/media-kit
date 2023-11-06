@@ -164,9 +164,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.20
-serde-1.0.190
+serde-1.0.191
 serde-big-array-0.4.1
-serde_derive-1.0.190
+serde_derive-1.0.191
 serde_json-1.0.108
 serde_spanned-0.6.4
 shlex-1.2.0
@@ -176,7 +176,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.1
 syn-1.0.109
-syn-2.0.38
+syn-2.0.39
 system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.3.0
@@ -189,9 +189,9 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.6
+toml-0.8.7
 toml_datetime-0.6.5
-toml_edit-0.20.7
+toml_edit-0.21.0
 unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
