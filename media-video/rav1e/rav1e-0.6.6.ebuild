@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.5
+errno-0.3.6
 fdeflate-0.3.1
 fern-0.6.2
 flate2-1.0.28
@@ -164,9 +164,9 @@ same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
 semver-1.0.20
-serde-1.0.191
+serde-1.0.192
 serde-big-array-0.4.1
-serde_derive-1.0.191
+serde_derive-1.0.192
 serde_json-1.0.108
 serde_spanned-0.6.4
 shlex-1.2.0
@@ -189,7 +189,7 @@ tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
 toml-0.5.11
-toml-0.8.7
+toml-0.8.8
 toml_datetime-0.6.5
 toml_edit-0.21.0
 unicode-bidi-0.3.13
