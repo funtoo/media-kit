@@ -69,7 +69,7 @@ fern-0.6.2
 flate2-1.0.28
 float-cmp-0.9.0
 form_urlencoded-1.2.0
-getrandom-0.2.10
+getrandom-0.2.11
 gimli-0.28.0
 git2-0.15.0
 glob-0.3.1
@@ -101,7 +101,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.10
+linux-raw-sys-0.4.11
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.4
