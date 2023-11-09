@@ -22,7 +22,7 @@ bindgen-0.61.0
 bitflags-1.3.2
 bitflags-2.4.1
 bitstream-io-1.8.0
-bstr-1.7.0
+bstr-1.8.0
 built-0.5.2
 bumpalo-3.14.0
 bytemuck-1.14.0
