@@ -174,7 +174,7 @@ signal-hook-0.3.17
 signal-hook-registry-1.4.1
 simd-adler32-0.3.7
 simd_helpers-0.1.0
-smallvec-1.11.1
+smallvec-1.11.2
 syn-1.0.109
 syn-2.0.39
 system-deps-6.2.0
