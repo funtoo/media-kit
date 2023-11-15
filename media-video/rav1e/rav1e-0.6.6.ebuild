@@ -29,7 +29,7 @@ bytemuck-1.14.0
 byteorder-1.5.0
 cargo-lock-8.0.3
 cast-0.3.0
-cc-1.0.84
+cc-1.0.83
 cexpr-0.6.0
 cfg-expr-0.15.5
 cfg-if-1.0.0
@@ -90,6 +90,7 @@ is-terminal-0.4.9
 itertools-0.8.2
 itertools-0.10.5
 itoa-1.0.9
+jobserver-0.1.27
 js-sys-0.3.65
 lab-0.11.0
 lazy_static-1.4.0
@@ -157,7 +158,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.27
-rustix-0.38.22
+rustix-0.38.24
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
@@ -178,7 +179,7 @@ syn-1.0.109
 syn-2.0.39
 system-deps-6.2.0
 target-lexicon-0.12.12
-termcolor-1.3.0
+termcolor-1.4.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
