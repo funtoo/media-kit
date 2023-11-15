@@ -63,7 +63,7 @@ either-1.9.0
 encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
-errno-0.3.6
+errno-0.3.7
 fdeflate-0.3.1
 fern-0.6.2
 flate2-1.0.28
