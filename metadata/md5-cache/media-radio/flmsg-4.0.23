@@ -7,5 +7,5 @@ KEYWORDS=*
 LICENSE=GPL-3
 RDEPEND=media-radio/fldigi x11-libs/fltk:= x11-libs/libX11:=
 SLOT=0
-SRC_URI=https://downloads.sourceforge.net/fldigi/flmsg/flmsg-4.0.22.tar.gz -> flmsg-4.0.22.tar.gz
-_md5_=3c23b13e0a9196a2608ef364ab77e919
+SRC_URI=https://downloads.sourceforge.net/fldigi/flmsg/flmsg-4.0.23.tar.gz -> flmsg-4.0.23.tar.gz
+_md5_=4079f03f803be982b164756428988ae5

@@ -2,7 +2,7 @@ EAPI=7
 
 DESCRIPTION="Fldigi helper for creating radiograms"
 HOMEPAGE="http://www.w1hkj.com"
-SRC_URI="https://downloads.sourceforge.net/fldigi/flmsg/flmsg-4.0.22.tar.gz -> flmsg-4.0.22.tar.gz"
+SRC_URI="https://downloads.sourceforge.net/fldigi/flmsg/flmsg-4.0.23.tar.gz -> flmsg-4.0.23.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
