@@ -158,7 +158,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.27
-rustix-0.38.24
+rustix-0.38.25
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
