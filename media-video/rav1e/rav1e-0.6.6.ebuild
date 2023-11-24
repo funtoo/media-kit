@@ -68,9 +68,9 @@ fdeflate-0.3.1
 fern-0.6.2
 flate2-1.0.28
 float-cmp-0.9.0
-form_urlencoded-1.2.0
+form_urlencoded-1.2.1
 getrandom-0.2.11
-gimli-0.28.0
+gimli-0.28.1
 git2-0.15.0
 glob-0.3.1
 half-1.8.2
@@ -80,7 +80,7 @@ heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.3.3
 home-0.5.5
-idna-0.4.0
+idna-0.5.0
 image-0.24.7
 indexmap-1.9.3
 indexmap-2.1.0
@@ -125,7 +125,7 @@ oorandom-11.1.3
 os_str_bytes-6.6.1
 paste-1.0.14
 peeking_take_while-0.1.2
-percent-encoding-2.3.0
+percent-encoding-2.3.1
 pkg-config-0.3.27
 plotters-0.3.5
 plotters-backend-0.3.5
@@ -196,7 +196,7 @@ unicode-bidi-0.3.13
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.11
-url-2.4.1
+url-2.5.0
 v_frame-0.3.6
 vcpkg-0.2.15
 version-compare-0.1.1
