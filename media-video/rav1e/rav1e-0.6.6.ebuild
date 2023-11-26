@@ -75,7 +75,7 @@ git2-0.15.0
 glob-0.3.1
 half-1.8.2
 hashbrown-0.12.3
-hashbrown-0.14.2
+hashbrown-0.14.3
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.3.3
