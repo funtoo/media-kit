@@ -138,7 +138,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.69
+proc-macro2-1.0.70
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.33
