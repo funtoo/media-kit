@@ -101,7 +101,7 @@ libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
 libz-sys-1.1.12
 linux-raw-sys-0.3.8
-linux-raw-sys-0.4.11
+linux-raw-sys-0.4.12
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.4
@@ -158,7 +158,7 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.27
-rustix-0.38.25
+rustix-0.38.26
 ryu-1.0.15
 same-file-1.0.6
 scan_fmt-0.2.6
