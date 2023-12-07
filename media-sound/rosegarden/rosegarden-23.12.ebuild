@@ -6,7 +6,7 @@ inherit cmake xdg virtualx
 
 DESCRIPTION="MIDI and audio sequencer and notation editor"
 HOMEPAGE="https://www.rosegardenmusic.com/"
-SRC_URI="https://github.com/tedfelix/rosegarden-official/tarball/ca0f9fc91a7a1b1d9c72ccb9a2383568c52bc2ee -> rosegarden-official-23.06-ca0f9fc.tar.gz"
+SRC_URI="https://github.com/tedfelix/rosegarden-official/tarball/752834321f025ea4d5a6ae29d1a365742d78b55c -> rosegarden-official-23.12-7528343.tar.gz"
 #SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"

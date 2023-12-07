@@ -120,7 +120,7 @@ num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.17
 object-0.32.1
-once_cell-1.18.0
+once_cell-1.19.0
 oorandom-11.1.3
 os_str_bytes-6.6.1
 paste-1.0.14
@@ -192,7 +192,7 @@ toml-0.5.11
 toml-0.8.8
 toml_datetime-0.6.5
 toml_edit-0.21.0
-unicode-bidi-0.3.13
+unicode-bidi-0.3.14
 unicode-ident-1.0.12
 unicode-normalization-0.1.22
 unicode-width-0.1.11
@@ -243,7 +243,7 @@ windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.4.1
-winnow-0.5.19
+winnow-0.5.26
 y4m-0.8.0
 yansi-0.5.1
 
