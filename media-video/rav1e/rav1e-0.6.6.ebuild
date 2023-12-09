@@ -89,7 +89,7 @@ io-lifetimes-1.0.11
 is-terminal-0.4.9
 itertools-0.8.2
 itertools-0.10.5
-itoa-1.0.9
+itoa-1.0.10
 jobserver-0.1.27
 js-sys-0.3.66
 lab-0.11.0
@@ -158,8 +158,8 @@ rustc-demangle-0.1.23
 rustc-hash-1.1.0
 rustc_version-0.4.0
 rustix-0.37.27
-rustix-0.38.26
-ryu-1.0.15
+rustix-0.38.28
+ryu-1.0.16
 same-file-1.0.6
 scan_fmt-0.2.6
 scopeguard-1.2.0
