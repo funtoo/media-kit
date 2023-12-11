@@ -95,7 +95,7 @@ js-sys-0.3.66
 lab-0.11.0
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.150
+libc-0.2.151
 libfuzzer-sys-0.3.5
 libgit2-sys-0.14.2+1.5.1
 libloading-0.7.4
@@ -176,7 +176,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.2
 syn-1.0.109
-syn-2.0.39
+syn-2.0.40
 system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.4.0
