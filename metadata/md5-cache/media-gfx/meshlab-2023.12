@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=dev-libs/xerces-c dev-libs/gmp:= >=dev-qt/qtcore-5.12:5 >=dev-qt/qtdeclarative-5.12:5 >=dev-qt/qtopengl-5.12:5 >=dev-qt/qtscript-5.12:5 >=dev-qt/qtxml-5.12:5 >=dev-qt/qtxmlpatterns-5.12:5 sci-mathematics/cgal
 SLOT=0
-SRC_URI=https://github.com/cnr-isti-vclab/meshlab/tarball/58731df6d68e4edeb45d36e7c8828a9d46f8799a -> meshlab-2022.02-58731df.tar.gz https://github.com/cnr-isti-vclab/vcglib/tarball/e4950d12e2db7f6ec3e587b06b2a0474b4f08d96 -> vcglib-2022.02-e4950d1.tar.gz
+SRC_URI=https://github.com/cnr-isti-vclab/meshlab/tarball/2dbd2f4b12df3b47d8777b2b4a43cabd9e425735 -> meshlab-2023.12-2dbd2f4.tar.gz https://github.com/cnr-isti-vclab/vcglib/tarball/6ac9e0c647a63e0e037813a1e92bd050d13efc85 -> vcglib-2023.12-6ac9e0c.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=0c0e222e3aaaec346a13b91e44681ce4
+_md5_=f51b0520c2d3bb4f6e42ac30320e504f

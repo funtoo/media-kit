@@ -50,11 +50,11 @@ crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
 crossbeam-0.8.2
-crossbeam-channel-0.5.8
-crossbeam-deque-0.8.3
-crossbeam-epoch-0.9.15
-crossbeam-queue-0.3.8
-crossbeam-utils-0.8.16
+crossbeam-channel-0.5.9
+crossbeam-deque-0.8.4
+crossbeam-epoch-0.9.16
+crossbeam-queue-0.3.9
+crossbeam-utils-0.8.17
 dav1d-sys-0.7.3
 diff-0.1.13
 difflib-0.4.0
@@ -162,7 +162,6 @@ rustix-0.38.28
 ryu-1.0.16
 same-file-1.0.6
 scan_fmt-0.2.6
-scopeguard-1.2.0
 semver-1.0.20
 serde-1.0.193
 serde-big-array-0.4.1
@@ -176,7 +175,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.2
 syn-1.0.109
-syn-2.0.40
+syn-2.0.41
 system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.4.0
@@ -243,7 +242,7 @@ windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.4.1
-winnow-0.5.26
+winnow-0.5.28
 y4m-0.8.0
 yansi-0.5.1
 
