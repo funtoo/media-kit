@@ -79,7 +79,7 @@ hashbrown-0.14.3
 heck-0.4.1
 hermit-abi-0.1.19
 hermit-abi-0.3.3
-home-0.5.5
+home-0.5.9
 idna-0.5.0
 image-0.24.7
 indexmap-1.9.3
@@ -182,8 +182,8 @@ termcolor-1.4.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.50
-thiserror-impl-1.0.50
+thiserror-1.0.51
+thiserror-impl-1.0.51
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
