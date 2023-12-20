@@ -167,7 +167,7 @@ serde-1.0.193
 serde-big-array-0.4.1
 serde_derive-1.0.193
 serde_json-1.0.108
-serde_spanned-0.6.4
+serde_spanned-0.6.5
 shlex-1.2.0
 signal-hook-0.3.17
 signal-hook-registry-1.4.1
@@ -242,7 +242,7 @@ windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.4.1
-winnow-0.5.28
+winnow-0.5.30
 y4m-0.8.0
 yansi-0.5.1
 
