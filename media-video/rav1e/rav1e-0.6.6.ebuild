@@ -126,7 +126,7 @@ os_str_bytes-6.6.1
 paste-1.0.14
 peeking_take_while-0.1.2
 percent-encoding-2.3.1
-pkg-config-0.3.27
+pkg-config-0.3.28
 plotters-0.3.5
 plotters-backend-0.3.5
 plotters-svg-0.3.5
