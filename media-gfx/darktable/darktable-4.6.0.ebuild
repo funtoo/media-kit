@@ -6,7 +6,7 @@ inherit cmake flag-o-matic pax-utils toolchain-funcs xdg
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="https://www.darktable.org/"
-SRC_URI="https://github.com/darktable-org/darktable/releases/download/release-4.4.2/darktable-4.4.2.tar.xz -> darktable-4.4.2.tar.xz"
+SRC_URI="https://github.com/darktable-org/darktable/releases/download/release-4.6.0/darktable-4.6.0.tar.xz -> darktable-4.6.0.tar.xz"
 
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"

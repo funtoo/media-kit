@@ -7,7 +7,7 @@ addr2line-0.21.0
 adler-1.0.2
 aho-corasick-1.1.2
 anes-0.1.6
-anyhow-1.0.75
+anyhow-1.0.76
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.4
@@ -138,7 +138,7 @@ predicates-tree-1.0.7
 pretty_assertions-1.4.0
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
-proc-macro2-1.0.70
+proc-macro2-1.0.71
 quickcheck-1.0.3
 quickcheck_macros-1.0.0
 quote-1.0.33
@@ -175,7 +175,7 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.2
 syn-1.0.109
-syn-2.0.41
+syn-2.0.42
 system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.4.0
