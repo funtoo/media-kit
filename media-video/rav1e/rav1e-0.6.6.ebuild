@@ -49,12 +49,12 @@ console-0.15.7
 crc32fast-1.3.2
 criterion-0.4.0
 criterion-plot-0.5.0
-crossbeam-0.8.2
-crossbeam-channel-0.5.9
+crossbeam-0.8.3
+crossbeam-channel-0.5.10
 crossbeam-deque-0.8.4
-crossbeam-epoch-0.9.16
-crossbeam-queue-0.3.9
-crossbeam-utils-0.8.17
+crossbeam-epoch-0.9.17
+crossbeam-queue-0.3.10
+crossbeam-utils-0.8.18
 dav1d-sys-0.7.3
 diff-0.1.13
 difflib-0.4.0
@@ -105,7 +105,6 @@ linux-raw-sys-0.4.12
 log-0.4.20
 maybe-rayon-0.1.1
 memchr-2.6.4
-memoffset-0.9.0
 minimal-lexical-0.2.1
 miniz_oxide-0.7.1
 nasm-rs-0.2.5
@@ -119,7 +118,7 @@ num-derive-0.4.1
 num-integer-0.1.45
 num-rational-0.4.1
 num-traits-0.2.17
-object-0.32.1
+object-0.32.2
 once_cell-1.19.0
 oorandom-11.1.3
 os_str_bytes-6.6.1
