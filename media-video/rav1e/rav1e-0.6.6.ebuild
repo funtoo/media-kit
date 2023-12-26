@@ -64,7 +64,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
 errno-0.3.8
-fdeflate-0.3.1
+fdeflate-0.3.2
 fern-0.6.2
 flate2-1.0.28
 float-cmp-0.9.0
@@ -174,15 +174,15 @@ simd-adler32-0.3.7
 simd_helpers-0.1.0
 smallvec-1.11.2
 syn-1.0.109
-syn-2.0.42
+syn-2.0.43
 system-deps-6.2.0
 target-lexicon-0.12.12
 termcolor-1.4.0
 terminal_size-0.2.6
 termtree-0.4.1
 textwrap-0.16.0
-thiserror-1.0.51
-thiserror-impl-1.0.51
+thiserror-1.0.52
+thiserror-impl-1.0.52
 tinytemplate-1.2.1
 tinyvec-1.6.0
 tinyvec_macros-0.1.1
