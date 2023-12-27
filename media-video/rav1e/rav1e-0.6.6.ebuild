@@ -7,7 +7,7 @@ addr2line-0.21.0
 adler-1.0.2
 aho-corasick-1.1.2
 anes-0.1.6
-anyhow-1.0.76
+anyhow-1.0.77
 aom-sys-0.3.2
 arbitrary-0.4.7
 arg_enum_proc_macro-0.3.4
@@ -64,7 +64,7 @@ encode_unicode-0.3.6
 env_logger-0.8.4
 equivalent-1.0.1
 errno-0.3.8
-fdeflate-0.3.2
+fdeflate-0.3.3
 fern-0.6.2
 flate2-1.0.28
 float-cmp-0.9.0
@@ -241,7 +241,7 @@ windows_x86_64_msvc-0.42.2
 windows_x86_64_msvc-0.48.5
 windows_x86_64_msvc-0.52.0
 winnow-0.4.1
-winnow-0.5.30
+winnow-0.5.31
 y4m-0.8.0
 yansi-0.5.1
 
