@@ -11,20 +11,11 @@ SRC_URI="https://download.enlightenment.org/rel/apps/ephoto/ephoto-1.6.0.tar.xz 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="*"
-IUSE="nls"
 
-RDEPEND="dev-libs/efl[eet,X]"
+RDEPEND="dev-libs/efl[eet,X]
+	media-libs/libexif"
 DEPEND="${RDEPEND}"
-BDEPEND="virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
-
-src_configure() {
-	local emesonargs=(
-		$(meson_use nls)
-	)
-
-	meson_src_configure
-}
+BDEPEND="virtual/pkgconfig"
 
 pkg_postinst() {
 	xdg_icon_cache_update
