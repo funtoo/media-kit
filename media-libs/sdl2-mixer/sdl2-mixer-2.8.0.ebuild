@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="An audio mixer that supports various file formats for SDL."
 HOMEPAGE="https://libsdl.org/projects/SDL_mixer/"
-SRC_URI="https://github.com/libsdl-org/SDL_mixer/tarball/6103316427a8479e5027e41ab9948bebfc1c3c19 -> SDL_mixer-2.6.3-6103316.tar.gz"
+SRC_URI="https://github.com/libsdl-org/SDL_mixer/tarball/a37e09f85d321a13dfcf0d4432827ee09beeb623 -> SDL_mixer-2.8.0-a37e09f.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
