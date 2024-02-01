@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install prepare
 DEPEND=media-gfx/sane-backends x11-libs/gtk+:2 x11-misc/xdg-utils jpeg? ( media-libs/libjpeg-turbo:= ) png? ( media-libs/libpng:= ) tiff? ( media-libs/tiff:= ) gimp? ( media-gfx/gimp:2 ) lcms? ( media-libs/lcms:2 )
 DESCRIPTION=Graphical scanning frontend
@@ -11,5 +11,5 @@ PDEPEND=ocr? ( app-text/gocr )
 RDEPEND=media-gfx/sane-backends x11-libs/gtk+:2 x11-misc/xdg-utils jpeg? ( media-libs/libjpeg-turbo:= ) png? ( media-libs/libpng:= ) tiff? ( media-libs/tiff:= ) gimp? ( media-gfx/gimp:2 ) lcms? ( media-libs/lcms:2 )
 SLOT=0
 SRC_URI=http://www.xsane.org/download/xsane-0.999.tar.gz https://dev.gentoo.org/~soap/distfiles/xsane-0.998-patches-3.tar.xz https://dev.gentoo.org/~pacho/xsane/xsane-256x256.png
-_eclasses_=autotools	5223f703a2e9c194fcda924f8c4b6baf	desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=620cd4634cdfc1809e91bffdf04f8424

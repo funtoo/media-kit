@@ -1,0 +1,16 @@
+BDEPEND=dev-util/ninja dev-util/cmake
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=media-libs/libsdl2[alsa=,joystick=,opengl=,sound=,video=,X=] !media-libs/libsdl test? ( virtual/opengl )
+DESCRIPTION=Simple Direct Media Layer 1.2 compatibility wrapper around SDL2
+EAPI=7
+HOMEPAGE=https://github.com/libsdl-org/sdl12-compat
+IUSE=alsa +joystick opengl +sound test +video X
+KEYWORDS=*
+LICENSE=ZLIB
+RDEPEND=media-libs/libsdl2[alsa=,joystick=,opengl=,sound=,video=,X=] !media-libs/libsdl
+REQUIRED_USE=test? ( joystick opengl sound video )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/libsdl-org/sdl12-compat/tarball/35ef746cf1a4fde8c442dc92fe9b18c3f90d7855 -> sdl12-compat-1.2.68-35ef746.tar.gz
+_eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=29c1d3793158fa9e034c320abd278a2d
