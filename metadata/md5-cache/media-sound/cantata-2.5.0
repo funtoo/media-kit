@@ -4,7 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/
 DESCRIPTION=Qt5 Graphical MPD Client
 EAPI=7
 HOMEPAGE=https://github.com/CDrummond/cantata
-IUSE=cdda cddb cdio http-server mtp musicbrainz replaygain streaming taglib +udisks zeroconf
+IUSE=cdda cddb cdio http-server mtp musicbrainz +replaygain +streaming +taglib +udisks zeroconf
 KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsql:5[sqlite] dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 sys-libs/zlib virtual/libudev:= cdda? ( media-sound/cdparanoia ) cddb? ( media-libs/libcddb ) cdio? ( dev-libs/libcdio-paranoia:= ) mtp? ( media-libs/libmtp:= ) musicbrainz? ( media-libs/musicbrainz:5= ) replaygain? ( media-libs/libebur128:= media-sound/mpg123 media-video/ffmpeg:0= ) streaming? ( dev-qt/qtmultimedia:5 ) taglib? ( media-libs/taglib[asf(+),mp4(+)] udisks? ( sys-fs/udisks:2 ) ) zeroconf? ( net-dns/avahi ) dev-lang/perl[ithreads] || ( kde-frameworks/breeze-icons:5 kde-frameworks/oxygen-icons:* )
@@ -13,4 +13,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/CDrummond/cantata/tarball/46a6c7b5ec46184288a3efde8245921f36777146 -> cantata-2.5.0-46a6c7b.tar.gz
 _eclasses_=cmake	ac7cb516f6a288b6a82bc0649ce49878	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	plocale	89c6aac5da68423465e6fd79fb4ad5fb	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=293d66f8b73b397c9b4cba7da4ef0ce9
+_md5_=3f78d92efe0b9395d8f95e64399f9b53

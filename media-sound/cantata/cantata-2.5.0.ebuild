@@ -12,7 +12,7 @@ SRC_URI="https://github.com/CDrummond/cantata/tarball/46a6c7b5ec46184288a3efde82
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="*"
-IUSE="cdda cddb cdio http-server mtp musicbrainz replaygain streaming taglib +udisks zeroconf"
+IUSE="cdda cddb cdio http-server mtp musicbrainz +replaygain +streaming +taglib +udisks zeroconf"
 REQUIRED_USE="
 	?? ( cdda cdio )
 	cdda? ( udisks || ( cddb musicbrainz ) )
@@ -117,3 +117,5 @@ pkg_postinst() {
 		elog "and querying of portable media players"
 	fi
 }
+
+# vim: noet ts=4 syn=ebuild
