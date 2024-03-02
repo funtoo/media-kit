@@ -7,7 +7,7 @@ inherit cmake python-single-r1
 
 DESCRIPTION="Library for particle IO and manipulation"
 HOMEPAGE="https://www.disneyanimation.com/technology/partio.html"
-SRC_URI="https://api.github.com/repos/wdas/partio/tarball/refs/tags/v1.17.1 -> partio-1.17.1.tar.gz"
+SRC_URI="https://api.github.com/repos/wdas/partio/tarball/refs/tags/v1.17.3 -> partio-1.17.3.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
