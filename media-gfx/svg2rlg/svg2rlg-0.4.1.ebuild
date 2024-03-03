@@ -7,7 +7,7 @@ inherit distutils-r1
 
 DESCRIPTION="Converts SVG files to PDFs or reportlab graphics"
 HOMEPAGE="https://github.com/sarnold/svg2rlg https://pypi.python.org/pypi/svg2rlg/"
-SRC_URI="https://github.com/sarnold/svg2rlg/tarball/8ed317c79547ee4f211e53ff6d6a3328f0c44b23 -> svg2rlg-0.4.1-8ed317c.tar.gz"
+SRC_URI="https://github.com/sarnold/svg2rlg/tarball/c29c146bffc580c52d4c56ecfcff7a19f4d9b81f -> svg2rlg-0.4.1-c29c146.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
