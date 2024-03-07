@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Implementation of the 3D Manufacturing Format file standard"
 HOMEPAGE="https://3mf.io/ https://github.com/3MFConsortium/lib3mf"
-SRC_URI="https://github.com/3MFConsortium/lib3mf/archive/refs/tags/v2.2.0.tar.gz -> lib3mf-2.2.0.tar.gz"
+SRC_URI="https://github.com/3MFConsortium/lib3mf/archive/refs/tags/v2.3.0.tar.gz -> lib3mf-2.3.0.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/2"

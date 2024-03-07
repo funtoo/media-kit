@@ -496,7 +496,7 @@ inherit cargo
 
 DESCRIPTION="ncurses Spotify client written in Rust using librespot, inspired by ncmpc and the likes"
 HOMEPAGE="https://github.com/hrkfdn/ncspot"
-SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v.1.1.0 -> ncspot-v.1.1.0.tar.gz
+SRC_URI="https://api.github.com/repos/hrkfdn/ncspot/tarball/v1.1.0 -> ncspot-v1.1.0.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 LICENSE="BSD"
 SLOT="0"
