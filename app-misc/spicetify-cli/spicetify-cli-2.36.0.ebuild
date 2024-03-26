@@ -43,10 +43,6 @@ S="${WORKDIR}/spicetify-spicetify-cli-6f88fb6"
 
 INSTALLDIR="/opt/${PN}"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-recognize_funtoo_install_path.patch"
-)
-
 src_compile() {
 	go build \
         -ldflags="-s -w -X main.version=${PV}" \
