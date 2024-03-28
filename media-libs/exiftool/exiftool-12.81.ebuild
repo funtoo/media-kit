@@ -7,7 +7,7 @@ inherit perl-module
 
 DESCRIPTION="Read and write meta information in image, audio and video files"
 HOMEPAGE="https://${PN}.org/ https://${PN}.sourceforge.net https://github.com/exiftool/exiftool"
-SRC_URI="https://github.com/exiftool/exiftool/tarball/da736f3d8894b233dfa44a6b68d793b1fc78b0cb -> exiftool-12.80-da736f3.tar.gz"
+SRC_URI="https://github.com/exiftool/exiftool/tarball/2d65ae878d945099517f42d6c32369c56b470111 -> exiftool-12.81-2d65ae8.tar.gz"
 
 SLOT="0"
 KEYWORDS="*"
