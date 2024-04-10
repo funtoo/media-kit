@@ -7,7 +7,7 @@ inherit cmake
 DESCRIPTION="Commandline tool to take screenshots of the desktop"
 HOMEPAGE="https://github.com/naelstrof/maim"
 
-SRC_URI="https://github.com/naelstrof/maim/tarball/7b5dd6605100592c6a8df19c93819105f859394d -> maim-5.7.4-7b5dd66.tar.gz"
+SRC_URI="https://github.com/naelstrof/maim/tarball/36a56dd7ea1888f99f237e5d79d0887efd40aaa3 -> maim-5.8.0-36a56dd.tar.gz"
 KEYWORDS="*"
 
 LICENSE="GPL-3+ MIT"
