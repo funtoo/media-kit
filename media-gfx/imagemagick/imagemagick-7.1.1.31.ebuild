@@ -2,7 +2,7 @@ EAPI="7"
 
 inherit flag-o-matic libtool perl-functions toolchain-funcs
 
-SRC_URI="https://api.github.com/repos/ImageMagick/ImageMagick/tarball/7.1.1-30 -> imagemagick-7.1.1-30.tar.gz"
+SRC_URI="https://api.github.com/repos/ImageMagick/ImageMagick/tarball/7.1.1-31 -> imagemagick-7.1.1-31.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="A collection of tools and libraries for many image formats"
