@@ -7,5 +7,5 @@ KEYWORDS=*
 LICENSE=MIT
 RDEPEND=app-misc/spicetify-cli
 SLOT=0
-SRC_URI=https://github.com/morpheusthewhite/spicetify-themes/archive/7460a018dec5f026fc9b6c6564c948c168325789.tar.gz -> spicetify-themes-20240503.tar.gz
-_md5_=01bd194bf0b271a449ee0ac79554a432
+SRC_URI=https://github.com/morpheusthewhite/spicetify-themes/archive/e9fd0ac138499470e4996b43430a197756f940fc.tar.gz -> spicetify-themes-20240507.tar.gz
+_md5_=f0fc7bb9047e6cbd70d9e7008c5d24ae
