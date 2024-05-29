@@ -8,7 +8,8 @@ inherit autotools gnome2 virtualx
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="https://www.gimp.org/"
-SRC_URI="https://download.gimp.org/gimp/v2.10/gimp-2.10.38.tar.bz2 -> gimp-2.10.38.tar.bz2"
+SRC_URI="https://download.gimp.org/gimp/v2.10/gimp-2.10.38.tar.bz2 -> gimp-2.10.38.tar.bz2
+"
 LICENSE="GPL-3 LGPL-3"
 SLOT="2"
 KEYWORDS="*"

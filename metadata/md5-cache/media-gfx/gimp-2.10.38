@@ -12,4 +12,4 @@ RESTRICT=!test? ( test )
 SLOT=2
 SRC_URI=https://download.gimp.org/gimp/v2.10/gimp-2.10.38.tar.bz2 -> gimp-2.10.38.tar.bz2
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome.org	532d56d07b9eace4831aaa817d2b756a	gnome2	6ba4e4d30451c4550e61b9eac4484ba9	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	virtualx	401b718cc14d43a5a7fbe062c4851ba5	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=6f34848183645bd27227963cdadc1587
+_md5_=0e208040d5d96143b22e6f45c23de529
