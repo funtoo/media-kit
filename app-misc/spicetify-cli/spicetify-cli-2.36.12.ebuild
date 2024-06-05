@@ -39,7 +39,7 @@ LICENSE="Apache-2.0 BSD GPL-3 MIT"
 SLOT="0"
 KEYWORDS="*"
 IUSE="hook"
-S="${WORKDIR}/spicetify-spicetify-cli-a2bad24"
+S="${WORKDIR}/spicetify-cli-a2bad24"
 
 INSTALLDIR="/opt/${PN}"
 
@@ -51,9 +51,9 @@ src_compile() {
 
 src_install() {
 	insinto "${INSTALLDIR}"
-	doins -r {CustomApps,Extensions,Themes,jsHelper,spicetify-cli}
-	fperms +x "${INSTALLDIR}/spicetify-cli"
-	dosym /opt/spicetify-cli/spicetify-cli /usr/bin/spicetify
+	doins -r {CustomApps,Extensions,Themes,jsHelper,cli}
+	fperms +x "${INSTALLDIR}/cli"
+	dosym /opt/spicetify-cli/cli /usr/bin/spicetify
 
 	if use hook; then
 		insinto "/etc/portage/env/media-sound"
