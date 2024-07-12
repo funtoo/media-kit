@@ -6,7 +6,7 @@ inherit desktop qmake-utils xdg
 
 DESCRIPTION="2D animation and drawing program based on Qt5"
 HOMEPAGE="https://www.pencil2d.org/"
-SRC_URI="https://api.github.com/repos/pencil2d/pencil/tarball/v0.6.6 -> pencil-v0.6.6.tar.gz"
+SRC_URI="https://api.github.com/repos/pencil2d/pencil/tarball/v0.7.0 -> pencil-v0.7.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
