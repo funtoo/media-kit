@@ -8,7 +8,7 @@ MY_P=${P/graphicsm/GraphicsM}
 DESCRIPTION="Collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.graphicsmagick.org/ https://hg.osdn.net/view/graphicsmagick/GM"
 
-SRC_URI="https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.43/GraphicsMagick-1.3.43.tar.xz -> GraphicsMagick-1.3.43.tar.xz"
+SRC_URI="https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.44/GraphicsMagick-1.3.44.tar.xz -> GraphicsMagick-1.3.44.tar.xz"
 S="${WORKDIR}/${MY_P}"
 
 KEYWORDS="*"
