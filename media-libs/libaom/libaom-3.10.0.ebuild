@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Alliance for Open Media AV1 Codec SDK"
 HOMEPAGE="https://aomedia.org"
-SRC_URI="https://storage.googleapis.com/aom-releases/libaom-3.9.1.tar.gz -> libaom-3.9.1.tar.gz"
+SRC_URI="https://storage.googleapis.com/aom-releases/libaom-3.10.0.tar.gz -> libaom-3.10.0.tar.gz"
 KEYWORDS="*"
 LICENSE="BSD-2"
 SLOT="0/3"

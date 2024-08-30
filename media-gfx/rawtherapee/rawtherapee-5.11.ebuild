@@ -7,7 +7,7 @@ inherit cmake flag-o-matic toolchain-funcs xdg-utils
 
 DESCRIPTION="A powerful cross-platform raw image processing program"
 HOMEPAGE="https://www.rawtherapee.com/"
-SRC_URI="https://github.com/Beep6581/RawTherapee/releases/download/5.10/rawtherapee-5.10.tar.xz -> rawtherapee-5.10.tar.xz"
+SRC_URI="https://github.com/Beep6581/RawTherapee/releases/download/5.11/rawtherapee-5.11.tar.xz -> rawtherapee-5.11.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
