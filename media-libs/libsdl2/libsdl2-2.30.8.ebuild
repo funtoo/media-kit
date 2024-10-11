@@ -6,7 +6,7 @@ inherit autotools flag-o-matic
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="https://www.libsdl.org/"
-SRC_URI="https://github.com/libsdl-org/SDL/tarball/9519b9916cd29a14587af0507292f2bd31dd5752 -> SDL-2.30.7-9519b99.tar.gz"
+SRC_URI="https://github.com/libsdl-org/SDL/tarball/79ec168f3c1e2fe27335cb8886439f7ef676fb49 -> SDL-2.30.8-79ec168.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"

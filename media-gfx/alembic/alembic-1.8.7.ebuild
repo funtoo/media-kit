@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Open framework for storing and sharing scene data"
 HOMEPAGE="https://www.alembic.io/"
-SRC_URI="https://api.github.com/repos/alembic/alembic/tarball/1.8.6 -> alembic-1.8.6.tar.gz"
+SRC_URI="https://api.github.com/repos/alembic/alembic/tarball/1.8.7 -> alembic-1.8.7.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
