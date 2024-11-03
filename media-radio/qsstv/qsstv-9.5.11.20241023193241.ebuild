@@ -4,7 +4,7 @@ inherit desktop qmake-utils xdg-utils
 
 DESCRIPTION="Amateur radio SSTV software"
 HOMEPAGE="http://users.telenet.be/on4qz/ https://github.com/ON4QZ/QSSTV"
-SRC_URI="https://github.com/ON4QZ/QSSTV/archive/fefeedffd5b2351f13ed19b9a61586e63b11f0bf.tar.gz -> QSSTV-9.5.11.20230715103538.tar.gz"
+SRC_URI="https://github.com/ON4QZ/QSSTV/archive/d314fac4daf4c11462f986afc772e589a05fd360.tar.gz -> QSSTV-9.5.11.20241023193241.tar.gz"
 
 
 LICENSE="GPL-3"
