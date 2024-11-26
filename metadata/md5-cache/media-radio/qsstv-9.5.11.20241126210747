@@ -7,6 +7,6 @@ KEYWORDS=*
 LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 media-libs/hamlib:= media-libs/openjpeg:2 media-libs/alsa-lib media-libs/libv4l sci-libs/fftw:3.0= media-sound/pulseaudio x11-misc/xdg-utils
 SLOT=0
-SRC_URI=https://github.com/ON4QZ/QSSTV/archive/d314fac4daf4c11462f986afc772e589a05fd360.tar.gz -> QSSTV-9.5.11.20241023193241.tar.gz
+SRC_URI=https://github.com/ON4QZ/QSSTV/archive/a9a601d8e3fb237bcc26d377033cb59604de5610.tar.gz -> QSSTV-9.5.11.20241126210747.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=b1c59113741fc4b4291e6ed68986f156
+_md5_=22c1aee2b20d6e0dc05ef889c1dfa5dd
