@@ -6,12 +6,12 @@ inherit cmake xdg
 
 DESCRIPTION="Lightweight Spotify client using Qt"
 HOMEPAGE="https://github.com/kraxarn/spotify-qt"
-SRC_URI="https://github.com/kraxarn/spotify-qt/tarball/83bfc5df710cce95eefae96299be9839e209f605 -> spotify-qt-3.11-83bfc5d.tar.gz"
+SRC_URI="https://github.com/kraxarn/spotify-qt/tarball/94a60199c167f46e14e35283624da7d780c19174 -> spotify-qt-3.12-94a6019.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="*"
-S="${WORKDIR}/kraxarn-spotify-qt-83bfc5d"
+S="${WORKDIR}/kraxarn-spotify-qt-94a6019"
 
 RDEPEND="
   dev-qt/qtcore:5
