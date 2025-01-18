@@ -7,7 +7,7 @@ inherit cmake
 
 DESCRIPTION="A software implementation of the OpenAL 3D audio API"
 HOMEPAGE="https://www.openal-soft.org/"
-SRC_URI="https://github.com/kcat/openal-soft/tarball/90191edd20bb877c5cbddfdac7ec0fe49ad93727 -> openal-soft-1.24.1-90191ed.tar.gz"
+SRC_URI="https://github.com/kcat/openal-soft/tarball/b621b5fce739525418f36e0474a46f9e1cab5e64 -> openal-soft-1.24.2-b621b5f.tar.gz"
 
 # See https://github.com/kcat/openal-soft/blob/e0097c18b82d5da37248c4823fde48b6e0002cdd/BSD-3Clause
 # Some components are under BSD
