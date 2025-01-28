@@ -30,7 +30,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-cpp/cairomm-1.12:0
 	>=dev-cpp/glibmm-2.54.1:2
 	dev-cpp/gtkmm:3.0
-	>=dev-cpp/pangomm-2.40:1.4
+	>=dev-cpp/pangomm-2.50
 	>=dev-libs/boehm-gc-7.1:=
 	dev-libs/boost:=[stacktrace]
 	dev-libs/double-conversion:=
